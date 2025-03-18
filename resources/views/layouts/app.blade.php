@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bimbo Ilorin Admin</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/ti-icons/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/base/vendor.bundle.base.css') }}">
     <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
     <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/vertical-light-layout/style.css') }}">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" />
-  </head>
-  <body>
+    <link rel="shortcut icon" href="{{ asset('assets/admin/images/favicon.png') }}" />
+
+    <!-- ✅ Include Livewire Styles - Ensure No Duplicate -->
+    @livewireStyles
+</head>
+
+<body>
     <div class="container-scroller">
-      <!-- partial:../../partials/_sidebar.html -->
-      @include('SuperAdmin.partials.sidebar')
-      <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:../../partials/_navbar.html -->
+        <!-- Navbar -->
         @include('SuperAdmin.partials.navbar')
-        <!-- partial -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            {{ $slot }}
-          </div>
-          <!-- content-wrapper ends -->
-          <!-- partial:../../partials/_footer.html -->
-          @include('SuperAdmin.partials.footer')
-          <!-- partial -->
+
+        <div class="container-fluid page-body-wrapper">
+            <!-- Sidebar -->
+            @include('SuperAdmin.partials.sidebar')
+
+            <!-- Main Content -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    {{ $slot }}
+                </div>
+                <!-- Footer -->
+                @include('SuperAdmin.partials.footer')
+            </div>
         </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ asset('assets/admin/vendors/js/vendor.bundle.base.js') }}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
+
+    <!-- Plugins: JS -->
+    <script src="{{ asset('assets/admin/vendors/base/vendor.bundle.base.js') }}"></script>
+
+    <!-- Plugin JS for this page -->
+    <script src="{{ asset('assets/admin/vendors/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/jquery.cookie.js') }}" type="text/javascript"></script>
+
     <!-- inject:js -->
     <script src="{{ asset('assets/admin/js/off-canvas.js') }}"></script>
     <script src="{{ asset('assets/admin/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/misc.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/settings.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/template.js') }}"></script>
     <script src="{{ asset('assets/admin/js/todolist.js') }}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <!-- End custom js for this page -->
-  </body>
-</html>
 
+    <!-- Custom JS for this page -->
+    <script src="{{ asset('assets/admin/js/dashboard.js') }}"></script>
+
+    <!-- ✅ Include Livewire Scripts - Ensure No Duplicate -->
+    @livewireScripts
+
+    <!-- ✅ Include Alpine.js - Make sure it's not duplicated -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>
+
+</html>

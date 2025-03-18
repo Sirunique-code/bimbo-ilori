@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Book;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class BookSeeder extends Seeder
 {
@@ -14,7 +15,6 @@ class BookSeeder extends Seeder
     {
         Book::create([
             'title' => 'Book Title 1',
-            'author' => 'Author Name',
             'description' => 'This is a sample description for the book.',
             'category' => 'Motivation',
             'image' => 'book1.jpg',
@@ -25,7 +25,6 @@ class BookSeeder extends Seeder
 
         Book::create([
             'title' => 'Book Title 2',
-            'author' => 'Another Author',
             'description' => 'This is another sample description.',
             'category' => 'Finance',
             'image' => 'book2.jpg',

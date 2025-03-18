@@ -7,60 +7,57 @@
 
             <!-- Course Title -->
             <div class="mb-3">
-                <label for="course_title" class="form-label">Course Title</label>
-                <input type="text" class="form-control" wire:model="course_title" required>
+                <label class="form-label">Course Title</label>
+                <input type="text" class="form-control" wire:model.defer="course_title" required>
                 @error('course_title') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Description -->
             <div class="mb-3">
-                <label for="course_description" class="form-label">Course Description</label>
-                <textarea class="form-control" wire:model="course_description" rows="5"></textarea>
+                <label class="form-label">Course Description</label>
+                <textarea class="form-control" wire:model.defer="course_description" rows="5"></textarea>
                 @error('course_description') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Price (USD) -->
             <div class="mb-3">
-                <label for="course_price_usd" class="form-label">Price (USD)</label>
-                <input type="number" class="form-control" wire:model="course_price_usd" step="0.01" required>
+                <label class="form-label">Price (USD)</label>
+                <input type="number" class="form-control" wire:model.defer="course_price_usd" step="0.01" required>
                 @error('course_price_usd') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Price (NGN) -->
             <div class="mb-3">
-                <label for="course_price_ngn" class="form-label">Price (NGN)</label>
-                <input type="number" class="form-control" wire:model="course_price_ngn" required>
+                <label class="form-label">Price (NGN)</label>
+                <input type="number" class="form-control" wire:model.defer="course_price_ngn" required>
                 @error('course_price_ngn') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Duration -->
             <div class="mb-3">
-                <label for="course_duration" class="form-label">Duration</label>
-                <input type="text" class="form-control" wire:model="course_duration" required>
+                <label class="form-label">Duration</label>
+                <input type="text" class="form-control" wire:model.defer="course_duration" required>
                 @error('course_duration') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Image -->
-            <div class="mb-3">
-                <label for="course_image" class="form-label">Course Image</label>
-                <input type="file" class="form-control" wire:model="course_image">
-                @error('course_image') <span class="text-danger">{{ $message }}</span> @enderror
-            </div>
+<div class="mb-3">
+    <label class="form-label">Course Image</label>
+    <input type="file" class="form-control" wire:model="course_image" accept="image/*">
+    @error('course_image') <span class="text-danger">{{ $message }}</span> @enderror
 
-            <!-- Image Preview (optional) -->
-           
+    <!-- Preview Selected Image -->
+    @if ($course_image)
+        <p class="mt-2">Image Preview:</p>
+        <img src="{{ $course_image->temporaryUrl() }}" alt="Image Preview" style="max-width: 200px;">
+    @endif
+</div>
 
-            <!-- Payment Link -->
-            <div class="mb-3">
-                <label for="pay_link" class="form-label">Payment Link</label>
-                <input type="url" class="form-control" wire:model="pay_link" required>
-                @error('pay_link') <span class="text-danger">{{ $message }}</span> @enderror
-            </div>
 
             <!-- Registration Link -->
             <div class="mb-3">
-                <label for="register_link" class="form-label">Registration Link</label>
-                <input type="url" class="form-control" wire:model="register_link" required>
+                <label class="form-label">Registration Link</label>
+                <input type="url" class="form-control" wire:model.defer="register_link">
                 @error('register_link') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 

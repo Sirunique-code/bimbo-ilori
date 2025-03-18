@@ -3,13 +3,13 @@
   $(function() {
     var todoListItem = $('.todo-list');
     var todoListInput = $('.todo-list-input');
-    $('#add-task').on("click", function(event) {
+    $('.todo-list-add-btn').on("click", function(event) {
       event.preventDefault();
 
       var item = $(this).prevAll('.todo-list-input').val();
 
       if (item) {
-        todoListItem.append("<li><div class='form-check'><label class='form-check-label'><input class='checkbox' type='checkbox'/>" + item + "<i class='input-helper'></i></label></div></li>");
+        todoListItem.append("<li><div class='form-check'><label class='form-check-label'><input class='checkbox' type='checkbox'/>" + item + "<i class='input-helper'></i></label></div><i class='remove ti-trash'></i></li>");
         todoListInput.val("");
       }
 

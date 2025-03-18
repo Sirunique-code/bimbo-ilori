@@ -3,11 +3,16 @@
 namespace App\Livewire\Superadmin\Courses;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\Models\Course;
+use Illuminate\Support\Facades\Storage;
 
 class Edit extends Component
 {
+    use WithFileUploads;
+
     public $courseId, $course_title, $course_price_usd, $course_price_ngn, $course_duration, $course_description, $pay_link, $register_link;
+    public $current_course_image, $new_course_image; // Image handling
 
     public function mount(Course $course)
     {
@@ -24,6 +29,7 @@ class Edit extends Component
         $this->course_description = $course->course_description;
         $this->pay_link = $course->pay_link;
         $this->register_link = $course->register_link;
+        $this->current_course_image = $course->course_image; // Store current image
     }
 
     public function updateCourse()
@@ -36,6 +42,7 @@ class Edit extends Component
             'course_description' => 'required',
             'pay_link' => 'required|url',
             'register_link' => 'required|url',
+            'new_course_image' => 'nullable|image|max:2048', // Image validation
         ]);
 
         $course = Course::find($this->courseId);
@@ -45,6 +52,21 @@ class Edit extends Component
             return redirect()->route('superadmin.courses.index');
         }
 
+        // Handle Image Upload
+        if ($this->new_course_image) {
+            $imageName = $this->new_course_image->store('assets/img', 'public');
+            $course->course_image = basename($imageName); // Save new image name
+
+            // Optional: Delete Old Image if needed
+            if ($this->current_course_image && file_exists(public_path('assets/img/' . $this->current_course_image))) {
+                unlink(public_path('assets/img/' . $this->current_course_image));
+            }
+
+            // Update current image preview after upload
+            $this->current_course_image = basename($imageName);
+        }
+
+        // Update Other Course Fields
         $course->update([
             'course_title' => $this->course_title,
             'course_price_usd' => $this->course_price_usd,
@@ -61,6 +83,8 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.superadmin.courses.edit');
+        return view('livewire.superadmin.courses.edit', [
+            'current_course_image' => $this->current_course_image, // Pass image to Blade file
+        ]);
     }
 }
