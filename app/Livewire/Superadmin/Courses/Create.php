@@ -21,7 +21,7 @@ class Create extends Component
         'course_price_usd' => 'required|numeric',
         'course_price_ngn' => 'required|numeric',
         'course_duration' => 'required|string',
-        'course_image' => 'nullable|image|max:1024', // Accept image upload (max 1MB)
+        'course_image' => 'nullable|file|max:1024', // Accept image upload (max 1MB)
         'pay_link' => 'nullable|url',
         'register_link' => 'nullable|url',
     ];

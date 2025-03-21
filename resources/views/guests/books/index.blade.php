@@ -23,7 +23,7 @@
                     These books are published under TKBlocs, labeled as <strong>“Life Purpose and Personal Development” (LPPD) Books.</strong>
                 </p>
                 <p class="mb-4">
-                    You can purchase her books via the platforms below:
+                    You can purchase books by Bimbo Ilori via the platforms below:
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                     <a class="btn btn-warning py-2 px-4" href="http://amazon.com/author/bimboilori" target="_blank">Buy via Amazon</a>

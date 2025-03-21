@@ -61,6 +61,13 @@
                 @error('register_link') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
+              <!-- Registration Link -->
+              <div class="mb-3">
+                <label class="form-label">Payment Link</label>
+                <input type="url" class="form-control" wire:model.defer="pay_link">
+                @error('pay_link') <span class="text-danger">{{ $message }}</span> @enderror
+            </div>
+
             <button type="submit" class="btn btn-primary">Save Course</button>
         </form>
     </div>    

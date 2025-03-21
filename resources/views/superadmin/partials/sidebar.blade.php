@@ -36,7 +36,7 @@
       <div class="collapse" id="books-menu">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"> 
-            <a class="nav-link" href="#">Manage Books</a>
+            <a class="nav-link" href="{{ route('superadmin.books.book-manager') }}">Manage Books</a>
           </li>
           <li class="nav-item"> 
             <a class="nav-link" href="#">Add New Book</a>

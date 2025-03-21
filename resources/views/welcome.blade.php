@@ -1,8 +1,10 @@
-<x-guest-layout>
+<x-guest-layout>    
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
+            
+            <!-- First Carousel Item -->
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
@@ -10,15 +12,17 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Transforming Lives, One Purpose at a Time</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Transform your mindset, achieve your goals, and design a life you love with expert guidance from Bimbo Ilori"</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Start Your Journey</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Books</a>
+                                <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Transform your mindset, achieve your goals, and live the life designed for you love with expert guidance from Bimbo Ilori</p>
+                                <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <!-- Second Carousel Item -->
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
@@ -28,18 +32,87 @@
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Create a Life of Purpose, Passion, and Fulfillment!</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Empower yourself with expert coaching, transformative books, and life-changing courses designed to help you thrive.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Start your Jourey</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Books</a>
+                                <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <!-- Third Carousel Item - Books to Thrive -->
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Books to Thrive</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Unlock Your Full Potential with Transformative Books!</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Explore a collection of powerful books designed to inspire, educate, and transform your life.</p>
+                                <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Explore Books</a>
+                                <a href="{{ route('contact.index')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get in Touch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
         </div>
     </div>
+    
     <!-- Carousel End -->
     
+      <!-- Services BIMS Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Image Section (Left Side) -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="assets/img/bims.jpg" alt="BIMS Services" style="object-fit: cover; border-radius: 10px;">
+                    </div>
+                </div>
     
+                <!-- Welcome Message & Services (Right Side) -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIMS</h6>
+                    <h1 class="mb-4">Discover a World of Transformation & Growth</h1>
+                    <p class="mb-4">
+                        At <strong>Bimbo Ilori Ministries & Services (BIMS)</strong>, we are dedicated to equipping individuals with transformational resources for spiritual growth, personal development, and professional success. Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and courses, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts, you’re in the right place.
+                    </p>
+                    <p class="mb-4">
+                        Browse, learn, and take the next step on your journey. Let’s thrive together!
+                    </p>
+    
+                    <!-- Services List -->
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kingswitbloc Consults & Training</p>
+                            <small>Insightful consulting and strategic counsel for organizational growth.</small>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>ThriveForge</p>
+                            <small>Online coaching and courses designed to help you unlock your full potential.</small>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Saved4Real</p>
+                            <small>A faith-driven platform featuring podcasts, books, and powerful teachings.</small>
+                        </div>
+                    </div>
+    
+                    <!-- Contact Information -->
+                    <div class="mt-4">
+                        <p><i class="fa fa-globe text-primary me-2"></i> <strong>Website:</strong> <a href="http://bimboilori.com" target="_blank">bimboilori.com</a></p>
+                        <p><i class="fa fa-phone text-primary me-2"></i> <strong>Call:</strong> +234 9028763627</p>
+                        <p><i class="fa fa-envelope text-primary me-2"></i> <strong>Email:</strong> kingswitbloc@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services BIMS End -->
     
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -115,7 +188,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-1.jpg" alt="">
+                            <img class="img-fluid" src="assets/img/category11.jpg" alt="">
                         </div>
                         
                     </div>
@@ -123,7 +196,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-2.jpg" alt="">
+                            <img class="img-fluid" src="assets/img/category12.jpg" alt="">
                         </div>
                         
                     </div>
@@ -131,7 +204,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-3.jpg" alt="">
+                            <img class="img-fluid" src="assets/img/category13.jpg" alt="">
                         </div>
                         
                             
@@ -140,39 +213,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-4.jpg" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-5.jpg" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-6.jpg" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-7.jpg" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="assets/img/book-8.jpg" alt="">
+                            <img class="img-fluid" src="assets/img/category14.jpg" alt="">
                         </div>
                         
                     </div>
@@ -180,7 +221,7 @@
             </div>
             <!-- View More Books button -->
             <div class="text-center mt-4">
-                <a href="{{ route('courses')}}" class="btn btn-primary px-4 py-2">View More Books by Bimbo Ilori</a>
+                <a href="{{ route('books.index')}}" class="btn btn-primary px-4 py-2">View More Books by Bimbo Ilori</a>
             </div>
         </div>
     </div>
@@ -200,7 +241,6 @@
                         <img src="assets/img/course-11.jpg" alt="Personal Growth">
                         <div class="course-info">
                             <h5 class="m-0">As One</h5>
-                            <small class="text-primary">Register Now</small>
                         </div>
                     </a>
                 </div>
@@ -209,7 +249,6 @@
                         <img src="assets/img/course-22.jpg" alt="Mindset & Motivation">
                         <div class="course-info">
                             <h5 class="m-0">Brand Essence BluePrint</h5>
-                            <small class="text-primary">Register Now</small>
                         </div>
                     </a>
                 </div>
@@ -218,44 +257,20 @@
                         <img src="assets/img/course-33.jpg" alt="Goal Setting & Success">
                         <div class="course-info">
                             <h5 class="m-0">RightReset</h5>
-                            <small class="text-primary">Register Now</small>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.4s">
-                    <a class="course-card d-block position-relative" href="">
-                        <img src="assets/img/course-44.jpg" alt="Career & Leadership">
-                        <div class="course-info">
-                            <h5 class="m-0">Mission Mastery</h5>
-                            <small class="text-primary">Register Now</small>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s">
-                    <a class="course-card d-block position-relative" href="">
-                        <img src="assets/img/course-55.jpg" alt="Emotional Well-being">
-                        <div class="course-info">
-                            <h5 class="m-0">Nurtured to Flourish</h5>
-                            <small class="text-primary">Register Now</small>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <a class="course-card d-block position-relative" href="">
-                        <img src="assets/img/course-66.jpg" alt="Work-Life Balance">
-                        <div class="course-info">
-                            <h5 class="m-0">Purposeful Parenting</h5>
-                            <small class="text-primary">Register Now</small>
-                        </div>
-                    </a>
-                </div>
+                <!-- View More Button -->
+            <div class="text-center mt-4">
+                <a href="{{route('courses')}}" class="btn btn-primary px-4 py-2">View More Courses</a>
+            </div>
             </div>
         </div>
     </div>
     <!-- Courses gallery Start -->
     
     
-    <!-- Courses Start -->
+    {{-- <!-- Courses Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -295,7 +310,7 @@
             </div>
         </div>
     </div>
-    <!-- Courses End -->
+    <!-- Courses End --> --}}
     
     
     </x-guest-layout>

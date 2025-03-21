@@ -10842,7 +10842,6 @@ textarea.form-control-lg {
 
 .form-check .form-check-input {
   float: left;
-  margin-left: -1.5em;
 }
 
 .form-check-input {
@@ -10861,6 +10860,8 @@ textarea.form-control-lg {
 
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
+  margin-left: -0.2em;
+
 }
 
 .form-check-input[type="radio"] {
@@ -21722,14 +21723,14 @@ dl li {
 /* Auth */
 .auth .login-half-bg {
   background: url("../images/auth/login-bg.jpg");
-  background-size: cover;  /* Ensures the image covers the full area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat;
-    margin-left: 50px;
-    height: 100vh; /* Makes it take full viewport height */
-    width: 100vh; /* Ensures it fills the right-side column */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Ensures it fills the right-side column */
 }
 
+/* Adjust for register screen */
 .auth .register-half-bg {
   background: url("../images/auth/login-bg.jpg");
   background-size: cover;
@@ -21740,12 +21741,14 @@ dl li {
   background-size: cover;
 }
 
+/* Profile image */
 .auth .lock-profile-img {
   width: 90px;
   height: 90px;
   border-radius: 100%;
 }
 
+/* Light background for auth forms */
 .auth .auth-form-light {
   background: #ffffff;
 }
@@ -21754,20 +21757,24 @@ dl li {
   color: #c9c8c8;
 }
 
-.auth .auth-form-light .input-group .form-control:focus, .auth .auth-form-light .input-group .form-control:active {
+.auth .auth-form-light .input-group .form-control:focus,
+.auth .auth-form-light .input-group .form-control:active {
   border-color: #c9ccd7;
 }
 
+/* Transparent form styling */
 .auth .auth-form-transparent {
   background: transparent;
 }
 
+/* Form inputs and borders */
 .auth .auth-form-transparent .form-control,
 .auth .auth-form-transparent .input-group-text {
   border-color: #a3a4a5;
 }
 
-.auth .auth-form-transparent .form-control:focus, .auth .auth-form-transparent .form-control:active,
+.auth .auth-form-transparent .form-control:focus,
+.auth .auth-form-transparent .form-control:active,
 .auth .auth-form-transparent .input-group-text:focus,
 .auth .auth-form-transparent .input-group-text:active {
   border-color: #a3a4a5;
@@ -21777,8 +21784,74 @@ dl li {
   outline-color: #a3a4a5;
 }
 
+/* Remove padding for full-height */
 .auth.auth-img-bg {
   padding: 0;
+}
+
+/* Brand logo styling */
+.auth .brand-logo {
+  margin-bottom: 2rem;
+}
+
+.auth .brand-logo img {
+  width: 150px;
+}
+
+/* Form input spacing */
+.auth form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth form .form-group label {
+  font-size: 0.8125rem;
+}
+
+.auth form .form-group .form-control {
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.9375rem;
+}
+
+/* Button padding */
+.auth form .auth-form-btn {
+  padding: 1rem 3rem;
+  line-height: 1.5;
+}
+
+/* Auth links */
+.auth form .auth-link {
+  font-size: 0.875rem;
+}
+
+.auth form .auth-link:hover {
+  color: initial;
+}
+
+/* Ensure full height minus navbar */
+.page-body-wrapper {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 70px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+  .auth .login-half-bg {
+    display: none; /* Hide right-side image on small screens */
+  }
+
+  .auth.auth-img-bg {
+    justify-content: center;
+  }
+
+  .auth .auth-form-transparent {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -21788,51 +21861,6 @@ dl li {
   }
 }
 
-.auth .brand-logo {
-  margin-bottom: 2rem;
-}
-
-.auth .brand-logo img {
-  width: 150px;
-}
-
-.auth form .form-group {
-  margin-bottom: 1.5rem;
-}
-
-.auth form .form-group label {
-  font-size: .8125rem;
-}
-
-.auth form .form-group .form-control {
-  background: transparent;
-  border-radius: 0;
-  font-size: .9375rem;
-}
-
-.auth form .auth-form-btn {
-  padding: 1rem 3rem;
-  line-height: 1.5;
-}
-
-.auth form .auth-link {
-  font-size: 0.875rem;
-}
-
-.auth form .auth-link:hover {
-  color: initial;
-}
-
-.page-body-wrapper {
-  min-height: calc(100vh - 70px);
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 70px;
-}
 
 .page-body-wrapper.full-page-wrapper {
   width: 100%;

@@ -18,11 +18,6 @@ class Index extends Component
         return view('livewire.superadmin.courses.index', compact('courses'));
     }
 
-    public function confirmDelete($id)
-    {
-        $this->dispatch('delete-course-confirmation', $id);
-    }
-
     public function deleteCourse($id)
     {
         $course = Course::find($id);
@@ -33,8 +28,8 @@ class Index extends Component
         }
 
         $course->delete();
-        session()->flash('message', 'Course deleted successfully!');
+        session()->flash('success', 'Course deleted successfully!');
 
-        $this->resetPage(); // Reset pagination to avoid missing records
+        $this->resetPage(); // Reset pagination after deletion
     }
 }

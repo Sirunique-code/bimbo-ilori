@@ -19,16 +19,16 @@
 <body>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
-                <div class="row flex-grow">
+            <div class="content-wrapper d-flex align-items-center auth auth-img-bg" style="min-height: 100vh;">
+                <div class="row flex-grow w-100 align-items-center">
                     <!-- Login Form Section -->
-                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <div class="auth-form-transparent text-left p-3">
-                            <div class="brand-logo">
+                    <div class="col-lg-6 col-md-8 col-sm-10 mx-auto d-flex align-items-center justify-content-center">
+                        <div class="auth-form-transparent text-left p-3 w-100">
+                            <div class="brand-logo text-center">
                                 <img src="{{ asset('assets/img/bi-logo-full.png') }}" alt="logo" style="width: 200px; height: auto;">
                             </div>
-                            <h2>Welcome Back!</h2>
-                            <h6 class="font-weight-light">Please log in to continue</h6>
+                            <h2 class="text-center">Welcome Back!</h2>
+                            <h6 class="font-weight-light text-center">Please log in to continue</h6>
 
                             <!-- Laravel Authentication Form -->
                             <form method="POST" action="{{ route('login') }}" class="pt-3">
@@ -67,7 +67,7 @@
 
                                 <div class="my-2 d-flex justify-content-between align-items-center">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="remember" id="remember" style="margin-left: 5px">
+                                        <input type="checkbox" class="form-check-input" name="remember" id="remember">
                                         <label class="form-check-label text-muted" for="remember">
                                             Keep me signed in
                                         </label>
@@ -84,23 +84,14 @@
                         </div>
                     </div>
 
-                    <!-- Right-Side Background -->
-                    <div class="col-lg-6 login-half-bg d-flex flex-row">
-                        <p class="text-white font-weight-medium text-center flex-grow align-self-end">
-                            Copyright &copy; {{ date('Y') }}. All rights reserved.
-                        </p>
-                    </div>
+                    
                 </div>
             </div>
-            <!-- content-wrapper ends -->
         </div>
-        <!-- page-body-wrapper ends -->
     </div>
 
     <!-- Plugins JS -->
     <script src="{{ asset('assets/admin/vendors/base/vendor.bundle.base.js') }}"></script>
-    
-    <!-- Custom JS -->
     <script src="{{ asset('assets/admin/js/off-canvas.js') }}"></script>
     <script src="{{ asset('assets/admin/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('assets/admin/js/template.js') }}"></script>

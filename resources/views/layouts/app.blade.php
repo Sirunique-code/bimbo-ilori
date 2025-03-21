@@ -22,11 +22,11 @@
 <body>
     <div class="container-scroller">
         <!-- Navbar -->
-        @include('SuperAdmin.partials.navbar')
+        @include('Superadmin.partials.navbar')
 
         <div class="container-fluid page-body-wrapper">
             <!-- Sidebar -->
-            @include('SuperAdmin.partials.sidebar')
+            @include('Superadmin.partials.sidebar')
 
             <!-- Main Content -->
             <div class="main-panel">
@@ -34,7 +34,7 @@
                     {{ $slot }}
                 </div>
                 <!-- Footer -->
-                @include('SuperAdmin.partials.footer')
+                @include('Superadmin.partials.footer')
             </div>
         </div>
     </div>

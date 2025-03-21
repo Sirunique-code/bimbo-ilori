@@ -5,11 +5,17 @@ use App\Livewire\Auth\Login;
 use App\Http\Controllers\SuperAdmin\DashboardController;
 use App\Http\Controllers\SuperAdmin\AuthController;
 
-// Courses Management Routes
+// Courses Management Controller
 use App\Livewire\Superadmin\Courses\Index;
 use App\Livewire\Superadmin\Courses\Create;
 use App\Livewire\Superadmin\Courses\Edit;
-use App\Http\Controllers\CourseController;;
+use App\Http\Controllers\CourseController;
+
+
+// Books Management Controlller
+use App\Livewire\Superadmin\Books\BookManager;
+
+
 
 // Website Controllers
 use App\Models\Book;
@@ -20,8 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 // Admin login Panel Routes
 
-// Courses
-
+// Courses Panel
 Route::prefix('superadmin')->middleware(['auth'])->group(function () {
     Route::get('/courses', Index::class)->name('superadmin.courses.index');
     Route::get('/courses/create', Create::class)->name('superadmin.courses.create');
@@ -29,7 +34,12 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
 
     // Add this for delete functionality
     Route::delete('/courses/{course}', [CourseController::class, 'destroy'])->name('superadmin.courses.destroy');
+
+    // Books Panel
+    Route::get('/books', BookManager::class)->name('superadmin.books.book-manager');
 });
+
+
 
 
 // Show login page
