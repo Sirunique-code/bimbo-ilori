@@ -1,4 +1,3 @@
-<x-app-layout>
         <div class="container mt-5">
             <div class="d-flex justify-content-between mb-4">
                 <h2>Manage Books</h2>
@@ -88,4 +87,3 @@
                 </tbody>
             </table>
         </div>
-    </x-app-layout>

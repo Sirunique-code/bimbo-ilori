@@ -49,7 +49,7 @@ class Edit extends Component
         
         if (!$course) {
             session()->flash('error', 'Course not found.');
-            return redirect()->route('superadmin.courses.index');
+            return redirect()->route('superadmin.courses.index')->layout('layouts.app');
         }
 
         // Handle Image Upload
@@ -85,6 +85,6 @@ class Edit extends Component
     {
         return view('livewire.superadmin.courses.edit', [
             'current_course_image' => $this->current_course_image, // Pass image to Blade file
-        ]);
+        ])->layout('layouts.app');
     }
 }

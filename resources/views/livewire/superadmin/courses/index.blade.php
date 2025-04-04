@@ -1,4 +1,3 @@
-<x-app-layout>
     <div class="container">
         <div class="d-flex justify-content-between align-items-center my-4">
             <h2>Courses Management</h2>
@@ -32,9 +31,10 @@
                         </td>
                         <td>{{ $course->course_duration }}</td>
                         <td>
-                            <img src="{{ asset('assets/img/' . $course->course_image) }}" 
+                            <img src="{{ $course->course_image ? asset('storage/' . $course->course_image) : asset('default-image.jpg') }}" 
                                  alt="{{ $course->course_title }}" width="80">
                         </td>
+                        
                         <td>
                             <a href="" target="_blank" class="btn btn-success btn-sm">Pay</a>
                         </td>
@@ -72,4 +72,3 @@
             </tbody>
         </table>
     </div>
-</x-app-layout>

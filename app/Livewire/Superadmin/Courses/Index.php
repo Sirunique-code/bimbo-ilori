@@ -15,7 +15,7 @@ class Index extends Component
     public function render()
     {
         $courses = Course::paginate(10);
-        return view('livewire.superadmin.courses.index', compact('courses'));
+        return view('livewire.superadmin.courses.index', compact('courses'))->layout('layouts.app');
     }
 
     public function deleteCourse($id)

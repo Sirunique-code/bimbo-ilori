@@ -31,7 +31,7 @@
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/img/awakening.jpg') }}" class="about-image shadow" alt="Bimbo Ilori">
+                <img src="{{ asset('assets/img/strategy.jpg') }}" class="about-image shadow" alt="Bimbo Ilori">
                 <p style="margin-top: 10px">Bimbo Ilori</p>
             </div>
         </section>
@@ -122,9 +122,9 @@
         </section>
 
         <!-- The 5-V Anchors of Purpose -->
-        <section class="text-center my-5">
+        <section class="text-center my-5 bg-light">
             <h2 class="fw-bold">The 5-V Anchors of Purpose</h2>
-            <p>At the core of my work is a structured framework:</p>
+            <p>At the core of my work is a structured framework: "The 5-V Anchors of Purpose", which emphasize:</p>
             <div class="row">
                 <div class="col-md-4">
                     <h4>✔ Virtue-Derived</h4>
@@ -153,9 +153,9 @@
 
       <!-- Call to Action -->
 <!-- Call to Action with Image on the Left -->
-<section class="row align-items-center my-5 bg-light p-4">
+<section class="row align-items-center my-5  p-4">
     <div class="col-md-4 text-center">
-        <img src="{{ asset('assets/img/strategy.jpg') }}" class="about-image shadow" alt="Here for You">
+        <img src="{{ asset('assets/img/introduction.jpg') }}" class="about-image " alt="Here for You">
     </div>
     <div class="col-md-8">
         <h1 class="fw-bold">HERE FOR YOU</h1>

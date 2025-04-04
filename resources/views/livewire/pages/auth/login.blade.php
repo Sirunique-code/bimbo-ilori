@@ -25,10 +25,10 @@
                     <div class="col-lg-6 col-md-8 col-sm-10 mx-auto d-flex align-items-center justify-content-center">
                         <div class="auth-form-transparent text-left p-3 w-100">
                             <div class="brand-logo text-center">
-                                <img src="{{ asset('assets/img/bi-logo-full.png') }}" alt="logo" style="width: 200px; height: auto;">
+                                <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="logo" >
                             </div>
-                            <h2 class="text-center">Welcome Back!</h2>
-                            <h6 class="font-weight-light text-center">Please log in to continue</h6>
+                      
+                            <h3 class="font-weight-light text-center">Please log in to continue</h3>
 
                             <!-- Laravel Authentication Form -->
                             <form method="POST" action="{{ route('login') }}" class="pt-3">

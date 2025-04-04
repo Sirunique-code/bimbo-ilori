@@ -38,7 +38,8 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
                 <div class="course-item bg-light">
                     <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="{{ asset('assets/img/' . $course->course_image) }}"
+                        <img class="img-fluid"
+                            src="{{ $course->course_image ? asset('storage/' . $course->course_image) : asset('default-image.jpg') }}"
                             alt="{{ $course->course_title }}">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="{{ route('courses.show', $course->id) }}"
@@ -65,6 +66,23 @@
     </div>
     </div>
     </div>
+
+    <!-- Bimbo Ilori Books link -->
+    <div class="container-xxl py-5">
+
+        <p class="text-center mt-3">
+            You can purchase books by Bimbo Ilori via the platforms below:
+        </p>
+        <div class="text-center mt-3">
+            <a class="btn btn-warning py-2 px-4" href="http://amazon.com/author/bimboilori" target="_blank">Buy via
+                Amazon</a>
+            <a class="btn btn-success py-2 px-4" href="https://selar.co/m/abimbola-ilori1" target="_blank">Buy via
+                Selar</a>
+            <a class="btn btn-primary py-2 px-4" href="https://paystack.shop/bimboiloribooks" target="_blank">Buy via
+                Paystack</a>
+        </div>
+    </div>
+    <!-- Bimbo Ilori Books link End-->
 
     <!-- KBLOC: Consults and Training Section -->
     <div class="container-xxl py-5">

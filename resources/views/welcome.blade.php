@@ -50,8 +50,8 @@
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Books to Thrive</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Unlock Your Full Potential with Transformative Books!</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Explore a collection of powerful books designed to inspire, educate, and transform your life.</p>
-                                <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Explore Books</a>
-                                <a href="{{ route('contact.index')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get in Touch</a>
+                                <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
                             </div>
                         </div>
                     </div>
@@ -63,23 +63,23 @@
     
     <!-- Carousel End -->
     
-      <!-- Services BIMS Start -->
+      <!-- Services BIPs Start -->
       <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <!-- Image Section (Left Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="assets/img/bims.jpg" alt="BIMS Services" style="object-fit: cover; border-radius: 10px;">
+                        <img class="img-fluid w-100" src="assets/img/bims.jpg" alt="BIPs Services" style="object-fit: cover; border-radius: 10px;">
                     </div>
                 </div>
     
                 <!-- Welcome Message & Services (Right Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIMS</h6>
+                    <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIPs</h6>
                     <h1 class="mb-4">Discover a World of Transformation & Growth</h1>
                     <p class="mb-4">
-                        At <strong>Bimbo Ilori Ministries & Services (BIMS)</strong>, we are dedicated to equipping individuals with transformational resources for spiritual growth, personal development, and professional success. Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and courses, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts, you’re in the right place.
+                        At <strong>Bimbo Ilori Programs (BIPs)</strong>, we are dedicated to equipping individuals with transformational resources for spiritual growth, personal development, and professional success. Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and courses, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts, you’re in the right place.
                     </p>
                     <p class="mb-4">
                         Browse, learn, and take the next step on your journey. Let’s thrive together!
@@ -112,7 +112,7 @@
         </div>
     </div>
     
-    <!-- Services BIMS End -->
+    <!-- Services BIPs End -->
     
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -129,7 +129,7 @@
                     <h6 class="section-title bg-white text-start text-primary pe-3">BIMBO ILORI</h6>
                     <h1 class="mb-4">Empowering You to Live with Purpose</h1>
                     <p class="mb-4">
-                        Meet <strong>Bimbo Ilori</strong>, a dedicated life and purpose coach passionate about helping individuals break through limitations and design a fulfilling life. With years of experience in personal development, she has guided countless people toward clarity, confidence, and success.
+                    BIPs is anchored by impactionaire <strong>Bimbo Ilori</strong> who is a dedicated life and purpose coach passionate about helping individuals break through limitations and design a fulfilling life. With years of experience in personal development, she has guided countless people toward clarity, confidence, and success.
                     </p>
                     <p class="mb-4">
                         Through transformative books, engaging online courses, and personalized coaching, she provides the tools and insights you need to navigate life’s challenges and achieve your dreams. Her mission is simple: to empower you to live intentionally and unlock your full potential.
@@ -182,7 +182,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Books</h6>
-                <h1 class="mb-5">Books by Bimbo Ilori Ministries</h1>
+                <h1 class="mb-5">Books by Bimbo Ilori Programs</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -268,6 +268,54 @@
         </div>
     </div>
     <!-- Courses gallery Start -->
+
+    <!-- KBLOC: Consults and Training Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <!-- KBLOC Image -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded fixed-height" src="{{ asset('assets/img/kbloc.jpg') }}"
+                        alt="KBloc Consults">
+                </div>
+                <!-- KBLOC Content -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary px-3">Consults and Training</h6>
+                    <h2 class="mb-4">Kingswitbloc (KBloc)</h2>
+                    <p>Kingswitbloc (KBloc) is our registered brand for Consult Services, that channels my skills and
+                        expertise as a Chartered Administrator and entrepreneur with ample years of experience.</p>
+                    <p>This intertwines with the capacity development propensity, to support businesses alignment,
+                        improvement, direction, and better positioning.</p>
+                    <p>Your business or startup stands to gain immense insight and strength from this service. Take
+                        advantage of the opportunity now!</p>
+                    <a href="https://forms.gle/G8iiparxyrnPRgUz8" class="btn btn-primary mt-3">REQUEST FOR CONSULTS /
+                        TRAINING HERE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Podcasts and Teachings Section -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <!-- Podcast Content -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary px-3">Podcasts and Teachings</h6>
+                    <h2 class="mb-4">Listen to BI on Spotify</h2>
+                    <p>Listen to BI deliver transformative and uplifting insights on Spotify. She shares insights that
+                        challenge and drive listeners to embrace spiritual and personal development.</p>
+                    <a href="https://creators.spotify.com/pod/show/bimbo-ilori" class="btn btn-primary mt-3">LISTEN
+                        HERE</a>
+                </div>
+                <!-- Podcast Image -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded fixed-height" src="{{ asset('assets/img/podcast.jpg') }}"
+                        alt="BI Podcasts">
+                </div>
+            </div>
+        </div>
+    </div>
     
     
     {{-- <!-- Courses Start -->

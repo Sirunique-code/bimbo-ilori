@@ -3,12 +3,30 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Course;
 
 class CourseSeeder extends Seeder
 {
     public function run()
     {
+        // Define the image directory
+        $imageDirectory = 'courses/';
+
+        // Ensure images exist in storage before seeding
+        $images = [
+            'course-11.jpg', 'course-44.jpg', 'course-22.jpg', 
+            'course-33.jpg', 'course-55.jpg', 'course-66.jpg', 'course-77.jpg'
+        ];
+
+        foreach ($images as $image) {
+            $path = storage_path("app/public/{$imageDirectory}{$image}");
+            if (!file_exists($path)) {
+                copy(public_path("images/{$image}"), $path); // Copy from a public images folder
+            }
+        }
+
+        // Now, seed courses
         Course::create([
             'course_title' => 'As One',
             'course_description' => '<h3>Maintain the unity of purpose in your marriage. </h3>
@@ -27,7 +45,7 @@ class CourseSeeder extends Seeder
             'course_price_usd' => 25.00,  // Store in decimal format
     'course_price_ngn' => 25000.00, // Equivalent in Naira
             'course_duration' => '2 days',
-            'course_image' => 'course-11.jpg',
+            'course_image' => $imageDirectory . 'course-11.jpg',
             'pay_link' => 'https://paystack.com/buy/as-one-gxsahq',
             'register_link' => 'https://forms.gle/TzXAddNzoxyZWvyF8',
         ]);
@@ -50,7 +68,7 @@ class CourseSeeder extends Seeder
             'course_price_usd' => 100.00,  // Store in decimal format
     'course_price_ngn' => 150000.00, // Equivalent in Naira
             'course_duration' => '6 weeks',
-            'course_image' => 'course-44.jpg',
+            'course_image' => $imageDirectory . 'course-44.jpg',
             'pay_link' => 'https://paystack.com/buy/mission-mastery-course-wwdjrd',
             'register_link' => 'https://forms.gle/R3qvMEErc3Jt7LK47',
         ]);
@@ -72,7 +90,7 @@ class CourseSeeder extends Seeder
             'course_price_usd' => 10.00,  // Store in decimal format
     'course_price_ngn' => 15500.00, // Equivalent in Naira
     'course_duration' => '3 days',
-            'course_image' => 'course-22.jpg',
+            'course_image' => $imageDirectory . 'course-22.jpg',
             'pay_link' => 'https://payment-gateway.com/pay/as-one',
             'register_link' => 'https://bimboiloriministries.com/register/as-one',
         ]);
@@ -96,7 +114,7 @@ class CourseSeeder extends Seeder
             'course_price_usd' => 10.00,  // Store in decimal format
             'course_price_ngn' => 15500.00, // Equivalent in Naira
             'course_duration' => '6 weeks',
-            'course_image' => 'course-33.jpg',
+            'course_image' => $imageDirectory . 'course-33.jpg',
             'pay_link' => 'https://paystack.com/buy/rightreset-hxvysh',
             'register_link' => 'https://forms.gle/R3qvMEErc3Jt7LK47',
            
@@ -118,7 +136,7 @@ class CourseSeeder extends Seeder
            'course_price_usd' => 65.00,  // Store in decimal format
     'course_price_ngn' => 10000.00, // Equivalent in Naira
             'course_duration' => '6 weeks',
-            'course_image' => 'course-55.jpg',
+            'course_image' => $imageDirectory . 'course-55.jpg',
             'pay_link' => 'https://payment-gateway.com/pay/as-one',
             'register_link' => 'https://bimboiloriministries.com/register/as-one',
         ]);
@@ -139,7 +157,7 @@ class CourseSeeder extends Seeder
             'course_price_usd' => 10.00,  // Store in decimal fomat
     'course_price_ngn' => 15500.00, // Equivalent in Naira
             'course_duration' => '6 weeks',
-            'course_image' => 'course-66.jpg',
+            'course_image' => $imageDirectory . 'course-66.jpg',
             'pay_link' => 'https://paystack.com/buy/purposeful-parenting-dqodyz',
             'register_link' => 'https://forms.gle/Kwt8gkWzfZENKnV68',
         ]);
@@ -160,12 +178,9 @@ class CourseSeeder extends Seeder
            'course_price_usd' => 35.00,  // Store in decimal format
     'course_price_ngn' => 50000.00, // Equivalent in Naira
             'course_duration' => '2-3 days',
-            'course_image' => 'course-77.jpg',
+            'course_image' => $imageDirectory . 'course-77.jpg',
             'pay_link' => 'https://paystack.com/buy/nurtured-to-flourish-ftbrmc',
             'register_link' => 'https://forms.gle/1kzBMGbsdsf3Ria87',
         ]);
-        
-        
-        
     }
 }

@@ -18,12 +18,25 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;'); // Enable foreign key constraints
 
-        // Create a test user only if it doesn't already exist
-        User::firstOrCreate([
-            'email' => 'test@example.com',
-        ], [
-            'name' => 'Test User',
-            'password' => bcrypt('password'), // Set a default password
+        // Create or update the admin user
+        User::updateOrCreate(
+            [
+                'email' => env('ADMIN_EMAIL', 'bimboilori@gmail.com'), // Admin email
+            ],
+            [
+                'name' => 'Admin User',
+                'password' => bcrypt(env('ADMIN_PASSWORD', 'bimbo2025')), // Admin password
+            ]
+        );
+
+
+        // Call other seeders
+        $this->call([
+            CourseSeeder::class,
+            BooksTableSeeder::class,
+            QuoteSeeder::class,
+            TestimonialSeeder::class,
+
         ]);
     }
 }

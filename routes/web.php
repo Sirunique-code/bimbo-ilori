@@ -1,43 +1,55 @@
 <?php
 
 // Super Admin Panel
-use App\Livewire\Auth\Login;
-use App\Http\Controllers\SuperAdmin\DashboardController;
-use App\Http\Controllers\SuperAdmin\AuthController;
+use App\Models\Book;
+use App\Models\Quote;
+use App\Models\Course;
 
 // Courses Management Controller
-use App\Livewire\Superadmin\Courses\Index;
-use App\Livewire\Superadmin\Courses\Create;
-use App\Livewire\Superadmin\Courses\Edit;
-use App\Http\Controllers\CourseController;
+use App\Models\Testimonial;
+use App\Livewire\Auth\Login;
+use App\Livewire\CourseDetail;
+use Illuminate\Support\Facades\Route;
 
 
 // Books Management Controlller
-use App\Livewire\Superadmin\Books\BookManager;
+use App\Livewire\Superadmin\Courses\Edit;
 
 
 
 // Website Controllers
-use App\Models\Book;
-use App\Models\Course;
-use App\Livewire\CourseDetail;
+use App\Http\Controllers\CourseController;
+use App\Livewire\Superadmin\Courses\Index;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
+use App\Livewire\Superadmin\Dashboard;
+use App\Livewire\Superadmin\Courses\Create;
+use App\Livewire\Superadmin\Books\BookManager;
+use App\Livewire\Superadmin\Quotes\QuotesGallery;
+use App\Http\Controllers\SuperAdmin\AuthController;
+use App\Http\Controllers\SuperAdmin\DashboardController;
+use App\Livewire\Superadmin\Testimonial\TestimonialsComponent;
 
 // Admin login Panel Routes
 
 // Courses Panel
+// Courses Panel
 Route::prefix('superadmin')->middleware(['auth'])->group(function () {
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/courses', Index::class)->name('superadmin.courses.index');
     Route::get('/courses/create', Create::class)->name('superadmin.courses.create');
     Route::get('/courses/{course}/edit', Edit::class)->name('superadmin.courses.edit');
-
-    // Add this for delete functionality
     Route::delete('/courses/{course}', [CourseController::class, 'destroy'])->name('superadmin.courses.destroy');
 
     // Books Panel
     Route::get('/books', BookManager::class)->name('superadmin.books.book-manager');
+
+    // ✅ Testimonials Panel
+    Route::get('/testimonials', TestimonialsComponent::class)->name('superadmin.testimonials.index');
+
+     // ✅ Quotes Management Panel
+     Route::get('/quotes', QuotesGallery::class)->name('superadmin.quotes.index');
 });
+
 
 
 
@@ -60,9 +72,9 @@ Route::post('/logout', function () {
 
 Route::view('/', 'welcome');
 
-Route::get('/dashboard', function () {
-    return view('superadmin.dashboard');
-})->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('superadmin.dashboard');
+// })->name('dashboard');
 
 
 Route::view('profile', 'profile')
@@ -79,11 +91,10 @@ Route::get('/', function () {
 })->name('welcome');
 
 //Course Route
-Route::get('/courses', function () {
+Route::get('/our-courses', function () {
     $courses = Course::all();
     return view('guests.courses.index', compact('courses'));
 })->name('courses');
-
 
 Route::get('/courses/{id}', function ($id) {
     $course = Course::findOrFail($id);
@@ -112,7 +123,9 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 
 //Testimonials Route
 Route::get('/testimonials', function () {
-    return view('guests.testimonials.index');
+    $testimonials = Testimonial::all();
+    $quotes = Quote::all();
+    return view('guests.testimonials.index', compact('testimonials', 'quotes'));
 })->name('testimonials.index');
 
 
@@ -120,53 +133,4 @@ Route::get('/testimonials', function () {
 
 
 
-// Route::get('/show/{id}', function ($id) {
-   // $course = Course::findOrFail($id);
-    //return view('guests.books.show', compact('course'));
-// })->name('courses.show');
 
-
-
-
-// use App\Http\Controllers\SuperAdmin\CourseController;
-// use App\Http\Controllers\SuperAdmin\BookController;
-// use App\Http\Controllers\SuperAdmin\TestimonialController;
-
-// Route::prefix('superadmin')->name('superadmin.')->group(function () {
-//     // Authentication Routes
-//     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-//     Route::post('/login', [AuthController::class, 'login'])->name('login.post');
-//     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-    // Dashboard Route
-    //Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-  
-
-    // Profile Route
-    //Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
-
-    // Course Management Routes (Uncomment when CourseController is ready)
-    // Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
-    // Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
-    // Route::post('/courses', [CourseController::class, 'store'])->name('courses.store');
-    // Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
-    // Route::put('/courses/{id}', [CourseController::class, 'update'])->name('courses.update');
-    // Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
-
-    // Book Management Routes (Uncomment when BookController is ready)
-    // Route::get('/books', [BookController::class, 'index'])->name('books.index');
-    // Route::get('/books/create', [BookController::class, 'create'])->name('books.create');
-    // Route::post('/books', [BookController::class, 'store'])->name('books.store');
-    // Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edit');
-    // Route::put('/books/{id}', [BookController::class, 'update'])->name('books.update');
-    // Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('books.destroy');
-
-    // Testimonial Management Routes (Uncomment when TestimonialController is ready)
-    // Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
-    // Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create');
-    // Route::post('/testimonials', [TestimonialController::class, 'store'])->name('testimonials.store');
-    // Route::get('/testimonials/{id}/edit', [TestimonialController::class, 'edit'])->name('testimonials.edit');
-    // Route::put('/testimonials/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
-    // Route::delete('/testimonials/{id}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
-//});

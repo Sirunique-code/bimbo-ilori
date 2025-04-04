@@ -12,8 +12,11 @@ class Course extends Model
     protected $fillable = [
         'course_title',
         'course_description',
-        'course_price',
+        'course_price_usd',
+        'course_price_ngn',
         'course_duration',
-        'course_image'
+        'course_image',
+        'register_link',
+        'pay_link',
     ];
 }

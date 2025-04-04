@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bimbo Ilori Ministries | Life Purpose Coaching & Personal Development</title>
+    <title>Bimbo Ilori Programs | Life Purpose Coaching & Personal Development</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="keywords" content="Life Purpose, Coaching, Personal Development, Leadership, Books, Courses, Bimbo Ilori">
     <meta name="description" content="Transform your life with Bimbo Ilori’s coaching, books, and online courses. Discover your purpose, grow in leadership, and achieve personal success.">
 
     <!-- Open Graph Meta Tags (For Social Media) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bimbo Ilori Ministries | Life Purpose Coaching & Personal Development">
+    <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
     <meta property="og:description" content="Transform your life with Bimbo Ilori’s coaching, books, and online courses. Discover your purpose, grow in leadership, and achieve personal success.">
     <meta property="og:image" content="{{ asset('assets/img/featured-image.jpg') }}">
     <meta property="og:url" content="http://bimboilori.com">
-    <meta property="og:site_name" content="Bimbo Ilori Ministries">
+    <meta property="og:site_name" content="Bimbo Ilori Programs">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bimbo Ilori Ministries | Life Purpose Coaching & Personal Development">
+    <meta name="twitter:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
     <meta name="twitter:description" content="Transform your life with Bimbo Ilori’s coaching, books, and online courses.">
     <meta name="twitter:image" content="{{ asset('assets/img/featured-image.jpg') }}">
     <meta name="twitter:site" content="@yourtwitterhandle">
@@ -63,7 +63,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <div class="container-fluid">  <!-- Added container-fluid for proper spacing -->
             <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center px-3">
-                <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="Bimbo Ilori Logo" class="me-2" height="55">
+                <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="Bimbo Ilori Logo" class="me-2" height="25">
             </a>
             <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -122,12 +122,12 @@
                 <div class="col-lg-4 col-md-12">
                     <h4 class="text-white mb-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Home</a></li>
-                        <li class="mb-2"><a href="/about" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> About Bi</a></li>
-                        <li class="mb-2"><a href="/courses" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Courses</a></li>
-                        <li class="mb-2"><a href="/books" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Books by BI</a></li>
+                        <li class="mb-2"><a href="{{ route('welcome')}}" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Home</a></li>
+                        <li class="mb-2"><a href="{{ route('about.index')}}" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> About Bi</a></li>
+                        <li class="mb-2"><a href="{{ route('courses')}}" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Courses</a></li>
+                        <li class="mb-2"><a href="{{ route('books.index')}}" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Books by BI</a></li>
                         <li class="mb-2"><a href={{ route('testimonials.index')}} class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Testimonials</a></li>
-                        <li><a href="/contact" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Contact Us</a></li>
+                        <li><a href="{{ route('contact.index')}}" class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Contact Us</a></li>
                     </ul>
                 </div>
             </div>

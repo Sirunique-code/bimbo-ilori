@@ -19,7 +19,7 @@ class BookManager extends Component
     public function render()
     {
         $this->books = Book::all();
-        return view('livewire.superadmin.books.book-manager');
+        return view('livewire.superadmin.books.book-manager')->layout('layouts.app');
     }
 
     public function showCreateForm()

@@ -10,7 +10,7 @@
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden text-center">
-                            <img class="img-fluid" src="{{ asset('assets/img/'.$course->course_image) }}" alt="{{ $course->course_title }}" style="max-height: 400px; width: auto;">
+                            <img class="img-fluid" src="{{ asset('storage/'.$course->course_image) }}" alt="{{ $course->course_title }}" style="max-height: 400px; width: auto;">
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">

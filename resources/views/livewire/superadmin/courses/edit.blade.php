@@ -1,4 +1,3 @@
-<x-app-layout>
     <div class="container">
         <h1 class="mt-4 mb-3">Edit Course</h1>
 
@@ -44,7 +43,7 @@
                 @if ($current_course_image)
                     <div class="mt-2">
                         <p>Current Image:</p>
-                        <img src="{{ asset('assets/img/' . $current_course_image) }}" class="img-thumbnail" width="150">
+                        <img src="{{ asset($current_course_image) }}" class="img-thumbnail" width="150">
                     </div>
                 @endif
 
@@ -66,4 +65,3 @@
             <button type="submit" class="btn btn-primary">Update Course</button>
         </form>
     </div>    
-</x-app-layout>

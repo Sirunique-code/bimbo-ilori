@@ -1,4 +1,3 @@
-<x-app-layout>
     <div class="container">
         <h1 class="mt-4 mb-3">Add New Course</h1>
 
@@ -22,14 +21,14 @@
             <!-- Course Price (USD) -->
             <div class="mb-3">
                 <label class="form-label">Price (USD)</label>
-                <input type="number" class="form-control" wire:model.defer="course_price_usd" step="0.01" required>
+                <input type="number" class="form-control" wire:model="course_price_usd" step="0.01" required>
                 @error('course_price_usd') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
             <!-- Course Price (NGN) -->
             <div class="mb-3">
                 <label class="form-label">Price (NGN)</label>
-                <input type="number" class="form-control" wire:model.defer="course_price_ngn" required>
+                <input type="number" class="form-control" wire:model="course_price_ngn" required>
                 @error('course_price_ngn') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
 
@@ -71,4 +70,3 @@
             <button type="submit" class="btn btn-primary">Save Course</button>
         </form>
     </div>    
-</x-app-layout>
