@@ -480,6 +480,28 @@ border-color: var(--primary);
 
 
 /*** Footer ***/
+
+.whatsapp-float-button {
+    position: fixed;
+    bottom: 100px;
+    right: 35px;
+    background-color: #25D366; /* WhatsApp Green */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .whatsapp-float-button img {
+    width: 50px; /* Size of the icon */
+    height: 50px;
+  }
+
+  .whatsapp-float-button:hover {
+    background-color: #128C7E; /* Darker shade of WhatsApp Green */
+  }
+  
+  
 .footer .btn.btn-social {
 margin-right: 5px;
 width: 35px;

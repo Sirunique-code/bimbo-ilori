@@ -38,9 +38,7 @@ return [
     |
     */
 
-    'layout' => 'layouts.auth', // or whatever layout you want
-
-
+    'layout' => 'components.layouts.app',
 
     /*
     |---------------------------------------------------------------------------
@@ -65,19 +63,19 @@ return [
     |
     */
 
-  'temporary_file_upload' => [
-    'disk' => 'public',  // Set the disk to 'public' for accessible URLs
-    'rules' => ['required', 'image', 'max:2048'],  // 2MB max, adjust as needed
-    'directory' => 'livewire-tmp',  // Ensure this directory exists in 'public'
-    'middleware' => 'throttle:60,1',  // Default middleware for file uploads
-    'preview_mimes' => [
-        'png', 'gif', 'bmp', 'svg', 'wav', 'mp4',
-        'mov', 'avi', 'wmv', 'mp3', 'm4a',
-        'jpg', 'jpeg', 'mpga', 'webp', 'wma',
+    'temporary_file_upload' => [
+        'disk' => null,        // Example: 'local', 's3'              | Default: 'default'
+        'rules' => null,       // Example: ['file', 'mimes:png,jpg']  | Default: ['required', 'file', 'max:12288'] (12MB)
+        'directory' => null,   // Example: 'tmp'                      | Default: 'livewire-tmp'
+        'middleware' => null,  // Example: 'throttle:5,1'             | Default: 'throttle:60,1'
+        'preview_mimes' => [   // Supported file types for temporary pre-signed file URLs...
+            'png', 'gif', 'bmp', 'svg', 'wav', 'mp4',
+            'mov', 'avi', 'wmv', 'mp3', 'm4a',
+            'jpg', 'jpeg', 'mpga', 'webp', 'wma',
+        ],
+        'max_upload_time' => 5, // Max duration (in minutes) before an upload is invalidated...
+        'cleanup' => true, // Should cleanup temporary uploads older than 24 hrs...
     ],
-    'max_upload_time' => 5,  // Max duration (in minutes)
-    'cleanup' => true,  // Cleans up temporary uploads after 24 hours
-],
 
     /*
     |---------------------------------------------------------------------------

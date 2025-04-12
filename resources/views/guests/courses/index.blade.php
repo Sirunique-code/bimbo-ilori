@@ -2,6 +2,14 @@
 
     <div class="container-xxl py-5">
         <div class="container">
+
+              <!-- The 5-V Anchors of Purpose -->
+        <section class="text-center my-5" style="margin-top: -100px">
+            <h2 class="fw-bold">Enriching Lives, Enabling Purpose </h2>
+            <p>BIPs (Bimbo Ilori Programs) is excited to offer a suite of innovative programs and services tailored to meet the unique needs of individuals and organizations. Browse our programs below and take the first step towards achieving your goals.</p>
+        </section>
+
+
             <div class="row g-5 align-items-center">
 
                 <!-- Image Section (Right) -->

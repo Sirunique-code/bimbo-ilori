@@ -15,7 +15,7 @@
                                 <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Transform your mindset, achieve your goals, and live the life designed for you love with expert guidance from Bimbo Ilori</p>
                                 <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
-                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse programs</a>
                             </div>
                         </div>
                     </div>
@@ -29,11 +29,11 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Programs</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Create a Life of Purpose, Passion, and Fulfillment!</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Empower yourself with expert coaching, transformative books, and life-changing courses designed to help you thrive.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">Empower yourself with expert coaching, transformative books, and life-changing programs designed to help you thrive.</p>
                                 <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
-                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse programs</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                 <h1 class="display-3 text-white animated slideInDown">Unlock Your Full Potential with Transformative Books!</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Explore a collection of powerful books designed to inspire, educate, and transform your life.</p>
                                 <a href="{{ route('books.index')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
-                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse Courses</a>
+                                <a href="{{ route('courses')}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Browse programs</a>
                             </div>
                         </div>
                     </div>
@@ -70,6 +70,7 @@
                 <!-- Image Section (Left Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative">
+                        <div class="btn btn-primary mt-3">BIPs OVERVIEW</div>
                         <img class="img-fluid w-100" src="assets/img/bims.jpg" alt="BIPs Services" style="object-fit: cover; border-radius: 10px;">
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                     <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIPs</h6>
                     <h1 class="mb-4">Discover a World of Transformation & Growth</h1>
                     <p class="mb-4">
-                        At <strong>Bimbo Ilori Programs (BIPs)</strong>, we are dedicated to equipping individuals with transformational resources for spiritual growth, personal development, and professional success. Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and courses, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts, you’re in the right place.
+                        At <strong>Bimbo Ilori Programs (BIPs)</strong>, we are dedicated to equipping individuals with transformational resources for spiritual growth, personal development, and professional success. Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and programs, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts, you’re in the right place.
                     </p>
                     <p class="mb-4">
                         Browse, learn, and take the next step on your journey. Let’s thrive together!
@@ -93,7 +94,7 @@
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>ThriveForge</p>
-                            <small>Online coaching and courses designed to help you unlock your full potential.</small>
+                            <small>Online coaching and programs designed to help you unlock your full potential.</small>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Saved4Real</p>
@@ -103,9 +104,9 @@
     
                     <!-- Contact Information -->
                     <div class="mt-4">
-                        <p><i class="fa fa-globe text-primary me-2"></i> <strong>Website:</strong> <a href="http://bimboilori.com" target="_blank">bimboilori.com</a></p>
+                        <p><i class="fa fa-whatsapp text-success me-2"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/2349028763627" target="_blank">Chat with us on WhatsApp</a></p>
                         <p><i class="fa fa-phone text-primary me-2"></i> <strong>Call:</strong> +234 9028763627</p>
-                        <p><i class="fa fa-envelope text-primary me-2"></i> <strong>Email:</strong> kingswitbloc@gmail.com</p>
+                        <p><i class="fa fa-envelope text-primary me-2"></i> <strong>Email:</strong> iloribimbo59@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -120,6 +121,8 @@
             <div class="row g-5">
                 <!-- Image Section -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="btn btn-primary mt-3">About BI</div>
+
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="assets/img/about.jpg" alt="About the Coach" style="object-fit: cover;">
                     </div>
@@ -132,14 +135,14 @@
                     BIPs is anchored by impactionaire <strong>Bimbo Ilori</strong> who is a dedicated life and purpose coach passionate about helping individuals break through limitations and design a fulfilling life. With years of experience in personal development, she has guided countless people toward clarity, confidence, and success.
                     </p>
                     <p class="mb-4">
-                        Through transformative books, engaging online courses, and personalized coaching, she provides the tools and insights you need to navigate life’s challenges and achieve your dreams. Her mission is simple: to empower you to live intentionally and unlock your full potential.
+                        Through transformative books, engaging online programs, and personalized coaching, she provides the tools and insights you need to navigate life’s challenges and achieve your dreams. Her mission is simple: to empower you to live intentionally and unlock your full potential.
                     </p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Life-Changing Books</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Transformative Online Courses</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Transformative Online programs</p>
                         </div>
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Personalized Coaching</p>
@@ -232,8 +235,8 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">ThriveForge Courses</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">programs</h6>
+                <h1 class="mb-5">ThriveForge programs</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
@@ -262,7 +265,7 @@
                 </div>
                 <!-- View More Button -->
             <div class="text-center mt-4">
-                <a href="{{route('courses')}}" class="btn btn-primary px-4 py-2">View More Courses</a>
+                <a href="{{route('courses')}}" class="btn btn-primary px-4 py-2">View More programs</a>
             </div>
             </div>
         </div>

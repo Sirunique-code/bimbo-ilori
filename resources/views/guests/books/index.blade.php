@@ -58,7 +58,11 @@
                         @foreach ($categoryBooks as $book)
                             <div class="item">
                                 <div class="card shadow-sm">
-                                    <img src="{{ asset('assets/img/' . $book->image) }}" class="card-img-top" alt="{{ $book->title }}">
+                                    <img src="{{ asset('storage/'  . $book->image) }}" class="card-img-top" alt="{{ $book->title }}">
+                        <p class="text-center"><strong>{{ $book->title}}: </strong>{{ Str::limit(strip_tags($book->description), 100, '...') }}</p>
+                        <a href="{{ route('books.show', $book->id) }}"
+                            class="btn btn-sm btn-primary px-3 border-end">Learn More</a>
+                                   
                                 </div>
                             </div>
                         @endforeach
@@ -68,7 +72,7 @@
                     <div class="text-center mt-3">
                         <a href="http://amazon.com/author/bimboilori" class="btn btn-warning mx-2" target="_blank">Buy via Amazon</a>
                         <a href="https://selar.co/m/abimbola-ilori1" class="btn btn-success mx-2" target="_blank">Buy via Selar</a>
-                        <a href="https://paystack.shop/bimboiloribooks" class="btn btn-primary mx-2" target="_blank">Buy via Paystack</a>
+                        <a href="{{$book->paystack_link}}" class="btn btn-primary mx-2" target="_blank">Buy via Paystack</a>
                     </div>
                 </div>
             @endforeach

@@ -36,7 +36,6 @@ class DatabaseSeeder extends Seeder
             BooksTableSeeder::class,
             QuoteSeeder::class,
             TestimonialSeeder::class,
-
         ]);
     }
 }

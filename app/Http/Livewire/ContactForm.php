@@ -36,11 +36,22 @@ class ContactForm extends Component
             'message' => $this->message,
         ];
 
-        Mail::to('iloribimbo59@gmail.com')->send(new ContactMail($data));
+        Mail::to('contact@bimboilori.com')->send(new ContactMail($data));
 
         session()->flash('success', 'Your message has been sent successfully.');
         $this->reset();
     }
 
+    public function subscribe()
+    {
+        $this->validate([
+            'newsletterEmail' => 'required|email',
+        ]);
+
+        Mail::to('contact@bimboilori.com')->send(new NewsletterMail($this->newsletterEmail));
+
+        $this->newsletterMessage = 'Thanks for subscribing!';
+        $this->reset('newsletterEmail');
+    }
     
 }

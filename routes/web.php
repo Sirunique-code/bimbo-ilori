@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 // Books Management Controlller
 use App\Livewire\Superadmin\Courses\Edit;
 
+//NewsLetter controller
+use App\Http\Controllers\NewsletterController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewsletterSubscriptionConfirmation;
 
 
 // Website Controllers
@@ -49,10 +53,6 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
      // ✅ Quotes Management Panel
      Route::get('/quotes', QuotesGallery::class)->name('superadmin.quotes.index');
 });
-
-
-
-
 
 // Show login page
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -108,6 +108,11 @@ Route::get('/books', function () {
     return view('guests.books.index', compact('books'));
 })->name('books.index');
 
+Route::get('/book/{id}', function ($id) {
+    $book = Book::findOrFail($id);
+    return view('guests.books.show', compact('book'));
+})->name('books.show');
+
 //About Route
 Route::get('/about', function () {
     return view('guests.about.index');
@@ -129,7 +134,22 @@ Route::get('/testimonials', function () {
 })->name('testimonials.index');
 
 
+// Handle newsletter subscription form submission
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
 
+// View all subscribed emails
+Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');
+
+Route::get('/test-no-reply', function () {
+    $email = 'uniquecreativenotion@gmail.com'; // Replace with your test email address
+    Mail::to($email)->send(new NewsletterSubscriptionConfirmation($email));
+    return 'Test email sent!';
+});
+
+//Courses Landing pages Routes
+Route::get('/rightreset', function(){
+    return view('guests.landing.rightreset.index');
+})->name('rightreset');
 
 
 
