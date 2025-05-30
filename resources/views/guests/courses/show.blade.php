@@ -8,37 +8,35 @@
 
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
+                     <a href="{{ route('courses') }}" class="btn btn-secondary mx-2"><i class="bi bi-arrow-left"> Go back</i></a>
                     <div class="course-item bg-light">
+                        <!-- Course Image -->
                         <div class="position-relative overflow-hidden text-center">
-                            <img class="img-fluid" src="{{ asset('storage/'.$course->course_image) }}" alt="{{ $course->course_title }}" style="max-height: 400px; width: auto;">
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">
-                                ${{ number_format($course->course_price_usd, 2) }} 
-                                (₦{{ number_format($course->course_price_ngn, 2) }})
-                            </h3>
-                            <div class="mb-3">
-                                @for($i = 0; $i < 5; $i++)
-                                    <small class="fa fa-star text-primary"></small>
-                                @endfor
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-3">{{ $course->course_title }}</h5>
+                            <img class="img-fluid" src="{{ asset('storage/' . $course->course_image) }}"
+                                alt="{{ $course->course_title }}" style="max-height: 400px; width: auto;">
                         </div>
 
+                        {{-- <!-- Embed Livewire Component Here -->
+                        @livewire('course-payment', ['course' => $course]) --}}
+
+                        <!-- Course Description -->
                         <div class="p-4">
-                            {!! $course->course_description !!}  <!-- Display full description -->
+                            {!! $course->course_description !!}
+                            <!-- Payment Buttons -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                                <a class="btn btn-success btn-lg" href="{{ $course->pay_link }}">Pay Now via Paystack</a>
+                                @if ($course->selar_link)
+                                <a class="btn btn-success btn-lg" href="{{ $course->selar_link }}">Pay Now via Selar</a>
+                                @endif
+                                <a href="{{ $course->register_link }}" class="btn btn-primary btn-lg">Register Here</a>
+                            </div>
                         </div>
-
-                        <div class="text-center pb-4">
-                            <a href="{{ $course->pay_link }}" class="btn btn-success btn-lg mx-2">Pay Here</a>
-                            <a href="{{ $course->register_link }}" class="btn btn-primary btn-lg mx-2">Register Here</a>
-                            <a href="{{ route('courses') }}" class="btn btn-secondary btn-lg mx-2">Back to Courses</a>
-                        </div>
+                        
+                        
                     </div>
+                    
                 </div>
             </div>
-
         </div>
     </div>
 </x-guest-layout>

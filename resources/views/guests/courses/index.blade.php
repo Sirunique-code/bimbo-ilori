@@ -75,21 +75,29 @@
     </div>
     </div>
 
-    <!-- Bimbo Ilori Books link -->
-    <div class="container-xxl py-5">
-
-        <p class="text-center mt-3">
-            You can purchase books by Bimbo Ilori via the platforms below:
-        </p>
-        <div class="text-center mt-3">
-            <a class="btn btn-warning py-2 px-4" href="http://amazon.com/author/bimboilori" target="_blank">Buy via
-                Amazon</a>
-            <a class="btn btn-success py-2 px-4" href="https://selar.co/m/abimbola-ilori1" target="_blank">Buy via
-                Selar</a>
-            <a class="btn btn-primary py-2 px-4" href="https://paystack.shop/bimboiloribooks" target="_blank">Buy via
-                Paystack</a>
+  <!-- Bimbo Ilori Books Link -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <div class="mb-4">
+                <img src="{{ asset('assets/img/legacy2.jpg') }}" 
+                    class="img-fluid rounded shadow-sm" 
+                    alt="Books and Writing" 
+                    style="max-width: 500px; width: 100%; height: auto;">
+            </div>
+            <p class="mt-3">
+                You can purchase books by Bimbo Ilori via the platforms below:
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                <a class="btn btn-warning py-2 px-4" href="https://www.amazon.com/stores/author/B08H1B27NT/allbooks" target="_blank">Buy via Amazon</a>
+                <a class="btn btn-success py-2 px-4" href="https://selar.co/m/abimbola-ilori1" target="_blank">Buy via Selar</a>
+                <a class="btn btn-primary py-2 px-4" href="https://paystack.shop/all-books-by-bimbo-ilori" target="_blank">Buy via Paystack</a>
+            </div>
         </div>
     </div>
+</div>
+
+      
     <!-- Bimbo Ilori Books link End-->
 
     <!-- KBLOC: Consults and Training Section -->

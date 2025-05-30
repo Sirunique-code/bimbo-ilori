@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('category');
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->string('amazon_link')->nullable();
+            $table->text('amazon_link')->nullable();
+            $table->text('bookselar_link')->nullable();
+            $table->text('bookamazon_link')->nullable();
+            $table->string('bookpaystack_link')->nullable();
+            $table->string('bookpaystackdigital_link')->nullable();
             $table->string('selar_link')->nullable();
             $table->string('paystack_link')->nullable();
             $table->timestamps();

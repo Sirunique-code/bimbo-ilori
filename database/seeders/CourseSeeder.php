@@ -48,6 +48,7 @@ class CourseSeeder extends Seeder
             'course_image' => $imageDirectory . 'course-11.jpg',
             'pay_link' => 'https://paystack.com/buy/as-one-gxsahq',
             'register_link' => 'https://forms.gle/TzXAddNzoxyZWvyF8',
+            'selar_link' => 'https://selar.com/14e24v',
         ]);
 
         Course::create([
@@ -71,6 +72,8 @@ class CourseSeeder extends Seeder
             'course_image' => $imageDirectory . 'course-44.jpg',
             'pay_link' => 'https://paystack.com/buy/mission-mastery-course-wwdjrd',
             'register_link' => 'https://forms.gle/R3qvMEErc3Jt7LK47',
+            'selar_link' => 'https://selar.com/o13fl7',
+
         ]);
 
         Course::create([
@@ -91,8 +94,8 @@ class CourseSeeder extends Seeder
     'course_price_ngn' => 15500.00, // Equivalent in Naira
     'course_duration' => '3 days',
             'course_image' => $imageDirectory . 'course-22.jpg',
-            'pay_link' => 'https://payment-gateway.com/pay/as-one',
-            'register_link' => 'https://bimboiloriministries.com/register/as-one',
+            'pay_link' => 'https://paystack.com/buy/brand-essence-blueprint-bbifvr',
+            'register_link' => 'https://forms.gle/77zyCtaMX9mHEuiP8',
         ]);
 
         Course::create([
@@ -116,8 +119,8 @@ class CourseSeeder extends Seeder
             'course_duration' => '6 weeks',
             'course_image' => $imageDirectory . 'course-33.jpg',
             'pay_link' => 'https://paystack.com/buy/rightreset-hxvysh',
-            'register_link' => 'https://forms.gle/R3qvMEErc3Jt7LK47',
-           
+            'register_link' => 'https://forms.gle/XZEtBHEztx31ayuJ6',
+            'selar_link' => 'https://selar.com/3a1n9g',
         ]);
 
         Course::create([
@@ -137,8 +140,8 @@ class CourseSeeder extends Seeder
     'course_price_ngn' => 10000.00, // Equivalent in Naira
             'course_duration' => '6 weeks',
             'course_image' => $imageDirectory . 'course-55.jpg',
-            'pay_link' => 'https://payment-gateway.com/pay/as-one',
-            'register_link' => 'https://bimboiloriministries.com/register/as-one',
+            'pay_link' => 'https://paystack.com/buy/nurtured-to-flourish-ftbrmc',
+            'register_link' => 'https://forms.gle/1kzBMGbsdsf3Ria87',
         ]);
 
         Course::create([
@@ -160,6 +163,7 @@ class CourseSeeder extends Seeder
             'course_image' => $imageDirectory . 'course-66.jpg',
             'pay_link' => 'https://paystack.com/buy/purposeful-parenting-dqodyz',
             'register_link' => 'https://forms.gle/Kwt8gkWzfZENKnV68',
+            'selar_link' => 'https://selar.com/08477i',
         ]);
 
         Course::create([
@@ -179,8 +183,10 @@ class CourseSeeder extends Seeder
     'course_price_ngn' => 50000.00, // Equivalent in Naira
             'course_duration' => '2-3 days',
             'course_image' => $imageDirectory . 'course-77.jpg',
-            'pay_link' => 'https://paystack.com/buy/nurtured-to-flourish-ftbrmc',
-            'register_link' => 'https://forms.gle/1kzBMGbsdsf3Ria87',
+            'pay_link' => 'https://paystack.com/buy/work-alignment-leap-rzyuxg',
+            'register_link' => 'https://forms.gle/X3bTSRHexepBi1e86',
+            'selar_link' => 'https://selar.com/z49q4z',
+
         ]);
     }
 }

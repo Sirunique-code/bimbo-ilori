@@ -1,0 +1,648 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #ffffff;
+}
+
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Section Base Styling */
+.section {
+    padding: 60px 20px;
+}
+
+.btn {
+    --bs-btn-color: #fff !important;
+}
+
+.d-flex .btn {
+    color: #ffffff !important;
+}
+
+.d-flex .btn1 {
+    color: #0b0404 !important;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(55, 0, 53));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+}
+
+.herosection-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #d8d8d8;
+    /* Purple for emphasis */
+}
+
+.hero-title {
+    color: #f8f9fa
+}
+
+.hero-img img {
+    width: 400px;
+    border-radius: 12px;
+    border: 10px solid #ffffff;
+    /* White border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+}
+
+/* Highlight "RIGHT RESET" in Yellow */
+.text-warning {
+    color: #FFC300;
+    /* Yellow */
+}
+
+/* Bold Paragraphs */
+.lead.fw-bold {
+    margin-top: 20px;
+    font-weight: 700;
+    /* Extra bold */
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.herotext-center {
+    color: #FFC300;
+    /* Purple accent color */
+}
+
+.sub-container {
+    background-color: rgba(255, 230, 0, 0.1);
+    padding: 15px;
+}
+
+.text-box {
+    background-color: #ffffff;
+    /* White background for text boxes */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the text box */
+    margin: 20px auto;
+    /* Margin around the text box */
+    max-width: 90%;
+    /* Responsive width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    color: #0b0404;
+}
+
+.text-box p {
+    font-size: 1.2rem;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height for readability */
+    text-align: center;
+    /* Center-aligned text */
+}
+
+.transparency-note {
+    text-align: center;
+    font-size: 0.8rem;
+    /* Smaller font size for the note */
+    color: #ffffff;
+    /* White text for visibility */
+    margin-top: 20px;
+    /* Space above the note */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    /* Purple for emphasis */
+}
+
+/* Section Titles */
+.mastersection-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #5F185A
+        /* Purple for emphasis */
+}
+
+.mastertext-center {
+    margin-top: 20px;
+    font-weight: 700;
+    /* Extra bold */
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.masterh4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5F185A;
+}
+
+.bg-second {
+    background-color: #FFC300;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.master {
+    padding: 30px;
+}
+
+.mastertext-center .btn {
+    background-color: #5F185A !important;
+    color: #ffffff
+}
+
+.p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ffcc23 !important;
+    /* Orange */
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    /* Semi-bold */
+    color: #000 !important;
+    /* Black text for contrast */
+}
+
+.btn-primary:hover {
+    background-color: #5F185A !important;
+    color: #f3f3f3 !important;
+    /* Slightly darker orange on hover */
+}
+
+/* Flyers Section */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for cards */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+}
+
+.card-img-top {
+    height: 400px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Ensure images are not stretched */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #5F185A;
+    /* Purple for emphasis */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #333;
+    /* Dark gray for readability */
+}
+
+/* Why Section*/
+
+
+.why-section {
+    background-color: #5F185A;
+    color: #ffffff
+}
+
+.whysection-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    /* Purple for emphasis */
+}
+
+/* Testimonials Section */
+.testimonial-card {
+    background-color: #ffffff;
+    /* White background */
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #5F185A !important;
+    /* Primary color (blue) */
+    margin-bottom: 10px;
+}
+
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    /* Dark gray text */
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-stars i {
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.rating-stars i:last-child {
+    margin-right: 0;
+}
+
+
+/* Accent Text */
+.accent-text {
+    color: #5F185A;
+    /* Purple accent color */
+}
+
+
+
+/* Bonuses Section */
+.bonus-list {
+font-size: 1rem;
+line-height: 1.8;
+color: #333; /* Dark gray text */
+}
+
+.bonus-item {
+position: relative;
+padding-left: 30px; /* Space for the checkmark icon */
+margin-bottom: 15px; /* Spacing between items */
+}
+
+.check-icon {
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+font-size: 1rem; /* Font size for the checkmark */
+font-weight: 700; /* Bold weight */
+color: #fff; /* White text for contrast */
+background-color: #00b4d8; /* Teal background for the checkmark */
+border-radius: 50%; /* Circular shape */
+width: 24px; /* Size of the circle */
+height: 24px; /* Size of the circle */
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 4px; /* Padding inside the circle */
+}
+
+.bonus-item strong {
+font-weight: 600; /* Semi-bold for emphasis */
+color: #5F185A; /* Purple for emphasis */
+}
+
+
+
+
+/* Bonuses Section */
+.bonus-card {
+    background-color: #ffffff;
+    /* White background */
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.bonus-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+}
+
+.bonus-number {
+    font-size: 4rem;
+    /* Very large number */
+    font-weight: 700;
+    /* Bold weight */
+    color: #FFC300;
+    /* Orange for emphasis */
+    margin-bottom: 10px;
+}
+
+.bonus-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    /* Semi-bold */
+    color: #5F185A;
+    /* Purple for emphasis */
+    margin-bottom: 10px;
+}
+
+.bonus-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #333;
+    /* Dark gray for readability */
+}
+
+
+/* Meet Bimbo Ilori Section */
+.meet-bimbo-section {
+    background-color: #f8f9fa;
+}
+
+.meet-title {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #FFC300;
+    /* Purple for emphasis */
+}
+
+.meet-subtitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    /* Purple for emphasis */
+}
+
+.meet-bimbo-section .accent-text {
+    color: #ffee00;
+}
+
+/* Rounded Circle Image */
+.img-fluid.rounded-circle {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Background Sections */
+.bg-dark-custom {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+/* Testimonials Carousel */
+.carousel-inner .carousel-item {
+    background-color: #ffffff;
+    /* Light gray background for slides */
+}
+
+.carousel-item img {
+    height: 300px;
+    width: 300px;
+    border: 5px solid #ffffff;
+    /* White border around the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.099);
+    /* Enhanced shadow */
+}
+
+.carousel-item p.lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+    /* Dark gray text */
+}
+
+.carousel-item strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #5F185A;
+    /* Purple for emphasis */
+}
+
+/* Carousel Indicators */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background-color: #FFC300 !important;
+    /* Orange for indicators */
+}
+
+.carousel-indicators .active {
+    background-color: #5F185A;
+    /* Purple for active indicator */
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #FFC300;
+    /* Orange for control icons */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Accordion Styling */
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    /* Dark gray text */
+    background-color: #f8f9fa;
+    /* Light gray background */
+    border: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* Remove focus outline */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FFC300;
+    /* Orange when expanded */
+    color: #000;
+    /* Black text for contrast */
+}
+
+.accordion-body {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #363636;
+    /* Slightly lighter gray text */
+    background-color: #f3f3f3
+}
+
+/* Hover Effect for Links */
+.text-decoration-underline {
+    text-decoration: underline;
+    color: #5F185A;
+    /* Purple for emphasis */
+}
+
+.text-decoration-underline:hover {
+    color: #5d115d;
+    /* Darker purple on hover */
+}
+
+.bonus-item {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #363636;
+    /* Slightly lighter gray text */
+    background-color: #f3f3f3;
+    margin-top: 10px;
+}
+
+.payment-card {
+    background-color: #ffffff;
+    /* White card background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift effect on hover */
+}
+
+.payment-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    /* Bold weight */
+    margin-bottom: 20px;
+}
+
+.payment-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Convener Profile Section */
+/* Knowledge Base Section */
+.knowledge-base-list {
+font-size: 1.2rem;
+line-height: 1.8;
+font-weight: 700;
+color: #1a1a1a; /* Dark gray text */
+}
+
+.knowledge-base-list li {
+position: relative;
+padding-left: 25px; /* Space for the checkmark icon */
+margin-bottom: 15px; /* Spacing between items */
+}
+
+.check-icon {
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+font-size: 1rem; /* Slightly smaller font size for better fit */
+font-weight: 700; /* Bold weight */
+color: #fff; /* White text for contrast */
+background-color: #00b4d8; /* Teal background for the checkmark */
+border-radius: 50%; /* Circular shape */
+width: 24px; /* Increased size for padding */
+height: 24px; /* Increased size for padding */
+display: flex;
+margin-left: -5px;
+align-items: center;
+justify-content: center;
+padding: 4px; /* Add padding inside the circle */
+}
+
+.knowledge-base-list em {
+font-style: italic;
+color: #161616; /* Purple for book titles */
+}
+
+
+/* Registration Form Section */
+.registration-form {
+  background-color: #ffffff; /* White background for the form */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.registration-form .form-label {
+  font-weight: 600; /* Semi-bold labels */
+  color: #333; /* Dark gray text */
+}
+
+.registration-form .form-control {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.registration-form .form-control:focus {
+  border-color: #FFC300; /* Orange border on focus */
+  box-shadow: 0 0 5px rgba(255, 195, 0, 0.5); /* Glow effect */
+}
+
+.registration-form .invalid-feedback {
+  font-size: 0.9rem;
+  color: #e74c3c; /* Red for error messages */
+}
+
+.registration-form .btn-primary {
+  background-color: #FFC300; /* Orange */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.25rem;
+  font-weight: 600; /* Semi-bold */
+  color: #000; /* Black text for contrast */
+}
+
+.registration-form .btn-primary:hover {
+  background-color: #e0b000; /* Slightly darker orange on hover */
+}
+
+/* Success Message */
+.alert-success {
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Green border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px;
+  margin-bottom: 20px;
+}

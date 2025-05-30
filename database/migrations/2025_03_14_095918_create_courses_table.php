@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('course_price_ngn', 10, 2)->nullable();  // Allowing NULL values
             $table->string('course_duration');
             $table->string('pay_link')->nullable();
+            $table->string('selar_link')->nullable();
             $table->string('register_link')->nullable();
             $table->string('course_image', 500)->nullable();
             $table->timestamps();

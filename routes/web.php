@@ -10,6 +10,8 @@ use App\Models\Testimonial;
 use App\Livewire\Auth\Login;
 use App\Livewire\CourseDetail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
+
 
 
 // Books Management Controlller
@@ -32,6 +34,9 @@ use App\Livewire\Superadmin\Quotes\QuotesGallery;
 use App\Http\Controllers\SuperAdmin\AuthController;
 use App\Http\Controllers\SuperAdmin\DashboardController;
 use App\Livewire\Superadmin\Testimonial\TestimonialsComponent;
+
+use App\Http\Controllers\RegistrationController;
+
 
 // Admin login Panel Routes
 
@@ -90,16 +95,31 @@ Route::get('/', function () {
     return view('welcome', compact('courses'));
 })->name('welcome');
 
-//Course Route
+
+
+// List All Courses
 Route::get('/our-courses', function () {
     $courses = Course::all();
     return view('guests.courses.index', compact('courses'));
 })->name('courses');
 
-Route::get('/courses/{id}', function ($id) {
-    $course = Course::findOrFail($id);
+// Show Single Course Details
+Route::get('/courses/{course}', function (Course $course) {
     return view('guests.courses.show', compact('course'));
 })->name('courses.show');
+
+// Success Page Route
+Route::get('/payment/success', function () {
+    return view('guests.courses.success'); // Updated path
+})->name('payment.success');
+
+// Error Page Route
+Route::get('/payment/error', function () {
+    return view('guests.courses.error'); // Updated path
+})->name('payment.error');
+
+
+
 
 
 //Books Route
@@ -152,5 +172,18 @@ Route::get('/rightreset', function(){
 })->name('rightreset');
 
 
+//Thank you Route
+Route::get('/thank-you', function () {
+    return view('guests.thank-you');
+})->name('thank-you');
+
+//Privacy-Policy
+Route::get('/privacy-policy', function () {
+    return view('guests.privacy-policy');
+})->name('privacy-policy');
+
+
+
+Route::post('/register', [RegistrationController::class, 'store'])->name('register.submit');
 
 

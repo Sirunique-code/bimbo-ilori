@@ -2,479 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Bimbo Ilori Programs | RightReset Course</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="keywords"
-        content="Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori">
-    <meta name="description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and achieve personal success.">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LPP4PFWS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- Open Graph Meta Tags (For Social Media) -->
+  gtag('config', 'G-B9LPP4PFWS');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RightReset | Bimbo Ilori</title>
+
+    <meta name="description" content="Join Bimbo Ilori's Right Reset journey — reset your mind and align with your true path.">
+    
+    <!-- Open Graph for social media sharing -->
+    <meta property="og:title" content="Right Reset | Bimbo Ilori">
+    <meta property="og:description" content="Join the transformative journey with Bimbo Ilori to reset your mindset and purpose.">
+    <meta property="og:image" content="{{ asset('assets/img/rightresetflyer3.jpg') }}">
+    <meta property="og:url" content="{{ url('/rightreset') }}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
-    <meta property="og:description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and achieve personal success.">
-    <meta property="og:image" content="{{ asset('assets/img/featured-image.jpg') }}">
-    <meta property="og:url" content="http://bimboilori.com">
-    <meta property="og:site_name" content="Bimbo Ilori Programs">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
-    <meta name="twitter:description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs.">
-    <meta name="twitter:image" content="{{ asset('assets/img/featured-image.jpg') }}">
-    <meta name="twitter:site" content="@yourtwitterhandle">
 
     <!-- Favicon -->
-    <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" defer>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
+
+    <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Include Laravel Echo and Pusher -->
+    @vite('resources/js/app.js')
 
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
-        }
-
-        .fas {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-        }
-
-        /* Section Base Styling */
-        .section {
-            padding: 60px 20px;
-        }
-
-        .btn {
-            --bs-btn-color: #fff;
-        }
-
-        .d-flex .btn {
-            color: #ffffff;
-        }
-
-        .d-flex .btn1 {
-            color: #0b0404;
-        }
-
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(55, 0, 53)), url('assets/img/rightresethero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .herosection-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #d8d8d8;
-            /* Purple for emphasis */
-        }
-
-        .hero-title {
-            color: #f8f9fa
-        }
-
-        .hero-img img {
-            width: 400px;
-            border-radius: 12px;
-            border: 10px solid #ffffff;
-            /* White border */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            /* Enhanced shadow */
-        }
-
-        /* Highlight "RIGHT RESET" in Yellow */
-        .text-warning {
-            color: #FFC300;
-            /* Yellow */
-        }
-
-        /* Bold Paragraphs */
-        .lead.fw-bold {
-            margin-top: 20px;
-            font-weight: 700;
-            /* Extra bold */
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: #ffffff;
-        }
-
-        .herotext-center {
-            color: #FFC300;
-            /* Purple accent color */
-        }
-
-        .sub-container {
-            background-color: rgba(255, 230, 0, 0.1);
-            padding: 15px;
-        }
-
-        .text-box {
-            background-color: #ffffff;
-            /* White background for text boxes */
-            border-radius: 10px;
-            /* Rounded corners */
-            padding: 20px;
-            /* Padding inside the text box */
-            margin: 20px auto;
-            /* Margin around the text box */
-            max-width: 90%;
-            /* Responsive width */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow */
-            color: #0b0404;
-        }
-
-        .text-box p {
-            font-size: 1.2rem;
-            /* Font size */
-            line-height: 1.6;
-            /* Line height for readability */
-            text-align: center;
-            /* Center-aligned text */
-        }
-
-        .transparency-note {
-            text-align: center;
-            font-size: 0.8rem;
-            /* Smaller font size for the note */
-            color: #ffffff;
-            /* White text for visibility */
-            margin-top: 20px;
-            /* Space above the note */
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #ffffff;
-            /* Purple for emphasis */
-        }
-
-        /* Section Titles */
-        .mastersection-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #5F185A
-                /* Purple for emphasis */
-        }
-
-        .mastertext-center {
-            margin-top: 20px;
-            font-weight: 700;
-            /* Extra bold */
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: #000000;
-        }
-
-        .masterh4 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #5F185A;
-        }
-
-        .bg-second {
-            background-color: #FFC300;
-            padding: 20px;
-            border-radius: 5px;
-
-        }
-
-        .master {
-            padding: 30px;
-        }
-
-        .mastertext-center .btn {
-            background-color: #5F185A;
-            color: #ffffff
-        }
-
-        .p {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #FFC300;
-            /* Orange */
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            /* Semi-bold */
-            color: #000;
-            /* Black text for contrast */
-        }
-
-        .btn-primary:hover {
-            background-color: #e0b000;
-            /* Slightly darker orange on hover */
-        }
-
-        /* Flyers Section */
-        .card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow for cards */
-            transition: transform 0.3s ease-in-out;
-            /* Smooth hover effect */
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            /* Slight lift on hover */
-        }
-
-        .card-img-top {
-            height: 400px;
-            /* Fixed height for consistency */
-            object-fit: cover;
-            /* Ensure images are not stretched */
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #5F185A;
-            /* Purple for emphasis */
-        }
-
-        .card-text {
-            font-size: 1rem;
-            color: #333;
-            /* Dark gray for readability */
-        }
-
-        /* Why Section*/
-
-
-        .why-section {
-            background-color: #5F185A;
-            color: #ffffff
-        }
-
-        .whysection-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #ffffff;
-            /* Purple for emphasis */
-        }
-
-        /* Testimonials Section */
-        .testimonial-card {
-            background-color: #ffffff;
-            /* White background */
-            border: 1px solid #e0e0e0;
-            /* Light gray border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow */
-        }
-
-        .quote-icon {
-            font-size: 2rem;
-            color: #5F185A !important;
-            /* Primary color (blue) */
-            margin-bottom: 10px;
-        }
-
-
-        .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
-            /* Dark gray text */
-        }
-
-        .rating-stars {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .rating-stars i {
-            font-size: 1.2rem;
-            margin-right: 2px;
-        }
-
-        .rating-stars i:last-child {
-            margin-right: 0;
-        }
-
-
-        /* Accent Text */
-        .accent-text {
-            color: #5F185A;
-            /* Purple accent color */
-        }
-
-        /* Bonuses Section */
-        .bonus-card {
-            background-color: #ffffff;
-            /* White background */
-            border: 1px solid #e0e0e0;
-            /* Light gray border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow */
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .bonus-card:hover {
-            transform: translateY(-5px);
-            /* Slight lift effect on hover */
-        }
-
-        .bonus-number {
-            font-size: 4rem;
-            /* Very large number */
-            font-weight: 700;
-            /* Bold weight */
-            color: #FFC300;
-            /* Orange for emphasis */
-            margin-bottom: 10px;
-        }
-
-        .bonus-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            /* Semi-bold */
-            color: #8E24AA;
-            /* Purple for emphasis */
-            margin-bottom: 10px;
-        }
-
-        .bonus-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1.6;
-            color: #333;
-            /* Dark gray for readability */
-        }
-
-
-        /* Meet Bimbo Ilori Section */
-        .meet-bimbo-section {
-            background-color: #f8f9fa;
-        }
-
-        .meet-title {
-            margin-top: 10px;
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: #FFC300;
-            /* Purple for emphasis */
-        }
-
-        .meet-subtitle {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #ffffff;
-            /* Purple for emphasis */
-        }
-
-        .meet-bimbo-section .accent-text {
-            color: #ffee00;
-        }
-
-        /* Rounded Circle Image */
-        .img-fluid.rounded-circle {
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Dark Background Sections */
-        .bg-dark-custom {
-            background-color: #1c1c1c;
-            color: #fff;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #f8f9fa;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        /* Accordion Styling */
-        .accordion-button {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-            /* Dark gray text */
-            background-color: #f8f9fa;
-            /* Light gray background */
-            border: none;
-        }
-
-        .accordion-button:focus {
-            box-shadow: none;
-            /* Remove focus outline */
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: #FFC300;
-            /* Orange when expanded */
-            color: #000;
-            /* Black text for contrast */
-        }
-
-        .accordion-body {
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 1.6;
-            color: #363636;
-            /* Slightly lighter gray text */
-            background-color: #f3f3f3
-        }
-
-        /* Hover Effect for Links */
-        .text-decoration-underline {
-            text-decoration: underline;
-            color: #8E24AA;
-            /* Purple for emphasis */
-        }
-
-        .text-decoration-underline:hover {
-            color: #5d115d;
-            /* Darker purple on hover */
-        }
-
-        .bonus-item{
-            font-size: 1.3rem;
-            font-weight: 500;
-            line-height: 1.6;
-            color: #363636;
-            /* Slightly lighter gray text */
-            background-color: #f3f3f3;
-            margin-top: 10px;
-        }
-    </style>
+   
+@livewireStyles
 </head>
 
 <body>
@@ -490,7 +62,7 @@
 
             <!-- Image -->
             <div class="hero-img">
-                <img src="assets/img/rightrestflyer3.jpg" alt="Bimbo Ilori" class="img-fluid shadow-lg">
+                <img src="assets/img/course-33.jpg" alt="Bimbo Ilori" class="img-fluid shadow-lg">
             </div>
 
             <!-- Paragraphs -->
@@ -513,7 +85,7 @@
                 </div>
                 <div class="text-box">
                     <p>
-                        This RightResets discovery and clarity interactive, unveiling webinar is what you need.
+                        The RightReset Discovery and Clarity Masterclass is the breakthrough you’ve been waiting for — interactive, insightful, and designed just for you.
                     </p>
                 </div>
             </div>
@@ -529,8 +101,8 @@
     <section class="section bg-light">
         <div class="container">
             <h2 class="mastersection-title text-center">RightReset Masterclass with Coach Bimbo Ilori</h2>
-            <p class="text-center lead">
-                Join the Right Reset masterclass, where you’ll unlock the tools, strategies, and inspiration to:
+            <p class="text-center " style="font-size: 23px">
+                Join the Right Reset masterclass on <strong class="text-success"> June 28th, by 8pm, </strong> where you’ll unlock the tools, strategies, and inspiration to:
             </p>
             <div class="row mt-4">
                 <div class="col-md-4 text-center master shadow">
@@ -554,7 +126,8 @@
                 purpose, balance, and fulfillment.
             </p>
             <div class="mastertext-center d-flex justify-content-center mt-4">
-                <a href="https://forms.gle/R3qvMEErc3Jt7LK47" class="btn btn-primary">Join the course Now</a>
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Join the Masterclass now with just an investment of N15500
+(Unlock bonuses worth 200k)</a>
             </div>
         </div>
     </section>
@@ -563,17 +136,17 @@
     <!-- Flyers Section -->
     <section class="py-5 bg-light">
         <div class="container">
-                <!-- Flyer 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="assets/img/rightrestflyer1.jpg" alt="Flyer 1" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Discover Your Path</h5>
-                            <p class="card-text">Clarify your next steps and uncover hidden opportunities.</p>
-                        </div>
+            <!-- Flyer 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="assets/img/rightrestflyer1.jpg" alt="Flyer 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Discover Your Path</h5>
+                        <p class="card-text">Clarify your next steps and uncover hidden opportunities. <br><strong class="text-success">Date: 28th June, 2025.  <br> Time: 8pm</strong> </p>
                     </div>
                 </div>
-                {{-- <!-- Flyer 3 -->
+            </div>
+            {{-- <!-- Flyer 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100">
                         <img src="assets/img/rightrestflyer3.jpg" alt="Flyer 3" class="card-img-top">
@@ -691,36 +264,119 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="https://forms.gle/R3qvMEErc3Jt7LK47" class="btn btn-primary">Be the Next Testifier!</a>
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Be the Next Testifier!</a>
             </div>
         </div>
     </section>
 
     <!-- Bonuses Section 1 -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="mastersection-title text-center">What You Will Walk Away With</h2>
-            <ul class="list-unstyled">
-                <li class="bonus-item">✅ Identify what’s holding you back and discover how to move past limiting
-                    beliefs.</li>
-                <li class="bonus-item">✅ Reclaim your focus and energy by learning proven strategies to realign your
-                    priorities.</li>
-                <li class="bonus-item">✅ Gain clarity on your true purpose and what drives you.</li>
-                <li class="bonus-item">✅ Overcome doubt, fear, and obstacles that hold you back.</li>
-                <li class="bonus-item">✅ Create a mission statement that serves as your compass.</li>
-                <li class="bonus-item">✅ Build habits and structures that keep you aligned with your goals.</li>
-                <li class="bonus-item">✅ Sustain long-term momentum while making a meaningful impact.</li>
-                <li class="bonus-item">✅ Craft a clear action plan to reset your path and achieve your next big
-                    breakthrough.</li>
-                <li class="bonus-item">✅ A crystal-clear action plan to realign with your purpose.</li>
-                <li class="bonus-item accent-text">✅ Additional Bonus worth ₦250,000</li>
-            </ul>
-            <div class="text-center mt-4">
-                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">Join Now for $10.00
-                    (₦15,500.00)</a>
-            </div>
-        </div>
-    </section>
+<section class="section bg-light">
+    <div class="container">
+      <h2 class="mastersection-title text-center">What You Will Walk Away With</h2>
+      <p class="text-center lead mb-4">In this masterclass, you will:</p>
+      <ul class="list-unstyled bonus-list">
+        <!-- Pre-Session Clarity Diagnostic -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Get a Pre-Session Clarity Diagnostic</strong> – A powerful self-assessment to uncover where you truly are.
+        </li>
+        <!-- Pinpoint What’s Holding You Back -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Pinpoint What’s Holding You Back</strong> – Identify internal blocks and limiting beliefs keeping you stuck.
+        </li>
+        <!-- Reclaim Your Focus and Energy -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Reclaim Your Focus and Energy</strong> – Learn simple, powerful strategies to reset your priorities and regain momentum.
+        </li>
+        <!-- Clarity Guide Blueprint -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Get a Clarity Guide Blueprint</strong> – A guided tool to help you mentally declutter and gain direction.
+        </li>
+        <!-- Break Through Fear and Doubt -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Break Through Fear and Doubt</strong> – Learn how to confront and conquer the invisible barriers within.
+        </li>
+        <!-- Build Aligned Habits and Structures -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Build Aligned Habits and Structures (Anchors)</strong> – Practical systems to help you stay focused and faithful to your goals.
+        </li>
+        <!-- Develop a Clear Action Plan -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Develop a Clear Action Plan</strong> – Leave with a tangible roadmap to help you move toward your next breakthrough.
+        </li>
+        <!-- Create a Mission Statement -->
+        <li class="bonus-item">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Create a Mission Statement</strong> – A compass to guide your decisions and actions.
+        </li>
+        <!-- Additional Bonus -->
+        <li class="bonus-item accent-text">
+          <span class="check-icon"><i class="fas fa-check"></i></span>
+          <strong>Additional Bonus worth ₦250,000</strong>
+        </li>
+      </ul>
+      <div class="text-center mt-4">
+        <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">Join Now for $10.00 (₦15,500.00)</a>
+      </div>
+    </div>
+</section>
+
+<!-- Registration Form Section -->
+<section class="section why-section">
+  <div class="container">
+    <h2 class="section-title text-center">Register Now</h2>
+    <p class="text-center lead mb-5">Secure your spot in the Right Reset Master Class by filling out the form below.</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <form id="registrationForm" action="{{ route('register.submit') }}" method="POST" class="needs-validation" novalidate>
+  @csrf <!-- CSRF Token -->
+  <!-- Full Name Field -->
+  <div class="mb-3">
+    <label for="fullName" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+    <div class="invalid-feedback">
+      Please enter your full name.
+    </div>
+  </div>
+  <!-- WhatsApp Number Field -->
+  <div class="mb-3">
+    <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
+    <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" placeholder="Enter your WhatsApp number" required>
+    <div class="invalid-feedback">
+      Please enter a valid WhatsApp number.
+    </div>
+  </div>
+  <!-- Email Field -->
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+    <div class="invalid-feedback">
+      Please enter a valid email address.
+    </div>
+  </div>
+  <!-- Submit Button -->
+  <div class="text-center mt-4">
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+
+  @if(session('success'))
+<div class="alert alert-success text-center">
+  {{ session('success') }}
+</div>
+@endif
+
+</section>
+
 
     <!-- Bonuses Section 2 -->
     <section class="py-5 bg-light">
@@ -742,8 +398,8 @@
                     <div class="bonus-card text-center p-4 border rounded shadow-sm">
                         <h1 class="bonus-number text-warning">2</h1>
                         <p class="bonus-text">
-                            A live Questions & Answers session with Coach BI for further clarity on your reset. Leverage
-                            my expertise and experience. Worth <strong class="text-success">N100,000</strong>.
+                            A bonus gift for further clarity on your reset. Leverage
+                            my expertise and experience. Worth <strong class="text-success">N50,000</strong>.
                         </p>
                     </div>
                 </div>
@@ -762,19 +418,285 @@
                     <div class="bonus-card text-center p-4 border rounded shadow-sm">
                         <h1 class="bonus-number text-warning">4</h1>
                         <p class="bonus-text">
-                            A powerful tool to analyze your strengths and skills. Worth <strong class="text-success">N50,000</strong>.
+                            A powerful tool to analyze your strengths and skills. Worth <strong
+                                class="text-success">N50,000</strong>.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="https://forms.gle/R3qvMEErc3Jt7LK47" class="mastersection-title ">Don't miss out on this BIG offer!</a>
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="mastersection-title ">Don't miss the slot, Register here!</a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-5 bg-light">
+    <!-- Testimonials Carousel Section with pictures-->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center text-dark">More testimonials from our clients</h2>
+            <p class="text-center lead mb-5">Hear from those who have experienced transformative growth with Coach BI.
+            </p>
+
+            <!-- Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/pristilla.jpg" alt="Pristilla" class="img-fluid shadow-lg"
+                                    style="max-width: 300px;">
+                            </div>
+                            <div class="col-md-6 mt-4 px-3">
+                                <p class="lead mb-4">
+                                    "I was helped to develop leadership skills that include making good decisions,
+                                    managing teams, and motivating others. These skills have made me a better leader,
+                                    prepared for any challenge."
+                                </p>
+                                <strong>- Pristilla</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/damola.jpg" alt="Damola" class="img-fluid shadow-lg"
+                                    style="max-width: 300px;">
+                            </div>
+                            <div class="col-md-6 mt-4 px-3">
+                                <p class="lead mb-4">
+                                    "My encounter with your training and the tasks given helped me develop targeted
+                                    potentials I didn’t even know I had. As I diligently worked on the tasks, I
+                                    discovered my abilities. Subsequently, I registered a startup with the CAC
+                                    (Corporate Affairs Commission), and it is doing well. Thank you."
+                                </p>
+                                <strong>- Damola</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-center">
+                                <img src="assets/img/joy.jpg" alt="Joy" class="img-fluid shadow-lg"
+                                    style="max-width: 300px;">
+                            </div>
+                            <div class="col-md-6 mt-4 px-3">
+                                <p class="lead mb-4">
+                                    "I had a great and worthwhile time with you. It has served as a bedrock and
+                                    foundation for my career. I'm always thankful to God for ordering my steps. The
+                                    leadership was excellent."
+                                </p>
+                                <strong>- Joy</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">BE THE NEXT TESTIFIER, REGISTER
+                    NOW!!!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Bimbo Ilori Section -->
+    <section class="section meet-bimbo-section bg-dark-custom">
+        <div class="container">
+            <h2 class="section-title text-center">Meet the Convener – <span class="text-warning">Bimbo Ilori </span>
+            </h2>
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="assets/img/introduction1.jpg" alt="Bimbo Ilori" class="img-fluid shadow-lg"
+                        style="max-width: 350px;">
+                </div>
+                <h5 class="meet-title">Coach | Author | Purpose Strategist | Founder, ThriveForge</h5>
+                <!-- Text Column -->
+                <div class="col-md-6">
+                    {{-- <p class="lead mb-4">
+                        <strong>Variable-Synced<br>Vision-Aligned</strong><br>
+                        Bimbo Ilori Programs (BIPs)
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li><i class="fas fa-check-circle me-2 accent-text"></i> KBloc Consults (consultation,
+                            training)
+                        </li>
+                        <li><i class="fas fa-check-circle me-2 accent-text"></i> ThriveForge Online Courses and
+                            Coaching
+                            Program</li>
+                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Book Publications and Blogs</li>
+                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Kingswit International School</li>
+                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Podcasts and Teachings</li>
+                    </ul> --}}
+                    <p class="meet-subtitle">
+                        I have seen many people constantly starting over — in relationships, in business, in purpose. It
+                        wasn’t because they were lazy or lacked potential, but because they never paused long enough to
+                        set right. They were doing a lot, but going nowhere fast. And that stirred something deep in
+                        me.<br><br>
+
+                        I’ve always believed that clarity is a gift — and one we don’t have to stumble into. I didn’t
+                        come into alignment through chaos or confusion.
+
+                    </p>
+                    <p class="meet-subtitle">
+                        I followed divine principles, embraced structure, and walked with God intentionally. That’s why
+                        I know stability is possible, not just spiritually, but practically. <br><br>
+
+                        That journey, one marked by structure, grace, and intentional obedience, is what fuels my
+                        passion today. I’ve authored over 35 books, (on life purpose and personal development), built
+                        multiple businesses, and coached countless individuals into alignment, not because I’m perfect,
+                        but because I’m proof that you don’t need to crash to be course-correct.
+
+                    </p>
+
+                    <h5 class="meet-title">That’s why I created the Right Reset Masterclass.</h5>
+
+                    <p class="meet-subtitle">
+                        This isn’t just another event. It’s a divine pause — a sacred space to reassess where you are,
+                        realign with who you’re becoming, and reset with intention. It’s for those who are tired of just
+                        moving and are now ready to move right. For those who’ve achieved some progress but sense
+                        there's another layer of clarity, depth, and destiny waiting. <br><br>
+
+                        I believe that the right reset doesn’t take you backward — it repositions you forward. It clears
+                        the fog. It redeems the time. It restores your focus.
+
+                    </p>
+                    <p class=" mastertext-center text-center bg-second">
+                        So if you’re done with circling, and ready to step into your next with boldness, strategy, and
+                        spiritual alignment, then welcome. You’re in the right place.
+
+                    </p>
+                    <div class="mastertext-center d-flex justify-content-center mt-4" style="margin-bottom: 20px;">
+                        <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Let’s reset — the right
+                            way.</a>
+
+                    </div>
+                    <div class="text-center pb-4" style="margin-top: 30px">
+                        <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-success btn-lg mx-2">Pay
+                            Here</a>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="d-flex justify-content-center mt-2 text-white">
+
+                        <a class="btn btn-social-icon btn-instagram me-3"
+                            href="https://www.instagram.com/bimboilori_bi/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-facebook me-3"
+                            href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-linkedin me-3"
+                            href="https://www.linkedin.com/in/bimbo-iiori" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-spotify me-3"
+                            href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-globe"
+                            href="https://www.bimboilori.com" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+        <!-- Convener Profile Section -->
+<section class="py-5" style="background-color: #FFC300">
+    <div class="container">
+      <h2 class="section-title text-center">What you'll gain from me</h2>
+      <p class="text-center lead mb-5">Explore valuable insights and resources from Coach Bimbo Ilori.</p>
+      <ul class="knowledge-base-list list-unstyled">
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Life Purpose and Personal Development Coach with years of impactful coaching experience</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Author of over 35 transformational books, including Purpose Tiers and Built to Last</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Creator of the 5-V Anchors of Purpose framework, helping hundreds discover and live out purpose</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Founder of ThriveForge and KBloc Consults, equipping individuals and businesses for growth</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Masterclass Host and Conference Speaker delivering practical, spirit-led strategies for success</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Coach to emerging and existing leaders, helping them gain clarity, confidence, and lasting results</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Proven track record of turning pain into purpose and principles into pathways</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Known for delivering deep, relatable, and faith-based insights with actionable tools</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Featured on multiple media platforms for inspiring personal and relationship transformations</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Trained over 2,000 individuals directly through institutions and platforms—backed by powerful testimonials</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Cumulatively impacted over 10,000 people through teachings, books, and training resources</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Integrative Life Coach blending faith, wisdom, and results-oriented coaching</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A structure practitioner who lends direction and organization to individuals and institutions</em></li>
+       
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Chartered Administrator and Fellow of the Chartered Administrator Guild, (FCIA).</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Certified Life Purpose Coach and trained Counselor</em></li>
+        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A coach with a clear voice, a deep sense of calling, and a commitment to helping others thrive</em></li>
+      </ul>
+      <div class=" mastertext-center d-flex justify-content-center mt-5">
+        <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary btn-lg">Yes, I Want to Register for This Course</a>
+      </div>
+    </div>
+</section>
+
+    <!-- Payment Section -->
+    <section class="py-5 " style="background-color: #DE4A09">
+        <div class="container">
+            <h2 class="section-title text-center text-white">Bank Transfer</h2>
+            <p class="text-center lead text-white mb-4">Make your payment now to secure your spot in the Right Reset
+                Course.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="payment-card p-5 text-center rounded shadow-lg" style="background-color: #ffffff;">
+                        <!-- Bank Logo -->
+                        <img src="assets/img/gtbank-logo.png" alt="GTBank Logo" class="mb-4"
+                            style="max-width: 150px;">
+                        <!-- Account Details -->
+                        <h3 class="payment-title text-dark">Account Details</h3>
+                        <p class="payment-text text-dark">Account Name: <br> <strong>
+                                <h2>Abimbola Ilori</h2>
+                            </strong></p>
+                        <p class="payment-text text-dark">Account Number: <br> <strong>
+                                <h2>0949179994</h2>
+                            </strong> </p>
+                        <p class="payment-text text-dark">Bank: <br> <strong>
+                                <h2> GTBank</h2>
+                            </strong></p>
+                        <!-- Call-to-Action Button -->
+                        <div class="mt-4">
+                            <p>Send payment receipt to whatsapp:</p>
+                            <a href="https://wa.me/2349028763627" class="btn btn-success btn-lg">Send Receipt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- FAQ Section -->
+     <section class="py-5 bg-light">
         <div class="container">
             <h2 class="mastersection-title text-center">FAQs</h2>
             <div class="accordion" id="faqAccordion">
@@ -859,7 +781,7 @@
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            You can register by clicking <a href="https://forms.gle/R3qvMEErc3Jt7LK47"
+                            You can register by clicking <a href="https://forms.gle/XZEtBHEztx31ayuJ6"
                                 class="text-decoration-underline">here</a>. Secure your spot now and take the first
                             step toward your reset!
                         </div>
@@ -869,123 +791,95 @@
         </div>
     </section>
 
-
-    <!-- Meet Bimbo Ilori Section -->
-    <section class="section meet-bimbo-section bg-dark-custom">
-        <div class="container">
-            <h2 class="section-title text-center">Meet the Convener – <span class="text-warning">Bimbo Ilori </span>
-            </h2>
-            <div class="row align-items-center">
-                <!-- Image Column -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="assets/img/introduction1.jpg" alt="Bimbo Ilori" class="img-fluid shadow-lg"
-                        style="max-width: 350px;">
-                </div>
-                <h5 class="meet-title">Coach | Author | Purpose Strategist | Founder, ThriveForge</h5>
-                <!-- Text Column -->
-                <div class="col-md-6">
-                    {{-- <p class="lead mb-4">
-                        <strong>Variable-Synced<br>Vision-Aligned</strong><br>
-                        Bimbo Ilori Programs (BIPs)
-                    </p>
-                    <ul class="list-unstyled mb-4">
-                        <li><i class="fas fa-check-circle me-2 accent-text"></i> KBloc Consults (consultation,
-                            training)
-                        </li>
-                        <li><i class="fas fa-check-circle me-2 accent-text"></i> ThriveForge Online Courses and
-                            Coaching
-                            Program</li>
-                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Book Publications and Blogs</li>
-                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Kingswit International School</li>
-                        <li><i class="fas fa-check-circle me-2 accent-text"></i> Podcasts and Teachings</li>
-                    </ul> --}}
-                    <p class="meet-subtitle">
-                        I have seen many people constantly starting over — in relationships, in business, in purpose. It
-                        wasn’t because they were lazy or lacked potential, but because they never paused long enough to
-                        set right. They were doing a lot, but going nowhere fast. And that stirred something deep in
-                        me.<br><br>
-
-                        I’ve always believed that clarity is a gift — and one we don’t have to stumble into. I didn’t
-                        come into alignment through chaos or confusion.
-
-                    </p>
-                    <p class="meet-subtitle">
-                        I followed divine principles, embraced structure, and walked with God intentionally. That’s why
-                        I know stability is possible, not just spiritually, but practically. <br><br>
-
-                        That journey, one marked by structure, grace, and intentional obedience, is what fuels my
-                        passion today. I’ve authored over 35 books, (on life purpose and personal development), built
-                        multiple businesses, and coached countless individuals into alignment, not because I’m perfect,
-                        but because I’m proof that you don’t need to crash to be course-correct.
-
-                    </p>
-
-                    <h5 class="meet-title">That’s why I created the Right Reset Masterclass.</h5>
-
-                    <p class="meet-subtitle">
-                        This isn’t just another event. It’s a divine pause — a sacred space to reassess where you are,
-                        realign with who you’re becoming, and reset with intention. It’s for those who are tired of just
-                        moving and are now ready to move right. For those who’ve achieved some progress but sense
-                        there's another layer of clarity, depth, and destiny waiting. <br><br>
-
-                        I believe that the right reset doesn’t take you backward — it repositions you forward. It clears
-                        the fog. It redeems the time. It restores your focus.
-
-                    </p>
-                    <p class=" mastertext-center text-center bg-second">
-                        So if you’re done with circling, and ready to step into your next with boldness, strategy, and
-                        spiritual alignment, then welcome. You’re in the right place.
-
-                    </p>
-                    <div class="mastertext-center d-flex justify-content-center mt-4" style="margin-bottom: 20px;">
-                        <a href="https://forms.gle/R3qvMEErc3Jt7LK47" class="btn btn-primary">Let’s reset — the right
-                            way.</a>
-                    </div>
-
-                    <!-- Social Media Icons -->
-                    <div class="d-flex justify-content-center mt-2 text-white">
-
-                        <a class="btn btn-social-icon btn-instagram me-3"
-                            href="https://www.instagram.com/bimboilori_bi/" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-facebook me-3"
-                            href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-linkedin me-3"
-                            href="https://www.linkedin.com/in/bimbo-iiori" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-spotify"
-                            href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
-                            <i class="fab fa-spotify"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </div>
-    </section>
-
-    <div class="text-center pb-4" style="margin-top: 30px">
-        <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-success btn-lg mx-2">Pay Here</a>
-    </div>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Bimbo Ilori Programs. All rights reserved. <span class="text-dark"><a
-                        href="www.bimboilori.com">www.bimboilori.com</a></span></p>
+                        href="https://bimboilori.com/">www.bimboilori.com</a></span></p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    
+<!-- Notification popup -->
+<div id="registration-notification" style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
+    The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
+</div>
 
 
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const form = this;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Show success message
+                const successDiv = document.createElement('div');
+                successDiv.className = 'alert alert-success text-center';
+                successDiv.textContent = data.success;
+                form.parentNode.insertBefore(successDiv, form.nextSibling);
+
+                // Optionally clear form
+                form.reset();
+
+                // Hide message after 5 seconds
+                setTimeout(() => successDiv.remove(), 5000);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
+    });
+</script>
+
+
+<div id="registration-notification" style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
+    The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
+</div>
+
+<script>
+    if (typeof Echo === 'undefined') {
+        console.error("❌ Echo is NOT loaded!");
+    } else {
+        console.log("✅ Echo is loaded!");
+
+        window.Echo.channel('public-channel')
+            .listen('.new-registration', (e) => {
+                console.log("📩 Received event:", e);
+                const el = document.getElementById('registration-notification');
+                const nameSpan = document.getElementById('registrant-name');
+
+                nameSpan.textContent = e.name;
+                el.style.display = 'block';
+
+                setTimeout(() => {
+                    el.style.display = 'none';
+                }, 5000);
+            });
+    }
+</script>
+
+
+
+
+
+@livewireScripts
 
 </body>
 

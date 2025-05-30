@@ -9,13 +9,17 @@ class Book extends Model
 { 
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'category',
-        'description',
-        'image',
-        'amazon_link',
-        'selar_link',
-        'paystack_link',
-    ];
+   protected $fillable = [
+    'title',
+    'bookpaystackdigital_link', // Make sure this is included
+    'bookpaystack_link',
+    'bookamazon_link',
+    'bookselar_link',
+    'category',
+    'description',
+    'image',
+    'amazon_link',
+    'selar_link',
+    'paystack_link'
+];
 }

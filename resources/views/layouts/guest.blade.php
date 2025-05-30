@@ -2,8 +2,21 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G38XVXDHPV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-G38XVXDHPV');
+    </script>
+
     <meta charset="utf-8">
-    <title>Bimbo Ilori Programs | Life Purpose Coaching & Personal Development</title>
+    <title>Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="keywords"
         content="Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori">
@@ -12,7 +25,7 @@
 
     <!-- Open Graph Meta Tags (For Social Media) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
+    <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.">
     <meta property="og:description"
         content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and achieve personal success.">
     <meta property="og:image" content="{{ asset('assets/img/featured-image.jpg') }}">
@@ -21,11 +34,26 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bimbo Ilori Programs | Life Purpose Coaching & Personal Development">
+    <meta name="twitter:title"
+        content="Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.">
     <meta name="twitter:description"
         content="Transform your life with Bimbo Ilori’s coaching, books, and online programs.">
     <meta name="twitter:image" content="{{ asset('assets/img/featured-image.jpg') }}">
     <meta name="twitter:site" content="@yourtwitterhandle">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Bimbo Ilori Programs",
+          "url": "https://www.bimboliori.com",
+          "logo": "https://bimboilori.com/assets/img/bi-logo-full2.png",
+          "sameAs": [
+            "https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL",
+            "https://www.instagram.com/bimboilori_bi/"
+          ]
+        }
+        </script>
 
     <!-- Favicon -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
@@ -38,7 +66,8 @@
         rel="stylesheet" loading="lazy">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" defer>
+    <!-- Font Awesome 6.4+ CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" defer>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
 
     <!-- Libraries Stylesheet -->
@@ -136,6 +165,9 @@
                                 class="fab fa-spotify"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/bimbo-iiori"><i
                                 class="fab fa-linkedin-in"></i></a>
+                                  <a class="btn btn-outline-light btn-social" href="https://x.com/BimboIlori9228?t=IXNLk2zrhiemZZ33ejojyQ&s=09" target="_blank">
+        <i class="fab fa-x-twitter"></i> <!-- Use fa-twitter if fa-x-twitter doesn't work -->
+    </a>
                     </div>
                 </div>
 
@@ -271,6 +303,8 @@
             });
         });
     </script>
+
+
 
 
 

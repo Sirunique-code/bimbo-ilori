@@ -179,9 +179,9 @@
         </p>
 
         <div class="d-flex flex-wrap gap-3 mt-3">
-            <a href="http://amazon.com/author/bimboilori" class="btn btn-primary">Get BI Books on Amazon</a>
+            <a href="https://www.amazon.com/stores/author/B08H1B27NT/allbooks?ingress=0&visitId=5654739c-d56f-4060-a86d-1fad5cc99e66&ref_=ap_rdr" class="btn btn-primary">Get BI Books on Amazon</a>
             <a href="https://selar.co/m/abimbola-ilori1" class="btn btn-success">Buy on Selar</a>
-            <a href="https://paystack.shop/bimboiloribooks" class="btn btn-warning">Buy on Paystack</a>
+            <a href="https://paystack.shop/all-books-by-bimbo-ilori" class="btn btn-warning">Buy on Paystack</a>
         </div> 
 
         <p class="mt-4 fw-bold">
