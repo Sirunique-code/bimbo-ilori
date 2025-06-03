@@ -366,13 +366,14 @@ left: 0;
 
 /*** Service ***/
 .service-item {
-background: var(--light);
+background: #5f185a;
+color: white;
 transition: .5s;
 }
 
 .service-item:hover {
 margin-top: -10px;
-background: var(--primary);
+background: #0EBBCC;
 }
 
 .service-item * {

@@ -13,7 +13,8 @@ class CreateRegistrationsTable extends Migration
     {
       Schema::create('registrations', function (Blueprint $table) {
     $table->id();
-    $table->string('fullName')->nullable(false); // Match form and controller
+    $table->string('firstName')->nullable(false); // Match form and controller
+    $table->string('lastName')->nullable(false); // Match form and controller
     $table->string('whatsappNumber')->nullable(false); // Match form and controller
     $table->string('email')->nullable(false)->unique(); // Already matches
     $table->timestamps();

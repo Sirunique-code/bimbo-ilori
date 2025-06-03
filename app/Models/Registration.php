@@ -11,7 +11,8 @@ class Registration extends Model
 
     // Add the fillable fields here
     protected $fillable = [
-        'fullName', // Matches the column name in the database
+        'lastName',
+        'firstName', // Matches the column name in the database // Matches the column name in the database
         'whatsappNumber',
         'email',
     ];

@@ -4,13 +4,19 @@ import './bootstrap';
 import Echo from "laravel-echo";
 import Pusher from "pusher-js";
 
-window.Pusher = Pusher;
+console.log("Starting Laravel Echo...");
 
-window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: import.meta.env.VITE_PUSHER_APP_KEY,
-    cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-    encrypted: true
-});
+try {
+    window.Pusher = Pusher;
 
-console.log("Echo initialized!");
+    window.Echo = new Echo({
+        broadcaster: 'pusher',
+        key: import.meta.env.VITE_PUSHER_APP_KEY,
+        cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+        encrypted: true
+    });
+
+    console.log("✅ Echo initialized successfully!", window.Echo);
+} catch (error) {
+    console.error("❌ Failed to initialize Echo", error);
+}

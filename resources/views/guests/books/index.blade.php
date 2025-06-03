@@ -12,8 +12,8 @@
                     <div class="row g-5 align-items-center">
                         <!-- Content Section (Right) -->
                         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <h6 class="section-title bg-white text-start text-primary pe-3">BIMBO ILORI</h6>
-                            <h1 class="mb-4">Explore Books by Bimbo Ilori</h1>
+                            <h6 class="section-title bg-white text-start text-primary pe-3">Books by BI</h6>
+                            <h1 class="mb-4">Books by Bimbo Ilori</h1>
                             <p class="mb-4">
                                 <strong>Bimbo Ilori</strong> is an inspirational and prolific writer whose works help
                                 readers grasp complex ideas with simplicity and clarity.

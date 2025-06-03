@@ -3,24 +3,29 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LPP4PFWS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LPP4PFWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-B9LPP4PFWS');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B9LPP4PFWS');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RightReset | Bimbo Ilori</title>
 
-    <meta name="description" content="Join Bimbo Ilori's Right Reset journey — reset your mind and align with your true path.">
-    
+    <meta name="description"
+        content="Join Bimbo Ilori's Right Reset journey — reset your mind and align with your true path.">
+
     <!-- Open Graph for social media sharing -->
     <meta property="og:title" content="Right Reset | Bimbo Ilori">
-    <meta property="og:description" content="Join the transformative journey with Bimbo Ilori to reset your mindset and purpose.">
+    <meta property="og:description"
+        content="Join the transformative journey with Bimbo Ilori to reset your mindset and purpose.">
     <meta property="og:image" content="{{ asset('assets/img/rightresetflyer3.jpg') }}">
     <meta property="og:url" content="{{ url('/rightreset') }}">
     <meta property="og:type" content="website">
@@ -38,15 +43,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Include Laravel Echo and Pusher -->
-    @vite('resources/js/app.js')
+
 
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-   
-@livewireStyles
+
+    @livewireStyles
 </head>
 
 <body>
@@ -85,7 +90,8 @@
                 </div>
                 <div class="text-box">
                     <p>
-                        The RightReset Discovery and Clarity Masterclass is the breakthrough you’ve been waiting for — interactive, insightful, and designed just for you.
+                        The RightReset Discovery and Clarity Masterclass is the breakthrough you’ve been waiting for —
+                        interactive, insightful, and designed just for you.
                     </p>
                 </div>
             </div>
@@ -102,7 +108,8 @@
         <div class="container">
             <h2 class="mastersection-title text-center">RightReset Masterclass with Coach Bimbo Ilori</h2>
             <p class="text-center " style="font-size: 23px">
-                Join the Right Reset masterclass on <strong class="text-success"> June 28th, by 8pm, </strong> where you’ll unlock the tools, strategies, and inspiration to:
+                Join the Right Reset masterclass on <strong class="text-success"> June 28th, by 8pm, </strong> where
+                you’ll unlock the tools, strategies, and inspiration to:
             </p>
             <div class="row mt-4">
                 <div class="col-md-4 text-center master shadow">
@@ -126,8 +133,9 @@
                 purpose, balance, and fulfillment.
             </p>
             <div class="mastertext-center d-flex justify-content-center mt-4">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Join the Masterclass now with just an investment of N15500
-(Unlock bonuses worth 200k)</a>
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Join the Masterclass now with just
+                    an investment of N15500
+                    (Unlock bonuses worth 200k)</a>
             </div>
         </div>
     </section>
@@ -142,7 +150,8 @@
                     <img src="assets/img/rightrestflyer1.jpg" alt="Flyer 1" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Discover Your Path</h5>
-                        <p class="card-text">Clarify your next steps and uncover hidden opportunities. <br><strong class="text-success">Date: 28th June, 2025.  <br> Time: 8pm</strong> </p>
+                        <p class="card-text">Clarify your next steps and uncover hidden opportunities. <br><strong
+                                class="text-success">Date: 28th June, 2025. <br> Time: 8pm</strong> </p>
                     </div>
                 </div>
             </div>
@@ -183,7 +192,7 @@
     <!-- Testimonials Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="mastersection-title text-center">What Our Students Have to Say</h2>
+            <h2 class="mastersection-title text-center">What participants Have to Say</h2>
             <div class="row mt-4">
                 <!-- Testimonial 1 -->
                 <div class="col-md-6 col-lg-4 mb-4">
@@ -270,112 +279,131 @@
     </section>
 
     <!-- Bonuses Section 1 -->
-<section class="section bg-light">
-    <div class="container">
-      <h2 class="mastersection-title text-center">What You Will Walk Away With</h2>
-      <p class="text-center lead mb-4">In this masterclass, you will:</p>
-      <ul class="list-unstyled bonus-list">
-        <!-- Pre-Session Clarity Diagnostic -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Get a Pre-Session Clarity Diagnostic</strong> – A powerful self-assessment to uncover where you truly are.
-        </li>
-        <!-- Pinpoint What’s Holding You Back -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Pinpoint What’s Holding You Back</strong> – Identify internal blocks and limiting beliefs keeping you stuck.
-        </li>
-        <!-- Reclaim Your Focus and Energy -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Reclaim Your Focus and Energy</strong> – Learn simple, powerful strategies to reset your priorities and regain momentum.
-        </li>
-        <!-- Clarity Guide Blueprint -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Get a Clarity Guide Blueprint</strong> – A guided tool to help you mentally declutter and gain direction.
-        </li>
-        <!-- Break Through Fear and Doubt -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Break Through Fear and Doubt</strong> – Learn how to confront and conquer the invisible barriers within.
-        </li>
-        <!-- Build Aligned Habits and Structures -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Build Aligned Habits and Structures (Anchors)</strong> – Practical systems to help you stay focused and faithful to your goals.
-        </li>
-        <!-- Develop a Clear Action Plan -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Develop a Clear Action Plan</strong> – Leave with a tangible roadmap to help you move toward your next breakthrough.
-        </li>
-        <!-- Create a Mission Statement -->
-        <li class="bonus-item">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Create a Mission Statement</strong> – A compass to guide your decisions and actions.
-        </li>
-        <!-- Additional Bonus -->
-        <li class="bonus-item accent-text">
-          <span class="check-icon"><i class="fas fa-check"></i></span>
-          <strong>Additional Bonus worth ₦250,000</strong>
-        </li>
-      </ul>
-      <div class="text-center mt-4">
-        <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">Join Now for $10.00 (₦15,500.00)</a>
-      </div>
-    </div>
-</section>
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="mastersection-title text-center">What You Will Walk Away With</h2>
+            <p class="text-center lead mb-4">In this masterclass, you will:</p>
+            <ul class="list-unstyled bonus-list">
+                <!-- Pre-Session Clarity Diagnostic -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Get a Pre-Session Clarity Diagnostic</strong> – A powerful self-assessment to uncover where
+                    you truly are.
+                </li>
+                <!-- Pinpoint What’s Holding You Back -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Pinpoint What’s Holding You Back</strong> – Identify internal blocks and limiting beliefs
+                    keeping you stuck.
+                </li>
+                <!-- Reclaim Your Focus and Energy -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Reclaim Your Focus and Energy</strong> – Learn simple, powerful strategies to reset your
+                    priorities and regain momentum.
+                </li>
+                <!-- Clarity Guide Blueprint -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Get a Clarity Guide Blueprint</strong> – A guided tool to help you mentally declutter and
+                    gain direction.
+                </li>
+                <!-- Break Through Fear and Doubt -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Break Through Fear and Doubt</strong> – Learn how to confront and conquer the invisible
+                    barriers within.
+                </li>
+                <!-- Build Aligned Habits and Structures -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Build Aligned Habits and Structures (Anchors)</strong> – Practical systems to help you stay
+                    focused and faithful to your goals.
+                </li>
+                <!-- Develop a Clear Action Plan -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Develop a Clear Action Plan</strong> – Leave with a tangible roadmap to help you move toward
+                    your next breakthrough.
+                </li>
+                <!-- Create a Mission Statement -->
+                <li class="bonus-item">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Create a Mission Statement</strong> – A compass to guide your decisions and actions.
+                </li>
+                <!-- Additional Bonus -->
+                <li class="bonus-item accent-text">
+                    <span class="check-icon"><i class="fas fa-check"></i></span>
+                    <strong>Additional Bonus worth ₦250,000</strong>
+                </li>
+            </ul>
+            <div class="text-center mt-4">
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">Join Now for $10.00
+                    (₦15,500.00)</a>
+            </div>
+        </div>
+    </section>
 
-<!-- Registration Form Section -->
-<section class="section why-section">
-  <div class="container">
-    <h2 class="section-title text-center">Register Now</h2>
-    <p class="text-center lead mb-5">Secure your spot in the Right Reset Master Class by filling out the form below.</p>
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10">
-        <form id="registrationForm" action="{{ route('register.submit') }}" method="POST" class="needs-validation" novalidate>
-  @csrf <!-- CSRF Token -->
-  <!-- Full Name Field -->
-  <div class="mb-3">
-    <label for="fullName" class="form-label">Full Name</label>
-    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
-    <div class="invalid-feedback">
-      Please enter your full name.
-    </div>
-  </div>
-  <!-- WhatsApp Number Field -->
-  <div class="mb-3">
-    <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
-    <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" placeholder="Enter your WhatsApp number" required>
-    <div class="invalid-feedback">
-      Please enter a valid WhatsApp number.
-    </div>
-  </div>
-  <!-- Email Field -->
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
-    <div class="invalid-feedback">
-      Please enter a valid email address.
-    </div>
-  </div>
-  <!-- Submit Button -->
-  <div class="text-center mt-4">
-    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-  </div>
-</form>
-      </div>
-    </div>
-  </div>
+    <!-- Registration Form Section -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title text-center">Register Now</h2>
+            <p class="text-center lead mb-5">Secure your spot in the Right Reset Master Class by filling out the form
+                below.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <form id="registrationForm" action="{{ route('register.submit') }}" method="POST"
+                        class="needs-validation" novalidate>
+                        @csrf
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="Enter your first name" required>
+                            <div class="invalid-feedback">Please enter your first name.</div>
+                        </div>
 
-  @if(session('success'))
-<div class="alert alert-success text-center">
-  {{ session('success') }}
-</div>
-@endif
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Enter your last name" required>
+                            <div class="invalid-feedback">Please enter your last name.</div>
+                        </div>
 
-</section>
+                        <!-- WhatsApp Number -->
+                        <div class="mb-3">
+                            <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
+                            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber"
+                                placeholder="Enter your WhatsApp number" required>
+                            <div class="invalid-feedback">Please enter a valid WhatsApp number.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email address" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {{-- Optional fallback for non-JS --}}
+            @if (session('success'))
+                <div class="alert alert-success text-center mt-3">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+    </section>
+
 
 
     <!-- Bonuses Section 2 -->
@@ -425,7 +453,8 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="mastersection-title ">Don't miss the slot, Register here!</a>
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="mastersection-title ">Don't miss the slot,
+                    Register here!</a>
             </div>
         </div>
     </section>
@@ -617,12 +646,11 @@
                             href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
                             <i class="fab fa-spotify"></i>
                         </a>
-                        <a class="btn btn-social-icon btn-globe"
-                            href="https://www.bimboilori.com" target="_blank">
+                        <a class="btn btn-social-icon btn-globe" href="https://www.bimboilori.com" target="_blank">
                             <i class="fas fa-globe"></i>
                         </a>
                     </div>
-                    
+
                 </div>
 
 
@@ -631,35 +659,52 @@
         </div>
     </section>
 
-        <!-- Convener Profile Section -->
-<section class="py-5" style="background-color: #FFC300">
-    <div class="container">
-      <h2 class="section-title text-center">What you'll gain from me</h2>
-      <p class="text-center lead mb-5">Explore valuable insights and resources from Coach Bimbo Ilori.</p>
-      <ul class="knowledge-base-list list-unstyled">
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Life Purpose and Personal Development Coach with years of impactful coaching experience</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Author of over 35 transformational books, including Purpose Tiers and Built to Last</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Creator of the 5-V Anchors of Purpose framework, helping hundreds discover and live out purpose</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Founder of ThriveForge and KBloc Consults, equipping individuals and businesses for growth</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Masterclass Host and Conference Speaker delivering practical, spirit-led strategies for success</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Coach to emerging and existing leaders, helping them gain clarity, confidence, and lasting results</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Proven track record of turning pain into purpose and principles into pathways</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Known for delivering deep, relatable, and faith-based insights with actionable tools</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Featured on multiple media platforms for inspiring personal and relationship transformations</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Trained over 2,000 individuals directly through institutions and platforms—backed by powerful testimonials</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Cumulatively impacted over 10,000 people through teachings, books, and training resources</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Integrative Life Coach blending faith, wisdom, and results-oriented coaching</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A structure practitioner who lends direction and organization to individuals and institutions</em></li>
-       
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Chartered Administrator and Fellow of the Chartered Administrator Guild, (FCIA).</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Certified Life Purpose Coach and trained Counselor</em></li>
-        <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A coach with a clear voice, a deep sense of calling, and a commitment to helping others thrive</em></li>
-      </ul>
-      <div class=" mastertext-center d-flex justify-content-center mt-5">
-        <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary btn-lg">Yes, I Want to Register for This Course</a>
-      </div>
-    </div>
-</section>
+    <!-- Convener Profile Section -->
+    <section class="py-5" style="background-color: #FFC300">
+        <div class="container">
+            <h2 class="section-title text-center">What you'll gain from me</h2>
+            <p class="text-center lead mb-5">Explore valuable insights and resources from Coach Bimbo Ilori.</p>
+            <ul class="knowledge-base-list list-unstyled">
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Life Purpose and Personal
+                        Development Coach with years of impactful coaching experience</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Author of over 35
+                        transformational books, including Purpose Tiers and Built to Last</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Creator of the 5-V Anchors of
+                        Purpose framework, helping hundreds discover and live out purpose</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Founder of ThriveForge and KBloc
+                        Consults, equipping individuals and businesses for growth</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Masterclass Host and Conference
+                        Speaker delivering practical, spirit-led strategies for success</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Coach to emerging and existing
+                        leaders, helping them gain clarity, confidence, and lasting results</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Proven track record of turning
+                        pain into purpose and principles into pathways</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Known for delivering deep,
+                        relatable, and faith-based insights with actionable tools</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Featured on multiple media
+                        platforms for inspiring personal and relationship transformations</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Trained over 2,000 individuals
+                        directly through institutions and platforms—backed by powerful testimonials</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Cumulatively impacted over 10,000
+                        people through teachings, books, and training resources</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Integrative Life Coach blending
+                        faith, wisdom, and results-oriented coaching</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A structure practitioner who
+                        lends direction and organization to individuals and institutions</em></li>
+
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Chartered Administrator and
+                        Fellow of the Chartered Administrator Guild, (FCIA).</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>Certified Life Purpose Coach and
+                        trained Counselor</em></li>
+                <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A coach with a clear voice, a
+                        deep sense of calling, and a commitment to helping others thrive</em></li>
+            </ul>
+            <div class=" mastertext-center d-flex justify-content-center mt-5">
+                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary btn-lg">Yes, I Want to Register
+                    for This Course</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Payment Section -->
     <section class="py-5 " style="background-color: #DE4A09">
@@ -695,8 +740,8 @@
         </div>
     </section>
 
-     <!-- FAQ Section -->
-     <section class="py-5 bg-light">
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
         <div class="container">
             <h2 class="mastersection-title text-center">FAQs</h2>
             <div class="accordion" id="faqAccordion">
@@ -801,85 +846,91 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    
-<!-- Notification popup -->
-<div id="registration-notification" style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
-    The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
-</div>
+    @vite(['resources/js/app.js'])
+
+    <!-- Notification popup -->
+    <div id="registration-notification"
+        style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
+        The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
+    </div>
 
 
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent default form submission
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
 
-        const form = this;
-        const formData = new FormData(form);
+            const form = this;
 
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            // Client-side validation
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated'); // Show validation feedback
+                return;
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Show success message
-                const successDiv = document.createElement('div');
-                successDiv.className = 'alert alert-success text-center';
-                successDiv.textContent = data.success;
-                form.parentNode.insertBefore(successDiv, form.nextSibling);
 
-                // Optionally clear form
-                form.reset();
+            const formData = new FormData(form);
 
-                // Hide message after 5 seconds
-                setTimeout(() => successDiv.remove(), 5000);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                            'content')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Show success message
+                        const successDiv = document.createElement('div');
+                        successDiv.className = 'alert alert-success text-center mt-3';
+                        successDiv.textContent = data.success;
+
+                        // Remove old success messages
+                        const existingAlert = form.parentNode.querySelector('.alert-success');
+                        if (existingAlert) existingAlert.remove();
+
+                        // Insert after form
+                        form.parentNode.appendChild(successDiv);
+
+                        form.reset();
+                        form.classList.remove('was-validated'); // Remove Bootstrap validation class
+
+                        setTimeout(() => successDiv.remove(), 5000);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
         });
-    });
-</script>
+    </script>
 
+    <script>
+        window.onload = function() {
+            if (typeof Echo === 'undefined') {
+                console.error("❌ Echo is NOT loaded!");
+            } else {
+                console.log("✅ Echo is loaded!");
 
-<div id="registration-notification" style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
-    The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
-</div>
+                window.Echo.channel('registration-channel')
+                    .listen('.new-registration', (e) => {
+                        console.log("📩 Received event:", e);
+                        const el = document.getElementById('registration-notification');
+                        const nameSpan = document.getElementById('registrant-name');
 
-<script>
-    if (typeof Echo === 'undefined') {
-        console.error("❌ Echo is NOT loaded!");
-    } else {
-        console.log("✅ Echo is loaded!");
+                        nameSpan.textContent = e.fullName;
+                        el.style.display = 'block';
 
-        window.Echo.channel('public-channel')
-            .listen('.new-registration', (e) => {
-                console.log("📩 Received event:", e);
-                const el = document.getElementById('registration-notification');
-                const nameSpan = document.getElementById('registrant-name');
-
-                nameSpan.textContent = e.name;
-                el.style.display = 'block';
-
-                setTimeout(() => {
-                    el.style.display = 'none';
-                }, 5000);
-            });
-    }
-</script>
-
-
-
-
-
-@livewireScripts
+                        setTimeout(() => {
+                            el.style.display = 'none';
+                        }, 5000);
+                    });
+            }
+        }
+    </script>
+    @livewireScripts
 
 </body>
 

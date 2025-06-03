@@ -85,8 +85,7 @@
                 <!-- Image Section (Left Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative">
-                        <div class="btn btn-primary mt-3">BIPs OVERVIEW</div>
-                        <img class="img-fluid w-100" src="assets/img/bims.jpg" alt="BIPs Services"
+                        <img class="img-fluid w-100" src="assets/img/brand-logo.jpg" alt="BIPs Services"
                             style="object-fit: cover; border-radius: 10px;">
                     </div>
                 </div>
@@ -102,35 +101,8 @@
                         programs, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts,
                         you’re in the right place.
                     </p>
-                    <p class="mb-4">
-                        Browse, learn, and take the next step on your journey. Let’s thrive together!
-                    </p>
-
-                    <!-- Services List -->
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kingswitbloc Consults &
-                                Training</p>
-                            <small>Insightful consulting and strategic counsel for organizational growth.</small>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>ThriveForge</p>
-                            <small>Online coaching and programs designed to help you unlock your full potential.</small>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Saved4Real</p>
-                            <small>A faith-driven platform featuring podcasts, books, and powerful teachings.</small>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="mt-4">
-                        <p><i class="fa fa-whatsapp text-success me-2"></i> <strong>WhatsApp:</strong> <a
-                                href="https://wa.me/2349028763627" target="_blank">Chat with us on WhatsApp</a></p>
-                        <p><i class="fa fa-phone text-primary me-2"></i> <strong>Call:</strong> +234 9028763627</p>
-                        <p><i class="fa fa-envelope text-primary me-2"></i> <strong>Email:</strong>
-                            iloribimbo59@gmail.com</p>
-                    </div>
+                   
+                 
                 </div>
             </div>
         </div>
@@ -149,7 +121,7 @@
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-bullseye text-primary mb-4"></i>
-                        <h5 class="mb-3">Our Brand Vision</h5>
+                        <h5 class="mb-3 text-white">Our Brand Vision</h5>
                         <p>To see a generation of purpose-driven individuals and leaders walking in clarity, living by principle, and creating transformational impact across life, faith, and influence.</p>
                     </div>
                 </div>
@@ -160,7 +132,7 @@
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-list-ul text-primary mb-4"></i>
-                        <h5 class="mb-3">Brand Values</h5>
+                        <h5 class="mb-3 text-white">Brand Values</h5>
                         <p><strong>Purposefulness:</strong> Intentionality in every step, session, and solution.<br>
                            <strong>Principled Living:</strong> Anchoring everything in faith and timeless truth.<br>
                            <strong>Practicality:</strong> Delivering clear, actionable steps that lead to real results.<br>
@@ -175,7 +147,7 @@
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-heartbeat text-primary mb-4"></i>
-                        <h5 class="mb-3">Brand Essence</h5>
+                        <h5 class="mb-3 text-white">Brand Essence</h5>
                         <p>Faith-rooted transformation through purpose, structure, and strategy, building lives and platforms that glorify God and impact generations.</p>
                     </div>
                 </div>
@@ -186,7 +158,7 @@
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
                         <i class="fa fa-3x fa-lightbulb text-primary mb-4"></i>
-                        <h5 class="mb-3">Value Proposition</h5>
+                        <h5 class="mb-3 text-white">Brand Value Proposition</h5>
                         <p>Faith-based, structured life coaching with real results brought to life through the step-by-step 5-V journey.</p>
                     </div>
                 </div>
@@ -195,6 +167,64 @@
     </div>
 </div>
 <!-- Service End -->
+
+  <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Left Side: Image -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <img src="assets/img/bims.jpg" alt="Welcome Image" class="img-fluid rounded shadow">
+            </div>
+
+            <!-- Right Side: Text and Services -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <p class="mb-4">
+                    Browse, learn, and take the next step on your journey. Let’s thrive together!
+                </p>
+
+                <!-- Services List -->
+                <div class="row gy-3 gx-4 mb-4">
+                    <div class="col-12 col-sm-6">
+                        <p class="mb-1">
+                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Consults & Training</strong>
+                        </p>
+                        <small class="d-block">Insightful consulting and strategic counsel for organizational growth.</small>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="mb-1">
+                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>ThriveForge</strong>
+                        </p>
+                        <small class="d-block">Online coaching and programs designed to help you unlock your full potential.</small>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="mb-1">
+                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>Saved4Real</strong>
+                        </p>
+                        <small class="d-block">A faith-driven platform featuring podcasts, books, and powerful teachings.</small>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-4">
+                    <p>
+                        <i class="fab fa-whatsapp text-success me-2"></i>
+                        <strong>WhatsApp:</strong>
+                        <a href="https://wa.me/2349028763627" target="_blank">Chat with us on WhatsApp</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone text-primary me-2"></i>
+                        <strong>Call:</strong> +234 9028763627
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope text-primary me-2"></i>
+                        <strong>Email:</strong> iloribimbo59@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -214,8 +244,8 @@
                     <h6 class="section-title bg-white text-start text-primary pe-3">BIMBO ILORI</h6>
                     <h1 class="mb-4">Empowering You to Live with Purpose</h1>
                     <p class="mb-4">
-                        BIPs is anchored by impactionaire <strong>Bimbo Ilori</strong> who is a dedicated life and
-                        purpose coach passionate about helping individuals break through limitations and design a
+                        BIPs is anchored by <strong>Bimbo Ilori,</strong> an impact entrepreneur dedicated to life and purpose development.
+                        She is passionate about helping individuals break through limitations and design a
                         fulfilling life. With years of experience in personal development, she has guided countless
                         people toward clarity, confidence, and success.
                     </p>
@@ -287,7 +317,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Books</h6>
-                <h1 class="mb-5">Books by Bimbo Ilori Programs</h1>
+                <h1 class="mb-5">Books by Bimbo Ilori</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -338,8 +368,8 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">programs</h6>
-                <h1 class="mb-5">ThriveForge programs</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Impact Programs</h6>
+                <h1 class="mb-5">ThriveForge Courses & Coaching</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
@@ -386,8 +416,8 @@
                 </div>
                 <!-- KBLOC Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary px-3">Consults and Training</h6>
-                    <h2 class="mb-4">Kingswitbloc (KBloc)</h2>
+                    {{-- <h6 class="section-title bg-white text-start text-primary px-3">Consults and Training</h6> --}}
+                    <h2 class="mb-4">KBloc Consults And Training</h2>
                     <p>Kingswitbloc (KBloc) is our registered brand for Consult Services, that channels my skills and
                         expertise as a Chartered Administrator and entrepreneur with ample years of experience.</p>
                     <p>This intertwines with the capacity development propensity, to support businesses alignment,

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Events\NewRegistrationEvent;
+use App\Models\Registration;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Broadcast;
+use Illuminate\Support\Facades\Log;
 
 class RegistrationController extends Controller
 {
@@ -13,35 +14,41 @@ class RegistrationController extends Controller
     {
         // Validate the form data
         $validatedData = $request->validate([
-            'fullName' => 'required|string|max:255',
+            'lastName' => 'required|string|max:255',
             'whatsappNumber' => 'required|string|max:20',
             'email' => 'required|email|max:255',
+            'firstName' => 'required|string|max:255',
         ]);
-             // Broadcast the new registration event
-    event(new NewRegistrationEvent($validatedData['fullName']));
-    
-        // Save data to the database (optional)
-        \App\Models\Registration::create($validatedData);
 
-        // Send email notification to the admin
-        Mail::send('guests.email.admin_notification', ['data' => $validatedData], function ($message) use ($validatedData) {
-            $message->to('contact@bimboilori.com') // Replace with your email
-                    ->subject('New Registration: ' . $validatedData['fullName']);
-        });
+        $fullName = $validatedData['firstName'] . ' ' . $validatedData['lastName'];
 
-        // Send confirmation email to the participant
-        Mail::send('guests.email.participant_confirmation', ['data' => $validatedData], function ($message) use ($validatedData) {
-            $message->to($validatedData['email']) // Use the participant's email
-                    ->subject('Thank You for Registering!');
-        });
+        // Broadcast the new registration event
+        event(new NewRegistrationEvent($fullName));
 
-         if ($request->ajax() || $request->wantsJson()) {
-        return response()->json([
-            'success' => 'Thank you for registering! We will be in touch soon.'
-        ]);
-    }
+        // Save to database
+        Registration::create($validatedData);
 
-     
+        // Send emails (wrap in try-catch to log any failures)
+        try {
+            Mail::send('guests.email.admin_notification', ['data' => $validatedData], function ($message) use ($fullName) {
+                $message->to('contact@bimboilori.com')
+                        ->subject('New Registration: ' . $fullName);
+            });
+
+            Mail::send('guests.email.participant_confirmation', ['data' => $validatedData], function ($message) use ($validatedData) {
+                $message->to($validatedData['email'])
+                        ->subject('Thank You for Registering!');
+            });
+        } catch (\Exception $e) {
+            Log::error('Mail sending failed: ' . $e->getMessage());
+        }
+
+        // Return JSON response (AJAX)
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json([
+                'success' => 'Thank you for registering! We will be in touch soon.'
+            ]);
+        }
 
         // Redirect with success message
         return redirect()->back()->with('success', 'Thank you for registering! We will be in touch soon.');

@@ -10,18 +10,18 @@ use Illuminate\Broadcasting\Channel;
 
 class NewRegistrationEvent implements ShouldBroadcast
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
+    use SerializesModels;
 
-    public $name;
+    public $fullName;
 
-    public function __construct($name)
+    public function __construct($fullName)
     {
-        $this->name = $name;
+        $this->fullName = $fullName;
     }
 
     public function broadcastOn()
     {
-        return new Channel('public-channel');
+        return new Channel('registration-channel');
     }
 
     public function broadcastAs()

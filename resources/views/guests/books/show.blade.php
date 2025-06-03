@@ -35,9 +35,9 @@
                                 <a href="{{ $book->bookselar_link }}" class="btn btn-primary btn-lg">Pay Here via
                                     Selar</a>
                                     <a href="{{ $book->bookpaystack_link }}" class="btn btn-success btn-lg">Pay Here via
-                                    Paystack (Hard Copy)</a>
+                                    Paystack (Hard copies)</a>
                                 <a href="{{ $book->bookpaystackdigital_link }}" class="btn btn-success btn-lg">Pay Here
-                                    via Paystack (Digital Copy)</a>
+                                    via Paystack (Digital copies)</a>
                             </div>
                         </div>
 

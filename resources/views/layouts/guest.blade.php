@@ -165,10 +165,10 @@
                                 class="fab fa-spotify"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/bimbo-iiori"><i
                                 class="fab fa-linkedin-in"></i></a>
-                                  <a class="btn btn-outline-light btn-social" href="https://x.com/BimboIlori9228?t=IXNLk2zrhiemZZ33ejojyQ&s=09" target="_blank">
+                                  {{-- <a class="btn btn-outline-light btn-social" href="https://x.com/BimboIlori9228?t=IXNLk2zrhiemZZ33ejojyQ&s=09" target="_blank">
         <i class="fab fa-x-twitter"></i> <!-- Use fa-twitter if fa-x-twitter doesn't work -->
     </a>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
