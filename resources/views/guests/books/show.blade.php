@@ -15,8 +15,8 @@
                     <div class="book-item bg-light">
                         <div class="position-relative overflow-hidden text-center">
 
-                            <img class="img-fluid" src="{{ asset('storage/' . $book->image) }}" alt="{{ $book->title }}"
-                                style="max-height: 400px; width: auto;">
+                            <img class="img-fluid" src="{{ asset('storage/' . $book->image) }}"
+                                alt="{{ $book->title }}" style="max-height: 400px; width: auto;">
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h5 class="mb-3">{{ $book->title }}</h5>
@@ -29,22 +29,22 @@
                         <div class="container">
                             <div
                                 class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 pb-4 text-center">
-                                
-                                <a href="{{ $book->bookamazon_link }}" class="btn btn-secondary btn-lg">Pay Here via
-                                    Amazon</a>
-                                <a href="{{ $book->bookselar_link }}" class="btn btn-primary btn-lg">Pay Here via
-                                    Selar</a>
-                                    <a href="{{ $book->bookpaystack_link }}" class="btn btn-success btn-lg">Pay Here via
-                                    Paystack (Hard copies)</a>
-                                <a href="{{ $book->bookpaystackdigital_link }}" class="btn btn-success btn-lg">Pay Here
-                                    via Paystack (Digital copies)</a>
+                                <a href="{{ $book->bookamazon_link }}"
+                                    class="btn btn-secondary btn-lg btn-books  fixed-btn">Pay Here via Amazon</a>
+                                <a href="{{ $book->bookselar_link }}" class="btn btn-primary btn-lg btn-books fixed-btn">Pay
+                                    Here via Selar</a>
+                                <a href="{{ $book->bookpaystack_link }}"
+                                    class="btn btn-success btn-lg  btn-books fixed-btn">Pay Here via Paystack (Paperback Edition)</a>
+                                <a href="{{ $book->bookpaystackdigital_link }}"
+                                    class="btn btn-success btn-lg btn-books fixed-btn">Pay Here via Paystack (Digital
+                                    Copies)</a>
                             </div>
-                        </div>
 
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 </x-guest-layout>

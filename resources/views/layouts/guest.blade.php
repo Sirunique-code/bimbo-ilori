@@ -21,13 +21,13 @@
     <meta name="keywords"
         content="Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori">
     <meta name="description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and achieve personal success.">
+        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.">
 
     <!-- Open Graph Meta Tags (For Social Media) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.">
     <meta property="og:description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and achieve personal success.">
+        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.">
     <meta property="og:image" content="{{ asset('assets/img/featured-image.jpg') }}">
     <meta property="og:url" content="http://bimboilori.com">
     <meta property="og:site_name" content="Bimbo Ilori Programs">
@@ -47,7 +47,7 @@
           "@type": "Organization",
           "name": "Bimbo Ilori Programs",
           "url": "https://www.bimboliori.com",
-          "logo": "https://bimboilori.com/assets/img/bi-logo-full2.png",
+          "logo": "https://bimboilori.com/assets/img/bi-logo-mini-full2.png",
           "sameAs": [
             "https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL",
             "https://www.instagram.com/bimboilori_bi/"
@@ -67,7 +67,7 @@
 
     <!-- Icon Font Stylesheet -->
     <!-- Font Awesome 6.4+ CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" defer>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" defer>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
 
     <!-- Libraries Stylesheet -->
@@ -128,6 +128,11 @@
             </div>
         </div>
     </nav>
+    <p class="text-left mt-3 mb-0 fst-italic" style="color:  #E4B548; font-size: 0.6rem; padding-left: 4.3rem;">
+        ...Transforming Lives, Translating Purpose...
+    </p>
+
+
 
 
     <!-- Navbar End -->
@@ -137,14 +142,19 @@
 
 
     @livewireScripts
-    <!-- Footer Start -->
+
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/+2349028763627" target="_blank" class="whatsapp-float-button">
         <img src="{{ asset('assets/img/whatsapp.png') }}" alt="WhatsApp">
     </a>
 
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
             <div class="row g-5">
+
+
+
                 <!-- Contact Info -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Contact</h4>
@@ -154,6 +164,7 @@
                             class="text-light text-decoration-none">+234 902 876 3627</a></p>
                     <p class="mb-3"><i class="fa fa-envelope me-2"></i> <a href="mailto:iloribimbo59@gmail.com"
                             class="text-light text-decoration-none">iloribimbo59@gmail.com</a></p>
+
                     <div class="d-flex pt-3">
                         <a class="btn btn-outline-light btn-social me-2"
                             href="https://www.instagram.com/bimboilori_bi"><i class="fab fa-instagram"></i></a>
@@ -165,104 +176,115 @@
                                 class="fab fa-spotify"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/bimbo-iiori"><i
                                 class="fab fa-linkedin-in"></i></a>
-                                  {{-- <a class="btn btn-outline-light btn-social" href="https://x.com/BimboIlori9228?t=IXNLk2zrhiemZZ33ejojyQ&s=09" target="_blank">
-        <i class="fab fa-x-twitter"></i> <!-- Use fa-twitter if fa-x-twitter doesn't work -->
-    </a>
-                    </div> --}}
+                    </div>
                 </div>
 
-                <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
-                    @csrf
-                    <div class="position-relative mx-auto" style="max-width: 100%;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5 rounded" type="email"
-                            name="email" placeholder="Enter your email" required>
-                        <button type="submit"
-                            class="btn btn-primary position-absolute top-0 end-0 mt-2 me-2 px-4">Sign Up</button>
-                    </div>
-                </form>
-
-                <div id="message-container"></div>
-
-                <script>
-                    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-                        e.preventDefault(); // Prevent the default form submission
-
-                        const form = e.target;
-                        const formData = new FormData(form);
-
-                        fetch(form.action, {
-                                method: 'POST',
-                                body: formData,
-                                headers: {
-                                    'Accept': 'application/json',
-                                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
-                                        'content')
-                                }
-                            })
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Network response was not ok');
-                                }
-                                return response.json();
-                            })
-                            .then(data => {
-                                if (data.success) {
-                                    document.getElementById('message-container').innerHTML = `
-                <div class="alert alert-success">${data.message}</div>
-            `;
-                                    form.reset(); // Reset the form
-                                } else {
-                                    document.getElementById('message-container').innerHTML = `
-                <div class="alert alert-danger">${data.message || 'An error occurred.'}</div>
-            `;
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                document.getElementById('message-container').innerHTML = `
-            <div class="alert alert-danger">An unexpected error occurred. Please try again.</div>
-        `;
-                            });
-                    });
-                </script>
-
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
+                        @csrf
+                        <div class="position-relative" style="max-width: 100%;">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5 rounded" type="email"
+                                name="email" placeholder="Enter your email" required>
+                            <button type="submit"
+                                class="btn btn-primary position-absolute top-0 end-0 mt-2 me-2 px-4">Sign Up</button>
+                        </div>
+                    </form>
+                    <div id="message-container" class="mt-2"></div>
+                </div>
 
                 <!-- Quick Links -->
                 <div class="col-lg-4 col-md-12">
                     <h4 class="text-white mb-4">Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{{ route('welcome') }}"
-                                class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i>
-                                Home</a></li>
-                        <li class="mb-2"><a href="{{ route('about.index') }}"
-                                class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> About
-                                BI</a></li>
-                        <li class="mb-2"><a href="{{ route('courses') }}"
-                                class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i>
-                                Programs</a></li>
-                        <li class="mb-2"><a href="{{ route('books.index') }}"
-                                class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i> Books
-                                by BI</a></li>
-                        <li class="mb-2"><a href={{ route('testimonials.index') }}
-                                class="text-light text-decoration-none"><i class="fa fa-angle-right me-2"></i>
-                                Testimonials</a></li>
-                        <li><a href="{{ route('contact.index') }}" class="text-light text-decoration-none"><i
-                                    class="fa fa-angle-right me-2"></i> Contact Us</a></li>
+                        <li class="mb-2">
+                            <a href="{{ route('welcome') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('welcome') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('about.index') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('about.index') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> About BI
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('courses') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('courses') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> Programs
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('books.index') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('books.index') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> Books by BI
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="{{ route('testimonials.index') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('testimonials.index') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contact.index') }}"
+                                class="text-light text-decoration-none {{ request()->routeIs('contact.index') ? 'active-link' : '' }}">
+                                <i class="fa fa-angle-right me-2"></i> Contact Us
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
         <!-- Copyright -->
         <div class="container">
-            <div class="copyright text-center py-3 border-top">
+            <div class="text-center py-3 border-top">
+                <p class="fst-italic" style="font-size: 0.7rem; color:#E4B548;">...Principles, Purpose, Progress...</p>
                 <p class="mb-0">&copy; <a class="text-light text-decoration-none"
                         href="https://bimboilori.com">bimboilori.com</a>. All Rights Reserved.</p>
             </div>
         </div>
     </div>
-
     <!-- Footer End -->
+
+    <!-- Newsletter JS -->
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                            'content')
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    const msg =
+                        `<div class="alert alert-${data.success ? 'success' : 'danger'}">${data.message || 'An error occurred.'}</div>`;
+                    document.getElementById('message-container').innerHTML = msg;
+                    if (data.success) form.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('message-container').innerHTML =
+                        `<div class="alert alert-danger">An unexpected error occurred. Please try again.</div>`;
+                });
+        });
+    </script>
 
 
     <!-- Back to Top -->

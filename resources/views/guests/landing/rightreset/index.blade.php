@@ -192,7 +192,7 @@
     <!-- Testimonials Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="mastersection-title text-center">What participants Have to Say</h2>
+            <h2 class="mastersection-title text-center">What others Have to Say</h2>
             <div class="row mt-4">
                 <!-- Testimonial 1 -->
                 <div class="col-md-6 col-lg-4 mb-4">
@@ -334,7 +334,7 @@
                 <!-- Additional Bonus -->
                 <li class="bonus-item accent-text">
                     <span class="check-icon"><i class="fas fa-check"></i></span>
-                    <strong>Additional Bonus worth ₦250,000</strong>
+                    <strong>Additional Bonus worth ₦200,000</strong>
                 </li>
             </ul>
             <div class="text-center mt-4">

@@ -8,13 +8,15 @@ use App\Mail\ContactMail;
 
 class ContactForm extends Component
 {
-    public $name;
+    public $firstName;
+    public $lastName;
     public $email;
     public $subject;
     public $message;
 
     protected $rules = [
-        'name' => 'required|string',
+        'firstName' => 'required|string',
+        'lastName' => 'required|string',
         'email' => 'required|email',
         'subject' => 'required',
         'message' => 'required|string',
@@ -30,7 +32,8 @@ class ContactForm extends Component
         $this->validate();
 
         $data = [
-            'name' => $this->name,
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
             'email' => $this->email,
             'subject' => $this->subject,
             'message' => $this->message,

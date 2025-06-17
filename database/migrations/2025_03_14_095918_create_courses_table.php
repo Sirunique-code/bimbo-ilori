@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('course_title');
             $table->text('course_description');
+            $table->text('course_description2')->nullable();
+            $table->text('course_track')->nullable();
             $table->decimal('course_price_usd', 8, 2)->nullable();  // Allowing NULL values
             $table->decimal('course_price_ngn', 10, 2)->nullable();  // Allowing NULL values
             $table->string('course_duration');

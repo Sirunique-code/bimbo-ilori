@@ -64,7 +64,7 @@ body {
 
 /* Highlight "RIGHT RESET" in Yellow */
 .text-warning {
-    color: #FFC300;
+    color: #E4B548;
     /* Yellow */
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .herotext-center {
-    color: #FFC300;
+    color: #E4B548;
     /* Purple accent color */
 }
 
@@ -137,7 +137,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #5F185A
+    color: #3F207F
         /* Purple for emphasis */
 }
 
@@ -153,11 +153,11 @@ body {
 .masterh4 {
     font-size: 2rem;
     font-weight: 700;
-    color: #5F185A;
+    color: #3F207F;
 }
 
 .bg-second {
-    background-color: #FFC300;
+    background-color: #E4B548;
     padding: 20px;
     border-radius: 5px;
 
@@ -168,7 +168,7 @@ body {
 }
 
 .mastertext-center .btn {
-    background-color: #5F185A !important;
+    background-color: #3F207F !important;
     color: #ffffff
 }
 
@@ -191,7 +191,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #5F185A !important;
+    background-color: #3F207F !important;
     color: #f3f3f3 !important;
     /* Slightly darker orange on hover */
 }
@@ -220,7 +220,7 @@ body {
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #5F185A;
+    color: #3F207F;
     /* Purple for emphasis */
 }
 
@@ -234,7 +234,7 @@ body {
 
 
 .why-section {
-    background-color: #5F185A;
+    background-color: #3F207F;
     color: #ffffff
 }
 
@@ -258,7 +258,7 @@ body {
 
 .quote-icon {
     font-size: 2rem;
-    color: #5F185A !important;
+    color: #3F207F !important;
     /* Primary color (blue) */
     margin-bottom: 10px;
 }
@@ -289,7 +289,7 @@ body {
 
 /* Accent Text */
 .accent-text {
-    color: #5F185A;
+    color: #3F207F;
     /* Purple accent color */
 }
 
@@ -328,7 +328,7 @@ padding: 4px; /* Padding inside the circle */
 
 .bonus-item strong {
 font-weight: 600; /* Semi-bold for emphasis */
-color: #5F185A; /* Purple for emphasis */
+color: #3F207F; /* Purple for emphasis */
 }
 
 
@@ -355,7 +355,7 @@ color: #5F185A; /* Purple for emphasis */
     /* Very large number */
     font-weight: 700;
     /* Bold weight */
-    color: #FFC300;
+    color: #E4B548;
     /* Orange for emphasis */
     margin-bottom: 10px;
 }
@@ -364,7 +364,7 @@ color: #5F185A; /* Purple for emphasis */
     font-size: 1.25rem;
     font-weight: 600;
     /* Semi-bold */
-    color: #5F185A;
+    color: #3F207F;
     /* Purple for emphasis */
     margin-bottom: 10px;
 }
@@ -387,7 +387,7 @@ color: #5F185A; /* Purple for emphasis */
     margin-top: 10px;
     font-size: 1.25rem;
     font-weight: 500;
-    color: #FFC300;
+    color: #E4B548;
     /* Purple for emphasis */
 }
 
@@ -440,7 +440,7 @@ color: #5F185A; /* Purple for emphasis */
     display: block;
     margin-top: 10px;
     font-size: 1.1rem;
-    color: #5F185A;
+    color: #3F207F;
     /* Purple for emphasis */
 }
 
@@ -448,19 +448,19 @@ color: #5F185A; /* Purple for emphasis */
 .carousel-indicators button {
     width: 10px;
     height: 10px;
-    background-color: #FFC300 !important;
+    background-color: #E4B548 !important;
     /* Orange for indicators */
 }
 
 .carousel-indicators .active {
-    background-color: #5F185A;
+    background-color: #3F207F;
     /* Purple for active indicator */
 }
 
 /* Carousel Controls */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #FFC300;
+    background-color: #E4B548;
     /* Orange for control icons */
 }
 
@@ -489,7 +489,7 @@ color: #5F185A; /* Purple for emphasis */
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #FFC300;
+    background-color: #E4B548;
     /* Orange when expanded */
     color: #000;
     /* Black text for contrast */
@@ -507,7 +507,7 @@ color: #5F185A; /* Purple for emphasis */
 /* Hover Effect for Links */
 .text-decoration-underline {
     text-decoration: underline;
-    color: #5F185A;
+    color: #3F207F;
     /* Purple for emphasis */
 }
 
@@ -615,7 +615,7 @@ color: #161616; /* Purple for book titles */
 }
 
 .registration-form .form-control:focus {
-  border-color: #FFC300; /* Orange border on focus */
+  border-color: #E4B548; /* Orange border on focus */
   box-shadow: 0 0 5px rgba(255, 195, 0, 0.5); /* Glow effect */
 }
 
@@ -625,7 +625,7 @@ color: #161616; /* Purple for book titles */
 }
 
 .registration-form .btn-primary {
-  background-color: #FFC300; /* Orange */
+  background-color: #E4B548; /* Orange */
   border: none;
   padding: 12px 30px;
   font-size: 1.25rem;

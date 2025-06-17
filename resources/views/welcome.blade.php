@@ -13,9 +13,10 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Transforming Lives,
-                                    One Purpose at a Time</h5>
+                                    Translating Purpose</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Transform your mindset. Achieve your goals. Live the life designed for you - with love and expert guidance.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">Transform your mindset. Achieve your goals. Live
+                                    the life designed for you - with love and expert guidance.</p>
                                 <a href="{{ route('books.index') }}"
                                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Browse Books</a>
                                 <a href="{{ route('courses') }}"
@@ -36,7 +37,8 @@
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Programs
                                 </h5>
-                                <h1 class="display-3 text-white animated slideInDown">Achieve a Life of Purpose, Passion,
+                                <h1 class="display-3 text-white animated slideInDown">Achieve a Life of Purpose,
+                                    Passion,
                                     and Fulfillment!</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Empower yourself with expert coaching,
                                     transformative books, and life-changing programs designed to help you thrive.</p>
@@ -58,7 +60,9 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown"  style="color: white; text-shadow: -1px -1px 0 hsl(299, 94%, 13%), 1px -1px 0 hsl(299, 94%, 13%), -1px 1px 0 hsl(299, 94%, 13%), 1px 1px 0 hsl(299, 94%, 13%);">Books to Thrive</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown"
+                                    style="color: white; text-shadow: -1px -1px 0 hsl(299, 94%, 13%), 1px -1px 0 hsl(299, 94%, 13%), -1px 1px 0 hsl(299, 94%, 13%), 1px 1px 0 hsl(299, 94%, 13%);">
+                                    Books to Thrive</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Unlock Your Full Potential with
                                     Transformative Books!</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Explore a collection of powerful books designed to
@@ -84,7 +88,7 @@
             <div class="row g-5 align-items-center">
                 <!-- Image Section (Left Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative">
+                    <div class="position-relative animated-brand">
                         <img class="img-fluid w-100" src="assets/img/brand-logo.jpg" alt="BIPs Services"
                             style="object-fit: cover; border-radius: 10px;">
                     </div>
@@ -101,8 +105,8 @@
                         programs, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts,
                         you’re in the right place.
                     </p>
-                   
-                 
+
+
                 </div>
             </div>
         </div>
@@ -111,119 +115,133 @@
     <!-- Services BIPs End -->
 
 
-    
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Brand Vision -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-bullseye text-primary mb-4"></i>
-                        <h5 class="mb-3 text-white">Our Brand Vision</h5>
-                        <p>To see a generation of purpose-driven individuals and leaders walking in clarity, living by principle, and creating transformational impact across life, faith, and influence.</p>
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Vision -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-bullseye text-primary mb-4"></i>
+                            <h5 class="mb-3">Our Brand Vision</h5>
+                            <p>To see a generation of purpose-driven individuals and leaders walking in clarity, living
+                                by principle, and creating transformational impact across life, faith, and influence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Values -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-list-ul text-primary mb-4"></i>
+                            <h5 class="mb-3">Brand Values</h5>
+                            <p><strong>Purposefulness:</strong> Intentionality in every step, session, and solution.<br>
+                                <strong>Principled Living:</strong> Anchoring everything in faith and timeless
+                                truth.<br>
+                                <strong>Practicality:</strong> Delivering clear, actionable steps that lead to real
+                                results.<br>
+                                <strong>Personal Growth:</strong> Championing transformation from the inside out.<br>
+                                <strong>Professional Excellence:</strong> Upholding high standards in service and
+                                impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Essence -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-heartbeat text-primary mb-4"></i>
+                            <h5 class="mb-3">Brand Essence</h5>
+                            <p>Faith-rooted transformation through purpose, structure, and strategy, building lives and
+                                platforms that glorify God and impact generations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Proposition -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-lightbulb text-primary mb-4"></i>
+                            <h5 class="mb-3">Brand Value Proposition</h5>
+                            <p>Faith-based, structured life coaching with real results brought to life through the
+                                step-by-step 5-V journey.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- Service End -->
 
-            <!-- Brand Values -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-list-ul text-primary mb-4"></i>
-                        <h5 class="mb-3 text-white">Brand Values</h5>
-                        <p><strong>Purposefulness:</strong> Intentionality in every step, session, and solution.<br>
-                           <strong>Principled Living:</strong> Anchoring everything in faith and timeless truth.<br>
-                           <strong>Practicality:</strong> Delivering clear, actionable steps that lead to real results.<br>
-                           <strong>Personal Growth:</strong> Championing transformation from the inside out.<br>
-                           <strong>Professional Excellence:</strong> Upholding high standards in service and impact.</p>
-                    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left Side: Image -->
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="btn btn-primary mt-3">BIPs Overview</div>
+
+                    <img src="assets/img/bims.jpg" alt="Welcome Image" class="img-fluid rounded shadow">
                 </div>
-            </div>
 
-            <!-- Brand Essence -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-heartbeat text-primary mb-4"></i>
-                        <h5 class="mb-3 text-white">Brand Essence</h5>
-                        <p>Faith-rooted transformation through purpose, structure, and strategy, building lives and platforms that glorify God and impact generations.</p>
+                <!-- Right Side: Text and Services -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <p class="mb-4">
+                        Browse, learn, and take the next step on your journey. Let’s thrive together!
+                    </p>
+
+                    <!-- Services List -->
+                    <div class="row gy-3 gx-4 mb-4">
+                        <div class="col-12 col-sm-6">
+                            <p class="mb-1">
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Consults &
+                                    Training</strong>
+                            </p>
+                            <small class="d-block">Insightful consulting and strategic counsel for organizational
+                                growth.</small>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="mb-1">
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>ThriveForge</strong>
+                            </p>
+                            <small class="d-block">Coaching and courses designed to help you unlock your full
+                                potential.</small>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="mb-1">
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Saved4Real</strong>
+                            </p>
+                            <small class="d-block">A faith-driven platform featuring podcasts, books, and powerful
+                                teachings.</small>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Value Proposition -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-lightbulb text-primary mb-4"></i>
-                        <h5 class="mb-3 text-white">Brand Value Proposition</h5>
-                        <p>Faith-based, structured life coaching with real results brought to life through the step-by-step 5-V journey.</p>
+                    <!-- Contact Info -->
+                    <div class="mt-4">
+                        <p>
+                            <i class="fab fa-whatsapp text-success me-2"></i>
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me/2349028763627" target="_blank">Chat with us on WhatsApp</a>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone text-primary me-2"></i>
+                            <strong>Call:</strong> +234 9028763627
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope text-primary me-2"></i>
+                            <strong>Email:</strong> iloribimbo59@gmail.com
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Service End -->
-
-  <div class="container-xxl py-5">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <!-- Left Side: Image -->
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                <img src="assets/img/bims.jpg" alt="Welcome Image" class="img-fluid rounded shadow">
-            </div>
-
-            <!-- Right Side: Text and Services -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <p class="mb-4">
-                    Browse, learn, and take the next step on your journey. Let’s thrive together!
-                </p>
-
-                <!-- Services List -->
-                <div class="row gy-3 gx-4 mb-4">
-                    <div class="col-12 col-sm-6">
-                        <p class="mb-1">
-                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Consults & Training</strong>
-                        </p>
-                        <small class="d-block">Insightful consulting and strategic counsel for organizational growth.</small>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <p class="mb-1">
-                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>ThriveForge</strong>
-                        </p>
-                        <small class="d-block">Online coaching and programs designed to help you unlock your full potential.</small>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <p class="mb-1">
-                            <i class="fa fa-arrow-right text-primary me-2"></i><strong>Saved4Real</strong>
-                        </p>
-                        <small class="d-block">A faith-driven platform featuring podcasts, books, and powerful teachings.</small>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="mt-4">
-                    <p>
-                        <i class="fab fa-whatsapp text-success me-2"></i>
-                        <strong>WhatsApp:</strong>
-                        <a href="https://wa.me/2349028763627" target="_blank">Chat with us on WhatsApp</a>
-                    </p>
-                    <p>
-                        <i class="fa fa-phone text-primary me-2"></i>
-                        <strong>Call:</strong> +234 9028763627
-                    </p>
-                    <p>
-                        <i class="fa fa-envelope text-primary me-2"></i>
-                        <strong>Email:</strong> iloribimbo59@gmail.com
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
     <!-- About Start -->
@@ -232,7 +250,7 @@
             <div class="row g-5">
                 <!-- Image Section -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="btn btn-primary mt-3">About BI</div>
+                    {{-- <div class="btn btn-primary mt-3">About BI</div> --}}
 
                     <div class="position-relative h-100">
                         <img class="img-fluid position-absolute w-100 h-100" src="assets/img/about.jpg"
@@ -244,7 +262,8 @@
                     <h6 class="section-title bg-white text-start text-primary pe-3">BIMBO ILORI</h6>
                     <h1 class="mb-4">Empowering You to Live with Purpose</h1>
                     <p class="mb-4">
-                        BIPs is anchored by <strong>Bimbo Ilori,</strong> an impact entrepreneur dedicated to life and purpose development.
+                        BIPs is anchored by <strong>Bimbo Ilori,</strong> an impact entrepreneur dedicated to life and
+                        purpose development.
                         She is passionate about helping individuals break through limitations and design a
                         fulfilling life. With years of experience in personal development, she has guided countless
                         people toward clarity, confidence, and success.
@@ -300,11 +319,7 @@
                             href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
                             <i class="fab fa-spotify"></i>
                         </a>
-                        <a class="btn btn-outline-dark btn-social"
-                            href="https://x.com/BimboIlori9228?t=IXNLk2zrhiemZZ33ejojyQ&s=09" target="_blank">
-                            <i class="fab fa-x-twitter"></i> <!-- or use fa-twitter for older versions -->
-                        </a>
-
+                     
                     </div>
                 </div>
             </div>

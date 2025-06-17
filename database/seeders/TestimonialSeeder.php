@@ -15,10 +15,10 @@ class TestimonialSeeder extends Seeder
 
         // Sample images (you will manually place these later in storage/app/public/testimonials)
         $testimonials = [
-            ['image' => 'testimonials/testimonial1.jpg'],
-            ['image' => 'testimonials/testimonial2.jpg'],
-            ['image' => 'testimonials/testimonial3.jpg'],
-            ['image' => 'testimonials/testimonial4.jpg'],
+            ['image' => 'testimonials/testimonials1.png'],
+            ['image' => 'testimonials/testimonials2.png'],
+            ['image' => 'testimonials/testimonials3.png'],
+            ['image' => 'testimonials/testimonials4.png'],
 
         ];
 

@@ -7,9 +7,15 @@
 
     <form wire:submit.prevent="sendMessage">
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-control" wire:model="name">
-            @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+            <label for="name" class="form-label">First Name</label>
+            <input type="text" id="firstName" class="form-control" wire:model="firstName">
+            @error('firstName') <span class="text-danger">{{ $message }}</span> @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" id="lastName" class="form-control" wire:model="lastName">
+            @error('lastName') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">

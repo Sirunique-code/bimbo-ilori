@@ -30,13 +30,13 @@
 
 
 :root {
-    --primary: #5f185a; /* Bootstrap Purple */
-    --light: #F0FBFC;
+    --primary: #3F207F; /* Bootstrap Purple */
+    --light: #F5F0E6;
     --dark: #000000;
 }
 
 .text-purple {
-    color: #5f185a !important;
+    color: #3F207F !important;
 }
 
 .fw-medium {
@@ -86,21 +86,21 @@ color: #f6f6f6 !important; /* Black Text */
 }
 
 .btn.btn-primary:hover {
-background-color: #ffce4c; /* Darker Purple on Hover */
+background-color: #219C9E; /* Darker Purple on Hover */
 border-color: #ffce4c;
-color: #5f185a !important; /* Ensure text stays black */
+color: #f0f0f0 !important; /* Ensure text stays black */
 }
 
 /* Secondary Button */
 .btn.btn-secondary {
 background-color: #ffce4c; /* Soft Lavender */
 border-color: #9b59b6;
-color: #5f185a !important; /* Black Text */
+color: #3F207F !important; /* Black Text */
 }
 
 .btn.btn-secondary:hover {
 background-color: #ffce4c; /* Darker on Hover */
-border-color: #8e44ad;
+border-color: #582bb3;
 color: #000 !important; /* Ensure text stays black */
 }
 
@@ -137,6 +137,43 @@ object-fit: cover; /* Ensures the image covers the area without distortion */
 width: 450px; /* Makes it responsive */
 }
 
+  .fixed-btn {
+        width: 280px; /* Adjust this to the desired width */
+        white-space: normal; /* Allow multi-line text if needed */
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .fixed-btn {
+            width: 100%; /* Stack buttons on smaller screens */
+        }
+    }
+
+        .equal-width-btn {
+        width: 220px; /* Set desired fixed width */
+        white-space: normal;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .equal-width-btn {
+            width: 100%; /* Stack full width on small screens */
+        }
+    }
+
+    .fixed-size-btn {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 60px;
+    text-align: center;
+    white-space: normal;
+    padding: 1rem;
+}
+
+
+.btn-books {
+    font-size: 0.8rem !important;
+}
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
 border: none;
@@ -158,7 +195,7 @@ outline: none;
 
 .navbar-nav .nav-link.active {
     position: relative;
-    color: #570051 !important;
+    color: #3F207F !important;
 }
 
 .navbar-nav .nav-link.active::after {
@@ -168,7 +205,7 @@ outline: none;
     bottom: 0px;
     width: 60px;
     height: 2px;
-    background-color: #570051;
+    background-color: #3F207F;
     border-radius: 2px;
 }
 
@@ -366,23 +403,40 @@ left: 0;
 
 /*** Service ***/
 .service-item {
-background: #5f185a;
+background: #3F207F;
 color: white;
 transition: .5s;
 }
 
+.service-item h5 {
+color: white !important;
+}
+
+.service-item:hover h5 {
+    color: #3F207F !important;
+}
+
 .service-item:hover {
 margin-top: -10px;
-background: #0EBBCC;
+color: #5f185a;
+background: #F0FBFC;
 }
 
-.service-item * {
-transition: .5s;
+/* Add this in your CSS file or <style> tag */
+@keyframes floatZoom {
+    0%, 100% {
+        transform: scale(1) translateY(0px);
+    }
+    50% {
+        transform: scale(1.05) translateY(-10px);
+    }
 }
 
-.service-item:hover * {
-color: var(--light) !important;
+.animated-brand {
+    animation: floatZoom 2s ease-in-out infinite;
 }
+
+
 
 
 /*** Categories & Courses ***/
@@ -499,7 +553,7 @@ border-color: var(--primary);
   }
 
   .whatsapp-float-button:hover {
-    background-color: #128C7E; /* Darker shade of WhatsApp Green */
+    background-color: #219C9E; /* Darker shade of WhatsApp Green */
   }
   
   
@@ -532,6 +586,12 @@ font-weight: normal;
 text-transform: capitalize;
 transition: .3s;
 }
+
+.active-link {
+    color: #219C9E !important; /* For example, Bootstrap's warning yellow */
+    font-weight: bold;
+}
+
 
 .footer .btn.btn-link::before {
 position: relative;

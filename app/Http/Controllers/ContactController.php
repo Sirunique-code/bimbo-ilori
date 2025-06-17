@@ -11,15 +11,17 @@ class ContactController extends Controller
     {
         // Validate input fields
         $request->validate([
-            'name'    => 'required|string|max:255',
-            'email'   => 'required|email',
-            'subject' => 'required|string|max:255',
-            'message' => 'required|string',
+            'firstName' => 'required|string|max:255',
+            'lastName'  => 'required|string|max:255',
+            'email'     => 'required|email',
+            'subject'   => 'required|string|max:255',
+            'message'   => 'required|string',
         ]);
 
         // Email details
         $data = [
-            'name'    => $request->name,
+            'firstName'    => $request->firstName,
+            'lastName'    => $request->lastName,
             'email'   => $request->email,
             'subject' => $request->subject,
             'message' => $request->message,

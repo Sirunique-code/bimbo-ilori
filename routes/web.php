@@ -95,6 +95,27 @@ Route::get('/', function () {
     return view('welcome', compact('courses'));
 })->name('welcome');
 
+Route::get('/home', function () {
+    $courses = Course::limit(3)->get();
+    return view('welcome', compact('courses'));
+});
+
+
+
+Route::get('/quote', function () {
+    $testimonials = Testimonial::all();
+    $quotes = Quote::all();
+    return view('guests.testimonials.index', compact('testimonials', 'quotes'));
+});
+
+
+Route::get('/portfolio', function () {
+    return view('guests.about.index');
+});
+
+Route::get('/services', function () {
+    return view('guests.courses.index');
+});
 
 
 // List All Courses
