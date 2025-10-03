@@ -28,6 +28,13 @@
     font-weight: bold;
 }
 
+#countdown {
+  color: #3F207F; /* Example: pink */
+  padding: 10px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
 
 :root {
     --primary: #3F207F; /* Bootstrap Purple */
@@ -627,3 +634,209 @@ margin-right: 0;
 padding-right: 0;
 border-right: none;
 }
+
+.calendar-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* Adjust this for aspect ratio (600/800 = 75%) */
+  height: 0;
+  overflow: hidden;
+  border: solid 1px #777;
+  border-radius: 10px; /* optional, looks nicer */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1); /* optional */
+}
+
+.calendar-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .calendar-container {
+    padding-bottom: 120%; /* taller ratio for small screens */
+  }
+}
+
+ .calendar-frame {
+    width: 100%;
+    min-height: 650px;   /* ensures full month fits */
+    height: 80vh;        /* responsive: takes 80% of viewport height */
+    max-height: 900px;   /* cap on very large screens */
+  }
+
+  @media (max-width: 768px) {
+    .calendar-frame {
+      min-height: 500px;  /* smaller but still full month on mobile */
+      height: 85vh;
+    }
+  }
+
+
+  /* ===== Bimbo Ilori Custom Styles ===== */
+
+/* Navbar */
+.bimbo-navbar {
+  background-color: #ffffff;
+}
+
+.bimbo-logo {
+  font-size: 1.25rem;
+  color: #000;
+}
+
+.bimbo-menu .nav-link {
+  font-weight: 500;
+  margin-left: 15px;
+  color: #333;
+}
+
+.bimbo-menu .nav-link:hover {
+  color: #219C9E; /* bootstrap primary blue */
+}
+
+/* Hero */
+.bimbo-hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url(../img/kbloc-image.jpg) center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px;
+}
+
+.bimbo-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bimbo-hero-subtext {
+  font-size: 1.2rem;
+  margin: 20px 0 30px;
+  color: #d2f1ff;
+}
+
+.bimbo-btn {
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+
+/* ===== Bimbo Full About Page Styles ===== */
+.bimbo-about-full { background: #fff; color: #222; }
+.bimbo-about-full-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.bimbo-about-full-lead { color: #555; margin-bottom: 2rem; font-size: 1.05rem; }
+
+.bimbo-section-heading { font-size: 1.25rem; font-weight: 700; color: #0d6efd; }
+.bimbo-subheading { font-size: 1.15rem; font-weight: 700; color: #111; margin-bottom: 0.75rem; }
+
+.bimbo-paragraph { color: #444; line-height: 1.6; margin-bottom: 1rem; }
+.bimbo-img { max-width: 100%; border-radius: 12px; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+
+/* Cards */
+.bimbo-card { background: #fff; border-radius: 12px; border: 1px solid rgba(13,110,253,0.06); box-shadow: 0 6px 18px rgba(16,24,40,0.03); }
+.bimbo-card-title { color: #219C9E; font-weight: 700; margin-bottom: 0.5rem; }
+
+/* Values & Services */
+.bimbo-value-card, .bimbo-service-card {
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.04);
+  height: 100%;
+}
+.bimbo-value-card h5, .bimbo-service-card h5 { font-weight: 700; margin-bottom: 0.5rem; }
+.bimbo-value-card p, .bimbo-service-card p { color: #555; }
+
+/* Difference list */
+.bimbo-diff-list { margin-top: 0.75rem; color: #444; list-style: inside; }
+
+/* CTA */
+.bimbo-cta {
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .bimbo-about-full-title { font-size: 1.6rem; }
+  .bimbo-about-full-lead { font-size: 1rem; }
+}
+
+/* ===== About Section Styles ===== */
+.bimbo-about {
+  background-color: #f9f9f9;
+}
+
+.bimbo-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.bimbo-about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #219C9E; /* bootstrap primary */
+}
+
+.bimbo-about-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.bimbo-about-btn {
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 500;
+}
+
+.bimbo-about-img {
+  max-width: 90%;
+  border-radius: 15px;
+}
+
+
+/* Programs Expandable Section */
+.bimbo-programs-detailed {
+  border-radius: 15px;
+  background: #f9f9f9;
+}
+
+.bimbo-programs-detailed h4 {
+  font-weight: 600;
+  color: #222;
+}
+
+.bimbo-programs-detailed ul {
+  margin-left: 1.2rem;
+  list-style: disc;
+}
+
+.bimbo-programs-detailed p {
+  color: #444;
+}
+
+.consultation-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+  }
+  .consultation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  .consultation-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+  }
+
+

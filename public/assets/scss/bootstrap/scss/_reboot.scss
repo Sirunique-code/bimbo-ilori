@@ -30,7 +30,7 @@
 
   @if $enable-smooth-scroll {
     @media (prefers-reduced-motion: no-preference) {
-      scroll-behavior: smooth;
+      
     }
   }
 }

@@ -126,7 +126,7 @@
                         <li>✔ Membership in the Chartered Administrators Guild</li>
                     </ul>
                     <p>
-                        Today, as an Impact Entrepreneur, I lead a holistic ecosystem of purpose-driven platforms,
+                        Today, as an  Impact Entrepreneur and Purpose Strategist, I lead a holistic ecosystem of purpose-driven platforms,
                         including:
                     </p>
                     <ul>

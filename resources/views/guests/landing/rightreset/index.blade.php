@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LPP4PFWS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,7 +11,6 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'G-B9LPP4PFWS');
     </script>
 
@@ -21,40 +20,98 @@
 
     <meta name="description"
         content="Join Bimbo Ilori's Right Reset journey — reset your mind and align with your true path.">
-
-    <!-- Open Graph for social media sharing -->
     <meta property="og:title" content="Right Reset | Bimbo Ilori">
     <meta property="og:description"
         content="Join the transformative journey with Bimbo Ilori to reset your mindset and purpose.">
-    <meta property="og:image" content="{{ asset('assets/img/rightresetflyer3.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/img/rightresetflyer1.jpg') }}">
     <meta property="og:url" content="{{ url('/rightreset') }}">
     <meta property="og:type" content="website">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" defer>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" defer>
-
-    <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
-
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Include Laravel Echo and Pusher -->
-
-
-
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS (should come first) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts: Montserrat -->
+
+    <!-- Font Awesome / Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
+
+    <!-- Inline Styles -->
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .notif {
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+    </style>
+
     @livewireStyles
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '715959051286003');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        fbq('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
+
 <body>
+
+    <!-- Countdown Section -->
+    <div class="container text-center my-5">
+        <h2 class="fw-bold fs-5 mb-4">
+            Countdown to the exclusive Right Reset MasterClass:
+        </h2>
+
+        <div class="d-inline-flex align-items-center gap-3 bg-light p-3 rounded shadow-sm">
+            <i class="fas fa-clock text-primary fs-3"></i>
+            <div class="countdown fs-4 fw-bold"></div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="section hero-section">
@@ -108,19 +165,19 @@
         <div class="container">
             <h2 class="mastersection-title text-center">RightReset Masterclass with Coach Bimbo Ilori</h2>
             <p class="text-center " style="font-size: 23px">
-                Join the Right Reset masterclass on <strong class="text-success"> June 28th, by 8pm, </strong> where
+                Join the Right Reset masterclass on <strong class="text-success"> August 23rd, by 8pm, </strong> where
                 you’ll unlock the tools, strategies, and inspiration to:
             </p>
             <div class="row mt-4">
-                <div class="col-md-4 text-center master shadow">
+                <div class="col-12 col-md-4 text-center master shadow mb-4">
                     <h4 class="masterh4">Clarify Your Next Steps</h4>
                     <p>Break free from confusion and uncover your hidden treasures.</p>
                 </div>
-                <div class="col-md-4 text-center master shadow">
+                <div class="col-12 col-md-4 text-center master shadow mb-4">
                     <h4 class="masterh4">Renew Your Energy</h4>
                     <p>Overcome discouragement and burnout, tap into a deep well of motivation and focus.</p>
                 </div>
-                <div class="col-md-4 text-center master shadow">
+                <div class="col-12 col-md-4 text-center master shadow mb-4">
                     <h4 class="masterh4">Release Limiting Patterns</h4>
                     <p>Identify and let go of habits and mindsets that no longer serve you.</p>
                 </div>
@@ -129,14 +186,10 @@
                 Take Bold, Purpose-Driven Action: Step into your potential with confidence and clarity.
             </p>
             <p class="mastertext-center text-center bg-second">
-                This isn’t just another course—it’s your moment to reset with intention and step into a life of
+                This isn’t just another Masterclass—it’s your moment to reset with intention and step into a life of
                 purpose, balance, and fulfillment.
             </p>
-            <div class="mastertext-center d-flex justify-content-center mt-4">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Join the Masterclass now with just
-                    an investment of N15500
-                    (Unlock bonuses worth 200k)</a>
-            </div>
+
         </div>
     </section>
 
@@ -144,29 +197,32 @@
     <!-- Flyers Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <!-- Flyer 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="assets/img/rightrestflyer1.jpg" alt="Flyer 1" class="card-img-top">
+            <div class="d-flex justify-content-center">
+                <div class="card shadow" style="max-width: 400px; width: 100%;">
+                    <img src="assets/img/rightrestflyer1.jpg" alt="Flyer 1" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h5 class="card-title">Discover Your Path</h5>
-                        <p class="card-text">Clarify your next steps and uncover hidden opportunities. <br><strong
-                                class="text-success">Date: 28th June, 2025. <br> Time: 8pm</strong> </p>
+                        <p class="card-text">
+                            Clarify your next steps and uncover hidden opportunities.
+                            <br>
+                            <strong class="text-success">
+                                Date: 23rd August, 2025<br>
+                                Time: 8pm
+                            </strong>
+                        </p>
                     </div>
                 </div>
             </div>
-            {{-- <!-- Flyer 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="assets/img/rightrestflyer3.jpg" alt="Flyer 3" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Release Limiting Patterns</h5>
-                            <p class="card-text">Identify and let go of habits that no longer serve you.</p>
-                        </div>
-                    </div>
-                </div> --}}
+            <div class="mastertext-center d-flex justify-content-center mt-4 bg-second">
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary ">Join the Masterclass now
+                    with just
+                    an investment of N15500
+                    (Unlock bonuses worth 200k)</a>
+            </div>
         </div>
     </section>
+
+
 
 
     <!-- Why You Need a Right Reset Section -->
@@ -178,7 +234,7 @@
                 opportunity to embrace transformation, step into your power, and align with the path you were meant to
                 walk. The moment you've been waiting for has arrived. Are you ready to take the leap?"
             </p>
-            <p class="mastertext-center text-center bg-second">
+            <p class="mastertext-center text-center bg-teal">
                 Unlike generic self-help programs, the Right Reset is tailored to meet you where you are, providing
                 practical, actionable steps to align your mindset, habits, and goals. It’s not about starting over—it’s
                 about starting right.
@@ -195,7 +251,7 @@
             <h2 class="mastersection-title text-center">What others Have to Say</h2>
             <div class="row mt-4">
                 <!-- Testimonial 1 -->
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="testimonial-card p-4 border rounded shadow-sm">
                         <div class="quote-icon">
                             <i class=" fas fa-quote-left "></i>
@@ -221,7 +277,7 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="testimonial-card p-4 border rounded shadow-sm">
                         <div class="quote-icon">
                             <i class="fas fa-quote-left "></i>
@@ -249,7 +305,7 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="testimonial-card p-4 border rounded shadow-sm">
                         <div class="quote-icon">
                             <i class="fas fa-quote-left "></i>
@@ -273,7 +329,8 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Be the Next Testifier!</a>
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">Lock your Spot for the
+                    Live masterclass Now!</a>
             </div>
         </div>
     </section>
@@ -344,67 +401,20 @@
         </div>
     </section>
 
-    <!-- Registration Form Section -->
-    <section class="section why-section">
-        <div class="container">
-            <h2 class="section-title text-center">Register Now</h2>
-            <p class="text-center lead mb-5">Secure your spot in the Right Reset Master Class by filling out the form
-                below.</p>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <form id="registrationForm" action="{{ route('register.submit') }}" method="POST"
-                        class="needs-validation" novalidate>
-                        @csrf
-                        <!-- First Name -->
-                        <div class="mb-3">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" name="firstName"
-                                placeholder="Enter your first name" required>
-                            <div class="invalid-feedback">Please enter your first name.</div>
-                        </div>
 
-                        <!-- Last Name -->
-                        <div class="mb-3">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName"
-                                placeholder="Enter your last name" required>
-                            <div class="invalid-feedback">Please enter your last name.</div>
-                        </div>
 
-                        <!-- WhatsApp Number -->
-                        <div class="mb-3">
-                            <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
-                            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber"
-                                placeholder="Enter your WhatsApp number" required>
-                            <div class="invalid-feedback">Please enter a valid WhatsApp number.</div>
-                        </div>
 
-                        <!-- Email -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Enter your email address" required>
-                            <div class="invalid-feedback">Please enter a valid email address.</div>
-                        </div>
+    <!-- Countdown Section -->
+    <div class="container text-center my-5">
+        <h2 class="fw-bold fs-5 mb-4">
+            Countdown to the exclusive Right Reset MasterClass:
+        </h2>
 
-                        <!-- Submit -->
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            {{-- Optional fallback for non-JS --}}
-            @if (session('success'))
-                <div class="alert alert-success text-center mt-3">
-                    {{ session('success') }}
-                </div>
-            @endif
+        <div class="d-inline-flex align-items-center gap-3 bg-light p-3 rounded shadow-sm">
+            <i class="fas fa-clock text-primary fs-3"></i>
+            <div class="countdown fs-4 fw-bold"></div>
         </div>
-    </section>
-
-
+    </div>
 
     <!-- Bonuses Section 2 -->
     <section class="py-5 bg-light">
@@ -412,7 +422,7 @@
             <h2 class="mastersection-title text-center">Bonuses</h2>
             <div class="row">
                 <!-- Bonus 1 -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="bonus-card text-center p-4 border rounded shadow-sm">
                         <h1 class="bonus-number text-warning">1</h1>
                         <p class="bonus-text">
@@ -422,7 +432,7 @@
                     </div>
                 </div>
                 <!-- Bonus 2 -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="bonus-card text-center p-4 border rounded shadow-sm">
                         <h1 class="bonus-number text-warning">2</h1>
                         <p class="bonus-text">
@@ -432,7 +442,7 @@
                     </div>
                 </div>
                 <!-- Bonus 3 -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="bonus-card text-center p-4 border rounded shadow-sm">
                         <h1 class="bonus-number text-warning">3</h1>
                         <p class="bonus-text">
@@ -453,8 +463,8 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="mastersection-title ">Don't miss the slot,
-                    Register here!</a>
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="mastersection-title ">Yes! i want to pay
+                    before i miss out</a>
             </div>
         </div>
     </section>
@@ -462,7 +472,7 @@
     <!-- Testimonials Carousel Section with pictures-->
     <section class="py-5">
         <div class="container">
-            <h2 class="section-title text-center text-dark">More testimonials from our clients</h2>
+            <h2 class="section-title text-center text-dark">More testimonials</h2>
             <p class="text-center lead mb-5">Hear from those who have experienced transformative growth with Coach BI.
             </p>
 
@@ -484,7 +494,7 @@
                                 <img src="assets/img/pristilla.jpg" alt="Pristilla" class="img-fluid shadow-lg"
                                     style="max-width: 300px;">
                             </div>
-                            <div class="col-md-6 mt-4 px-3">
+                            <div class="col-12 col-md-6 text-center">
                                 <p class="lead mb-4">
                                     "I was helped to develop leadership skills that include making good decisions,
                                     managing teams, and motivating others. These skills have made me a better leader,
@@ -501,7 +511,7 @@
                                 <img src="assets/img/damola.jpg" alt="Damola" class="img-fluid shadow-lg"
                                     style="max-width: 300px;">
                             </div>
-                            <div class="col-md-6 mt-4 px-3">
+                            <div class="col-12 col-md-6 text-center">
                                 <p class="lead mb-4">
                                     "My encounter with your training and the tasks given helped me develop targeted
                                     potentials I didn’t even know I had. As I diligently worked on the tasks, I
@@ -519,7 +529,7 @@
                                 <img src="assets/img/joy.jpg" alt="Joy" class="img-fluid shadow-lg"
                                     style="max-width: 300px;">
                             </div>
-                            <div class="col-md-6 mt-4 px-3">
+                            <div class="col-12 col-md-6 text-center">
                                 <p class="lead mb-4">
                                     "I had a great and worthwhile time with you. It has served as a bedrock and
                                     foundation for my career. I'm always thankful to God for ordering my steps. The
@@ -543,7 +553,8 @@
                 </button>
             </div>
             <div class="text-center mt-4">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">BE THE NEXT TESTIFIER, REGISTER
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">BE THE NEXT TESTIFIER,
+                    PAY
                     NOW!!!
                 </a>
             </div>
@@ -555,15 +566,15 @@
         <div class="container">
             <h2 class="section-title text-center">Meet the Convener – <span class="text-warning">Bimbo Ilori </span>
             </h2>
-            <div class="row align-items-center">
+            <div class="row align-items-start">
                 <!-- Image Column -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
+                <div class="col-12 col-md-4 text-center mb-4">
                     <img src="assets/img/introduction1.jpg" alt="Bimbo Ilori" class="img-fluid shadow-lg"
-                        style="max-width: 350px;">
+                        style="max-width: 250px;">
                 </div>
                 <h5 class="meet-title">Coach | Author | Purpose Strategist | Founder, ThriveForge</h5>
                 <!-- Text Column -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-8">
                     {{-- <p class="lead mb-4">
                         <strong>Variable-Synced<br>Vision-Aligned</strong><br>
                         Bimbo Ilori Programs (BIPs)
@@ -612,14 +623,15 @@
                         the fog. It redeems the time. It restores your focus.
 
                     </p>
-                    <p class=" mastertext-center text-center bg-second">
+                    <p class=" mastertext-center text-center bg-teal">
                         So if you’re done with circling, and ready to step into your next with boldness, strategy, and
                         spiritual alignment, then welcome. You’re in the right place.
 
                     </p>
                     <div class="mastertext-center d-flex justify-content-center mt-4" style="margin-bottom: 20px;">
-                        <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary">Let’s reset — the right
-                            way.</a>
+                        <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn btn-primary">SAVE YOUR FRONT
+                            SEAT NOW. <br> Pay now for just $10.00
+                            (₦15,500.00)</a>
 
                     </div>
                     <div class="text-center pb-4" style="margin-top: 30px">
@@ -627,29 +639,7 @@
                             Here</a>
                     </div>
 
-                    <!-- Social Media Icons -->
-                    <div class="d-flex justify-content-center mt-2 text-white">
 
-                        <a class="btn btn-social-icon btn-instagram me-3"
-                            href="https://www.instagram.com/bimboilori_bi/" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-facebook me-3"
-                            href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-linkedin me-3"
-                            href="https://www.linkedin.com/in/bimbo-iiori" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-spotify me-3"
-                            href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
-                            <i class="fab fa-spotify"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-globe" href="https://www.bimboilori.com" target="_blank">
-                            <i class="fas fa-globe"></i>
-                        </a>
-                    </div>
 
                 </div>
 
@@ -699,9 +689,9 @@
                 <li><span class="check-icon"><i class="fas fa-check"></i></span> <em>A coach with a clear voice, a
                         deep sense of calling, and a commitment to helping others thrive</em></li>
             </ul>
-            <div class=" mastertext-center d-flex justify-content-center mt-5">
-                <a href="https://forms.gle/XZEtBHEztx31ayuJ6" class="btn btn-primary btn-lg">Yes, I Want to Register
-                    for This Course</a>
+            <div class=" d-flex justify-content-center mt-5 ">
+                <a href="https://paystack.com/buy/rightreset-hxvysh" class="btn bg-teal btn-lg">Yes, I Want to Pay
+                    for This Masterclass</a>
             </div>
         </div>
     </section>
@@ -711,7 +701,7 @@
         <div class="container">
             <h2 class="section-title text-center text-white">Bank Transfer</h2>
             <p class="text-center lead text-white mb-4">Make your payment now to secure your spot in the Right Reset
-                Course.</p>
+                Master Class.</p>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="payment-card p-5 text-center rounded shadow-lg" style="background-color: #ffffff;">
@@ -739,6 +729,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Countdown Section -->
+    <div class="container text-center my-5">
+        <h2 class="fw-bold fs-5 mb-4">
+            Countdown to the exclusive Right Reset MasterClass:
+        </h2>
+
+        <div class="d-inline-flex align-items-center gap-3 bg-light p-3 rounded shadow-sm">
+            <i class="fas fa-clock text-primary fs-3"></i>
+            <div class="countdown fs-4 fw-bold"></div>
+        </div>
+    </div>
+
 
     <!-- FAQ Section -->
     <section class="py-5 bg-light">
@@ -820,13 +823,13 @@
                     <h2 class="accordion-header" id="headingFive">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            How can I register for this masterclass?
+                            How can I Pay for this masterclass?
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            You can register by clicking <a href="https://forms.gle/XZEtBHEztx31ayuJ6"
+                            You can Pay by clicking <a href="https://paystack.com/buy/rightreset-hxvysh"
                                 class="text-decoration-underline">here</a>. Secure your spot now and take the first
                             step toward your reset!
                         </div>
@@ -836,11 +839,107 @@
         </div>
     </section>
 
+    <!-- Registration Form Section -->
+    <section id="registrationSection" class="section why-section">
+        <div class="container">
+            <h2 class="section-title text-center">Complete your registration below:</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <form id="registrationForm" action="{{ route('register.submit') }}" method="POST"
+                        class="needs-validation" novalidate>
+                        @csrf
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="Enter your first name" required>
+                            <div class="invalid-feedback">Please enter your first name.</div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Enter your last name" required>
+                            <div class="invalid-feedback">Please enter your last name.</div>
+                        </div>
+
+                        <!-- WhatsApp Number -->
+                        <div class="mb-3">
+                            <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
+                            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber"
+                                placeholder="Enter your WhatsApp number" required>
+                            <div class="invalid-feedback">Please enter a valid WhatsApp number.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email address" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="mb-3 form-check text-center">
+                            <input type="checkbox" class="form-check-input" id="privacyPolicy" name="privacyPolicy"
+                                required>
+                            <label class="form-check-label" for="privacyPolicy">
+                                I have read and agree to the
+                                <a href="https://bimboilori.com/privacy-policy" target="_blank">Privacy Policy</a>.
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree to the Privacy Policy before submitting.
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @if (session('success'))
+            <div class="alert alert-success text-center mt-3">
+                {{ session('success') }}
+            </div>
+        @endif
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Bimbo Ilori Programs. All rights reserved. <span class="text-dark"><a
-                        href="https://bimboilori.com/">www.bimboilori.com</a></span></p>
+            <p>&copy; 2025 Bimbo Ilori Programs. All rights reserved. <span class="text-dark">
+                    <!-- Social Media Icons -->
+                    <div class="d-flex justify-content-center mt-2 text-dark">
+
+                        <a class="btn1 btn-social-icon btn-instagram me-3"
+                            href="https://www.instagram.com/bimboilori_bi/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn1 btn-social-icon btn-facebook me-3"
+                            href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="btn1 btn-social-icon btn-linkedin me-3"
+                            href="https://www.linkedin.com/in/bimbo-iiori" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a class="btn1 btn-social-icon btn-spotify me-3"
+                            href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a class="btn1 btn-social-icon btn-globe" href="https://www.bimboilori.com" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                    <p>Powered by: <a href="https://bimboilori.com/">  www.bimboilori.com</a>
+                </span></p>
+            </p>
         </div>
     </footer>
 
@@ -849,11 +948,11 @@
 
     @vite(['resources/js/app.js'])
 
-    <!-- Notification popup -->
+    {{-- <!-- Notification popup -->
     <div id="registration-notification"
         style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
         The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
-    </div>
+    </div> --}}
 
 
     <script>
@@ -907,31 +1006,67 @@
         });
     </script>
 
-    <script>
-        window.onload = function() {
-            if (typeof Echo === 'undefined') {
-                console.error("❌ Echo is NOT loaded!");
-            } else {
-                console.log("✅ Echo is loaded!");
+    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+    <script type="module">
+        import Echo from 'https://cdn.skypack.dev/laravel-echo';
+        import Pusher from 'https://cdn.skypack.dev/pusher-js';
 
-                window.Echo.channel('registration-channel')
-                    .listen('.new-registration', (e) => {
-                        console.log("📩 Received event:", e);
-                        const el = document.getElementById('registration-notification');
-                        const nameSpan = document.getElementById('registrant-name');
+        window.Pusher = Pusher;
 
-                        nameSpan.textContent = e.fullName;
-                        el.style.display = 'block';
+        window.Echo = new Echo({
+            broadcaster: 'pusher',
+            key: '{{ env('PUSHER_APP_KEY') }}',
+            cluster: '{{ env('PUSHER_APP_CLUSTER') }}',
+            forceTLS: true
+        });
 
-                        setTimeout(() => {
-                            el.style.display = 'none';
-                        }, 5000);
-                    });
-            }
-        }
+        window.Echo.channel('registrations')
+            .listen('.new.registration', (e) => {
+                let popup = document.createElement("div");
+                popup.innerText = `🎉 ${e.fullName} just registered for this Masterclass`;
+                popup.classList.add("notif");
+                document.body.appendChild(popup);
+                setTimeout(() => popup.remove(), 6000);
+            });
     </script>
-    @livewireScripts
 
+
+
+
+    <script>
+        const targetDate = new Date("2025-08-23T20:00:00");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const countdownElements = document.querySelectorAll(".countdown");
+
+            if (distance < 0) {
+                countdownElements.forEach(el => {
+                    el.innerHTML = "The MasterClass has started!";
+                });
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const formatted = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            countdownElements.forEach(el => {
+                el.innerHTML = formatted;
+            });
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+
+    @livewireScripts
 </body>
 
 </html>

@@ -12,7 +12,13 @@ use App\Livewire\CourseDetail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaymentController;
 
+use App\Events\NewRegistrationEvent;
 
+//thank-you 90
+use App\Http\Controllers\ThankYouBookingController;
+
+//Ebook Downloader
+use App\Http\Controllers\EbookController;
 
 // Books Management Controlller
 use App\Livewire\Superadmin\Courses\Edit;
@@ -21,6 +27,9 @@ use App\Livewire\Superadmin\Courses\Edit;
 use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewsletterSubscriptionConfirmation;
+
+//Booking Controllers
+use App\Http\Controllers\SessionBookingController;
 
 
 // Website Controllers
@@ -118,6 +127,11 @@ Route::get('/services', function () {
 });
 
 
+//Booking View
+Route::get('/book-session', [SessionBookingController::class, 'create'])->name('session.create');
+Route::post('/book-session', [SessionBookingController::class, 'store'])->name('session.store');
+
+
 // List All Courses
 Route::get('/our-courses', function () {
     $courses = Course::all();
@@ -154,6 +168,15 @@ Route::get('/book/{id}', function ($id) {
     return view('guests.books.show', compact('book'));
 })->name('books.show');
 
+Route::get('/e-book', function () {
+    return view('guests.books.e-book');
+})->name('e-book');
+
+//Ebook Download
+Route::post('/ebook-request', [EbookController::class, 'request'])->name('ebook.request');
+Route::get('/ebook-download', [EbookController::class, 'download'])->name('ebook.download');
+
+
 //About Route
 Route::get('/about', function () {
     return view('guests.about.index');
@@ -188,9 +211,14 @@ Route::get('/test-no-reply', function () {
 });
 
 //Courses Landing pages Routes
+Route::get('/landing-rightreset', function(){
+    return view('guests.landing.rightreset.form');
+})->name('rightreset');
+
 Route::get('/rightreset', function(){
     return view('guests.landing.rightreset.index');
 })->name('rightreset');
+
 
 
 //Thank you Route
@@ -198,13 +226,50 @@ Route::get('/thank-you', function () {
     return view('guests.thank-you');
 })->name('thank-you');
 
+Route::get('/thank-you-90', function () {
+    return view('guests.thank-you-90');
+})->name('thank-you-90');
+
+
+Route::post('/thank-you/submit', [ThankYouBookingController::class, 'store'])
+    ->name('thank-you.submit');
+
+Route::get('/calendar', function () {
+    return view('guests.calendar');
+})->name('calendar');
+
 //Privacy-Policy
 Route::get('/privacy-policy', function () {
     return view('guests.privacy-policy');
 })->name('privacy-policy');
 
 
+//KBloc Consult
+Route::get('/kbloc', function () {
+    return view('guests.kbloc.index');
+})->name('kbloc');
+
+//KBloc Consult
+Route::get('/kbloc-about', function () {
+    return view('guests.kbloc.kblocAbout');
+})->name('kbloc-about');
+
+
+//Podcasts
+Route::get('/podcast', function () {
+    return view('guests.podcasts.index');
+})->name('podcast');
+
+
+
+
+
 
 Route::post('/register', [RegistrationController::class, 'store'])->name('register.submit');
 
 
+
+Route::get('/test-broadcast', function () {
+    broadcast(new NewRegistrationEvent('Thaddeaus Ruth'));
+    return 'Event Sent';
+});

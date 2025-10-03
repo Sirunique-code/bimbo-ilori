@@ -1,6 +1,4 @@
 import './bootstrap';
-
-// resources/js/app.js
 import Echo from "laravel-echo";
 import Pusher from "pusher-js";
 
@@ -13,7 +11,11 @@ try {
         broadcaster: 'pusher',
         key: import.meta.env.VITE_PUSHER_APP_KEY,
         cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-        encrypted: true
+        forceTLS: true,
+        encrypted: true,
+        wsHost: `ws-${import.meta.env.VITE_PUSHER_APP_CLUSTER}.pusher.com`,
+        wsPort: 443,
+        disableStats: true,
     });
 
     console.log("✅ Echo initialized successfully!", window.Echo);

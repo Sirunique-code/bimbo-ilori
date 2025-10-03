@@ -3,14 +3,13 @@
 namespace App\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Broadcasting\Channel;
 
-class NewRegistrationEvent implements ShouldBroadcast
+class NewRegistrationEvent implements ShouldBroadcastNow
 {
-    use SerializesModels;
+    use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $fullName;
 
@@ -21,11 +20,11 @@ class NewRegistrationEvent implements ShouldBroadcast
 
     public function broadcastOn()
     {
-        return new Channel('registration-channel');
+        return ['registrations'];
     }
 
     public function broadcastAs()
     {
-        return 'new-registration';
+        return 'new.registration';
     }
 }

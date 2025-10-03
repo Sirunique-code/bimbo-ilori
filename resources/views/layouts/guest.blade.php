@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G38XVXDHPV"></script>
     <script>
@@ -83,6 +84,25 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @livewireStyles
+
+        <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '715959051286003');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 
@@ -98,36 +118,48 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <div class="container-fluid"> <!-- Added container-fluid for proper spacing -->
-            <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center px-3">
-                <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="Bimbo Ilori Logo" class="me-2"
-                    height="25">
-            </a>
-            <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="{{ route('welcome') }}"
-                        class="nav-item nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}">Home</a>
-                    <a href="{{ route('about.index') }}"
-                        class="nav-item nav-link {{ request()->routeIs('about*') ? 'active' : '' }}">About BI</a>
-                    <a href="{{ route('courses') }}"
-                        class="nav-item nav-link {{ request()->routeIs('courses*') ? 'active' : '' }}">Programs</a>
-                    <a href="{{ route('books.index') }}"
-                        class="nav-item nav-link {{ request()->routeIs('books*') ? 'active' : '' }}">Books by BI</a>
-                    <a href="{{ route('testimonials.index') }}"
-                        class="nav-item nav-link {{ request()->routeIs('testimonials*') ? 'active' : '' }}">Testimonials</a>
-                    <a href="{{ route('contact.index') }}"
-                        class="nav-item nav-link {{ request()->routeIs('contact*') ? 'active' : '' }}">Contact Us</a>
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <div class="container-fluid">
+        <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center px-3">
+            <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="Bimbo Ilori Logo" class="me-2" height="25">
+        </a>
+        <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{{ route('welcome') }}"
+                    class="nav-item nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}">Home</a>
+                <a href="{{ route('about.index') }}"
+                    class="nav-item nav-link {{ request()->routeIs('about*') ? 'active' : '' }}">About BI</a>
+
+                <!-- Programs Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('courses*') ? 'active' : '' }}" data-bs-toggle="dropdown">Programs</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="{{ route('courses') }}" class="dropdown-item">Coaching</a>
+                        <a href="{{ route('kbloc') }}" class="dropdown-item">Consults</a>
+                        <a href="{{ route('courses') }}" class="dropdown-item">Podcasts</a>
+                        <a href="{{ route('calendar') }}" class="dropdown-item">Upcoming Events</a>
+                    </div>
                 </div>
-                <a href="{{ route('contact.index') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Contact
-                    Us<i class="fa fa-arrow-right ms-3"></i></a>
+
+                <a href="{{ route('books.index') }}"
+                    class="nav-item nav-link {{ request()->routeIs('books*') ? 'active' : '' }}">Books by BI</a>
+                <a href="{{ route('testimonials.index') }}"
+                    class="nav-item nav-link {{ request()->routeIs('testimonials*') ? 'active' : '' }}">Testimonials</a>
+                <a href="{{ route('contact.index') }}"
+                    class="nav-item nav-link {{ request()->routeIs('contact*') ? 'active' : '' }}">Contact Us</a>
             </div>
+            <a href="{{ url('/book-session') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+                BOOK A SESSION <i class="fa fa-arrow-right ms-3"></i>
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
+<!-- Navbar End -->
+
     <p class="text-left mt-3 mb-0 fst-italic" style="color:  #E4B548; font-size: 0.6rem; padding-left: 4.3rem;">
         ...Transforming Lives, Translating Purpose...
     </p>
@@ -243,7 +275,8 @@
         <!-- Copyright -->
         <div class="container">
             <div class="text-center py-3 border-top">
-                <p class="fst-italic" style="font-size: 0.7rem; color:#E4B548;">...Principles, Purpose, Progress...</p>
+                <p class="fst-italic" style="font-size: 0.7rem; color:#E4B548;">...Principles, Purpose, Progress...
+                </p>
                 <p class="mb-0">&copy; <a class="text-light text-decoration-none"
                         href="https://bimboilori.com">bimboilori.com</a>. All Rights Reserved.</p>
             </div>

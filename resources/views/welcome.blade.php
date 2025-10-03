@@ -215,6 +215,12 @@
                         </div>
                         <div class="col-12 col-sm-6">
                             <p class="mb-1">
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Publications</strong>
+                            </p>
+                            <small class="d-block">Bimbo Ilori Authored Books</small>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <p class="mb-1">
                                 <i class="fa fa-arrow-right text-primary me-2"></i><strong>Saved4Real</strong>
                             </p>
                             <small class="d-block">A faith-driven platform featuring podcasts, books, and powerful
@@ -456,7 +462,7 @@
                     <h2 class="mb-4">Listen to BI on Spotify</h2>
                     <p>Listen to BI deliver transformative and uplifting insights on Spotify. She shares insights that
                         challenge and drive listeners to embrace spiritual and personal development.</p>
-                    <a href="https://creators.spotify.com/pod/show/bimbo-ilori" class="btn btn-primary mt-3">LISTEN
+                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA" class="btn btn-primary mt-3">LISTEN
                         HERE</a>
                 </div>
                 <!-- Podcast Image -->

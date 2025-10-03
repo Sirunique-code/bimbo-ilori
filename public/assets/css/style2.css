@@ -1,7 +1,15 @@
 /* Global Styles */
+
+html{
+    overflow-x: hidden;
+  scroll-behavior: auto !important;
+
+}
 body {
     font-family: 'Montserrat', sans-serif !important;
     background-color: #ffffff;
+  overflow-x: hidden;
+
 }
 
 .fas {
@@ -14,10 +22,12 @@ body {
     line-height: 1;
 }
 
-/* Section Base Styling */
-.section {
-    padding: 60px 20px;
+p, h1, h2, h3, h4, h5 {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
+
+/* Section Base Styling */
 
 .btn {
     --bs-btn-color: #fff !important;
@@ -54,7 +64,7 @@ body {
 }
 
 .hero-img img {
-    width: 400px;
+     max-width: 100%;
     border-radius: 12px;
     border: 10px solid #ffffff;
     /* White border */
@@ -156,6 +166,13 @@ body {
     color: #3F207F;
 }
 
+.bg-teal {
+    background-color: #00b4d8;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
 .bg-second {
     background-color: #E4B548;
     padding: 20px;
@@ -163,12 +180,17 @@ body {
 
 }
 
+
 .master {
     padding: 30px;
 }
 
+.text-center{
+    padding: 20px;
+}
+
 .mastertext-center .btn {
-    background-color: #3F207F !important;
+    background-color: #E4B548 !important;
     color: #ffffff
 }
 
@@ -211,7 +233,7 @@ body {
 }
 
 .card-img-top {
-    height: 400px;
+   
     /* Fixed height for consistency */
     object-fit: cover;
     /* Ensure images are not stretched */
@@ -420,6 +442,11 @@ color: #3F207F; /* Purple for emphasis */
     /* Light gray background for slides */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .carousel-item img {
     height: 300px;
     width: 300px;
@@ -433,12 +460,16 @@ color: #3F207F; /* Purple for emphasis */
     font-size: 1.25rem;
     line-height: 1.6;
     color: #333;
+    margin: 30px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     /* Dark gray text */
 }
 
 .carousel-item strong {
     display: block;
     margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
     color: #3F207F;
     /* Purple for emphasis */
@@ -552,6 +583,10 @@ color: #3F207F; /* Purple for emphasis */
     margin-bottom: 10px;
 }
 
+.list-unstyled {
+    padding: 20px;
+}
+
 /* Convener Profile Section */
 /* Knowledge Base Section */
 .knowledge-base-list {
@@ -559,6 +594,7 @@ font-size: 1.2rem;
 line-height: 1.8;
 font-weight: 700;
 color: #1a1a1a; /* Dark gray text */
+ padding: 20px !important;
 }
 
 .knowledge-base-list li {
@@ -645,4 +681,260 @@ color: #161616; /* Purple for book titles */
   border-radius: 5px; /* Rounded corners */
   padding: 15px;
   margin-bottom: 20px;
+}
+
+#countdown {
+  color: #3F207F; /* Example: pink */
+  padding: 10px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 15px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .herosection-title,
+  .section-title,
+  .mastersection-title {
+    font-size: 1.75rem;
+  }
+
+    .sub-container {
+    padding: 10px;
+  }
+
+    .text-box {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .lead.fw-bold,
+  .mastertext-center,
+  .bonus-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .bonus-number {
+    font-size: 2rem;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-primary {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+
+  .registration-form {
+    padding: 20px;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whysection-title {
+    font-size: 1.6rem;
+  }
+
+  .bg-second {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bonus-item {
+    font-size: 1rem;
+    padding-left: 28px;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+
+  .bonus-list {
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-form {
+    padding: 15px;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .bonus-number {
+    font-size: 2rem;
+  }
+
+  .bonus-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .bonus-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-item img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .meet-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .btn-social-icon {
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
+
+    .btn-social-icon {
+    margin-bottom: 10px;
+  }
+
+  .d-flex.justify-content-center {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .knowledge-base-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 28px;
+    margin-bottom: 15px;
+  }
+
+  .check-icon i {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-card {
+    padding: 20px;
+  }
+
+  .payment-card p {
+    font-size: 1rem;
+  }
+
+  .payment-card img {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer a {
+    word-break: break-word;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer a {
+    word-break: break-word;
+  }
 }

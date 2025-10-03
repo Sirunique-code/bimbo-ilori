@@ -84,15 +84,35 @@
 
                                     <!-- Payment Buttons for this book -->
                                     <div class="d-grid gap-2">
-                                        <a href="{{ $book->bookamazon_link }}" class="btn btn-warning"
-                                            target="_blank">Buy via Amazon</a>
-                                        <a href="{{ $book->bookselar_link }}" class="btn btn-success"
-                                            target="_blank">Buy Digital Versions via Selar </a>
-                                        <a href="{{ $book->bookpaystackdigital_link }}" class="btn btn-primary"
-                                            target="_blank">Buy Digital Verisons via Paystack</a>
-                                        <a href="{{ $book->bookpaystack_link }}" class="btn btn-primary"
-                                            target="_blank">Buy Paperback Edition via Paystack </a>
+                                        @if (!empty($book->bookamazon_link))
+                                            <a href="{{ $book->bookamazon_link }}" class="btn btn-warning"
+                                                target="_blank">
+                                                Buy via Amazon
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($book->bookselar_link))
+                                            <a href="{{ $book->bookselar_link }}" class="btn btn-success"
+                                                target="_blank">
+                                                Buy Digital Versions via Selar
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($book->bookpaystackdigital_link))
+                                            <a href="{{ $book->bookpaystackdigital_link }}" class="btn btn-primary"
+                                                target="_blank">
+                                                Buy Digital Versions via Paystack
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($book->bookpaystack_link))
+                                            <a href="{{ $book->bookpaystack_link }}" class="btn btn-primary"
+                                                target="_blank">
+                                                Buy Paperback Edition via Paystack
+                                            </a>
+                                        @endif
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -104,13 +124,87 @@
     </div>
     </div>
 
+    <!-- Free Book Giveaway Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-white"> 🎁 TAKE ADVANTAGE OF THE BOOKS BY BI FREE GIVEAWAY 🎁</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-dark shadow-sm">
+                        <div class="card-body text-center">
+                            <a href="{{ route('e-book') }}" target="_blank" class="btn btn-success btn-lg mt-2">
+                                📥 Download Free eBook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Promotional Book Spotlight Section -->
+    <section class="py-5" style="background: #f7f7f7;">
+        <div class="container">
+            <!-- Title & Intro -->
+            <h2 class="text-center fw-bold mb-3" style="color: #270067; 
+            background: linear-gradient(to right, #ffe3e3, #faea9a);">72-Hour Flash Sale</h2>
+            <p class="text-center fs-5 text-danger fw-bold mb-1">Limited Time Offer !!!</p>
+            <p class="text-center fs-6 mb-4">August 30th - September 1st, 2025</p>
+
+            <!-- Spotlight Card -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow-lg border-0">
+                        <img src="{{ asset('assets/img/faith-bundle.jpg') }}" class="card-img-top"
+                            alt="Faith Development Collection">
+
+                        <div class="card-body text-center">
+                            <h4 class="fw-bold text-primary mb-3">THE FAITH DEVELOPMENT COLLECTION</h4>
+                            <p class="mb-3">
+                                💎 <strong>5 Books to Grow, Stretch & Anchor Your Faith</strong><br>
+                                Includes: <em>Faith That Fits</em>, <em>Portals of Faith</em>, <em>100 Characteristics
+                                    of Faith</em>, <em>Montage</em>, <em>Unmute</em>
+                            </p>
+
+                            <p class="fw-semibold text-dark">
+                                Available at a <span class="text-success">special discounted rate</span> for this
+                                summer/holiday period.
+                            </p>
+
+                            <p class="fw-bold text-danger">
+                                ⏳ LIMITED TIME OFFER – 72 HOURS ONLY
+                            </p>
+
+                            <!-- Payment Buttons -->
+                            <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                <a class="btn btn-primary py-2 px-4" href="#" target="_blank">
+                                    Buy Digital Version via Paystack
+                                </a>
+
+                                <a class="btn btn-success py-2 px-4" href="#" target="_blank">
+                                    Buy Paperback Edition via Paystack
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Owl Carousel Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             $(".book-carousel").owlCarousel({
-                loop: true,
+                loop: false,
                 margin: 20,
                 nav: true,
                 dots: false,
@@ -135,6 +229,7 @@
             });
         });
     </script>
+
 
     <!-- Owl Carousel Styles -->
     <style>

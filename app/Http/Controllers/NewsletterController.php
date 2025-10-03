@@ -14,7 +14,7 @@ class NewsletterController extends Controller
     {
         // Validate the input
         $validator = \Validator::make($request->all(), [
-            'email' => 'required|email|unique:newsletter_subscribers,email',
+            'email' => 'required|email:rfc,dns|unique:newsletter_subscribers,email'
         ]);
     
         if ($validator->fails()) {
