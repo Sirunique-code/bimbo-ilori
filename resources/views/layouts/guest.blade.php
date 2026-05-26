@@ -140,7 +140,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                     <div class="dropdown-menu m-0">
                         <a href="{{ route('courses') }}" class="dropdown-item">Coaching</a>
                         <a href="{{ route('kbloc') }}" class="dropdown-item">Consults</a>
-                        <a href="{{ route('courses') }}" class="dropdown-item">Podcasts</a>
+                        <a href="{{ route('podcast') }}" class="dropdown-item">Podcasts</a>
                         <a href="{{ route('calendar') }}" class="dropdown-item">Upcoming Events</a>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
 </nav>
 <!-- Navbar End -->
 
-    <p class="text-left mt-3 mb-0 fst-italic" style="color:  #E4B548; font-size: 0.6rem; padding-left: 4.3rem;">
+    <p class="text-left mt-3 mb-0 fst-italic" style="color:  #3F207F; font-size: 0.6rem; padding-left: 4.3rem;">
         ...Transforming Lives, Translating Purpose...
     </p>
 
@@ -204,7 +204,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                             href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL"><i
                                 class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social me-2"
-                            href="https://creators.spotify.com/pod/show/bimbo-ilori"><i
+                            href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"><i
                                 class="fab fa-spotify"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/bimbo-iiori"><i
                                 class="fab fa-linkedin-in"></i></a>
@@ -284,6 +284,21 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
     </div>
     <!-- Footer End -->
 
+
+    <!-- Ebook Popup -->
+    <div id="ebookPopup" class="popup-overlay">
+    <div class="popup-box">
+        <button class="close-popup">&times;</button>
+
+        <h2>Download Your Free E-Book</h2>
+        <p>🎁 TAKE ADVANTAGE OF THE BOOKS BY BI FREE GIVEAWAY 🎁</p>
+
+        <a href="{{ url('/e-book') }}" class="popup-btn">
+            Download Now
+        </a>
+    </div>
+   </div>
+
     <!-- Newsletter JS -->
     <script>
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
@@ -358,6 +373,34 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
             });
         });
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('ebookPopup');
+        const closeBtn = document.querySelector('.close-popup');
+
+        if (!popup) return;
+
+        // Show popup after 2 seconds
+        if (!sessionStorage.getItem('ebookPopupShown')) {
+            setTimeout(() => {
+                popup.style.display = 'flex';
+                sessionStorage.setItem('ebookPopupShown', 'true');
+            }, 2000);
+        }
+
+        closeBtn.addEventListener('click', function () {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+</script>
+
 
 
 

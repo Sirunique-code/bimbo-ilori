@@ -1,5 +1,7 @@
 <x-guest-layout>
 
+
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
@@ -215,7 +217,8 @@
                         </div>
                         <div class="col-12 col-sm-6">
                             <p class="mb-1">
-                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Publications</strong>
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc
+                                    Publications</strong>
                             </p>
                             <small class="d-block">Bimbo Ilori Authored Books</small>
                         </div>
@@ -255,12 +258,10 @@
         <div class="container">
             <div class="row g-5">
                 <!-- Image Section -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    {{-- <div class="btn btn-primary mt-3">About BI</div> --}}
-
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="assets/img/about.jpg"
-                            alt="About the Coach" style="object-fit: cover;">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative w-100">
+                        <img class="img-fluid w-100" src="assets/img/about.jpg" alt="About the Coach"
+                            style="object-fit: contain; display: block;">
                     </div>
                 </div>
                 <!-- About Content Section -->
@@ -325,7 +326,7 @@
                             href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
                             <i class="fab fa-spotify"></i>
                         </a>
-                     
+
                     </div>
                 </div>
             </div>
@@ -462,7 +463,8 @@
                     <h2 class="mb-4">Listen to BI on Spotify</h2>
                     <p>Listen to BI deliver transformative and uplifting insights on Spotify. She shares insights that
                         challenge and drive listeners to embrace spiritual and personal development.</p>
-                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA" class="btn btn-primary mt-3">LISTEN
+                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"
+                        class="btn btn-primary mt-3">LISTEN
                         HERE</a>
                 </div>
                 <!-- Podcast Image -->

@@ -7,7 +7,7 @@
                 <!-- Podcast Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary px-3">Podcasts and Teachings</h6>
-                    <h2 class="mb-4">Listen to BI on Spotify</h2>
+                    <h2 class="mb-4">Listen to BI</h2>
                     <p>Listen to BI deliver transformative and uplifting insights. She shares wisdom that challenges and
                         drives listeners to embrace spiritual and personal development.</p>
                     <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"

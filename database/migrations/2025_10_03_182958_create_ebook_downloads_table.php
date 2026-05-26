@@ -13,7 +13,8 @@ return new class extends Migration
   {
     Schema::create('ebook_downloads', function (Blueprint $table) {
         $table->id();
-        $table->string('name');
+        $table->string('firstName');
+        $table->string('secondName');
         $table->string('email')->unique();
         $table->timestamps();
     });

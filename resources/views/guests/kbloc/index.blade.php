@@ -399,7 +399,7 @@
       <h2 class="fw-bold">Organizational Strategy Consultation</h2>
       <p class="lead text-muted">Let’s Build Together</p>
       <p>Partner with Kingswitbloc Consult for your next training, leadership retreat, or organizational development program.</p>
-      <a href="{{ route('contact.index') }}" class="btn btn-primary px-4 mt-3">📌 Request a Consultation/Session</a>
+      <a href="#" class="btn btn-primary px-4 mt-3">📌 Request a Consultation/Session Below</a>
     </div>
 
     <!-- Tiers Row -->

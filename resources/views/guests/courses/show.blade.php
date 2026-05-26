@@ -29,8 +29,8 @@
                              {!! $course->course_description2 !!}
                             <!-- Payment Buttons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
-                                <a class="btn btn-success btn-lg fixed-btn" href="{{ $course->pay_link }}">Pay Now via Paystack</a>
-                                {{-- @if ($course->selar_link)
+                                 {{--<a class="btn btn-success btn-lg fixed-btn" href="{{ $course->pay_link }}">Pay Now via Paystack</a>
+                                 @if ($course->selar_link)
                                 <a class="btn btn-success btn-lg" href="{{ $course->selar_link }}">Pay Now via Selar</a>
                                 @endif --}}
                                 <a href="{{ $course->register_link }}" class="btn btn-primary btn-lg fixed-btn">Register Here</a>

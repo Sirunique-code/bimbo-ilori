@@ -64,8 +64,8 @@
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="{{ route('courses.show', $course->id) }}"
                                 class="btn btn-sm btn-primary px-3 border-end">Read More</a>
-                            <a href="{{ $course->pay_link }}" class="btn btn-sm btn-success px-3"
-                                style="border-radius: 0 30px 30px 0;">Pay here</a>
+                            <a href="{{ $course->register_link }}" class="btn btn-sm btn-success px-3"
+                                style="border-radius: 0 30px 30px 0;">Register here</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">

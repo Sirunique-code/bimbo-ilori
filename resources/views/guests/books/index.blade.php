@@ -22,7 +22,7 @@
                                 with audiences via social media and impactful community projects.
                             </p>
                             <p class="mb-4">
-                                With over <strong>35+ published books</strong> and counting, she covers a wide range of
+                                With over <strong>45+ published books</strong> and counting, she covers a wide range of
                                 topics, including life purpose, personal development, relationships, and healthy living.
                                 These books are published under TKBlocs, labeled as <strong>“Life Purpose and Personal
                                     Development” (LPPD) Books.</strong>
@@ -123,8 +123,167 @@
 
     </div>
     </div>
+    
+    <!-- Why I Write Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-6 text-dark">Why I Write</h2>
+            <div class="mx-auto" style="width: 80px; height: 3px; background-color: #6c63ff;"></div>
+        </div>
 
-    <!-- Free Book Giveaway Section -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="p-4 bg-white shadow rounded-4">
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">1. Instruction</h5>
+                        <p>I write from instruction — divinely directed to express truths that must be spoken.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">2. Innate</h5>
+                        <p>I write from innate ability — a natural grace that finds rhythm in words.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">3. Insight</h5>
+                        <p>I write with insight — as a vessel for revelations that seek human expression.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">4. Inspiration</h5>
+                        <p>I write through inspiration — stirred by life, moments, and divine nudges that awaken reflection.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">5. Identification (Empathy)</h5>
+                        <p>I write from identification and empathy — to touch hearts, heal wounds, and echo unspoken cries.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">6. Initiative (Driven Service)</h5>
+                        <p>I write by initiative — to take action, respond to needs, and serve with purpose through words.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">7. Introspection (Communication + Reflection)</h5>
+                        <p>I write for introspection — to communicate deeply, process meaning, and invite others into shared reflection.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">8. Innovation (Futuristic or Posterity)</h5>
+                        <p>I write with innovation — to preserve truth, inspire growth, and shape thought for generations to come.</p>
+                    </div>
+
+                    <div class="text-end mt-4">
+                           <p class="fst-italic text-secondary mb-1">“Transforming Lives, Translating Purpose, One Page at a Time.”</p>
+                        <h5 class="fw-bold fst-italic text-secondary">— Bimbo Ilori (BI)</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="why-read-books">
+  <div class="container">
+    <h2>Why You Should Read My Books</h2>
+    <p class="intro">
+      These books are written to walk with you — offering clarity, healing, and
+      purpose through Spirit-led wisdom and timeless truth.
+    </p>
+
+    <div class="reasons-grid">
+      <div class="reason">
+        <h3>Insightful Guidance</h3>
+        <p>
+          Practical, Spirit-led wisdom that brings clarity to life, purpose,
+          and personal growth.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Transformational Truth</h3>
+        <p>
+          Compassionate and revelatory insights that confront real issues,
+          guiding you toward healing, wholeness, and renewed strength.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Purpose Illumination</h3>
+        <p>
+          Awakens and refines your God-given purpose, helping you walk
+          confidently in who you’re called to be.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Emotional & Spiritual Healing</h3>
+        <p>
+          Gentle words that speak to the heart, giving language to silent
+          struggles and comfort to wounded places.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Clarity for Life’s Challenges</h3>
+        <p>
+          Direction for navigating decisions, relationships, transitions,
+          and inner battles.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Faith-Rooted Wisdom</h3>
+        <p>
+          Timeless scriptural truth made simple, relatable, and deeply
+          applicable to everyday life.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Legacy & Leadership</h3>
+        <p>
+          Strengthens your values, sharpens your character, and empowers
+          you to lead a purposeful life and family.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>Simplicity with Depth</h3>
+        <p>
+          Deep revelation expressed in everyday language, often through
+          imagery and metaphors that make truth visible and transformative.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>A Companion for Your Journey</h3>
+        <p>
+          Meets you where you are — and helps you rise into who you are
+          becoming.
+        </p>
+      </div>
+
+      <div class="reason">
+        <h3>A Gift & a Blessing</h3>
+        <p>
+          A meaningful gift that brings encouragement, clarity, guidance,
+          and a fresh encounter with purpose and truth.
+        </p>
+      </div>
+    </div>
+
+    <blockquote>
+      “When you give a book, you give hope, healing, and direction.”
+    </blockquote>
+  </div>
+</section>
+
+
+    <!-- Free Book Giveaway Section 
     <section class="py-5 bg-dark text-white">
         <div class="container">
             <div class="text-center mb-4">
@@ -143,58 +302,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
-    <!-- Promotional Book Spotlight Section -->
-    <section class="py-5" style="background: #f7f7f7;">
-        <div class="container">
-            <!-- Title & Intro -->
-            <h2 class="text-center fw-bold mb-3" style="color: #270067; 
-            background: linear-gradient(to right, #ffe3e3, #faea9a);">72-Hour Flash Sale</h2>
-            <p class="text-center fs-5 text-danger fw-bold mb-1">Limited Time Offer !!!</p>
-            <p class="text-center fs-6 mb-4">August 30th - September 1st, 2025</p>
-
-            <!-- Spotlight Card -->
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card shadow-lg border-0">
-                        <img src="{{ asset('assets/img/faith-bundle.jpg') }}" class="card-img-top"
-                            alt="Faith Development Collection">
-
-                        <div class="card-body text-center">
-                            <h4 class="fw-bold text-primary mb-3">THE FAITH DEVELOPMENT COLLECTION</h4>
-                            <p class="mb-3">
-                                💎 <strong>5 Books to Grow, Stretch & Anchor Your Faith</strong><br>
-                                Includes: <em>Faith That Fits</em>, <em>Portals of Faith</em>, <em>100 Characteristics
-                                    of Faith</em>, <em>Montage</em>, <em>Unmute</em>
-                            </p>
-
-                            <p class="fw-semibold text-dark">
-                                Available at a <span class="text-success">special discounted rate</span> for this
-                                summer/holiday period.
-                            </p>
-
-                            <p class="fw-bold text-danger">
-                                ⏳ LIMITED TIME OFFER – 72 HOURS ONLY
-                            </p>
-
-                            <!-- Payment Buttons -->
-                            <div class="d-flex flex-wrap gap-2 justify-content-center">
-                                <a class="btn btn-primary py-2 px-4" href="#" target="_blank">
-                                    Buy Digital Version via Paystack
-                                </a>
-
-                                <a class="btn btn-success py-2 px-4" href="#" target="_blank">
-                                    Buy Paperback Edition via Paystack
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 

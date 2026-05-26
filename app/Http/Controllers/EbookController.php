@@ -9,30 +9,39 @@ class EbookController extends Controller
 {
     public function request(Request $request)
     {
+        // Validate all required fields
         $request->validate([
-            'email' => 'required|email',
-            'name'  => 'nullable|string|max:255',
+            'firstName' => 'required|string|max:255',
+            'secondName'  => 'required|string|max:255',
+            'email'      => 'required|email|unique:ebook_downloads,email',
+        ], [
+            'firstName.required' => 'First name is required.',
+            'secondName.required'  => 'Second name is required.',
+            'email.required'      => 'Email is required.',
+            'email.email'         => 'Please enter a valid email address.',
+            'email.unique'        => 'This email has already been used to download the eBook.',
         ]);
-
-        // Check if email already exists
-        if (EbookDownload::where('email', $request->email)->exists()) {
-            return back()->with('error', 'You have already downloaded this eBook.');
-        }
 
         // Save record
         EbookDownload::create([
-            'name'  => $request->name,
-            'email' => $request->email,
+            'firstName' => $request->firstName,
+            'secondName'  => $request->secondName,
+            'email'      => $request->email,
         ]);
 
-        // Instead of sending file directly, we flag success and let JS trigger download
+        // Trigger success feedback (auto download handled by JS)
         return back()->with('success', true);
     }
 
     // File download route
     public function download()
     {
-        $path = storage_path('app/public/ebooks/The-art-of-asking-well.pdf'); // put file in storage/app/public/ebooks/
+        $path = storage_path('app/public/ebooks/The-art-of-asking-well.pdf');
+
+        if (!file_exists($path)) {
+            return back()->with('error', 'Sorry, the eBook file is missing. Please try again later.');
+        }
+
         return response()->download($path, 'The Art of Asking Well.pdf');
     }
 }
