@@ -14,9 +14,9 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Transforming Lives,
-                                    Translating Purpose</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach</h1>
+                                <h1 class="display-3 text-white text-uppercase mb-3">Transforming Lives,
+                                    Translating Purpose</h1>
+                                <!-- <h1 class="display-3 text-white animated slideInDown">Life and Purpose Coach</h1> -->
                                 <p class="fs-5 text-white mb-4 pb-2">Transform your mindset. Achieve your goals. Live
                                     the life designed for you - with love and expert guidance.</p>
                                 <a href="{{ route('books.index') }}"
@@ -79,6 +79,129 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Purpose Journey eBook Download Section Start -->
+    <div id="begin-purpose-journey" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center bg-light rounded-4 shadow-lg p-4 p-md-5"
+                style="border-left: 8px solid #3F207F; background: linear-gradient(145deg, #ffffff, #f1f3f7);">
+                <!-- Text and eBook Image -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="pe-lg-4">
+                        <span class="badge bg-primary text-uppercase px-3 py-2 mb-3"
+                            style="background-color: #3F207F !important;">E-Book Giveaway</span>
+                        <h2 class="display-6 fw-bold mb-3" style="color: #3F207F;">Begin Your Purpose Journey</h2>
+                        <p class="fs-5 text-muted mb-4">Download your complimentary eBook and receive future Purpose
+                            Insights from BIPPs.</p>
+
+                        <div
+                            class="d-flex align-items-center gap-4 bg-white p-3 rounded-3 shadow-sm border border-light">
+                            <div class="position-relative flex-shrink-0"
+                                style="width: 100px; height: 130px; transform: rotate(-5deg); transition: transform 0.3s ease;"
+                                onmouseover="this.style.transform='rotate(0deg) scale(1.08)'"
+                                onmouseout="this.style.transform='rotate(-5deg)'">
+                                <img src="{{ asset('assets/img/The-art-of-asking-well.jpg') }}"
+                                    alt="The Art of Asking Well Book Cover"
+                                    class="img-fluid rounded shadow-sm w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1 text-dark" style="font-size: 1.1rem;">"The Art of Asking Well"
+                                </h5>
+                                <p class="text-muted mb-0 small">Learn how to make your requests irresistible and
+                                    position yourself for results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <!-- Registration Form -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light">
+
+                        <!-- Success Message -->
+                        @if (session('success'))
+                            <div class="alert alert-success d-flex align-items-center gap-2 mb-4" role="alert">
+                                <i class="fa fa-check-circle fs-4"></i>
+                                <div>🎉 Thank you! Your free eBook download will start shortly...</div>
+                            </div>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    setTimeout(function() {
+                                        window.location.href = "{{ route('ebook.download') }}";
+                                    }, 800);
+                                });
+                            </script>
+                        @endif
+
+                        <!-- General Error -->
+                        @if (session('error'))
+                            <div class="alert alert-danger mb-4">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <form method="POST" action="{{ route('ebook.request') }}">
+                            @csrf
+
+                            <!-- Full Name -->
+                            <div class="mb-4">
+                                <label for="ebookName" class="form-label fw-semibold text-dark">
+                                    Full Name
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0 border-light px-3">
+                                        <i class="fa fa-user text-muted"></i>
+                                    </span>
+
+                                    <input type="text" name="name" id="ebookName"
+                                        class="form-control bg-light border-start-0 border-light py-3 ps-1 text-dark @error('firstName') is-invalid @enderror"
+                                        placeholder="Enter your full name" value="{{ old('name') }}" required>
+                                </div>
+
+                                @error('firstName')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <label for="ebookEmail" class="form-label fw-semibold text-dark">
+                                    Email Address
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0 border-light px-3">
+                                        <i class="fa fa-envelope text-muted"></i>
+                                    </span>
+
+                                    <input type="email" name="email" id="ebookEmail"
+                                        class="form-control bg-light border-start-0 border-light py-3 ps-1 text-dark @error('email') is-invalid @enderror"
+                                        placeholder="Enter your email address" value="{{ old('email') }}" required>
+                                </div>
+
+                                @error('email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn-primary w-100 py-3 fw-bold mt-2 shadow-sm"
+                                style="background-color:#3F207F;border:none;border-radius:8px;transition:all .3s ease;"
+                                onmouseover="this.style.backgroundColor='#219C9E';this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.backgroundColor='#3F207F';this.style.transform='translateY(0)'">
+                                Download Free eBook
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

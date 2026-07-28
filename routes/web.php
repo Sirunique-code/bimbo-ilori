@@ -219,7 +219,10 @@ Route::get('/rightreset', function(){
     return view('guests.landing.rightreset.index');
 })->name('rightreset');
 
-
+//Child Development
+Route::get('/childdevelopment', function () {
+    return view('guests.child-development');
+})->name('child-development');
 
 //Thank you Route
 Route::get('/thank-you', function () {

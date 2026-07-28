@@ -951,3 +951,255 @@ blockquote {
   margin-right: auto;
   border-radius: 12px;
 }
+
+
+/* =========================================
+   STC LANDING PAGE - SCOPED STYLES
+   Scope: [data-page="stc-landing"]
+   ========================================= */
+
+[data-page="stc-landing"] {
+  /* Theme Variables for easy tweaking */
+  --stc-blue: #1e40af;
+  --stc-green: #16a34a;
+  --stc-yellow: #facc15;
+  --stc-purple: #9333ea;
+  --stc-cyan: #0891b2;
+  --stc-indigo: #4338ca;
+  --stc-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --stc-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --stc-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Global Section Spacing & Typography --- */
+[data-page="stc-landing"] .stc-section-title {
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #1e3a8a 0%, #16a34a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-page="stc-landing"] .stc-section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* --- 1. Hero Section --- */
+[data-page="stc-landing"] .stc-hero-badge {
+  animation: stc-fade-in-down 0.8s ease-out forwards;
+}
+
+[data-page="stc-landing"] .stc-hero-title {
+  animation: stc-fade-in-up 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+[data-page="stc-landing"] .stc-hero-subtitle {
+  animation: stc-fade-in-up 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+[data-page="stc-landing"] .stc-pillars-grid {
+  animation: stc-fade-in-up 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+[data-page="stc-landing"] .stc-pillar-card {
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-page="stc-landing"] .stc-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.15);
+}
+
+/* --- 2. Pathway Section --- */
+[data-page="stc-landing"] .stc-pathway-container {
+  position: relative;
+}
+
+[data-page="stc-landing"] .stc-pathway-step {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 10;
+}
+
+[data-page="stc-landing"] .stc-pathway-step:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--stc-shadow-lg);
+}
+
+/* Subtle pulse animation for the central pathway items on hover */
+[data-page="stc-landing"] .stc-pathway-step:hover .text-5xl {
+  animation: stc-bounce-soft 0.6s ease-in-out;
+}
+
+/* --- 3. Collections Section --- */
+[data-page="stc-landing"] .stc-collection-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+[data-page="stc-landing"] .stc-collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--stc-shadow-md);
+  border-color: transparent;
+}
+
+/* --- 4. Beyond Workbooks Section --- */
+[data-page="stc-landing"] .stc-service-card {
+  transition: all 0.3s ease;
+}
+
+[data-page="stc-landing"] .stc-service-card:hover {
+  border-color: var(--stc-blue);
+}
+
+[data-page="stc-landing"] .stc-service-card:hover .text-4xl {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* --- 5. Who It Serves (Audience) Section --- */
+[data-page="stc-landing"] .stc-audience-grid {
+  position: relative;
+}
+
+/* Connecting lines for mobile/tablet between circles */
+[data-page="stc-landing"] .stc-audience-circle,
+[data-page="stc-landing"] .stc-audience-circle-central {
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+[data-page="stc-landing"] .stc-audience-circle-central {
+  box-shadow: 0 0 0 8px rgba(30, 64, 175, 0.1), var(--stc-shadow-lg);
+  animation: stc-pulse-glow 3s infinite ease-in-out;
+}
+
+[data-page="stc-landing"] .stc-audience-circle:hover {
+  transform: scale(1.05);
+  box-shadow: var(--stc-shadow-md);
+}
+
+/* --- 6. CTA Section --- */
+[data-page="stc-landing"] .stc-cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+[data-page="stc-landing"] .stc-cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+[data-page="stc-landing"] .stc-cta-btn:hover::after {
+  left: 100%;
+}
+
+[data-page="stc-landing"] .stc-cta-btn:hover {
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+  transform: translateY(-2px);
+}
+
+/* --- 7. Footer --- */
+[data-page="stc-landing"] .stc-footer-links a {
+  position: relative;
+  display: inline-block;
+}
+
+[data-page="stc-landing"] .stc-footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #facc15;
+  transition: width 0.3s ease;
+}
+
+[data-page="stc-landing"] .stc-footer-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+   ========================================= */
+
+@keyframes stc-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stc-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stc-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes stc-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 8px rgba(30, 64, 175, 0.1), var(--stc-shadow-lg);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(30, 64, 175, 0.05), var(--stc-shadow-lg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 768px) {
+  [data-page="stc-landing"] .stc-hero-title {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  [data-page="stc-landing"] .stc-audience-grid {
+    gap: 2rem !important;
+  }
+  
+  [data-page="stc-landing"] .stc-audience-circle,
+  [data-page="stc-landing"] .stc-audience-circle-central {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  [data-page="stc-landing"] .stc-audience-circle-central {
+    width: 140px !important;
+    height: 140px !important;
+    order: -1; /* Puts STC at the top on mobile */
+    margin-bottom: 1rem;
+  }
+}

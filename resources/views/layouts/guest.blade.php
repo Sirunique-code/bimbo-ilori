@@ -190,6 +190,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                 <!-- Contact Info -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Contact</h4>
+                      <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> James Bookshop, 83 Church Road, Sabon Gari, Kano</p>
                     <p class="mb-2"><i class="fa fa-globe me-2"></i> <a href="https://bimboilori.com"
                             class="text-light text-decoration-none">bimboilori.com</a></p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> <a href="tel:+2349028763627"
@@ -285,7 +286,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
     <!-- Footer End -->
 
 
-    <!-- Ebook Popup -->
+    <!-- Ebook Popup 
     <div id="ebookPopup" class="popup-overlay">
     <div class="popup-box">
         <button class="close-popup">&times;</button>
@@ -297,7 +298,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
             Download Now
         </a>
     </div>
-   </div>
+   </div> -->
 
     <!-- Newsletter JS -->
     <script>

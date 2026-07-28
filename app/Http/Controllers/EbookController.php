@@ -9,39 +9,41 @@ class EbookController extends Controller
 {
     public function request(Request $request)
     {
-        // Validate all required fields
-        $request->validate([
+        // Split the full name into first and second names
+        $parts = preg_split('/\s+/', trim($request->name), 2);
+
+        $request->merge([
+            'firstName'  => $parts[0] ?? '',
+            'secondName' => $parts[1] ?? '',
+        ]);
+
+        $validated = $request->validate([
             'firstName' => 'required|string|max:255',
-            'secondName'  => 'required|string|max:255',
-            'email'      => 'required|email|unique:ebook_downloads,email',
+            'secondName' => 'nullable|string|max:255',
+            'email' => 'required|email|max:255|unique:ebook_downloads,email',
         ], [
-            'firstName.required' => 'First name is required.',
-            'secondName.required'  => 'Second name is required.',
-            'email.required'      => 'Email is required.',
-            'email.email'         => 'Please enter a valid email address.',
-            'email.unique'        => 'This email has already been used to download the eBook.',
+            'email.unique' => 'This email has already downloaded the eBook.',
         ]);
 
-        // Save record
-        EbookDownload::create([
-            'firstName' => $request->firstName,
-            'secondName'  => $request->secondName,
-            'email'      => $request->email,
-        ]);
+        EbookDownload::create($validated);
 
-        // Trigger success feedback (auto download handled by JS)
-        return back()->with('success', true);
+        return redirect(url()->previous() . '#begin-purpose-journey')
+            ->with('success', true);
     }
 
-    // File download route
     public function download()
     {
         $path = storage_path('app/public/ebooks/The-art-of-asking-well.pdf');
 
         if (!file_exists($path)) {
-            return back()->with('error', 'Sorry, the eBook file is missing. Please try again later.');
+            return redirect()
+                ->back()
+                ->with('error', 'Sorry, the eBook is currently unavailable.');
         }
 
-        return response()->download($path, 'The Art of Asking Well.pdf');
+        return response()->download(
+            $path,
+            'The Art of Asking Well.pdf'
+        );
     }
 }
