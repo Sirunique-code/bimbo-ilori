@@ -11,7 +11,7 @@ class BookManager extends Component
 {
     use WithFileUploads;
 
-    public $books, $title, $category, $description, $image, $amazon_link, $selar_link, $paystack_link;
+    public $books, $title, $category, $description, $image, $existing_image, $amazon_link, $selar_link, $paystack_link;
     public $bookId; // For editing
     public $showForm = false; // Toggle form visibility
     public $isEditMode = false; // Differentiate between create & update
@@ -35,10 +35,10 @@ class BookManager extends Component
             'title' => 'required',
             'category' => 'required',
             'description' => 'required',
-            'image' => 'required|image|max:1024', // Max 1MB
-            'amazon_link' => 'required|url',
-            'selar_link' => 'required|url',
-            'paystack_link' => 'required|url',
+            'image' => 'required|image|max:3072',
+            'amazon_link' => 'nullable|url',
+            'selar_link' => 'nullable|url',
+            'paystack_link' => 'nullable|url',
         ]);
 
         $imagePath = $this->image->store('books', 'public');
@@ -65,6 +65,7 @@ class BookManager extends Component
         $this->title = $book->title;
         $this->category = $book->category;
         $this->description = $book->description;
+        $this->existing_image = $book->image;
         $this->amazon_link = $book->amazon_link;
         $this->selar_link = $book->selar_link;
         $this->paystack_link = $book->paystack_link;
@@ -78,16 +79,17 @@ class BookManager extends Component
             'title' => 'required',
             'category' => 'required',
             'description' => 'required',
-            'amazon_link' => 'required|url',
-            'selar_link' => 'required|url',
-            'paystack_link' => 'required|url',
+            'amazon_link' => 'nullable|url',
+            'selar_link' => 'nullable|url',
+            'paystack_link' => 'nullable|url',
         ]);
 
         $book = Book::findOrFail($this->bookId);
 
         if ($this->image) {
-            // Delete old image
-            Storage::disk('public')->delete($book->image);
+            if ($book->image) {
+                Storage::disk('public')->delete($book->image);
+            }
             $imagePath = $this->image->store('books', 'public');
             $book->image = $imagePath;
         }
@@ -110,20 +112,25 @@ class BookManager extends Component
     public function delete($id)
     {
         $book = Book::findOrFail($id);
-        Storage::disk('public')->delete($book->image); // Delete stored image
+        if ($book->image) {
+            Storage::disk('public')->delete($book->image);
+        }
         $book->delete();
         session()->flash('message', 'Book deleted successfully!');
     }
 
-    private function resetInputFields()
+    public function resetInputFields()
     {
         $this->title = '';
         $this->category = '';
         $this->description = '';
-        $this->image = '';
+        $this->image = null;
+        $this->existing_image = null;
         $this->amazon_link = '';
         $this->selar_link = '';
         $this->paystack_link = '';
         $this->bookId = null;
+        $this->showForm = false;
+        $this->isEditMode = false;
     }
 }

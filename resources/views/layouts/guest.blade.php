@@ -120,42 +120,102 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
     <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <div class="container-fluid">
+
         <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center px-3">
-            <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="Bimbo Ilori Logo" class="me-2" height="25">
+            <img src="{{ asset('assets/img/bi-logo-full2.png') }}"
+                 alt="Bimbo Ilori Logo"
+                 height="25">
         </a>
-        <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse">
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ route('welcome') }}"
-                    class="nav-item nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}">Home</a>
-                <a href="{{ route('about.index') }}"
-                    class="nav-item nav-link {{ request()->routeIs('about*') ? 'active' : '' }}">About BI</a>
 
-                <!-- Programs Dropdown -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <div class="navbar-nav ms-auto">
+
+                <a href="{{ route('welcome') }}" class="nav-link">Home</a>
+
+                <a href="{{ route('about.index') }}" class="nav-link">About</a>
+
+                <!-- Programs -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('courses*') ? 'active' : '' }}" data-bs-toggle="dropdown">Programs</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="{{ route('courses') }}" class="dropdown-item">Coaching</a>
-                        <a href="{{ route('kbloc') }}" class="dropdown-item">Consults</a>
-                        <a href="{{ route('podcast') }}" class="dropdown-item">Podcasts</a>
-                        <a href="{{ route('calendar') }}" class="dropdown-item">Upcoming Events</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Programs
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="{{ route('courses') }}">
+                            Coaching
+                        </a>
+
+                        <a class="dropdown-item" href="{{ route('kbloc') }}">
+                            Consultations
+                        </a>
+
+                        <a class="dropdown-item" href="{{ route('child-partner') }}">
+                            Child Development Partnership
+                        </a>
                     </div>
                 </div>
 
-                <a href="{{ route('books.index') }}"
-                    class="nav-item nav-link {{ request()->routeIs('books*') ? 'active' : '' }}">Books by BI</a>
-                <a href="{{ route('testimonials.index') }}"
-                    class="nav-item nav-link {{ request()->routeIs('testimonials*') ? 'active' : '' }}">Testimonials</a>
-                <a href="{{ route('contact.index') }}"
-                    class="nav-item nav-link {{ request()->routeIs('contact*') ? 'active' : '' }}">Contact Us</a>
+                <!-- Books -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Books
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="{{ route('books.index') }}">
+                            LPPD Books
+                        </a>
+
+                        <a class="dropdown-item" href="{{ route('child-development') }}">
+                            STC Series
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('podcast') }}">
+                            Podcasts
+                        </a>
+
+                        <a class="dropdown-item" href="{{ route('calendar') }}">
+                            Events
+                        </a>
+
+                        <a class="dropdown-item" href="{{ route('purpose-insight') }}">
+                            Purpose Insight
+                        </a>
+                    </div>
+                </div>
+
+                <a href="{{ route('contact.index') }}" class="nav-link">
+                    Contact
+                </a>
+
             </div>
-            <a href="{{ url('/book-session') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-                BOOK A SESSION <i class="fa fa-arrow-right ms-3"></i>
+
+            <a href="{{ route('subscribe') }}"
+               class="btn btn-primary px-lg-4 py-3 d-none d-lg-block">
+                Subscribe
             </a>
+
         </div>
+
     </div>
 </nav>
 <!-- Navbar End -->
@@ -214,7 +274,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
 
                 <!-- Newsletter -->
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <h4 class="text-white mb-4">Join our Mailing List</h4>
                     <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
                         @csrf
                         <div class="position-relative" style="max-width: 100%;">

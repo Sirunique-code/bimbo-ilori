@@ -66,6 +66,12 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
 
      // ✅ Quotes Management Panel
      Route::get('/quotes', QuotesGallery::class)->name('superadmin.quotes.index');
+
+     // ✅ Purpose Insights Panel
+     Route::get('/purpose-insights', \App\Livewire\Superadmin\PurposeInsights\PurposeInsightManager::class)->name('superadmin.purpose-insights.index');
+
+     // ✅ Newsletter Subscribers List
+     Route::get('/newsletter-subscribers', [App\Http\Controllers\NewsletterController::class, 'index'])->name('superadmin.newsletter.index');
 });
 
 // Show login page
@@ -224,6 +230,12 @@ Route::get('/childdevelopment', function () {
     return view('guests.child-development');
 })->name('child-development');
 
+//Child Development
+Route::get('/childpartner', function () {
+    return view('guests.child-partner');
+})->name('child-partner');
+
+
 //Thank you Route
 Route::get('/thank-you', function () {
     return view('guests.thank-you');
@@ -262,6 +274,11 @@ Route::get('/kbloc-about', function () {
 Route::get('/podcast', function () {
     return view('guests.podcasts.index');
 })->name('podcast');
+
+//Purpose Insight
+Route::get('/purpose-insight', [\App\Http\Controllers\PurposeInsightController::class, 'index'])->name('purpose-insight');
+Route::get('/purpose-insight/{slug}', [\App\Http\Controllers\PurposeInsightController::class, 'show'])->name('purpose-insight.show');
+
 
 
 
