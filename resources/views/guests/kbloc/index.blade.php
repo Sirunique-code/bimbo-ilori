@@ -8,10 +8,6 @@
     <p class="bimbo-hero-subtext">
       We design and deliver purpose-driven training in leadership, communication, mentoring, and resilience — helping organizations thrive and professionals grow.
     </p>
-    <div class="bimbo-hero-buttons">
-      <a href="{{ route('courses')}}" class="btn btn-primary bimbo-btn">📌 Explore Programs</a>
-      <a href="{{ route('contact.index') }}" class="btn btn-outline-light bimbo-btn">📩 Contact Us</a>
-    </div>
   </div>
 </section>
 
@@ -269,7 +265,7 @@
         <!-- Call to Action -->
         <div class="text-center">
           <p class="fw-bold mb-3">📌 Ready to strengthen your team?</p>
-          <a href="{{ route('contact.index') }}" class="btn btn-primary bimbo-btn-rounded">📩 Contact Us Today</a>
+          <a href="https://forms.gle/7UP1WmroM1FUC8np8" class="btn btn-primary bimbo-btn-rounded">📩 Contact Us Today</a>
         </div>
 
       </div>
@@ -298,29 +294,56 @@
   </div>
 </section>
 
-<!-- Clients & Impact -->
-<section id="clients-impact" class="py-5">
+<!-- Clients & Impact 
+<section id="clients-impact" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Clients & Impact</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <blockquote class="blockquote">
-          <p>“The training you give is exceptional and we have found a good mentor in you.”</p>
-          <footer class="blockquote-footer">Mrs Adejoh</footer>
-        </blockquote>
-        <blockquote class="blockquote">
-          <p>“Your mentorship and programs transformed the way our team works together.”</p>
-          <footer class="blockquote-footer">Mr Kola</footer>
-        </blockquote>
+    <h2 class="text-center mb-5 fw-bold ">
+      Clients & Impact
+    </h2>
+
+    <div class="row g-5 align-items-center">
+     
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm mb-4">
+          <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+          <p class="mb-3 fst-italic">
+            “The training you give is exceptional and we have found a good mentor in you.”
+          </p>
+          <footer class="blockquote-footer mt-2">
+            <strong>Dean</strong>, KHCollege
+          </footer>
+        </div>
+
+        <div class="p-4 bg-white rounded-4 shadow-sm">
+          <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+          <p class="mb-3 fst-italic">
+            “Your mentorship and programs transformed the way our team works together.”
+          </p>
+          <footer class="blockquote-footer mt-2">
+            <strong>Arrows Organization</strong> <br>
+            <small>(Personal & Capacity Development Specialists)</small>
+          </footer>
+        </div>
       </div>
-      <div class="col-md-6 d-flex align-items-center">
-        <p class="lead text-center">
-          Trusted by professionals across sectors for impact and purpose-driven growth.
-        </p>
+
+      
+      <div class="col-lg-6 text-center">
+        <div class="p-5 rounded-4 bg-primary text-white shadow">
+          <h4 class="fw-bold mb-3">Making Real Impact</h4>
+          <p class="lead mb-4">
+            Trusted by professionals across industries for transformative, purpose-driven growth.
+          </p>
+          <div class="d-flex justify-content-center gap-4 mt-3">
+            <i class="fas fa-briefcase fa-2x"></i>
+            <i class="fas fa-users fa-2x"></i>
+            <i class="fas fa-lightbulb fa-2x"></i>
+            <i class="fas fa-chart-line fa-2x"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</section> --> 
 
 <!-- Resources -->
 <section id="resources" class="py-5 bg-light">
@@ -335,8 +358,8 @@
           <div class="card-body">
             <h5 class="card-title">Leadership Posts</h5>
             <ul class="list-unstyled mb-0">
-              <li><a href="https://lnkd.in/p/g7ix6MEw" target="_blank">LinkedIn Post 1</a></li>
-              <li><a href="https://lnkd.in/p/g_t8CDWa" target="_blank">LinkedIn Post 2</a></li>
+              <li><a href="https://lnkd.in/p/g7ix6MEw" target="_blank">LinkedIn Post </a></li>
+              <li><a href="https://lnkd.in/p/g_t8CDWa" target="_blank">LinkedIn Post </a></li>
             </ul>
           </div>
         </div>
@@ -348,31 +371,21 @@
           <div class="card-body">
             <h5 class="card-title">Social Media Shares</h5>
             <ul class="list-unstyled mb-0">
-              <li><a href="https://www.facebook.com/share/p/15vBX8Bgeb/" target="_blank">Facebook Resource 1</a></li>
-              <li><a href="https://www.facebook.com/share/p/1Cmivvk37z/" target="_blank">Facebook Resource 2</a></li>
-              <li><a href="https://www.facebook.com/share/p/1FBVKj3RQP/" target="_blank">Facebook Resource 3</a></li>
-              <li><a href="https://www.facebook.com/share/p/1JhUuDc7gP/" target="_blank">Facebook Resource 4</a></li>
-              <li><a href="https://www.facebook.com/share/p/1CjRckETxH/" target="_blank">Facebook Resource 5</a></li>
-              <li><a href="https://www.facebook.com/share/p/1G58PLqGFE/" target="_blank">Facebook Resource 6</a></li>
-              <li><a href="https://www.facebook.com/share/p/1KBD8xdv9C/" target="_blank">Facebook Resource 7</a></li>
-              <li><a href="https://www.facebook.com/share/p/19miZdBnQn/" target="_blank">Facebook Resource 8</a></li>
+              <li><a href="https://www.facebook.com/share/p/15vBX8Bgeb/" target="_blank">Mindset Shift</a></li>
+              <li><a href="https://www.facebook.com/share/p/1Cmivvk37z/" target="_blank">Retrospective Leadership</a></li>
+              <li><a href="https://www.facebook.com/share/p/1FBVKj3RQP/" target="_blank">Capability Tops Capacity</a></li>
+              <li><a href="https://www.facebook.com/share/p/1JhUuDc7gP/" target="_blank">The Sacrifice of Personal Growth</a></li>
+              <li><a href="https://www.facebook.com/share/p/1CjRckETxH/" target="_blank">Disallow Normalised Nonsense</a></li>
+              <li><a href="https://www.facebook.com/share/p/1G58PLqGFE/" target="_blank">Partnership and Purpose</a></li>
+              <li><a href="https://www.facebook.com/share/p/1KBD8xdv9C/" target="_blank">Skills and Success</a></li>
+              <li><a href="https://web.facebook.com/story.php?story_fbid=8519862404734658&id=100001329488346&rdid=MVHzfEMlL0hqLnkD#" target="_blank">The power of Reserved Judgement</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Podcasts -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-body">
-            <h5 class="card-title">Podcasts</h5>
-            <p>
-              Listen to our supported podcast edition: 
-              <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA" target="_blank">(Irresistible Request)</a>
-            </p>
-          </div>
-        </div>
-      </div>
+
+
 
       <!-- Books -->
       <div class="col-md-6 col-lg-4">
@@ -380,12 +393,17 @@
           <div class="card-body">
             <h5 class="card-title">Recommended Books</h5>
             <ul class="list-unstyled mb-0">
-              <li>Asking Well</li>
-              <li>Business Backends</li>
-              <li>More coming soon…</li>
-            </ul>
+              <li>Business backends</li>
+              <li>What do you want?</li>
+              <li>The line Within</li>
+              <li>Overcoming difficult relationships</li>
+              <li>The Test of Triumph</li>
+            </ul> <br>
+             <a  href="{{ route('books.index') }}" class="btn btn-primary bimbo-lead-btn">Explore Books →</a>
           </div>
+           
         </div>
+       
       </div>
     </div>
   </div>
@@ -399,7 +417,7 @@
       <h2 class="fw-bold">Organizational Strategy Consultation</h2>
       <p class="lead text-muted">Let’s Build Together</p>
       <p>Partner with Kingswitbloc Consult for your next training, leadership retreat, or organizational development program.</p>
-      <a href="#" class="btn btn-primary px-4 mt-3">📌 Request a Consultation/Session Below</a>
+  
     </div>
 
     <!-- Tiers Row -->
@@ -413,8 +431,8 @@
             <p><strong>Theme:</strong> Quick Wins, Clear Direction</p>
             <p class="small text-muted">#QuickFocus #FastTrack #ExecutiveBrief</p>
             <p class="flex-grow-1">A short, targeted briefing to tackle one urgent organizational issue and provide immediate, actionable insight.</p>
-            <p class="fw-bold">→ $100 – $250 (₦150,000 – ₦350,000)</p>
-            <a href="https://paystack.com/buy/the-focus-brief-ypzkpf" class="btn btn-outline-primary mt-auto">Book Now</a>
+            <!-- <p class="fw-bold">→ $100 – $250 (₦150,000 – ₦350,000)</p> -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScG_S1DCkOxs0rEjRcBdvpi3twa4gyVFxVSULPQmEV8yhINoA/viewform?usp=send_form" class="btn btn-outline-primary mt-auto">Book Now</a>
           </div>
         </div>
       </div>
@@ -428,8 +446,8 @@
             <p><strong>Theme:</strong> Insight, Structure, Solutions</p>
             <p class="small text-muted">#DeepDive #StrategicShift #LeadershipLens</p>
             <p class="flex-grow-1">A one-hour strategy session to explore root issues, align leadership, and outline 3–5 clear action steps.</p>
-            <p class="fw-bold">→ $200-$400 (₦300,000 – 600,000)</p>
-            <a href="https://paystack.com/buy/the-strategy-reset-wnhzfx" class="btn btn-primary mt-auto">Book Now</a>
+            <!-- <p class="fw-bold">→ $200-$400 (₦300,000 – 600,000)</p> -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScG_S1DCkOxs0rEjRcBdvpi3twa4gyVFxVSULPQmEV8yhINoA/viewform?usp=send_form" class="btn btn-primary mt-auto">Book Now</a>
           </div>
         </div>
       </div>
@@ -443,8 +461,8 @@
             <p><strong>Theme:</strong> Breakthrough Strategy, Lasting Change</p>
             <p class="small text-muted">#Transformation #Blueprint #HighImpact</p>
             <p class="flex-grow-1">A deep-dive strategy lab to scan organizational realities, introduce tailored frameworks, and draft a roadmap for lasting transformation. Includes post-session notes and summary.</p>
-            <p class="fw-bold">→ $300-$500 (₦450,000 – ₦750,000)</p>
-            <a href="https://paystack.com/buy/the-transformation-leap--90mins-jrcwpw" class="btn btn-outline-primary mt-auto">Book Now</a>
+            <!-- <p class="fw-bold">→ $300-$500 (₦450,000 – ₦750,000)</p> -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScG_S1DCkOxs0rEjRcBdvpi3twa4gyVFxVSULPQmEV8yhINoA/viewform?usp=send_form" class="btn btn-outline-primary mt-auto">Book Now</a>
           </div>
         </div>
       </div>

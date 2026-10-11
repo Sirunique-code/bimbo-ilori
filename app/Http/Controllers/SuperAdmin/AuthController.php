@@ -11,7 +11,7 @@ class AuthController extends Controller
     // Show the login form
     public function showLoginForm()
     {
-        return view('superadmin.auth.login'); // Your custom login page
+        return redirect()->route('login');
     }
 
     // Handle the login request

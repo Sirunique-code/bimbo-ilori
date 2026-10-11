@@ -12,17 +12,12 @@ class PurposeInsightController extends Controller
      */
     public function index()
     {
-        $publishedInsights = PurposeInsight::where('is_published', true)
-            ->latest('published_at')
-            ->get()
-            ->groupBy('category');
-
         $latestInsights = PurposeInsight::where('is_published', true)
             ->latest('published_at')
-            ->take(6)
+            ->latest('id')
             ->get();
 
-        return view('guests.purpose-insight', compact('publishedInsights', 'latestInsights'));
+        return view('guests.purpose-insight', compact('latestInsights'));
     }
 
     /**

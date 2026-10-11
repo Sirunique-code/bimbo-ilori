@@ -3,6 +3,7 @@
         <div class="container text-center">
 
             <div class="text-center">
+              
                 <h6 class="section-title bg-white text-center text-primary px-3">Thank You!</h6>
             </div>
 

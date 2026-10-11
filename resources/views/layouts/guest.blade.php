@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G38XVXDHPV"></script>
     <script>
@@ -85,7 +85,7 @@
 
     @livewireStyles
 
-        <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -95,12 +95,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '715959051286003');
+fbq('init', '1927742851377054');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1927742851377054&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
@@ -176,10 +175,16 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                             LPPD Books
                         </a>
 
-                        <a class="dropdown-item" href="{{ route('child-development') }}">
+                        <a class="dropdown-item" href="/childdevelopment#stc-collections">
                             STC Series
                         </a>
                     </div>
+                </div>
+                
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ route('child-development') }}">
+                        Child Hub
+                    </a>
                 </div>
 
                 <!-- Resources -->
@@ -192,14 +197,11 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                         <a class="dropdown-item" href="{{ route('podcast') }}">
                             Podcasts
                         </a>
-
-                        <a class="dropdown-item" href="{{ route('calendar') }}">
-                            Events
-                        </a>
-
                         <a class="dropdown-item" href="{{ route('purpose-insight') }}">
                             Purpose Insight
                         </a>
+
+                       
                     </div>
                 </div>
 
@@ -219,12 +221,9 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
     </div>
 </nav>
 <!-- Navbar End -->
-
     <p class="text-left mt-3 mb-0 fst-italic" style="color:  #3F207F; font-size: 0.6rem; padding-left: 4.3rem;">
         ...Transforming Lives, Translating Purpose...
     </p>
-
-
 
 
     <!-- Navbar End -->
@@ -250,7 +249,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                 <!-- Contact Info -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Contact</h4>
-                      <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> James Bookshop, 83 Church Road, Sabon Gari, Kano</p>
+                     
                     <p class="mb-2"><i class="fa fa-globe me-2"></i> <a href="https://bimboilori.com"
                             class="text-light text-decoration-none">bimboilori.com</a></p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> <a href="tel:+2349028763627"
@@ -258,23 +257,25 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                     <p class="mb-3"><i class="fa fa-envelope me-2"></i> <a href="mailto:iloribimbo59@gmail.com"
                             class="text-light text-decoration-none">iloribimbo59@gmail.com</a></p>
 
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-outline-light btn-social me-2"
-                            href="https://www.instagram.com/bimboilori_bi"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social me-2"
-                            href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social me-2"
-                            href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"><i
-                                class="fab fa-spotify"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/bimbo-iiori"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+                   <div class="d-flex pt-3">
+    <a class="btn btn-outline-light btn-social me-2"
+        href="https://www.instagram.com/bimboilori_bi"><i class="fab fa-instagram"></i></a>
+    <a class="btn btn-outline-light btn-social me-2"
+        href="https://www.facebook.com/bimbo.a.ilori?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+    <a class="btn btn-outline-light btn-social me-2"
+        href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"><i class="fab fa-spotify"></i></a>
+    <a class="btn btn-outline-light btn-social me-2"
+        href="https://www.linkedin.com/in/bimbo-iiori"><i class="fab fa-linkedin-in"></i></a>
+    <!-- <a class="btn btn-outline-light btn-social"
+        href="https://youtube.com/@solpodcast-k8w?si=l-ElE0j6q3IcvBKN"><i class="fab fa-youtube"></i></a>-->
+</div>
 
-                <!-- Newsletter -->
+                </div>
+                
+                 <!-- Newsletter -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Join our Mailing List</h4>
+                    <p>Subscribe to receive periodic Purpose Insights, BIPPs updates and resources to engage more deeply with the BIPPs Community.</p>
                     <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
                         @csrf
                         <div class="position-relative" style="max-width: 100%;">
@@ -287,48 +288,113 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
                     <div id="message-container" class="mt-2"></div>
                 </div>
 
+               
+
                 <!-- Quick Links -->
-                <div class="col-lg-4 col-md-12">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="{{ route('welcome') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('welcome') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> Home
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ route('about.index') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('about.index') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> About BI
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ route('courses') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('courses') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> Programs
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ route('books.index') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('books.index') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> Books by BI
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ route('testimonials.index') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('testimonials.index') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> Testimonials
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('contact.index') }}"
-                                class="text-light text-decoration-none {{ request()->routeIs('contact.index') ? 'active-link' : '' }}">
-                                <i class="fa fa-angle-right me-2"></i> Contact Us
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+<div class="col-lg-4 col-md-12">
+    <h4 class="text-white mb-4">Quick Links</h4>
+
+    <ul class="list-unstyled">
+
+        <li class="mb-2">
+            <a href="{{ route('welcome') }}" class="text-light text-decoration-none">
+                <i class="fa fa-angle-right me-2"></i> Home
+            </a>
+        </li>
+
+        <li class="mb-2">
+            <a href="{{ route('about.index') }}" class="text-light text-decoration-none">
+                <i class="fa fa-angle-right me-2"></i> About
+            </a>
+        </li>
+
+        <li class="mb-2">
+            <span class="text-light">
+                <i class="fa fa-angle-right me-2"></i> Programs
+            </span>
+
+            <ul class="list-unstyled ms-4 mt-2">
+                <li>
+                    <a href="{{ route('courses') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> Coaching
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('kbloc') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> Consultations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('child-partner') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> Child Development Partnership
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="mb-2">
+            <span class="text-light">
+                <i class="fa fa-angle-right me-2"></i> Books
+            </span>
+
+            <ul class="list-unstyled ms-4 mt-2">
+                <li>
+                    <a href="{{ route('books.index') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> LPPD Books
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/childdevelopment#stc-collections" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> STC Series
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="mb-2">
+            <a href="{{ route('child-development') }}" class="text-light text-decoration-none">
+                <i class="fa fa-angle-right me-2"></i> Child Hub
+            </a>
+        </li>
+
+        <li class="mb-2">
+            <span class="text-light">
+                <i class="fa fa-angle-right me-2"></i> Resources
+            </span>
+
+            <ul class="list-unstyled ms-4 mt-2">
+                <li>
+                    <a href="{{ route('podcast') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> Podcasts
+                    </a>
+                </li>
+                    
+                <li>
+                    <a href="{{ route('purpose-insight') }}" class="text-light text-decoration-none">
+                        <i class="fa fa-caret-right me-2"></i> Purpose Insight
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="mb-2">
+            <a href="{{ route('testimonials.index') }}" class="text-light text-decoration-none">
+                <i class="fa fa-angle-right me-2"></i> Testimonials
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ route('contact.index') }}" class="text-light text-decoration-none">
+                <i class="fa fa-angle-right me-2"></i> Contact
+            </a>
+        </li>
+
+    </ul>
+</div>
+
 
             </div>
         </div>
@@ -346,7 +412,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
     <!-- Footer End -->
 
 
-    <!-- Ebook Popup 
+ <!-- Ebook Popup 
     <div id="ebookPopup" class="popup-overlay">
     <div class="popup-box">
         <button class="close-popup">&times;</button>
@@ -359,41 +425,7 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
         </a>
     </div>
    </div> -->
-
-    <!-- Newsletter JS -->
-    <script>
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
-                            'content')
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.json();
-                })
-                .then(data => {
-                    const msg =
-                        `<div class="alert alert-${data.success ? 'success' : 'danger'}">${data.message || 'An error occurred.'}</div>`;
-                    document.getElementById('message-container').innerHTML = msg;
-                    if (data.success) form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('message-container').innerHTML =
-                        `<div class="alert alert-danger">An unexpected error occurred. Please try again.</div>`;
-                });
-        });
-    </script>
+ 
 
 
     <!-- Back to Top -->
@@ -434,8 +466,8 @@ src="https://www.facebook.com/tr?id=2236429676815546&ev=PageView&noscript=1"
             });
         });
     </script>
-
-    <script>
+    
+     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const popup = document.getElementById('ebookPopup');
         const closeBtn = document.querySelector('.close-popup');

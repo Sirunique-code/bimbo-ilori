@@ -21,14 +21,7 @@
                     Please complete the form below to confirm your booking.
                 </p>
 
-                <!-- New Calendar Link Button -->
-                <div class="mt-4">
-                    <a href="https://calendar.app.google/fjh51TnRp7eAnKnQA" 
-                       target="_blank" 
-                       class="btn btn-lg btn-success shadow">
-                        📅 Reserve Your Spot on the Calendar
-                    </a>
-                </div>
+            
             </div>
         </div>
     </div>

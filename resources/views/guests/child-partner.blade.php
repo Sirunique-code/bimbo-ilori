@@ -8,8 +8,8 @@
     ========================== -->
     <section class="p-hero">
         <div class="container mx-auto px-6 lg:px-16 text-center">
-            <span class="p-hero-badge">PARTNER WITH BIPPs</span>
-            <h1 class="p-hero-title">Develop the Learner.<br>Develop the Teacher.<br>Develop the Institution.</h1>
+            <span class="p-hero-badge">COLLABORATE WITH BIPPs</span>
+            <h1 class="p-hero-title text-white">Develop the Learner.<br>Develop the Teacher.<br>Develop the Institution.</h1>
             <p class="p-hero-text">
                 BIPPs partners with schools to build intentional systems that help children grow, help teachers understand and develop learners, and help schools make that development visible, measurable, and actionable.
             </p>
@@ -41,7 +41,7 @@
                     <p>The Student Transformation Companion (STC) is BIPPs' structured learner development framework designed to help students grow in:</p>
                     <p class="p-pillar-focus">Character • Competence • Clarity • Contribution</p>
                     <p>The STC helps learners build intentional habits, learning skills, responsibility, confidence, purpose, leadership, and personal growth through progressive developmental experiences. STC helps schools develop learners intentionally, one stage at a time.</p>
-                    <a href="/childdevelopment" class="p-btn-secondary">Explore the STC Series →</a>
+                    <a href="/childdevelopment#stc-collections" class="p-btn-secondary">Explore the STC Series →</a>
                 </div>
 
                 <!-- Pillar 02 -->
@@ -79,7 +79,7 @@
                         <li>Subject Choice and Pathway Guidance</li>
                         <li>Teacher Observation as a Tool for Development</li>
                     </ul>
-                    <a href="#" class="p-btn-secondary">Explore Professional Capacity Building →</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzx439f_5HOaBB8g1f-sh-1OGUXqJqY2b0w7_SrWUH3n_kOA/viewform?usp=header" class="p-btn-secondary">I am Ready to Partner</a>
                 </div>
 
                 <!-- Pillar 03 -->
@@ -108,7 +108,7 @@
                         <li>Student Accountability & Positive Discipline</li>
                         <li>Student Leadership & Values Based Practice</li>
                     </ul>
-                    <a href="#" class="p-btn-secondary">Explore School Development & Systems →</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzx439f_5HOaBB8g1f-sh-1OGUXqJqY2b0w7_SrWUH3n_kOA/viewform?usp=header" class="p-btn-secondary">Explore School Development & Systems →</a>
                 </div>
 
             </div>
@@ -176,8 +176,8 @@
                 <div class="p-shift-box p-shift-old">
                     <h3>Instead of asking only:</h3>
                     <p class="p-shift-quote">"What grades did this learner achieve?"</p>
-                </div>
-                
+                </div><br>
+                <br>
                 <div class="p-shift-arrow">→</div>
                 
                 <div class="p-shift-box p-shift-new">
@@ -203,11 +203,11 @@
     <!-- =========================
          5. PARTNERSHIP PATHWAYS
     ========================== -->
-   <section class="p-pathways-section">
+    <section class="p-pathways-section">
     <div class="container mx-auto px-6 lg:px-16">
         <div class="text-center mb-16">
-            <h2 class="p-section-title">Our School Partnership Pathways</h2>
-            <p class="p-section-subtitle">BIPPs can partner with your school at one or more levels:</p>
+            <h2 class="p-section-title">Our School Collaboration Pathways</h2>
+            <p class="p-section-subtitle">BIPPs can collaborate with your school at one or more levels:</p>
         </div>
 
         <div class="p-pathways-grid">
@@ -228,7 +228,7 @@
             </div>
             <div class="p-pathway-card p-pathway-featured">
                 <div class="p-pathway-icon">🤝</div>
-                <h3>Whole School Partnership</h3>
+                <h3>Whole School Collaboration</h3>
                 <p>An integrated approach connecting the learner, teacher, and institution.</p>
             </div>
         </div>
@@ -239,7 +239,7 @@
                target="_blank" 
                rel="noopener noreferrer" 
                class="p-btn-primary">
-                Begin Your Partnership Journey →
+                Begin Your Collaboration Journey →
             </a>
             <p class="text-sm text-gray-500 mt-4">
                 Clicking this will open our official partnership inquiry form in a new tab.
@@ -256,16 +256,12 @@
 
 <!-- Simple script to show success message on form submit (Remove if using Laravel redirect) -->
 <script>
-    document.getElementById('stc-partnership-form').addEventListener('submit', function(e) {
-        // Note: If you are using standard Laravel form submission with a redirect, 
-        // remove this script and handle the success message via session flash data in Blade.
-        // This is just for frontend demonstration.
-        /* 
-        e.preventDefault(); 
-        document.getElementById('p-form-container').style.display = 'none';
-        document.getElementById('p-success-message').style.display = 'block';
-        */
-    });
+    const partnershipForm = document.getElementById('stc-partnership-form');
+    if (partnershipForm) {
+        partnershipForm.addEventListener('submit', function(e) {
+            // Frontend demonstration handling if needed
+        });
+    }
 </script>
 
 </x-guest-layout>

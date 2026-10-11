@@ -74,12 +74,8 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
      Route::get('/newsletter-subscribers', [App\Http\Controllers\NewsletterController::class, 'index'])->name('superadmin.newsletter.index');
 });
 
-// Show login page
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-
 // Handle login form submission
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
-;
 
 //logout route
 Route::post('/logout', function () {

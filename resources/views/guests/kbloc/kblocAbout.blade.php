@@ -44,9 +44,9 @@
           only perform better but also transform the culture of the institutions they serve.
         </p>
         <p class="bimbo-paragraph">
-          Our founder, <span class="bimbo-founder">[Founder Name]</span>, is a Chartered Administrator,
+          Our founder, <span class="bimbo-founder">Abimbola Ilori</span>, is a Chartered Administrator,
           Certified Life Purpose Coach, and trained Guidance Professional. With a unique blend of
-          administrative expertise, coaching insight, and guidance principles, <span class="bimbo-founder">Bimbo Ilori</span>
+          administrative expertise, coaching insight, and guidance principles, <span class="bimbo-founder">she</span>
           brings depth and balance to organizational development.
         </p>
       </div>
@@ -174,7 +174,7 @@
     <!-- CTA -->
     <div class="row mt-5 mb-4">
       <div class="col text-center">
-        <a href="contact.html" class="btn btn-primary bimbo-cta">Work With Us →</a>
+        <a href="https://forms.gle/G8iiparxyrnPRgUz8" class="btn btn-primary bimbo-cta">Work With Us →</a>
       </div>
     </div>
   </div>

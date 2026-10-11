@@ -24,12 +24,11 @@
                         <!-- Course Description -->
                         <div class="p-4">
                             {!! $course->course_description !!}
-                             <h4>Investment:</h4><h3 class="mb-0">₦{{ number_format($course->course_price_ngn, 2) }}
-                            (${{ number_format($course->course_price_usd, 2) }})</h3><br>
+                           <br>
                              {!! $course->course_description2 !!}
                             <!-- Payment Buttons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
-                                 {{--<a class="btn btn-success btn-lg fixed-btn" href="{{ $course->pay_link }}">Pay Now via Paystack</a>
+                                {{-- <a class="btn btn-success btn-lg fixed-btn" href="{{ $course->pay_link }}">Pay Now via Paystack</a>
                                  @if ($course->selar_link)
                                 <a class="btn btn-success btn-lg" href="{{ $course->selar_link }}">Pay Now via Selar</a>
                                 @endif --}}

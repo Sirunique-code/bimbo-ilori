@@ -60,27 +60,38 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <label class="form-label font-weight-bold">Featured Cover Image (Optional)</label>
+                        <label class="form-label font-weight-bold d-flex align-items-center gap-1">
+                            <i class="ti-image text-primary"></i> Featured Cover Image (Optional)
+                        </label>
                         <input type="file" wire:model="image" class="form-control">
                         @if($existing_image && !$image)
-                            <div class="mt-2">
-                                <small class="text-muted">Current Cover:</small><br>
-                                <img src="{{ asset('storage/' . $existing_image) }}" class="rounded shadow-sm" style="height: 60px; object-fit: cover;">
+                            <div class="mt-2 d-flex align-items-center gap-2">
+                                <img src="{{ asset('storage/' . $existing_image) }}" class="rounded shadow-sm" style="height: 44px; width: 60px; object-fit: cover;">
+                                <small class="text-muted">Current cover active</small>
                             </div>
                         @endif
-                        @error('image') <span class="text-danger small">{{ $message }}</span> @enderror
+                        @error('image') <span class="text-danger small d-block mt-1">{{ $message }}</span> @enderror
                     </div>
 
-                    <div class="col-md-6 mb-3 d-flex align-items-center">
-                        <div class="form-check form-switch me-4">
-                            <input class="form-check-input" type="checkbox" wire:model="is_published" id="isPublishedCheck">
-                            <label class="form-check-label font-weight-bold" for="isPublishedCheck">Publish Immediately</label>
-                        </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label font-weight-bold d-block">Publication & Email Broadcast</label>
+                        <div class="p-3 bg-light rounded-3 border d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
+                            <!-- Toggle 1: Publish Immediately -->
+                            <label class="custom-admin-toggle mb-0" for="isPublishedCheck">
+                                <input type="checkbox" wire:model="is_published" id="isPublishedCheck" class="custom-toggle-input">
+                                <span class="custom-toggle-slider"></span>
+                                <span class="custom-toggle-label font-weight-bold text-dark">
+                                    Publish Immediately
+                                </span>
+                            </label>
 
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" wire:model="notify_subscribers" id="notifySubscribersCheck">
-                            <label class="form-check-label font-weight-bold text-primary" for="notifySubscribersCheck">
-                                <i class="ti-email me-1"></i> Send Opening Tip Email to All Subscribers
+                            <!-- Toggle 2: Send Email to Subscribers -->
+                            <label class="custom-admin-toggle mb-0" for="notifySubscribersCheck">
+                                <input type="checkbox" wire:model="notify_subscribers" id="notifySubscribersCheck" class="custom-toggle-input">
+                                <span class="custom-toggle-slider slider-warning"></span>
+                                <span class="custom-toggle-label font-weight-bold text-dark">
+                                    <i class="ti-email text-warning me-1"></i> Send Email to Subscribers
+                                </span>
                             </label>
                         </div>
                     </div>

@@ -113,7 +113,7 @@
                         organizational policies, letters of encouragement, personal reflections, and inspirations.
                     </p>
                     <p>
-                        Over time, these writings became the foundation of my published works, leading to over 38 book
+                        Over time, these writings became the foundation of my published works, leading to over 45 book
                         titles to date, under the generic term LPPD Books (Life Purpose and Personal Development). These
                         books have been transformational for many.
                     </p>
@@ -198,23 +198,9 @@
                         Embark on a transformative journey with my collection of over 35 titles
                         focused on Life Purpose and Personal Development:
                     </p>
-                    <p class="mt-4 fw-bold">
-                        Get Books by BI here ⬇️ <br>
+                    <p class="mt-4 fw-bold"> <a href="{{ route('books.index') }} ">Get Books by BI here ⬇️ <br></a>
+                        
                     </p>
-
-                    <div class="d-flex flex-wrap gap-3 mt-3">
-                        <a href="https://www.amazon.com/stores/author/B08H1B27NT/allbooks?ingress=0&visitId=5654739c-d56f-4060-a86d-1fad5cc99e66&ref_=ap_rdr"
-                            class="btn btn-primary equal-width-btn">Buy via Amazon <br> (Kindle and Paperback)</a>
-
-                        <a href="https://selar.co/m/abimbola-ilori1" class="btn btn-success equal-width-btn">Buy via
-                            Selar <br> (Digital Version)</a>
-
-                        <a href="https://paystack.shop/all-books-by-bimbo-ilori"
-                            class="btn btn-warning equal-width-btn">Buy via Paystack <br> (Digital Version)</a>
-                        <a href="https://paystack.shop/all-books-by-bimbo-ilori"
-                            class="btn btn-warning equal-width-btn">Buy via
-                            Paystack <br>(Paperback Edition)</a>
-                    </div>
 
                     <p class="mt-4 fw-bold">
                         Rooting for you to Peak in Purpose, <br>

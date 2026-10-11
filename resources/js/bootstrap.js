@@ -14,7 +14,4 @@ window.Echo = new Echo({
     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
     forceTLS: true,
     encrypted: true,
-    wsHost: 'ws-' + import.meta.env.VITE_PUSHER_APP_CLUSTER + '.pusher.com',
-    wsPort: 443,
-    disableStats: true,
 });

@@ -88,7 +88,7 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '715959051286003');
+        fbq('init', '1030375422413980');
         fbq('track', 'PageView');
         fbq('track', 'Lead');
         fbq('track', 'ViewContent');
@@ -101,7 +101,7 @@
 
 <body>
 
-    <!-- Countdown Section -->
+    <!-- Countdown Section 
     <div class="container text-center my-5">
         <h2 class="fw-bold fs-5 mb-4">
             Countdown to the exclusive Right Reset MasterClass:
@@ -111,7 +111,7 @@
             <i class="fas fa-clock text-primary fs-3"></i>
             <div class="countdown fs-4 fw-bold"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Hero Section -->
     <section class="section hero-section">
@@ -165,7 +165,7 @@
         <div class="container">
             <h2 class="mastersection-title text-center">RightReset Masterclass with Coach Bimbo Ilori</h2>
             <p class="text-center " style="font-size: 23px">
-                Join the Right Reset masterclass on <strong class="text-success"> August 23rd, by 8pm, </strong> where
+                Join the Right Reset masterclass on <strong class="text-success"> August 23rd, by 8pm WAT, </strong> where
                 you’ll unlock the tools, strategies, and inspiration to:
             </p>
             <div class="row mt-4">
@@ -207,7 +207,7 @@
                             <br>
                             <strong class="text-success">
                                 Date: 23rd August, 2025<br>
-                                Time: 8pm
+                                Time: 8pm WAT
                             </strong>
                         </p>
                     </div>
@@ -404,7 +404,7 @@
 
 
 
-    <!-- Countdown Section -->
+    <!-- Countdown Section 
     <div class="container text-center my-5">
         <h2 class="fw-bold fs-5 mb-4">
             Countdown to the exclusive Right Reset MasterClass:
@@ -414,7 +414,7 @@
             <i class="fas fa-clock text-primary fs-3"></i>
             <div class="countdown fs-4 fw-bold"></div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Bonuses Section 2 -->
     <section class="py-5 bg-light">
@@ -730,7 +730,7 @@
         </div>
     </section>
 
-    <!-- Countdown Section -->
+    <!-- Countdown Section
     <div class="container text-center my-5">
         <h2 class="fw-bold fs-5 mb-4">
             Countdown to the exclusive Right Reset MasterClass:
@@ -740,7 +740,7 @@
             <i class="fas fa-clock text-primary fs-3"></i>
             <div class="countdown fs-4 fw-bold"></div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- FAQ Section -->
@@ -839,82 +839,12 @@
         </div>
     </section>
 
-    <!-- Registration Form Section -->
-    <section id="registrationSection" class="section why-section">
-        <div class="container">
-            <h2 class="section-title text-center">Complete your registration below:</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <form id="registrationForm" action="{{ route('register.submit') }}" method="POST"
-                        class="needs-validation" novalidate>
-                        @csrf
-                        <!-- First Name -->
-                        <div class="mb-3">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" name="firstName"
-                                placeholder="Enter your first name" required>
-                            <div class="invalid-feedback">Please enter your first name.</div>
-                        </div>
-
-                        <!-- Last Name -->
-                        <div class="mb-3">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" name="lastName"
-                                placeholder="Enter your last name" required>
-                            <div class="invalid-feedback">Please enter your last name.</div>
-                        </div>
-
-                        <!-- WhatsApp Number -->
-                        <div class="mb-3">
-                            <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
-                            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber"
-                                placeholder="Enter your WhatsApp number" required>
-                            <div class="invalid-feedback">Please enter a valid WhatsApp number.</div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Enter your email address" required>
-                            <div class="invalid-feedback">Please enter a valid email address.</div>
-                        </div>
-
-                        <!-- Submit -->
-                        <div class="mb-3 form-check text-center">
-                            <input type="checkbox" class="form-check-input" id="privacyPolicy" name="privacyPolicy"
-                                required>
-                            <label class="form-check-label" for="privacyPolicy">
-                                I have read and agree to the
-                                <a href="https://bimboilori.com/privacy-policy" target="_blank">Privacy Policy</a>.
-                            </label>
-                            <div class="invalid-feedback">
-                                You must agree to the Privacy Policy before submitting.
-                            </div>
-                        </div>
-
-                        <!-- Submit -->
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        @if (session('success'))
-            <div class="alert alert-success text-center mt-3">
-                {{ session('success') }}
-            </div>
-        @endif
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Bimbo Ilori Programs. All rights reserved. <span class="text-dark">
-                    <!-- Social Media Icons -->
+                    <!-- Social Media Icons 
                     <div class="d-flex justify-content-center mt-2 text-dark">
 
                         <a class="btn1 btn-social-icon btn-instagram me-3"
@@ -938,9 +868,9 @@
                         </a>
                     </div>
                     <p>Powered by: <a href="https://bimboilori.com/">  www.bimboilori.com</a>
-                </span></p>
+                </span></p> -->
             </p>
-        </div>
+        </div> 
     </footer>
 
     <!-- Bootstrap JS -->
@@ -948,63 +878,9 @@
 
     @vite(['resources/js/app.js'])
 
-    {{-- <!-- Notification popup -->
-    <div id="registration-notification"
-        style="display:none; position:fixed; bottom:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:5px;">
-        The <span id="registrant-name"></span> just registered for the RightReset MasterClass!
-    </div> --}}
+ 
 
 
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-
-            const form = this;
-
-            // Client-side validation
-            if (!form.checkValidity()) {
-                form.classList.add('was-validated'); // Show validation feedback
-                return;
-            }
-
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
-                            'content')
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // Show success message
-                        const successDiv = document.createElement('div');
-                        successDiv.className = 'alert alert-success text-center mt-3';
-                        successDiv.textContent = data.success;
-
-                        // Remove old success messages
-                        const existingAlert = form.parentNode.querySelector('.alert-success');
-                        if (existingAlert) existingAlert.remove();
-
-                        // Insert after form
-                        form.parentNode.appendChild(successDiv);
-
-                        form.reset();
-                        form.classList.remove('was-validated'); // Remove Bootstrap validation class
-
-                        setTimeout(() => successDiv.remove(), 5000);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
-                });
-        });
-    </script>
 
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
     <script type="module">

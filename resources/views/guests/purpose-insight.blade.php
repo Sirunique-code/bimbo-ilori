@@ -1,4 +1,57 @@
 <x-guest-layout>
+    @php
+    $allCategories = [
+        'Faith Development' => [
+            'series' => 'The Faith Rise Series',
+            'image' => 'storage/category44.png',
+        ],
+        'Purpose & Personal Discovery' => [
+            'series' => 'The Purpose Series',
+            'image' => 'storage/category12.jpg',
+        ],
+        'Parenting & Child Development' => [
+            'series' => 'The Parenting Series',
+            'image' => 'storage/category110.png',
+        ],
+        'Health, Wellness & Lifestyle' => [
+            'series' => 'The Wellness Series',
+            'image' => 'storage/category83.png',
+        ],
+        'Overcoming Obstacles & Resilience' => [
+            'series' => 'The Overcomer Series',
+            'image' => 'storage/category61.jpg',
+        ],
+        'Redemption & Restoration' => [
+            'series' => 'The Redemption Series',
+            'image' => 'storage/category31.jpg',
+        ],
+        'Business & Entrepreneurship' => [
+            'series' => 'The Business Insight Series',
+            'image' => 'storage/category72.jpg',
+        ],
+        'Leadership & Influence' => [
+            'series' => 'The Leadership Skill Series',
+            'image' => 'storage/category23.jpg',
+        ],
+        'Relationships, Love & Emotional Wholeness' => [
+            'series' => 'The Relationship Series',
+            'image' => 'storage/category90.jpg',
+        ],
+        'Personal Effectiveness & Life Skills' => [
+            'series' => 'The Personal Skills Series',
+            'image' => 'storage/category102.jpg',
+        ],
+        'Insight, Discernment & Wisdom' => [
+            'series' => 'The Insight Series',
+            'image' => 'storage/category123.jpg',
+        ],
+        'Marriage & Family Life' => [
+            'series' => 'The Marriage Series',
+            'image' => 'storage/category52.jpg',
+        ]
+    ];
+    @endphp
+
     <style>
         .category-card {
             transition: all 0.3s ease;
@@ -10,38 +63,35 @@
             box-shadow: 0 8px 20px rgba(63, 32, 127, 0.15) !important;
             border-color: #3F207F !important;
         }
-        .insight-section {
-            scroll-margin-top: 100px;
-        }
-        .insight-badge {
-            background-color: rgba(63, 32, 127, 0.1);
-            color: #3F207F;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
         .insight-card {
             transition: all 0.3s ease;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
+            background: #ffffff;
         }
         .insight-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12) !important;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.1) !important;
+        }
+        .insight-card img {
+            transition: transform 0.4s ease;
+        }
+        .insight-card:hover img {
+            transform: scale(1.04);
         }
         .btn-purple {
             background-color: #3F207F;
             color: #ffffff;
             border: none;
+            transition: all 0.2s ease;
         }
         .btn-purple:hover {
             background-color: #2b1559;
             color: #ffffff;
+            transform: translateY(-1px);
         }
-        .copy-link-btn {
-            cursor: pointer;
-            transition: background-color 0.2s ease;
+        .hover-primary:hover {
+            color: #3F207F !important;
         }
     </style>
 
@@ -104,7 +154,7 @@
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Navigation</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Curriculum & Series</h6>
                 <h2 class="mb-3">Explore by Topic</h2>
                 <h5 class="text-primary fw-semibold mb-3" style="color: #3F207F !important;">Where are you in your purpose journey?</h5>
                 <p class="text-muted col-lg-8 mx-auto">
@@ -114,189 +164,120 @@
 
             <!-- Categories 12-Card Grid -->
             <div class="row g-3 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                <!-- Column 1 (Categories 1 to 6) -->
-                <div class="col-md-6">
-                    <!-- 1. FAITH DEVELOPMENT TITLES -->
-                    <a href="{{ route('books.index') }}#faith-development" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category44.png') }}" alt="Faith Development" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Faith Development</h6>
-                                <small class="text-muted">The Faith Rise Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 2. PURPOSE DEVELOPMENT TITLES -->
-                    <a href="{{ route('books.index') }}#purpose-development" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category12.jpg') }}" alt="Purpose Development" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Purpose & Personal Discovery</h6>
-                                <small class="text-muted">The Purpose Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 3. PARENTING SKILL DEVELOPMENT TITLES -->
-                    <a href="{{ route('books.index') }}#parenting-skill-development" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category110.png') }}" alt="Parenting Skill Development" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Parenting & Child Development</h6>
-                                <small class="text-muted">The Parenting Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 4. WELLNESS AND BALANCE TITLES -->
-                    <a href="{{ route('books.index') }}#wellness-and-balance" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category83.png') }}" alt="Wellness and Balance" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Health, Wellness & Lifestyle</h6>
-                                <small class="text-muted">The Wellness Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 5. OVERCOMERS' TITLES -->
-                    <a href="{{ route('books.index') }}#overcomers" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category61.jpg') }}" alt="Overcomers" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Overcoming Obstacles & Resilience</h6>
-                                <small class="text-muted">The Overcomer Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 6. REDEMPTIVE POWER TITLES -->
-                    <a href="{{ route('books.index') }}#redemptive-power" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category31.jpg') }}" alt="Redemptive Power" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Redemption & Restoration</h6>
-                                <small class="text-muted">The Redemption Series</small>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Column 2 (Categories 7 to 12) -->
-                <div class="col-md-6">
-                    <!-- 7. BUSINESS DEVELOPMENT TITLES -->
-                    <a href="{{ route('books.index') }}#business-development" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category72.jpg') }}" alt="Business Development" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Business & Entrepreneurship</h6>
-                                <small class="text-muted">The Business Insight Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 8. LEADERSHIP UPLIFT TITLES -->
-                    <a href="{{ route('books.index') }}#leadership-uplift" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category23.jpg') }}" alt="Leadership Uplift" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Leadership & Influence</h6>
-                                <small class="text-muted">The Leadership Skill Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 9. RELATIONSHIP UPSKILL TITLES -->
-                    <a href="{{ route('books.index') }}#relationship-upskill" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category90.jpg') }}" alt="Relationship Upskill" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Relationships, Love & Emotional Wholeness</h6>
-                                <small class="text-muted">The Relationship Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 10. SPIRITUAL & PERSONAL SKILL DEVELOPMENT TITLES -->
-                    <a href="{{ route('books.index') }}#spiritual-personal-skill-development" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category102.jpg') }}" alt="Spiritual & Personal Skill Development" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Personal Effectiveness & Life Skills</h6>
-                                <small class="text-muted">The Personal Skills Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 11. THE INSIGHT SERIES -->
-                    <a href="{{ route('books.index') }}#the-insight-series" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category123.jpg') }}" alt="The Insight Series" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Insight, Discernment & Wisdom</h6>
-                                <small class="text-muted">The Insight Series</small>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- 12. MARRIAGE ENRICHMENT TITLES -->
-                    <a href="{{ route('books.index') }}#marriage-enrichment" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/category52.jpg') }}" alt="Marriage Enrichment" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                            <div>
-                                <h6 class="mb-1 fw-bold text-dark">Marriage & Family Life</h6>
-                                <small class="text-muted">The Marriage Series</small>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @php
+                    $categoriesList = array_chunk($allCategories, 6, true);
+                @endphp
+                @foreach($categoriesList as $chunk)
+                    <div class="col-md-6">
+                        @foreach($chunk as $cName => $cData)
+                            <a href="#recent-articles" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ asset($cData['image']) }}" alt="{{ $cName }}" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                        <div>
+                                            <h6 class="mb-1 fw-bold text-dark">{{ $cName }}</h6>
+                                            <small class="text-muted">{{ $cData['series'] }}</small>
+                                        </div>
+                                    </div>
+                                    <span class="text-muted small me-2">
+                                        <i class="fa fa-angle-right"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
 
     <!-- Purpose Insights Articles / Blog Posts Feed -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="recent-articles">
         <div class="container">
             <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Latest Posts & Reflections</h6>
-                <h2 class="mb-3">Purpose Insights Articles</h2>
+                <h2 class="mb-3">Recent Articles</h2>
                 <p class="text-muted col-lg-8 mx-auto">
-                    Explore our recent reflections, wisdom keys, and practical growth articles. Share specific post links directly across your social platforms.
+                    Explore our recent reflections, wisdom keys, and practical growth articles. New posts appear here with the latest published on top.
                 </p>
             </div>
 
-            <!-- 1. FAITH DEVELOPMENT SECTION -->
-            <div id="faith-development" class="insight-section mb-5 pt-4">
-                <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-4">
-                    <div class="d-flex align-items-center">
-                        <img src="{{ asset('storage/category44.png') }}" alt="Faith Development" class="me-3 rounded shadow-sm" style="width: 45px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h3 class="fw-bold mb-0 text-dark">Faith Development</h3>
-                            <small class="text-primary fw-semibold">The Faith Rise Series</small>
-                        </div>
-                    </div>
-                    <button class="btn btn-sm btn-outline-primary rounded-pill copy-link-btn" onclick="copySectionLink('faith-development')">
-                        <i class="fa fa-share-alt me-1"></i> Share Topic
-                    </button>
-                </div>
+            <!-- Recent Articles Grid (All Latest Posts) -->
+            @if($latestInsights->count() > 0)
+                <div class="row g-4 mb-4">
+                    @foreach($latestInsights as $insight)
+                        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="card h-100 border-0 shadow-sm insight-card d-flex flex-column">
+                                @if($insight->image)
+                                    <div class="position-relative overflow-hidden" style="height: 220px;">
+                                        <a href="{{ route('purpose-insight.show', $insight->slug) }}">
+                                            <img src="{{ asset('storage/' . $insight->image) }}" 
+                                                 alt="{{ $insight->title }}" 
+                                                 class="w-100 h-100" 
+                                                 style="object-fit: cover;">
+                                        </a>
+                                        <span class="position-absolute top-0 start-0 m-3 badge bg-primary text-white px-3 py-2 rounded-pill shadow-sm" style="background-color: #3F207F !important;">
+                                            {{ $insight->category }}
+                                        </span>
+                                    </div>
+                                @else
+                                    <div class="p-4 text-white d-flex align-items-center justify-content-between" style="background: linear-gradient(135deg, #3F207F 0%, #5B32AC 100%); min-height: 140px;">
+                                        <div>
+                                            <span class="badge bg-warning text-dark mb-2 px-2 py-1 rounded-pill">{{ $insight->category }}</span>
+                                            <h6 class="text-white-50 mb-0"><i class="fa fa-book-open me-1"></i> Purpose Reflection</h6>
+                                        </div>
+                                        <i class="fa fa-quote-right fa-2x text-white-50"></i>
+                                    </div>
+                                @endif
 
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm insight-card">
-                            <div class="card-body p-4">
-                                <span class="insight-badge mb-3 d-inline-block">Faith Rise</span>
-                                <h5 class="card-title fw-bold mb-3">Building Unshakable Faith in Trying Seasons</h5>
-                                <p class="card-text text-muted">Discover foundational biblical principles for standing firm when tests and challenges push your faith to the limit.</p>
-                            </div>
-                            <div class="card-footer bg-white border-0 p-4 pt-0 d-flex align-items-center justify-content-between">
-                                <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> Latest Insight</small>
-                                <a href="{{ route('books.index') }}" class="btn btn-sm btn-purple rounded-pill px-3">Explore Books</a>
+                                <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                                    <div class="d-flex align-items-center gap-2 mb-2 text-muted small">
+                                        <span><i class="far fa-calendar-alt me-1"></i> {{ ($insight->published_at ?? $insight->created_at)->format('M d, Y') }}</span>
+                                        <span>•</span>
+                                        <span><i class="far fa-clock me-1"></i> {{ ceil(str_word_count(strip_tags($insight->content)) / 200) }} min read</span>
+                                    </div>
+
+                                    <h5 class="card-title fw-bold mb-3">
+                                        <a href="{{ route('purpose-insight.show', $insight->slug) }}" class="text-dark text-decoration-none hover-primary">
+                                            {{ $insight->title }}
+                                        </a>
+                                    </h5>
+
+                                    @if($insight->opening_tip)
+                                        <p class="card-text text-muted small mb-3 fst-italic">
+                                            "{{ Str::limit($insight->opening_tip, 120) }}"
+                                        </p>
+                                    @else
+                                        <p class="card-text text-muted small mb-3">
+                                            {{ Str::limit(strip_tags($insight->content), 120) }}
+                                        </p>
+                                    @endif
+
+                                    <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
+                                        <a href="{{ route('purpose-insight.show', $insight->slug) }}" class="btn btn-sm btn-purple rounded-pill px-3">
+                                            Read Article <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <button class="btn btn-sm btn-outline-secondary rounded-circle" 
+                                                style="width: 32px; height: 32px; padding: 0;"
+                                                title="Share Post"
+                                                onclick="copyArticleLink('{{ route('purpose-insight.show', $insight->slug) }}', '{{ addslashes($insight->title) }}')">
+                                            <i class="fa fa-share-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    @endforeach
+                </div>
+            @else
+                <div class="text-center py-5">
+                    <div class="p-5 bg-light rounded-4 shadow-sm d-inline-block" style="max-width: 500px;">
+                        <i class="fa fa-feather-alt fa-3x text-muted mb-3"></i>
+                        <h4 class="fw-bold text-dark">No Articles Published Yet</h4>
+                        <p class="text-muted mb-0">Check back soon for fresh insights, reflections, and growth keys.</p>
                     </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 
@@ -328,10 +309,9 @@
     </div>
 
     <script>
-        function copySectionLink(sectionId) {
-            const url = window.location.origin + window.location.pathname + '#' + sectionId;
-            navigator.clipboard.writeText(url).then(function() {
-                alert('Link to ' + sectionId.replace(/-/g, ' ') + ' copied to clipboard! You can now share it on social media.');
+        function copyArticleLink(articleUrl, title) {
+            navigator.clipboard.writeText(articleUrl).then(function() {
+                alert('Link to "' + title + '" copied to clipboard! You can now share it on social media.');
             }, function(err) {
                 console.error('Could not copy text: ', err);
             });

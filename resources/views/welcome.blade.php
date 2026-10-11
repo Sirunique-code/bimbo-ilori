@@ -1,7 +1,5 @@
 <x-guest-layout>
 
-
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
@@ -81,13 +79,14 @@
 
         </div>
     </div>
+    <!-- Carousel End -->
 
-    <!-- Purpose Journey eBook Download Section Start -->
+     <!-- Purpose Journey eBook Download Section Start 
     <div id="begin-purpose-journey" class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center bg-light rounded-4 shadow-lg p-4 p-md-5"
                 style="border-left: 8px solid #3F207F; background: linear-gradient(145deg, #ffffff, #f1f3f7);">
-                <!-- Text and eBook Image -->
+               
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="pe-lg-4">
                         <span class="badge bg-primary text-uppercase px-3 py-2 mb-3"
@@ -116,12 +115,11 @@
                     </div>
                 </div>
 
-                <!-- Registration Form -->
-                <!-- Registration Form -->
+               
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light">
 
-                        <!-- Success Message -->
+                      
                         @if (session('success'))
                             <div class="alert alert-success d-flex align-items-center gap-2 mb-4" role="alert">
                                 <i class="fa fa-check-circle fs-4"></i>
@@ -137,7 +135,7 @@
                             </script>
                         @endif
 
-                        <!-- General Error -->
+                        
                         @if (session('error'))
                             <div class="alert alert-danger mb-4">
                                 {{ session('error') }}
@@ -147,7 +145,7 @@
                         <form method="POST" action="{{ route('ebook.request') }}">
                             @csrf
 
-                            <!-- Full Name -->
+                            
                             <div class="mb-4">
                                 <label for="ebookName" class="form-label fw-semibold text-dark">
                                     Full Name
@@ -168,7 +166,7 @@
                                 @enderror
                             </div>
 
-                            <!-- Email -->
+                          
                             <div class="mb-4">
                                 <label for="ebookEmail" class="form-label fw-semibold text-dark">
                                     Email Address
@@ -189,7 +187,7 @@
                                 @enderror
                             </div>
 
-                            <!-- Submit -->
+                            
                             <button type="submit" class="btn btn-primary w-100 py-3 fw-bold mt-2 shadow-sm"
                                 style="background-color:#3F207F;border:none;border-radius:8px;transition:all .3s ease;"
                                 onmouseover="this.style.backgroundColor='#219C9E';this.style.transform='translateY(-2px)'"
@@ -203,28 +201,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+      <!-- Purpose Journey eBook Download Section Start --> 
 
-    <!-- Carousel End -->
-
-    <!-- Services BIPs Start -->
+    <!-- Services BIPPs Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <!-- Image Section (Left Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative animated-brand">
-                        <img class="img-fluid w-100" src="assets/img/brand-logo.jpg" alt="BIPs Services"
+                        <img class="img-fluid w-100" src="assets/img/brand-logo.jpg" alt="BIPPs Services"
                             style="object-fit: cover; border-radius: 10px;">
                     </div>
                 </div>
 
                 <!-- Welcome Message & Services (Right Side) -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIPs</h6>
+                    <h6 class="section-title bg-white text-primary pe-3">WELCOME TO BIPPs</h6>
                     <h1 class="mb-4">Discover a World of Transformation & Growth</h1>
                     <p class="mb-4">
-                        At <strong>Bimbo Ilori Programs (BIPs)</strong>, we are dedicated to equipping individuals with
+                        At <strong>Bimbo Ilori Programs (BIPPs)</strong>, we are dedicated to equipping individuals with
                         transformational resources for spiritual growth, personal development, and professional success.
                         Whether you're here to explore my books, join ThriveForge’s purpose-driven coaching and
                         programs, gain insights through <strong>K-Bloc Consults</strong>, or tune into my podcasts,
@@ -236,8 +233,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Services BIPs End -->
+    <!-- Services BIPPs End -->
 
 
 
@@ -310,7 +306,7 @@
             <div class="row align-items-center g-5">
                 <!-- Left Side: Image -->
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="btn btn-primary mt-3">BIPs Overview</div>
+                    <div class="btn btn-primary mt-3">BIPPs Overview</div>
 
                     <img src="assets/img/bims.jpg" alt="Welcome Image" class="img-fluid rounded shadow">
                 </div>
@@ -340,8 +336,7 @@
                         </div>
                         <div class="col-12 col-sm-6">
                             <p class="mb-1">
-                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc
-                                    Publications</strong>
+                                <i class="fa fa-arrow-right text-primary me-2"></i><strong>Kingswitbloc Publications</strong>
                             </p>
                             <small class="d-block">Bimbo Ilori Authored Books</small>
                         </div>
@@ -381,7 +376,7 @@
         <div class="container">
             <div class="row g-5">
                 <!-- Image Section -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative w-100">
                         <img class="img-fluid w-100" src="assets/img/about.jpg" alt="About the Coach"
                             style="object-fit: contain; display: block;">
@@ -392,7 +387,7 @@
                     <h6 class="section-title bg-white text-start text-primary pe-3">BIMBO ILORI</h6>
                     <h1 class="mb-4">Empowering You to Live with Purpose</h1>
                     <p class="mb-4">
-                        BIPs is anchored by <strong>Bimbo Ilori,</strong> an impact entrepreneur dedicated to life and
+                        BIPPs is anchored by <strong>Bimbo Ilori,</strong> an impact entrepreneur dedicated to life and
                         purpose development.
                         She is passionate about helping individuals break through limitations and design a
                         fulfilling life. With years of experience in personal development, she has guided countless
@@ -446,10 +441,10 @@
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <a class="btn btn-outline-dark btn-social"
-                            href="https://creators.spotify.com/pod/show/bimbo-ilori" target="_blank">
+                            href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA" target="_blank">
                             <i class="fab fa-spotify"></i>
                         </a>
-
+                     
                     </div>
                 </div>
             </div>
@@ -583,11 +578,10 @@
                 <!-- Podcast Content -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary px-3">Podcasts and Teachings</h6>
-                    <h2 class="mb-4">Listen to BI on Spotify</h2>
+                    <h2 class="mb-4">Listen to BI</h2>
                     <p>Listen to BI deliver transformative and uplifting insights on Spotify. She shares insights that
                         challenge and drive listeners to embrace spiritual and personal development.</p>
-                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"
-                        class="btn btn-primary mt-3">LISTEN
+                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA" class="btn btn-primary mt-3">LISTEN
                         HERE</a>
                 </div>
                 <!-- Podcast Image -->

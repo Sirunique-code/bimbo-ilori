@@ -1,100 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login | Admin Panel</title>
-    
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/ti-icons/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/admin/vendors/base/vendor.bundle.base.css') }}">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
+<?php
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/admin/images/favicon.png') }}">
-</head>
+use App\Livewire\Forms\LoginForm;
+use Illuminate\Support\Facades\Session;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
 
-<body>
-    <div class="container-scroller">
-        <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="content-wrapper d-flex align-items-center auth auth-img-bg" style="min-height: 100vh;">
-                <div class="row flex-grow w-100 align-items-center">
-                    <!-- Login Form Section -->
-                    <div class="col-lg-6 col-md-8 col-sm-10 mx-auto d-flex align-items-center justify-content-center">
-                        <div class="auth-form-transparent text-left p-3 w-100">
-                            <div class="brand-logo text-center">
-                                <img src="{{ asset('assets/img/bi-logo-full2.png') }}" alt="logo" >
-                            </div>
-                      
-                            <h3 class="font-weight-light text-center">Please log in to continue</h3>
+new #[Layout('layouts.auth')] class extends Component
+{
+    public LoginForm $form;
 
-                            <!-- Laravel Authentication Form -->
-                            <form method="POST" action="{{ route('login') }}" class="pt-3">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend bg-transparent">
-                                            <span class="input-group-text bg-transparent border-right-0">
-                                                <i class="ti-user text-primary"></i>
-                                            </span>
-                                        </div>
-                                        <input type="email" name="email" class="form-control form-control-lg border-left-0" 
-                                            id="email" placeholder="Enter your email" required>
-                                    </div>
-                                    @error('email')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
+    /**
+     * Handle an incoming authentication request.
+     */
+    public function login(): void
+    {
+        $this->validate();
 
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend bg-transparent">
-                                            <span class="input-group-text bg-transparent border-right-0">
-                                                <i class="ti-lock text-primary"></i>
-                                            </span>
-                                        </div>
-                                        <input type="password" name="password" class="form-control form-control-lg border-left-0" 
-                                            id="password" placeholder="Enter your password" required>
-                                    </div>
-                                    @error('password')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
+        $this->form->authenticate();
 
-                                <div class="my-2 d-flex justify-content-between align-items-center">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                                        <label class="form-check-label text-muted" for="remember">
-                                            Keep me signed in
-                                        </label>
-                                    </div>
-                                    <a href="{{ route('password.request') }}" class="auth-link text-black">Forgot password?</a>
-                                </div>
+        Session::regenerate();
 
-                                <div class="my-3">
-                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
-                                        LOGIN
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+    }
+}; ?>
 
-                    
+<div class="auth-wrapper">
+    <div class="auth-container">
+        <!-- Main Card -->
+        <div class="auth-card">
+            <!-- Brand & Badging -->
+            <div class="text-center mb-4">
+                <a href="{{ route('welcome') }}" class="d-inline-block mb-3">
+                    <img src="{{ asset('assets/img/bi-logo-mini-full2.png') }}" alt="Bimbo Ilori Logo" style="height: 48px; width: auto;" class="img-fluid">
+                </a>
+                <div>
+                    <span class="auth-badge">
+                        <i class="bi bi-shield-lock-fill"></i> Control Center
+                    </span>
                 </div>
+                <h1 class="auth-title mt-3">Welcome Back</h1>
+                <p class="auth-subtitle">Sign in to manage Bimbo Ilori programs and content</p>
             </div>
+
+            <!-- Session Status Alert -->
+            @if (session('status'))
+                <div class="alert alert-success d-flex align-items-center gap-2 py-2 px-3 rounded-3 small mb-3 border-0" role="alert" style="background-color: #ECFDF5; color: #065F46;">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <div>{{ session('status') }}</div>
+                </div>
+            @endif
+
+            <!-- Authentication Form -->
+            <form wire:submit="login" method="POST" action="{{ route('login.post') }}">
+                @csrf
+
+                <!-- Email Input -->
+                <div class="mb-3">
+                    <label for="email" class="auth-form-label">Email Address</label>
+                    <div class="auth-input-group">
+                        <input wire:model="form.email" 
+                               id="email" 
+                               class="form-control @error('form.email') is-invalid @enderror @error('email') is-invalid @enderror" 
+                               type="email" 
+                               name="email" 
+                               value="{{ old('email') }}" 
+                               required 
+                               autofocus 
+                               autocomplete="username" 
+                               placeholder="admin@bimboilori.com">
+                        <i class="bi bi-envelope input-icon"></i>
+                    </div>
+                    @error('form.email')
+                        <div class="text-danger small mt-1 d-flex align-items-center gap-1">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            <span>{{ $message }}</span>
+                        </div>
+                    @enderror
+                    @error('email')
+                        <div class="text-danger small mt-1 d-flex align-items-center gap-1">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            <span>{{ $message }}</span>
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Password Input -->
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <label for="password" class="auth-form-label mb-0">Password</label>
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="small text-decoration-none fw-semibold" style="color: #5B32AC; font-size: 0.8rem;">Forgot password?</a>
+                        @endif
+                    </div>
+                    <div class="auth-input-group position-relative">
+                        <input wire:model="form.password" 
+                               id="password" 
+                               class="form-control @error('form.password') is-invalid @enderror @error('password') is-invalid @enderror" 
+                               type="password" 
+                               name="password" 
+                               required 
+                               autocomplete="current-password" 
+                               placeholder="••••••••••••">
+                        <i class="bi bi-lock input-icon"></i>
+                        <button type="button" class="auth-password-toggle" id="togglePasswordBtn" aria-label="Toggle password visibility">
+                            <i class="bi bi-eye" id="togglePasswordIcon"></i>
+                        </button>
+                    </div>
+                    @error('form.password')
+                        <div class="text-danger small mt-1 d-flex align-items-center gap-1">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            <span>{{ $message }}</span>
+                        </div>
+                    @enderror
+                    @error('password')
+                        <div class="text-danger small mt-1 d-flex align-items-center gap-1">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            <span>{{ $message }}</span>
+                        </div>
+                    @enderror
+                </div>
+
+                <!-- Remember Me & Security Note -->
+                <div class="d-flex align-items-center justify-content-between my-3">
+                    <div class="d-flex align-items-center gap-2 mb-0">
+                        <input wire:model="form.remember" 
+                               id="remember" 
+                               type="checkbox" 
+                               class="form-check-input m-0" 
+                               name="remember"
+                               style="width: 17px; height: 17px; cursor: pointer;">
+                        <label for="remember" class="text-muted small user-select-none mb-0" style="cursor: pointer;">
+                            Remember me
+                        </label>
+                    </div>
+                    <span class="badge bg-light text-muted border px-2 py-1 small" style="font-size: 0.725rem; font-weight: 500;">
+                        <i class="bi bi-shield-check text-success me-1"></i> Encrypted
+                    </span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="auth-btn-submit mt-2" wire:loading.attr="disabled">
+                    <span wire:loading.remove>
+                        <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Dashboard
+                    </span>
+                    <span wire:loading style="display: none;">
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Authenticating...
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Back to Website Link & Footer -->
+        <div class="text-center mt-4">
+            <a href="{{ route('welcome') }}" class="auth-footer-link">
+                <i class="bi bi-arrow-left"></i> Return to Public Website
+            </a>
+        </div>
+        <div class="text-center mt-3">
+            <span class="text-white-50" style="font-size: 0.775rem;">
+                &copy; {{ date('Y') }} Bimbo Ilori Programs. All rights reserved.
+            </span>
         </div>
     </div>
+</div>
 
-    <!-- Plugins JS -->
-    <script src="{{ asset('assets/admin/vendors/base/vendor.bundle.base.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/template.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/todolist.js') }}"></script>
-</body>
-</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.getElementById('togglePasswordBtn');
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.getElementById('togglePasswordIcon');
+
+        if (toggleBtn && passwordInput && toggleIcon) {
+            toggleBtn.addEventListener('click', function () {
+                const isPassword = passwordInput.getAttribute('type') === 'password';
+                passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+                toggleIcon.classList.toggle('bi-eye', !isPassword);
+                toggleIcon.classList.toggle('bi-eye-slash', isPassword);
+            });
+        }
+    });
+</script>

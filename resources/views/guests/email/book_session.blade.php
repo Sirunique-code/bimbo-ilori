@@ -1,33 +1,5 @@
 <x-guest-layout>
 
-     <!-- KBLOC: Consults and Training Section -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <!-- KBLOC Image -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded fixed-height" src="{{ asset('assets/img/kbloc.jpg') }}"
-                        alt="KBloc Consults">
-                </div>
-                <!-- KBLOC Content -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    {{-- <h6 class="section-title bg-white text-start text-primary px-3">Consults and Training</h6> --}}
-                    <h2 class="mb-4">KBloc Consults And Training</h2>
-                    <p>Kingswitbloc (KBloc) is our registered brand for Consult Services, that channels my skills and
-                        expertise as a Chartered Administrator and entrepreneur with ample years of experience.</p>
-                    <p>This intertwines with the capacity development propensity, to support businesses alignment,
-                        improvement, direction, and better positioning.</p>
-                    <p>Your business or startup stands to gain immense insight and strength from this service. Take
-                        advantage of the opportunity now!</p>
-                    <a href="https://forms.gle/G8iiparxyrnPRgUz8" class="btn btn-primary mt-3">REQUEST FOR CONSULTS /
-                        TRAINING HERE</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 <section>
 <div class="container mx-auto py-8 max-w-2xl">
     <!-- Title -->
@@ -51,30 +23,42 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                    <a class="course-card d-block position-relative" href="https://paystack.com/buy/30-minutes-clarity-session-kmreom">
-                        <img src="assets/img/session-30.jpg" alt="Personal Growth">
-                        <div class="course-info">
-                            <h5 class="m-0">30 Minutes Clarity Session</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.2s">
-                    <a class="course-card d-block position-relative" href="https://paystack.com/buy/book-a-60-minutes-clarity-session-coypfu">
-                        <img src="assets/img/session-60.jpg" alt="Mindset & Motivation">
-                        <div class="course-info">
-                            <h5 class="m-0">60 Minutes Clarity Session</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <a class="course-card d-block position-relative" href="">
-                        <img src="assets/img/session-90.jpg" alt="Goal Setting & Success">
-                        <div class="course-info">
-                            <h5 class="m-0">30 Minutes Clarity Session</h5>
-                        </div>
-                    </a>
-                </div>
-                <!-- View More Button -->
+    <div class="course-card d-block position-relative">
+        <img src="assets/img/session-30.jpg" alt="Personal Growth">
+        <div class="course-info text-center p-3">
+            <h5 class="m-0">30 Minutes Clarity Session</h5>
+            <a href="https://paystack.com/buy/30-minutes-clarity-session-kmreom" class="btn btn-primary mt-3">
+                Book Now
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.2s">
+    <div class="course-card d-block position-relative">
+        <img src="assets/img/session-60.jpg" alt="Mindset & Motivation">
+        <div class="course-info text-center p-3">
+            <h5 class="m-0">60 Minutes Clarity Session</h5>
+            <a href="https://paystack.com/buy/book-a-60-minutes-clarity-session-coypfu" class="btn btn-primary mt-3">
+                Book Now
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+    <div class="course-card d-block position-relative">
+        <img src="assets/img/session-90.jpg" alt="Goal Setting & Success">
+        <div class="course-info text-center p-3">
+            <h5 class="m-0">90 Minutes Clarity Session</h5>
+            <a href="https://paystack.com/buy/90-minutes-deep-dive-strategy-session-skbvfw" class="btn btn-primary mt-3">
+                Book Now
+            </a>
+        </div>
+    </div>
+</div>
+
+              
                 
             </div>
         </div>
@@ -92,75 +76,7 @@
         <a href="https://wa.me/+2349028763627" class="text-blue-600 underline">+2349028763627</a>
     </p>
 
-    <!-- Booking Form -->
-    <form id="session-form" enctype="multipart/form-data">
- 
-    @csrf
-      
-
-    <div class="mb-3">
-        <label for="name" class="form-label">Full Name</label>
-        <input type="text" id="name" name="name" class="form-control" wire:model="name" required>
-        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" id="email" name="email" class="form-control" wire:model="email" required>
-        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="text" id="phone" name="phone" class="form-control" wire:model="phone" required>
-        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="session_type" class="form-label">Session Type</label>
-        <select id="session_type" name="session_type" class="form-control" wire:model="session_type" required>
-            <option value="">-- Select Session Type --</option>
-            <option value="30 Minutes Clarity Session">30 Minutes Clarity Session</option>
-            <option value="60 Minutes Clarity Session">60 Minutes Clarity Session</option>
-            <option value="90 Minutes Deep Dive Strategy Session">90 Minutes Deep Dive Strategy Session</option>
-        </select>
-        @error('session_type') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="preferred_date" class="form-label">Preferred Date</label>
-        <input type="date" id="preferred_date" name="preferred_date" class="form-control" wire:model="preferred_date" required>
-        @error('preferred_date') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="preferred_time" class="form-label">Preferred Time</label>
-        <input type="time" id="preferred_time" name="preferred_time" class="form-control" wire:model="preferred_time" required>
-        @error('preferred_time') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="payment_proof" class="form-label">Upload Proof of Payment (PDF/JPG/PNG) | not more than 2MB</label>
-        <input type="file" id="payment_proof" name="payment_proof" class="form-control" wire:model="payment_proof" accept=".pdf,.jpg,.jpeg,.png" required>
-        @error('payment_proof') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
-
-    <div class="mb-3">
-        <label for="notes" class="form-label">Additional Notes (Optional)</label>
-        <textarea id="notes" name="notes" class="form-control" wire:model="notes"></textarea>
-    </div>
-
-        <div id="form-loader" style="display:none; margin-top:1rem;">
-    <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Submitting...</span>
-    </div>
-    <span style="margin-left: 10px;">Submitting...</span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit Booking</button>
-    <div id="form-message" style="margin-bottom: 1rem;"></div>
-</form>
-
+    
 
 <script>
     document.getElementById('session-form').addEventListener('submit', function (e) {

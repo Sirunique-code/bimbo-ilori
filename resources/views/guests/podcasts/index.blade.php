@@ -9,9 +9,16 @@
                     <h6 class="section-title bg-white text-start text-primary px-3">Podcasts and Teachings</h6>
                     <h2 class="mb-4">Listen to BI</h2>
                     <p>Listen to BI deliver transformative and uplifting insights. She shares wisdom that challenges and
-                        drives listeners to embrace spiritual and personal development.</p>
-                    <a href="https://open.spotify.com/show/7iwYHW0a9gsFQeNRIQOErH?si=bOyVq0sWRaiPa5xlvjtrNA"
-                        class="btn btn-primary mt-3">LISTEN HERE</a>
+                        drives listeners to embrace spiritual and personal development, for life purpose actualization.</p>
+                     <!-- Streaming Platforms Section -->
+
+    <p class="fs-5">
+        Listen Here: 
+        <a href="https://www.youtube.com/@bippshub?si=M88mpsgIGCpLsBUy" target="_blank" class="text-decoration-none text-primary fw-bold">YouTube</a> |
+        <a href="https://bit.ly/3UNAmk1" target="_blank" class="text-decoration-none text-primary fw-bold">Spotify</a> |
+        <a href="https://bit.ly/3JJtUrP" target="_blank" class="text-decoration-none text-primary fw-bold">Amazon Music</a>
+    </p>
+
                 </div>
                 <!-- Podcast Image -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -22,7 +29,20 @@
 
             <!-- Podcast Series Overview -->
             <div class="row g-4">
-                <h3 class="text-center mb-4">Podcast Series Overview</h3>
+                <h3 class="text-center mb-4">Podcast Series List</h3>
+                
+                   <!-- Irrestible requests -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card shadow-sm h-100 border-0">
+                        <img src="{{ asset('assets/img/series0.jpg') }}" class="card-img-top"
+                            alt="Irresistible Requests">
+                        <div class="card-body">
+                            <h5 class="card-title">Irresistible Requests</h5>
+                            <p class="card-text">Discover the timeless principles that make your requests irresistible.<br><small
+                                    class="text-muted">Sept - Dec 2025</small></p>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Series Card -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -87,31 +107,34 @@
                     </div>
                 </div>
             </div>
+            
+           
+
 
             <!-- Streaming Platforms Section -->
             <div class="row mt-5 text-center">
-                <h3 class="mb-4">Available On</h3>
+          
 
                 <!-- Spotify -->
                 <div class="col-4 mb-3">
-                    <a href="#">
+                    <a href="https://bit.ly/3UNAmk1">
                         <img src="{{ asset('assets/img/spotify.png') }}" alt="Spotify" width="120">
                     </a>
                 </div>
 
                 <!-- Apple Podcasts -->
                 <div class="col-4 mb-3">
-                    <a href="#">
+                    <a href="https://bit.ly/3JJtUrP">
                         <img src="{{ asset('assets/img/apple-podcast.png') }}" alt="Apple Podcasts" width="120">
                     </a>
                 </div>
 
-                <!-- Amazon Music -->
+                <!-- Amazon Music 
                 <div class="col-4 mb-3">
-                    <a href="#">
+                    <a href="https://www.youtube.com/@bippshub?si=M88mpsgIGCpLsBUy">
                         <img src="{{ asset('assets/img/amazon-music.png') }}" alt="Amazon Music" width="120">
                     </a>
-                </div>
+                </div> -->
             </div>
 
 

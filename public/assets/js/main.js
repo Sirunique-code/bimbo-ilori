@@ -114,11 +114,14 @@ $(".testimonial-carousel").owlCarousel({
   const targetDate = new Date("2025-08-09T20:00:00");
 
   function updateCountdown() {
+    const countdownEl = document.getElementById("countdown");
+    if (!countdownEl) return;
+
     const now = new Date().getTime();
     const distance = targetDate - now;
 
     if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "The course has started!";
+      countdownEl.innerHTML = "The course has started!";
       return;
     }
 
@@ -127,9 +130,11 @@ $(".testimonial-carousel").owlCarousel({
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML =
+    countdownEl.innerHTML =
       `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  updateCountdown(); // Initial call
-  setInterval(updateCountdown, 1000); // Update every second
+  if (document.getElementById("countdown")) {
+    updateCountdown(); // Initial call
+    setInterval(updateCountdown, 1000); // Update every second
+  }

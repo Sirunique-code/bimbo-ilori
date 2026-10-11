@@ -1,6 +1,7 @@
 <x-guest-layout>
     <div style="margin-top: 50px"></div>
     <div class="container">
+                
         <h1>Privacy Policy for Bimbo Ilori Programs (BIPs)</h1>
         <p><strong>Effective Date:</strong> May, 2025</p>
 
