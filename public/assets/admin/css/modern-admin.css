@@ -1199,4 +1199,57 @@ body.sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-icon {
   }
 }
 
+/* ==========================================================================
+   PAGINATION STYLING & SVG CONSTRAINTS
+   ========================================================================== */
+.pagination {
+  margin-bottom: 0 !important;
+  gap: 5px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.pagination .page-item .page-link {
+  border-radius: var(--bi-radius-sm) !important;
+  color: var(--bi-primary) !important;
+  border: 1px solid var(--bi-border) !important;
+  padding: 0.45rem 0.85rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--bi-primary) !important;
+  border-color: var(--bi-primary) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 10px rgba(63, 32, 127, 0.25) !important;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #94A3B8 !important;
+  background-color: #F8FAFC !important;
+  border-color: var(--bi-border) !important;
+}
+
+.pagination .page-item .page-link:hover:not(.active) {
+  background-color: rgba(63, 32, 127, 0.08) !important;
+  border-color: var(--bi-primary) !important;
+  color: var(--bi-primary) !important;
+}
+
+/* Force constraint on any pagination chevron SVGs */
+nav[role="navigation"] svg,
+.pagination svg,
+.page-link svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+
 

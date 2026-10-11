@@ -61,8 +61,8 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <span class="text-muted">
-                                            <i class="bi bi-calendar-event me-1"></i> {{ $subscriber->created_at->format('M d, Y &bull; h:i A') }}
+                                        <span class="text-muted small">
+                                            <i class="bi bi-calendar-event me-1 text-primary"></i> {{ $subscriber->created_at->format('M d, Y') }} &bull; {{ $subscriber->created_at->format('h:i A') }}
                                         </span>
                                     </td>
                                 </tr>
@@ -79,11 +79,12 @@
                 </div>
 
                 @if($subscribers->hasPages())
-                    <div class="p-3 border-top d-flex justify-content-center">
-                        {{ $subscribers->links() }}
+                    <div class="p-3 border-top d-flex justify-content-center align-items-center">
+                        {{ $subscribers->links('pagination::bootstrap-5') }}
                     </div>
                 @endif
             </div>
+
         </div>
     </div>
 </x-app-layout>
