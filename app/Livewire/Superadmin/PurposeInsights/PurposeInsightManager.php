@@ -18,6 +18,7 @@ class PurposeInsightManager extends Component
     public $insights;
     public $insight_id;
     public $title, $category, $opening_tip, $content, $image, $existing_image, $is_published = true;
+    public $remove_image = false;
     public $notify_subscribers = false;
     public $isEditing = false;
 
@@ -48,6 +49,7 @@ class PurposeInsightManager extends Component
 
     public function resetFields()
     {
+        $this->resetValidation();
         $this->insight_id = null;
         $this->title = '';
         $this->category = '';
@@ -55,9 +57,21 @@ class PurposeInsightManager extends Component
         $this->content = '';
         $this->image = null;
         $this->existing_image = null;
+        $this->remove_image = false;
         $this->is_published = true;
         $this->notify_subscribers = false;
         $this->isEditing = false;
+    }
+
+    public function removeExistingImage()
+    {
+        $this->existing_image = null;
+        $this->remove_image = true;
+    }
+
+    public function cancelNewImage()
+    {
+        $this->image = null;
     }
 
     public function save()
@@ -70,25 +84,46 @@ class PurposeInsightManager extends Component
             'image' => 'nullable|image|max:3072', // Max 3MB
         ]);
 
-        $imagePath = $this->existing_image;
-
-        if ($this->image) {
-            $imagePath = $this->image->store('purpose-insights', 'public');
-        }
-
         if ($this->isEditing) {
             $insight = PurposeInsight::findOrFail($this->insight_id);
+
+            $imagePath = $insight->image;
+
+            if ($this->image) {
+                if ($insight->image && Storage::disk('public')->exists($insight->image)) {
+                    Storage::disk('public')->delete($insight->image);
+                }
+                $imagePath = $this->image->store('purpose-insights', 'public');
+            } elseif ($this->remove_image) {
+                if ($insight->image && Storage::disk('public')->exists($insight->image)) {
+                    Storage::disk('public')->delete($insight->image);
+                }
+                $imagePath = null;
+            }
+
+            // Keep slug if title has not changed, otherwise update
+            $slug = $insight->slug;
+            if ($insight->title !== $this->title || empty($slug)) {
+                $slug = Str::slug($this->title) . '-' . substr(md5(time()), 0, 4);
+            }
+
             $insight->update([
                 'title' => $this->title,
-                'slug' => Str::slug($this->title) . '-' . substr(md5(time()), 0, 4),
+                'slug' => $slug,
                 'category' => $this->category,
                 'opening_tip' => $this->opening_tip,
                 'content' => $this->content,
                 'image' => $imagePath,
-                'is_published' => $this->is_published,
+                'is_published' => (bool) $this->is_published,
             ]);
+
             session()->flash('message', 'Purpose Insight updated successfully!');
         } else {
+            $imagePath = null;
+            if ($this->image) {
+                $imagePath = $this->image->store('purpose-insights', 'public');
+            }
+
             $insight = PurposeInsight::create([
                 'title' => $this->title,
                 'slug' => Str::slug($this->title) . '-' . substr(md5(time()), 0, 4),
@@ -96,7 +131,7 @@ class PurposeInsightManager extends Component
                 'opening_tip' => $this->opening_tip,
                 'content' => $this->content,
                 'image' => $imagePath,
-                'is_published' => $this->is_published,
+                'is_published' => (bool) $this->is_published,
                 'published_at' => now(),
             ]);
 
@@ -114,6 +149,7 @@ class PurposeInsightManager extends Component
 
     public function edit($id)
     {
+        $this->resetValidation();
         $insight = PurposeInsight::findOrFail($id);
         $this->insight_id = $insight->id;
         $this->title = $insight->title;
@@ -121,17 +157,27 @@ class PurposeInsightManager extends Component
         $this->opening_tip = $insight->opening_tip;
         $this->content = $insight->content;
         $this->existing_image = $insight->image;
-        $this->is_published = $insight->is_published;
+        $this->image = null;
+        $this->remove_image = false;
+        $this->is_published = (bool) $insight->is_published;
+        $this->notify_subscribers = false;
         $this->isEditing = true;
+
+        $this->dispatch('scroll-to-form');
     }
 
     public function delete($id)
     {
         $insight = PurposeInsight::findOrFail($id);
-        if ($insight->image) {
+        if ($insight->image && Storage::disk('public')->exists($insight->image)) {
             Storage::disk('public')->delete($insight->image);
         }
         $insight->delete();
+
+        if ($this->insight_id === $id) {
+            $this->resetFields();
+        }
+
         session()->flash('message', 'Insight deleted successfully!');
         $this->loadInsights();
     }

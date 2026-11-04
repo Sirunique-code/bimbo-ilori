@@ -39,4 +39,35 @@ class PurposeInsight extends Model
             }
         });
     }
+
+    /**
+     * Get the absolute URL of the featured image, or null if not set.
+     */
+    public function getFeaturedImageUrlAttribute(): ?string
+    {
+        if (empty($this->image)) {
+            return null;
+        }
+
+        if (Str::startsWith($this->image, ['http://', 'https://', '//'])) {
+            return $this->image;
+        }
+
+        $cleanPath = ltrim($this->image, '/');
+        if (Str::startsWith($cleanPath, 'storage/')) {
+            return asset($cleanPath);
+        }
+
+        return asset('storage/' . $cleanPath);
+    }
+
+    /**
+     * Get the link preview image URL for social media cards.
+     * Uses the featured image if selected, otherwise falls back to the default website preview image.
+     */
+    public function getLinkPreviewImageUrlAttribute(): string
+    {
+        return $this->featured_image_url ?: asset('assets/img/featured-image.jpg');
+    }
 }
+

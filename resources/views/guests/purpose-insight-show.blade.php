@@ -1,4 +1,23 @@
-<x-guest-layout>
+@php
+    $previewTitle = $insight->title . ' | Bimbo Ilori Purpose Insights';
+    $previewDescription = !empty($insight->opening_tip)
+        ? Str::limit(strip_tags($insight->opening_tip), 200)
+        : Str::limit(strip_tags($insight->content), 200);
+    $previewImage = $insight->link_preview_image_url;
+    $canonicalUrl = route('purpose-insight.show', $insight->slug);
+    $publishedTime = $insight->published_at ? $insight->published_at->toIso8601String() : $insight->created_at->toIso8601String();
+    $section = $insight->category;
+@endphp
+
+<x-guest-layout 
+    :title="$previewTitle"
+    :description="$previewDescription"
+    :image="$previewImage"
+    :url="$canonicalUrl"
+    type="article"
+    :published-time="$publishedTime"
+    :section="$section"
+>
     <style>
         .article-opening-tip {
             background: linear-gradient(135deg, #f8f6ff 0%, #ffffff 100%);
@@ -68,9 +87,9 @@
                     </div>
 
                     <!-- Featured Image if available -->
-                    @if($insight->image)
+                    @if($insight->featured_image_url)
                         <div class="mb-5 text-center">
-                            <img src="{{ asset('storage/' . $insight->image) }}" alt="{{ $insight->title }}" class="img-fluid rounded-4 shadow-sm w-100" style="max-height: 450px; object-fit: cover;">
+                            <img src="{{ $insight->featured_image_url }}" alt="{{ $insight->title }}" class="img-fluid rounded-4 shadow-sm w-100" style="max-height: 450px; object-fit: cover;">
                         </div>
                     @endif
 

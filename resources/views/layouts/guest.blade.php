@@ -16,31 +16,50 @@
         gtag('config', 'G-G38XVXDHPV');
     </script>
 
+    @php
+        $pageTitle = !empty($title) ? $title : 'Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.';
+        $pageDescription = !empty($description) ? $description : 'Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.';
+        $pageKeywords = !empty($keywords) ? $keywords : 'Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori';
+        $pageImage = !empty($image) ? $image : asset('assets/img/featured-image.jpg');
+        $pageUrl = !empty($url) ? $url : url()->current();
+        $pageType = !empty($type) ? $type : 'website';
+    @endphp
+
     <meta charset="utf-8">
-    <title>Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.</title>
+    <title>{{ $pageTitle }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="keywords"
-        content="Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori">
-    <meta name="description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.">
+    <meta name="keywords" content="{{ $pageKeywords }}">
+    <meta name="description" content="{{ $pageDescription }}">
 
     <!-- Open Graph Meta Tags (For Social Media) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.">
-    <meta property="og:description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.">
-    <meta property="og:image" content="{{ asset('assets/img/featured-image.jpg') }}">
-    <meta property="og:url" content="http://bimboilori.com">
+    <meta property="og:type" content="{{ $pageType }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $pageDescription }}">
+    <meta property="og:image" content="{{ $pageImage }}">
+    <meta property="og:image:secure_url" content="{{ $pageImage }}">
+    <meta property="og:url" content="{{ $pageUrl }}">
     <meta property="og:site_name" content="Bimbo Ilori Programs">
+    @if(($pageType ?? 'website') === 'article')
+        @if(!empty($publishedTime))
+    <meta property="article:published_time" content="{{ $publishedTime }}">
+        @endif
+        @if(!empty($author))
+    <meta property="article:author" content="{{ $author }}">
+        @endif
+        @if(!empty($section))
+    <meta property="article:section" content="{{ $section }}">
+        @endif
+    @endif
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title"
-        content="Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.">
-    <meta name="twitter:description"
-        content="Transform your life with Bimbo Ilori’s coaching, books, and online programs.">
-    <meta name="twitter:image" content="{{ asset('assets/img/featured-image.jpg') }}">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $pageDescription }}">
+    <meta name="twitter:image" content="{{ $pageImage }}">
     <meta name="twitter:site" content="@yourtwitterhandle">
+
+    {{ $meta ?? '' }}
+    @stack('meta')
 
     <script type="application/ld+json">
         {

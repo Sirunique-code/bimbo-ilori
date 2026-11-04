@@ -18,13 +18,35 @@
     @endif
 
     <!-- Create / Edit Form Card -->
-    <div class="card mb-4 shadow-sm border-0">
-        <div class="card-header bg-primary text-white py-3">
-            <h5 class="card-title mb-0 text-white font-weight-bold">
-                <i class="ti-pencil-alt me-2"></i> {{ $isEditing ? 'Edit Purpose Insight Article' : 'Create New Purpose Insight Article' }}
-            </h5>
+    <div id="purpose-insight-form-card" class="card mb-4 shadow-sm border-0 {{ $isEditing ? 'border border-primary' : '' }}" style="{{ $isEditing ? 'border-width: 2px !important;' : '' }}">
+        <div class="card-header bg-primary text-white py-3 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+                <h5 class="card-title mb-0 text-white font-weight-bold">
+                    <i class="{{ $isEditing ? 'ti-pencil-alt' : 'ti-plus' }} me-2"></i> 
+                    {{ $isEditing ? 'Edit Purpose Insight Article' : 'Create New Purpose Insight Article' }}
+                </h5>
+                @if($isEditing)
+                    <span class="badge bg-warning text-dark font-weight-bold ms-2">EDITING MODE</span>
+                @endif
+            </div>
+            @if($isEditing)
+                <button type="button" wire:click="resetFields" class="btn btn-sm btn-light font-weight-bold">
+                    <i class="ti-close me-1"></i> Cancel Edit
+                </button>
+            @endif
         </div>
         <div class="card-body">
+            @if($isEditing)
+                <div class="alert alert-info py-2 px-3 mb-3 d-flex align-items-center justify-content-between">
+                    <div>
+                        <i class="ti-info-alt me-2"></i> You are currently editing: <strong>"{{ Str::limit($title, 60) }}"</strong>
+                    </div>
+                    <button type="button" wire:click="resetFields" class="btn btn-link btn-sm text-info p-0 text-decoration-none font-weight-bold">
+                        Switch to Create New
+                    </button>
+                </div>
+            @endif
+
             <form wire:submit.prevent="save">
                 <div class="row">
                     <div class="col-md-8 mb-3">
@@ -60,16 +82,50 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <label class="form-label font-weight-bold d-flex align-items-center gap-1">
+                        <label class="form-label font-weight-bold d-flex align-items-center gap-1 mb-1">
                             <i class="ti-image text-primary"></i> Featured Cover Image (Optional)
                         </label>
-                        <input type="file" wire:model="image" class="form-control">
-                        @if($existing_image && !$image)
-                            <div class="mt-2 d-flex align-items-center gap-2">
-                                <img src="{{ asset('storage/' . $existing_image) }}" class="rounded shadow-sm" style="height: 44px; width: 60px; object-fit: cover;">
-                                <small class="text-muted">Current cover active</small>
+                        <small class="text-muted d-block mb-2">Used as the article cover image and the link preview image when shared on WhatsApp, Facebook, LinkedIn, Twitter/X, etc.</small>
+                        <input type="file" wire:model="image" class="form-control" accept="image/*">
+                        
+                        <div wire:loading wire:target="image" class="text-primary small mt-1">
+                            <i class="ti-reload fa-spin me-1"></i> Uploading preview...
+                        </div>
+
+                        {{-- If a new image was uploaded --}}
+                        @if ($image)
+                            <div class="mt-2 p-2 border rounded bg-light d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="{{ $image->temporaryUrl() }}" class="rounded shadow-sm" style="height: 50px; width: 70px; object-fit: cover;">
+                                    <div>
+                                        <span class="badge bg-success">New Image Selected</span>
+                                        <small class="text-muted d-block">Will be active cover & social link preview upon saving</small>
+                                    </div>
+                                </div>
+                                <button type="button" wire:click="cancelNewImage" class="btn btn-sm btn-outline-danger" title="Cancel this selection">
+                                    <i class="ti-close"></i> Cancel
+                                </button>
+                            </div>
+                        {{-- Else if there is an existing saved image --}}
+                        @elseif ($existing_image)
+                            <div class="mt-2 p-2 border rounded bg-light d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="{{ asset('storage/' . $existing_image) }}" class="rounded shadow-sm" style="height: 50px; width: 70px; object-fit: cover;">
+                                    <div>
+                                        <span class="badge bg-primary">Current Active Cover</span>
+                                        <small class="text-muted d-block">Active on public site & used for social link previews</small>
+                                    </div>
+                                </div>
+                                <button type="button" wire:click="removeExistingImage" class="btn btn-sm btn-outline-danger" title="Remove cover image">
+                                    <i class="ti-trash"></i> Remove Image
+                                </button>
+                            </div>
+                        @elseif ($remove_image)
+                            <div class="mt-2 alert alert-warning py-1 px-2 small mb-0">
+                                <i class="ti-info-alt me-1"></i> Current image will be removed upon updating.
                             </div>
                         @endif
+
                         @error('image') <span class="text-danger small d-block mt-1">{{ $message }}</span> @enderror
                     </div>
 
@@ -99,10 +155,17 @@
 
                 <div class="d-flex justify-content-end gap-2 mt-3">
                     @if($isEditing)
-                        <button type="button" wire:click="resetFields" class="btn btn-secondary me-2">Cancel Edit</button>
+                        <button type="button" wire:click="resetFields" class="btn btn-secondary me-2">
+                            <i class="ti-close me-1"></i> Cancel Edit
+                        </button>
                     @endif
-                    <button type="submit" class="btn btn-primary px-4">
-                        <i class="ti-save me-1"></i> {{ $isEditing ? 'Update Article' : 'Publish & Broadcast' }}
+                    <button type="submit" class="btn btn-primary px-4" wire:loading.attr="disabled" wire:target="save,image">
+                        <span wire:loading.remove wire:target="save">
+                            <i class="ti-save me-1"></i> {{ $isEditing ? 'Update Article' : 'Publish & Broadcast' }}
+                        </span>
+                        <span wire:loading wire:target="save">
+                            <span class="spinner-border spinner-border-sm me-1" role="status"></span> Saving changes...
+                        </span>
                     </button>
                 </div>
             </form>
@@ -125,12 +188,12 @@
                             <th style="min-width: 160px;">Category</th>
                             <th style="width: 100px;">Status</th>
                             <th style="width: 120px;">Published</th>
-                            <th class="text-center" style="width: 220px; white-space: nowrap;">Actions</th>
+                            <th class="text-center" style="width: 240px; white-space: nowrap;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse($insights as $item)
-                            <tr>
+                            <tr wire:key="insight-row-{{ $item->id }}" class="{{ $insight_id === $item->id ? 'table-primary bg-opacity-10' : '' }}">
                                 <td>
                                     @if($item->image)
                                         <img src="{{ asset('storage/' . $item->image) }}" class="rounded shadow-sm" style="width: 45px; height: 45px; object-fit: cover;">
@@ -141,7 +204,12 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <h6 class="font-weight-bold mb-1 text-dark text-truncate" style="max-width: 240px;" title="{{ $item->title }}">{{ $item->title }}</h6>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <h6 class="font-weight-bold mb-1 text-dark text-truncate" style="max-width: 240px;" title="{{ $item->title }}">{{ $item->title }}</h6>
+                                        @if($insight_id === $item->id)
+                                            <span class="badge bg-warning text-dark font-weight-bold" style="font-size: 0.65rem;">EDITING</span>
+                                        @endif
+                                    </div>
                                     <p class="text-muted small mb-0 text-truncate" style="max-width: 240px;" title="{{ $item->opening_tip }}">
                                         "{{ $item->opening_tip }}"
                                     </p>
@@ -164,13 +232,24 @@
                                         <a href="{{ route('purpose-insight.show', $item->slug) }}" target="_blank" class="btn btn-xs btn-sm btn-outline-info" title="View on Site">
                                             <i class="ti-eye"></i> View
                                         </a>
-                                        <button wire:click="broadcastToSubscribers({{ $item->id }})" class="btn btn-xs btn-sm btn-outline-warning" title="Send Opening Tip Email to Subscribers" onclick="return confirm('Send opening tip email for this post to all subscribers?')">
+                                        <button type="button" wire:click="broadcastToSubscribers({{ $item->id }})" class="btn btn-xs btn-sm btn-outline-warning" title="Send Opening Tip Email to Subscribers" onclick="return confirm('Send opening tip email for this post to all subscribers?')">
                                             <i class="ti-email"></i> Email
                                         </button>
-                                        <button wire:click="edit({{ $item->id }})" class="btn btn-xs btn-sm btn-outline-primary" title="Edit Article">
-                                            <i class="ti-pencil"></i> Edit
+                                        <button type="button" 
+                                                wire:click="edit({{ $item->id }})" 
+                                                wire:loading.attr="disabled"
+                                                wire:target="edit({{ $item->id }})"
+                                                onclick="document.getElementById('purpose-insight-form-card')?.scrollIntoView({ behavior: 'smooth' });"
+                                                class="btn btn-xs btn-sm {{ $insight_id === $item->id ? 'btn-primary text-white' : 'btn-outline-primary' }}" 
+                                                title="Edit Article">
+                                            <span wire:loading.remove wire:target="edit({{ $item->id }})">
+                                                <i class="ti-pencil"></i> Edit
+                                            </span>
+                                            <span wire:loading wire:target="edit({{ $item->id }})">
+                                                <span class="spinner-border spinner-border-sm" role="status"></span>
+                                            </span>
                                         </button>
-                                        <button wire:click="delete({{ $item->id }})" class="btn btn-xs btn-sm btn-outline-danger" title="Delete Article" onclick="return confirm('Are you sure you want to delete this article?')">
+                                        <button type="button" wire:click="delete({{ $item->id }})" class="btn btn-xs btn-sm btn-outline-danger" title="Delete Article" onclick="return confirm('Are you sure you want to delete this article?')">
                                             <i class="ti-trash"></i> Delete
                                         </button>
                                     </div>
@@ -189,3 +268,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized', () => {
+        Livewire.on('scroll-to-form', () => {
+            const formCard = document.getElementById('purpose-insight-form-card');
+            if (formCard) {
+                formCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
