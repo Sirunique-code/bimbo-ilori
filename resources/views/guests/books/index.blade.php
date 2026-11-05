@@ -328,22 +328,36 @@
         }
 
         /* Individual Book Card */
+        .book-item-node {
+            position: relative;
+            transition: z-index 0.2s ease;
+        }
+
+        .book-item-node:hover,
+        .book-item-node:focus-within,
+        .book-item-node.dropdown-active {
+            z-index: 1050;
+        }
+
         .book-single-card {
             background: #FFFFFF;
             border: 1px solid #EAE6F4;
             border-radius: 16px;
-            overflow: hidden;
+            overflow: visible; /* Allows dropdown menu to expand freely outside card */
             display: flex;
-            flex-column: column;
+            flex-direction: column;
             height: 100%;
             transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
         }
 
-        .book-single-card:hover {
+        .book-single-card:hover,
+        .book-single-card:focus-within,
+        .book-single-card.dropdown-active {
             transform: translateY(-6px);
             box-shadow: 0 14px 30px rgba(63, 32, 127, 0.12);
             border-color: #D3C4F0;
+            z-index: 1050;
         }
 
         .book-cover-frame {
@@ -355,6 +369,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
         }
 
         .book-cover-frame img {
@@ -454,12 +470,55 @@
         }
 
         /* Dropdown custom item */
+        .buy-dropdown-wrapper {
+            position: relative;
+        }
+
         .buy-dropdown-menu {
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid #E6DFF5;
-            box-shadow: 0 10px 30px rgba(63, 32, 127, 0.15);
+            box-shadow: 0 16px 36px rgba(63, 32, 127, 0.22), 0 4px 12px rgba(0, 0, 0, 0.06);
             padding: 8px;
-            min-width: 250px;
+            min-width: 260px;
+            max-width: calc(100vw - 32px);
+            z-index: 1060 !important;
+            background: #FFFFFF;
+            margin-top: 6px;
+            right: 0;
+            left: auto;
+        }
+
+        /* Invisible bridge to prevent mouseleave gap between button and dropdown */
+        .buy-dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: transparent;
+        }
+
+        /* Hover support on desktop */
+        @media (min-width: 992px) {
+            .buy-dropdown-wrapper:hover > .buy-dropdown-menu {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+
+            .buy-dropdown-wrapper:hover > .buy-dropdown-btn {
+                background-color: #2D1460 !important;
+                border-color: #2D1460 !important;
+                color: #FFE699 !important;
+            }
+        }
+
+        /* Click or touch display */
+        .buy-dropdown-menu.show {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         .buy-dropdown-menu .dropdown-item {
@@ -468,13 +527,22 @@
             font-size: 0.88rem;
             display: flex;
             align-items: center;
-            gap: 10px;
-            transition: background 0.15s ease;
+            gap: 12px;
+            transition: all 0.15s ease;
+            color: #333333;
         }
 
         .buy-dropdown-menu .dropdown-item:hover {
             background: #F4EFFC;
             color: #3F207F;
+            transform: translateX(3px);
+        }
+
+        .buy-dropdown-menu .dropdown-item i {
+            font-size: 1.15rem;
+            width: 22px;
+            text-align: center;
+            flex-shrink: 0;
         }
 
         /* Value Pillars Section */
@@ -567,7 +635,7 @@
                             <i class="fa fa-compass me-2"></i> Browse All Series
                         </a>
                         <a href="#bundle-showcase-section" class="btn btn-outline-light rounded-pill px-4 py-3 fw-semibold">
-                            <i class="fa fa-gift me-2 text-warning"></i> View Category Bundles (20% Off)
+                            <i class="fa fa-gift me-2 text-warning"></i> View Category Bundles (10% Off)
                         </a>
                     </div>
                 </div>
@@ -640,7 +708,7 @@
                             <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
                                 <i class="fa fa-star me-1"></i> Complete Series Value Packs
                             </span>
-                            <h2 class="display-6 fw-bold text-white mb-2">Category Bundle Plans (20% Off)</h2>
+                            <h2 class="display-6 fw-bold text-white mb-2">Category Bundle Plans (10% Off)</h2>
                             <p class="text-white-50 mb-0 fs-6">
                                 Acquire the full curated collection for any series in one simple order. Each Category Bundle combines all titles in that thematic track at a special bundle discount. Available in instant Digital Editions and Paperback Deliveries.
                             </p>
@@ -725,7 +793,7 @@
                                             <i class="fa fa-gift"></i> {{ $meta['series'] }} Collection
                                         </span>
                                         <span class="badge bg-danger text-white rounded-pill px-3 py-1 fw-bold">
-                                            Special 20% Bundle Savings
+                                            Special 10% Bundle Savings
                                         </span>
                                     </div>
 
@@ -813,11 +881,11 @@
                                                 </a>
 
                                                 <!-- Quick Purchase Dropdown Menu -->
-                                                <div class="dropdown flex-grow-1">
-                                                    <button class="btn btn-sm btn-primary rounded-pill px-2 py-1 w-100 dropdown-toggle text-nowrap" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #3F207F; border-color: #3F207F; font-size: 0.8rem;">
+                                                <div class="dropdown flex-grow-1 buy-dropdown-wrapper">
+                                                    <button class="btn btn-sm btn-primary rounded-pill px-2 py-1 w-100 dropdown-toggle text-nowrap buy-dropdown-btn" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="background-color: #3F207F; border-color: #3F207F; font-size: 0.8rem;">
                                                         <i class="fa fa-shopping-bag me-1"></i> Buy
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end buy-dropdown-menu">
+                                                    <ul class="dropdown-menu dropdown-menu-end buy-dropdown-menu shadow">
                                                         <li class="dropdown-header text-uppercase fw-bold text-muted small pb-1">
                                                             Order {{ Str::limit($book->title, 20) }}
                                                         </li>
@@ -1091,6 +1159,39 @@
                 const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
                 return text.replace(/[&<>"']/g, function(m) { return map[m]; });
             }
+
+            // Buy Dropdown Hover & Click Sync for individual book cards
+            const buyDropdownWrappers = document.querySelectorAll('.buy-dropdown-wrapper');
+            buyDropdownWrappers.forEach(wrapper => {
+                const card = wrapper.closest('.book-single-card');
+                const node = wrapper.closest('.book-item-node');
+                const menu = wrapper.querySelector('.buy-dropdown-menu');
+
+                // On mouse enter: elevate card z-index so dropdown floats above cards below
+                wrapper.addEventListener('mouseenter', function() {
+                    if (card) card.classList.add('dropdown-active');
+                    if (node) node.classList.add('dropdown-active');
+                });
+
+                // On mouse leave: only remove elevation if menu is not actively open
+                wrapper.addEventListener('mouseleave', function() {
+                    if (!menu || !menu.classList.contains('show')) {
+                        if (card) card.classList.remove('dropdown-active');
+                        if (node) node.classList.remove('dropdown-active');
+                    }
+                });
+
+                // Listen to Bootstrap dropdown events
+                wrapper.addEventListener('show.bs.dropdown', function() {
+                    if (card) card.classList.add('dropdown-active');
+                    if (node) node.classList.add('dropdown-active');
+                });
+
+                wrapper.addEventListener('hidden.bs.dropdown', function() {
+                    if (card) card.classList.remove('dropdown-active');
+                    if (node) node.classList.remove('dropdown-active');
+                });
+            });
         });
     </script>
 </x-guest-layout>

@@ -26,10 +26,10 @@
     });
     
     
-    // Dropdown on mouse hover
-    const $dropdown = $(".dropdown");
-    const $dropdownToggle = $(".dropdown-toggle");
-    const $dropdownMenu = $(".dropdown-menu");
+    // Dropdown on mouse hover for Navbar
+    const $dropdown = $(".navbar .dropdown");
+    const $dropdownToggle = $(".navbar .dropdown-toggle");
+    const $dropdownMenu = $(".navbar .dropdown-menu");
     const showClass = "show";
     
     $(window).on("load resize", function() {
