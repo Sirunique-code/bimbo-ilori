@@ -42,6 +42,14 @@
     <!-- SECTION 3: AUDIENCE & MEDIA -->
     <li class="sidebar-section-title mt-2">Community & Media</li>
 
+    <!-- Reader Comments & Questions -->
+    <li class="nav-item {{ request()->routeIs('superadmin.comments*') ? 'active' : '' }}">
+      <a class="nav-link {{ request()->routeIs('superadmin.comments*') ? 'active' : '' }}" href="{{ route('superadmin.comments.index') }}">
+        <i class="bi bi-chat-dots-fill menu-icon"></i>
+        <span class="menu-title">Reader Comments</span>
+      </a>
+    </li>
+
     <!-- Newsletter Subscribers -->
     <li class="nav-item {{ request()->routeIs('superadmin.newsletter*') ? 'active' : '' }}">
       <a class="nav-link {{ request()->routeIs('superadmin.newsletter*') ? 'active' : '' }}" href="{{ route('superadmin.newsletter.index') }}">

@@ -209,6 +209,9 @@
                                         @if($insight_id === $item->id)
                                             <span class="badge bg-warning text-dark font-weight-bold" style="font-size: 0.65rem;">EDITING</span>
                                         @endif
+                                        <a href="{{ route('superadmin.comments.index') }}" class="badge bg-light text-primary border text-decoration-none" title="View Reader Comments">
+                                            <i class="ti-comment me-1"></i> {{ $item->comments_count ?? 0 }}
+                                        </a>
                                     </div>
                                     <p class="text-muted small mb-0 text-truncate" style="max-width: 240px;" title="{{ $item->opening_tip }}">
                                         "{{ $item->opening_tip }}"

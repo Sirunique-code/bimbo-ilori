@@ -69,5 +69,21 @@ class PurposeInsight extends Model
     {
         return $this->featured_image_url ?: asset('assets/img/featured-image.jpg');
     }
+
+    /**
+     * Approved comments for public display.
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class)->where('is_approved', true)->latest();
+    }
+
+    /**
+     * All comments including pending/unapproved for admin moderation.
+     */
+    public function allComments()
+    {
+        return $this->hasMany(Comment::class)->latest();
+    }
 }
 

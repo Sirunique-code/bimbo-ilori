@@ -44,7 +44,7 @@ class PurposeInsightManager extends Component
 
     public function loadInsights()
     {
-        $this->insights = PurposeInsight::latest()->get();
+        $this->insights = PurposeInsight::withCount('comments')->latest()->get();
     }
 
     public function resetFields()

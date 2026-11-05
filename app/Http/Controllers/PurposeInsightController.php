@@ -25,7 +25,8 @@ class PurposeInsightController extends Controller
      */
     public function show($slug)
     {
-        $insight = PurposeInsight::where('slug', $slug)
+        $insight = PurposeInsight::with('comments')
+            ->where('slug', $slug)
             ->where('is_published', true)
             ->firstOrFail();
 

@@ -70,6 +70,9 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
      // ✅ Purpose Insights Panel
      Route::get('/purpose-insights', \App\Livewire\Superadmin\PurposeInsights\PurposeInsightManager::class)->name('superadmin.purpose-insights.index');
 
+     // ✅ Article Comments & Questions Panel
+     Route::get('/comments', \App\Livewire\Superadmin\Comments\CommentManager::class)->name('superadmin.comments.index');
+
      // ✅ Newsletter Subscribers List
      Route::get('/newsletter-subscribers', [App\Http\Controllers\NewsletterController::class, 'index'])->name('superadmin.newsletter.index');
 });
@@ -274,6 +277,7 @@ Route::get('/podcast', function () {
 //Purpose Insight
 Route::get('/purpose-insight', [\App\Http\Controllers\PurposeInsightController::class, 'index'])->name('purpose-insight');
 Route::get('/purpose-insight/{slug}', [\App\Http\Controllers\PurposeInsightController::class, 'show'])->name('purpose-insight.show');
+Route::post('/purpose-insight/{slug}/comments', [\App\Http\Controllers\CommentController::class, 'store'])->name('purpose-insight.comments.store');
 
 
 
