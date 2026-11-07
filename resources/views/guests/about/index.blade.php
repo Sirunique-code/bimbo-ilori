@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="{{ asset('assets/img/strategy.jpg') }}" class="about-image shadow" alt="Bimbo Ilori">
-                    <p style="margin-top: 10px">Bimbo Ilori</p>
+                    <p style="margin-top: 10px">Bimbo Ilori (née Agoro)</p>
                 </div>
             </section>
 

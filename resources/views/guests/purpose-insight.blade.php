@@ -4,50 +4,62 @@
         'Faith Development' => [
             'series' => 'The Faith Rise Series',
             'image' => 'storage/category44.png',
+            'slug' => 'faith-development',
         ],
         'Purpose & Personal Discovery' => [
             'series' => 'The Purpose Series',
             'image' => 'storage/category12.jpg',
+            'slug' => 'purpose-development',
         ],
         'Parenting & Child Development' => [
             'series' => 'The Parenting Series',
             'image' => 'storage/category110.png',
+            'slug' => 'parenting-skill-development',
         ],
         'Health, Wellness & Lifestyle' => [
             'series' => 'The Wellness Series',
             'image' => 'storage/category83.png',
+            'slug' => 'wellness-and-balance',
         ],
         'Overcoming Obstacles & Resilience' => [
             'series' => 'The Overcomer Series',
             'image' => 'storage/category61.jpg',
+            'slug' => 'overcomers',
         ],
         'Redemption & Restoration' => [
             'series' => 'The Redemption Series',
             'image' => 'storage/category31.jpg',
+            'slug' => 'redemptive-power',
         ],
         'Business & Entrepreneurship' => [
             'series' => 'The Business Insight Series',
             'image' => 'storage/category72.jpg',
+            'slug' => 'business-development',
         ],
         'Leadership & Influence' => [
             'series' => 'The Leadership Skill Series',
             'image' => 'storage/category23.jpg',
+            'slug' => 'leadership-uplift',
         ],
         'Relationships, Love & Emotional Wholeness' => [
             'series' => 'The Relationship Series',
             'image' => 'storage/category90.jpg',
+            'slug' => 'relationship-upskill',
         ],
         'Personal Effectiveness & Life Skills' => [
             'series' => 'The Personal Skills Series',
             'image' => 'storage/category102.jpg',
+            'slug' => 'spiritual-personal-skill-development',
         ],
         'Insight, Discernment & Wisdom' => [
             'series' => 'The Insight Series',
             'image' => 'storage/category123.jpg',
+            'slug' => 'the-insight-series',
         ],
         'Marriage & Family Life' => [
             'series' => 'The Marriage Series',
             'image' => 'storage/category52.jpg',
+            'slug' => 'marriage-enrichment',
         ]
     ];
     @endphp
@@ -170,7 +182,7 @@
                 @foreach($categoriesList as $chunk)
                     <div class="col-md-6">
                         @foreach($chunk as $cName => $cData)
-                            <a href="#recent-articles" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3">
+                            <a href="{{ route('books.index') }}#{{ $cData['slug'] }}" class="category-card d-block p-2 border rounded-3 shadow-sm mb-3" title="Explore {{ $cName }} Books & Resources">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="{{ asset($cData['image']) }}" alt="{{ $cName }}" class="me-3" style="width: 50px; height: 70px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
@@ -180,7 +192,7 @@
                                         </div>
                                     </div>
                                     <span class="text-muted small me-2">
-                                        <i class="fa fa-angle-right"></i>
+                                        <i class="fa fa-arrow-right text-primary"></i>
                                     </span>
                                 </div>
                             </a>

@@ -13,6 +13,7 @@
                 'gradient' => 'linear-gradient(135deg, #3F207F 0%, #5E35B1 100%)',
                 'icon' => 'fa-cross',
                 'tagline' => 'Unshakable faith, spiritual authority, and supernatural alignment.',
+                'description' => 'Build rock-solid spiritual foundations, deepen intimate communion with God, and activate spiritual authority to overcome life challenges.',
             ],
             '2. Purpose Development Titles' => [
                 'name' => 'Purpose & Personal Discovery',
@@ -22,6 +23,7 @@
                 'gradient' => 'linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%)',
                 'icon' => 'fa-compass',
                 'tagline' => 'Discover, pilot, and anchor your divine assignment with clarity.',
+                'description' => 'Gain deep clarity on your divine calling, uncover hidden gifts, and align your everyday choices with your ultimate life blueprint.',
             ],
             '3. Parenting Skill Development Titles' => [
                 'name' => 'Parenting & Child Development',
@@ -31,6 +33,7 @@
                 'gradient' => 'linear-gradient(135deg, #0F766E 0%, #0D9488 100%)',
                 'icon' => 'fa-child',
                 'tagline' => 'Raise remarkable, protected, and purpose-guided children with peace.',
+                'description' => 'Practical frameworks and biblical wisdom to nurture resilient, emotionally sound, protected, and purpose-driven children with joy.',
             ],
             '4. Wellness and Balance Titles' => [
                 'name' => 'Health, Wellness & Lifestyle',
@@ -40,6 +43,7 @@
                 'gradient' => 'linear-gradient(135deg, #15803D 0%, #16A34A 100%)',
                 'icon' => 'fa-heartbeat',
                 'tagline' => 'Cultivate healthy habits, unburden the mind, and thrive holistically.',
+                'description' => 'Holistic practices to conquer mental fatigue, preserve vitality, establish self-care rhythms, and flourish in body, mind, and spirit.',
             ],
             '5. Overcomers\' Titles' => [
                 'name' => 'Overcoming Obstacles & Resilience',
@@ -49,6 +53,7 @@
                 'gradient' => 'linear-gradient(135deg, #B45309 0%, #D97706 100%)',
                 'icon' => 'fa-shield-alt',
                 'tagline' => 'Translate pain into power, push through resistance, and rise stronger.',
+                'description' => 'Turn setbacks into launching pads, build emotional grit, break through persistent resistance, and emerge victorious over trials.',
             ],
             '6. Redemptive Power Titles' => [
                 'name' => 'Redemption & Restoration',
@@ -58,6 +63,7 @@
                 'gradient' => 'linear-gradient(135deg, #831843 0%, #9D174D 100%)',
                 'icon' => 'fa-crown',
                 'tagline' => 'Live redeemed, release past guilt, and walk in covenant restoration.',
+                'description' => 'Experience complete liberation from past regrets, embrace God’s restorative grace, and step boldly into your redeemed destiny.',
             ],
             '7. Business Development Titles' => [
                 'name' => 'Business & Entrepreneurship',
@@ -67,6 +73,7 @@
                 'gradient' => 'linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%)',
                 'icon' => 'fa-chart-line',
                 'tagline' => 'Strategic execution, entrepreneurial wisdom, and sustainable impact.',
+                'description' => 'Sound entrepreneurial principles, commercial acumen, strategic growth systems, and marketplace leadership with ethical integrity.',
             ],
             '8. Leadership Uplift Titles' => [
                 'name' => 'Leadership & Influence',
@@ -76,6 +83,7 @@
                 'gradient' => 'linear-gradient(135deg, #4C1D95 0%, #6D28D9 100%)',
                 'icon' => 'fa-users',
                 'tagline' => 'Lead with character, courage, and timeless principled influence.',
+                'description' => 'Inspire high-performance teams, cultivate authentic influence, lead with empathy and moral courage, and leave an enduring legacy.',
             ],
             '9. Relationship Upskill Titles ' => [
                 'name' => 'Relationships & Emotional Wholeness',
@@ -85,6 +93,7 @@
                 'gradient' => 'linear-gradient(135deg, #BE185D 0%, #E11D48 100%)',
                 'icon' => 'fa-heart',
                 'tagline' => 'Confront relational blind spots and build intentional, mature bonds.',
+                'description' => 'Heal emotional wounds, enhance communication, overcome relational friction, and cultivate intentional, uplifting connections.',
             ],
             '10. Spiritual & Personal Skill Development Titles' => [
                 'name' => 'Personal Effectiveness & Life Skills',
@@ -94,6 +103,7 @@
                 'gradient' => 'linear-gradient(135deg, #0369A1 0%, #0284C7 100%)',
                 'icon' => 'fa-seedling',
                 'tagline' => 'Inner systems, productivity, and structure for long-term success.',
+                'description' => 'Master time management, develop personal disciplines, optimize daily productivity routines, and build habits that sustain success.',
             ],
             '11. The Insight Series' => [
                 'name' => 'Insight, Discernment & Wisdom',
@@ -103,6 +113,7 @@
                 'gradient' => 'linear-gradient(135deg, #4338CA 0%, #4F46E5 100%)',
                 'icon' => 'fa-lightbulb',
                 'tagline' => 'See clearly, discern spiritual realities, and navigate complex seasons.',
+                'description' => 'Sharpen intuitive discernment, decode seasons and times, make sound decisions under pressure, and navigate life with divine wisdom.',
             ],
             '12. Marriage Enrichment Titles' => [
                 'name' => 'Marriage & Family Life',
@@ -112,6 +123,7 @@
                 'gradient' => 'linear-gradient(135deg, #9D174D 0%, #BE185D 100%)',
                 'icon' => 'fa-ring',
                 'tagline' => 'Deepen marital intimacy, weather storms, and build love that lasts.',
+                'description' => 'Deepen mutual intimacy, navigate conflict constructively, protect marital harmony, and build a lasting covenant union.',
             ],
         ];
 
@@ -598,6 +610,94 @@
             opacity: 1;
             pointer-events: auto;
         }
+
+        /* Category Directory Listing Cards */
+        .cat-directory-card {
+            background: #FFFFFF;
+            border: 1px solid #ECE7F6;
+            border-radius: 18px;
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-decoration: none !important;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(63, 32, 127, 0.04);
+            cursor: pointer;
+        }
+
+        .cat-directory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--card-accent, #3F207F);
+            transition: height 0.25s ease;
+        }
+
+        .cat-directory-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 34px rgba(63, 32, 127, 0.12);
+            border-color: #CDBFE7;
+        }
+
+        .cat-directory-card:hover::before {
+            height: 6px;
+        }
+
+        .cat-directory-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            flex-shrink: 0;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .cat-directory-card:hover .cat-directory-icon-box {
+            transform: scale(1.08) rotate(-2deg);
+        }
+
+        .cat-directory-cta-btn {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--card-accent-text, #3F207F);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.2s ease, gap 0.2s ease;
+        }
+
+        .cat-directory-card:hover .cat-directory-cta-btn {
+            transform: translateX(4px);
+        }
+
+        .cat-directory-card-circle-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #F4EFFC;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .cat-directory-card:hover .cat-directory-card-circle-btn {
+            background: var(--card-accent, #3F207F);
+            color: #FFFFFF !important;
+            transform: translateY(2px);
+        }
     </style>
 
     <!-- HERO SECTION START -->
@@ -631,8 +731,8 @@
                     </div>
 
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#faith-development" class="btn btn-warning rounded-pill px-4 py-3 fw-bold text-dark shadow-sm">
-                            <i class="fa fa-compass me-2"></i> Browse All Series
+                        <a href="#book-categories-directory" class="btn btn-warning rounded-pill px-4 py-3 fw-bold text-dark shadow-sm">
+                            <i class="fa fa-th-large me-2"></i> Browse All Categories
                         </a>
                         <a href="#bundle-showcase-section" class="btn btn-outline-light rounded-pill px-4 py-3 fw-semibold">
                             <i class="fa fa-gift me-2 text-warning"></i> View Category Bundles (10% Off)
@@ -700,6 +800,77 @@
     <div class="container-xxl py-5">
         <div class="container">
 
+            <!-- ALL CATEGORIES DIRECTORY SECTION START -->
+            <div id="book-categories-directory" class="mb-5 pb-3">
+                <div class="text-center mb-5">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase mb-2 shadow-sm">
+                        <i class="fa fa-th-large me-1"></i> Library Directory
+                    </span>
+                    <h2 class="display-6 fw-bold text-dark mb-2" style="color: #240E4A !important;">
+                        Explore Books by Category
+                    </h2>
+                    <p class="text-muted col-lg-8 mx-auto fs-6">
+                        Browse all 12 curated thematic series authored by Bimbo Ilori. Select any category below to jump directly to its complete collection of titles and bundle packs.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    @foreach ($books as $catKey => $catBooksList)
+                        @php
+                            $catMeta = $seriesMeta[$catKey] ?? [
+                                'name' => preg_replace('/^\d+\.\s*/', '', $catKey),
+                                'series' => 'Life Purpose Series',
+                                'slug' => Str::slug($catKey),
+                                'color' => '#3F207F',
+                                'gradient' => 'linear-gradient(135deg, #3F207F 0%, #5E35B1 100%)',
+                                'icon' => 'fa-bookmark',
+                                'tagline' => 'Transformative wisdom for purposeful living.',
+                                'description' => 'Curated books and frameworks designed to bring clarity, spiritual growth, and actionable life principles.',
+                            ];
+                            $targetSlug = $catMeta['slug'];
+                            $catDesc = $catMeta['description'] ?? $catMeta['tagline'];
+                        @endphp
+                        <div class="col-md-6 col-lg-4">
+                            <a href="#{{ $targetSlug }}" class="cat-directory-card" data-target="{{ $targetSlug }}" style="--card-accent: {{ $catMeta['color'] }}; --card-accent-text: {{ $catMeta['color'] }};">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="cat-directory-icon-box" style="background: {{ $catMeta['gradient'] }};">
+                                            <i class="fa {{ $catMeta['icon'] }}"></i>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-light text-dark border px-2 py-1 rounded-pill small" style="font-size: 0.72rem;">
+                                                {{ $catMeta['series'] }}
+                                            </span>
+                                            <div class="text-muted small mt-1" style="font-size: 0.75rem;">
+                                                <i class="fa fa-book-open me-1"></i> {{ $catBooksList->count() }} Titles
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="fw-bold text-dark mb-2">
+                                        {{ $catMeta['name'] }}
+                                    </h5>
+
+                                    <p class="text-secondary small mb-3 lh-base">
+                                        {{ $catDesc }}
+                                    </p>
+                                </div>
+
+                                <div class="pt-3 border-top d-flex align-items-center justify-content-between">
+                                    <span class="cat-directory-cta-btn">
+                                        View Category Books <i class="fa fa-arrow-down ms-1"></i>
+                                    </span>
+                                    <span class="cat-directory-card-circle-btn shadow-sm" style="color: {{ $catMeta['color'] }};">
+                                        <i class="fa fa-chevron-down" style="font-size: 0.75rem;"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <!-- ALL CATEGORIES DIRECTORY SECTION END -->
+
             <!-- SPECIAL STANDALONE BUNDLE SHOWCASE SECTION -->
             <div id="bundle-showcase-section" class="mb-5 pb-4">
                 <div class="p-4 p-md-5 rounded-4 mb-4 text-white position-relative overflow-hidden" style="background: linear-gradient(135deg, #190835 0%, #3F207F 70%, #200947 100%);">
@@ -761,13 +932,16 @@
                                 <p class="text-white-50 mb-0 small">{{ $meta['tagline'] }}</p>
                             </div>
 
-                            @if(!empty($categoryBooks->first()->paystack_link))
-                                <div>
+                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                <a href="#book-categories-directory" class="btn btn-sm btn-outline-light rounded-pill px-3 py-2 fw-semibold text-nowrap" title="Return to category listing">
+                                    <i class="fa fa-arrow-up me-1"></i> All Categories
+                                </a>
+                                @if(!empty($categoryBooks->first()->paystack_link))
                                     <a href="{{ $categoryBooks->first()->paystack_link }}" target="_blank" class="btn btn-sm btn-light rounded-pill px-3 py-2 fw-semibold text-nowrap shadow-sm">
                                         <i class="fa fa-store me-1 text-primary"></i> Series Paystack Store &rarr;
                                     </a>
-                                </div>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </div>
 
@@ -1143,7 +1317,12 @@
                         searchNoticeBanner.style.display = 'none';
                         bookCards.forEach(c => c.style.display = '');
                         categorySections.forEach(s => s.style.display = '');
-                        window.scrollTo({ top: 380, behavior: 'smooth' });
+                        const directorySec = document.getElementById('book-categories-directory');
+                        if (directorySec) {
+                            directorySec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            window.scrollTo({ top: 380, behavior: 'smooth' });
+                        }
                     } else if (targetSlug) {
                         // Regular category anchor jump
                         // Reset search/bundles view
@@ -1151,6 +1330,49 @@
                         searchNoticeBanner.style.display = 'none';
                         bookCards.forEach(c => c.style.display = '');
                         categorySections.forEach(s => s.style.display = '');
+                    }
+                });
+            });
+
+            // Smooth scroll & pill-sync handler for Category Directory Cards
+            const catDirectoryCards = document.querySelectorAll('.cat-directory-card');
+            catDirectoryCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('data-target');
+                    if (!targetId) return;
+
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        e.preventDefault();
+                        // Reset search/bundles view if active
+                        searchInput.value = '';
+                        searchNoticeBanner.style.display = 'none';
+                        bookCards.forEach(c => c.style.display = '');
+                        categorySections.forEach(s => s.style.display = '');
+
+                        // Sync active pill in sticky sub-nav
+                        categoryPillBtns.forEach(btn => {
+                            if (btn.getAttribute('data-slug') === targetId) {
+                                categoryPillBtns.forEach(b => b.classList.remove('active'));
+                                btn.classList.add('active');
+                                btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                            }
+                        });
+
+                        // Smoothly scroll to the selected category section
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                        // Brief subtle highlight effect on target section header
+                        const header = targetSection.querySelector('.series-section-header');
+                        if (header) {
+                            header.style.transition = 'box-shadow 0.4s ease, transform 0.4s ease';
+                            header.style.boxShadow = '0 0 0 4px rgba(228, 181, 72, 0.7)';
+                            header.style.transform = 'scale(1.01)';
+                            setTimeout(() => {
+                                header.style.boxShadow = '';
+                                header.style.transform = '';
+                            }, 1500);
+                        }
                     }
                 });
             });

@@ -7,6 +7,154 @@
     $canonicalUrl = route('purpose-insight.show', $insight->slug);
     $publishedTime = $insight->published_at ? $insight->published_at->toIso8601String() : $insight->created_at->toIso8601String();
     $section = $insight->category;
+
+    // Explore More mappings tailored by Category to relevant coaching course, book category, or program
+    $categoryRecommendations = [
+        'Faith Development' => [
+            'type' => 'Book Category',
+            'title' => 'Deepen Your Faith & Spiritual Authority',
+            'description' => 'Continue this journey with the Faith Rise Series by Bimbo Ilori, crafted to anchor your life on unshakable biblical truth and supernatural alignment.',
+            'url' => route('books.index') . '#faith-development',
+            'button_text' => 'Explore More (Faith Series Books)',
+            'secondary_url' => route('courses'),
+            'secondary_text' => 'Life & Clarity Coaching Track',
+            'badge' => 'The Faith Rise Series',
+            'icon' => 'fa-cross'
+        ],
+        'Purpose & Personal Discovery' => [
+            'type' => 'Book Category & Coaching Course',
+            'title' => 'Discover & Walk in Your Calling',
+            'description' => 'Uncover your divine assignment, dismantle confusion, and accelerate personal transformation through the Purpose Series books and ThriveForge Coaching.',
+            'url' => route('books.index') . '#purpose-development',
+            'button_text' => 'Explore More (Purpose Series Books)',
+            'secondary_url' => route('courses'),
+            'secondary_text' => 'ThriveForge Coaching',
+            'badge' => 'The Purpose Series',
+            'icon' => 'fa-compass'
+        ],
+        'Parenting & Child Development' => [
+            'type' => 'Program & Book Category',
+            'title' => 'Raise Purpose-Guided, Protected Children',
+            'description' => 'Discover our Student Transformation Companion (STC) developmental framework and explore the complete Parenting Series books by Bimbo Ilori.',
+            'url' => route('child-development'),
+            'button_text' => 'Explore Child Development Program',
+            'secondary_url' => route('books.index') . '#parenting-skill-development',
+            'secondary_text' => 'Explore Parenting Books',
+            'badge' => 'Child Development & Parenting',
+            'icon' => 'fa-child'
+        ],
+        'Health, Wellness & Lifestyle' => [
+            'type' => 'Book Category',
+            'title' => 'Cultivate Holistic Health & Mental Rest',
+            'description' => 'Flourish in body, mind, and spirit with practical lifestyle disciplines and inner restoration from the Wellness Series books.',
+            'url' => route('books.index') . '#wellness-and-balance',
+            'button_text' => 'Explore More (Wellness Books)',
+            'secondary_url' => route('courses'),
+            'secondary_text' => 'ThriveForge Life Track',
+            'badge' => 'The Wellness Series',
+            'icon' => 'fa-heartbeat'
+        ],
+        'Overcoming Obstacles & Resilience' => [
+            'type' => 'Book Category & Coaching',
+            'title' => 'Overcome Setbacks & Build Unshakable Grit',
+            'description' => 'Translate your pain into purposeful power, break through persistent resistance, and rise stronger with the Overcomer Series books.',
+            'url' => route('books.index') . '#overcomers',
+            'button_text' => 'Explore More (The Overcomer Series)',
+            'secondary_url' => route('session.create'),
+            'secondary_text' => 'Book 1-on-1 Session',
+            'badge' => 'The Overcomer Series',
+            'icon' => 'fa-shield-alt'
+        ],
+        'Redemption & Restoration' => [
+            'type' => 'Book Category',
+            'title' => 'Experience Freedom & Grace in Restoration',
+            'description' => 'Release past guilt, step into healing, and walk boldly in covenant redemption through the curated Redemption Series books.',
+            'url' => route('books.index') . '#redemptive-power',
+            'button_text' => 'Explore More (Redemption Series)',
+            'secondary_url' => route('session.create'),
+            'secondary_text' => 'Book Guidance Session',
+            'badge' => 'The Redemption Series',
+            'icon' => 'fa-crown'
+        ],
+        'Business & Entrepreneurship' => [
+            'type' => 'Program & Book Category',
+            'title' => 'Build Impactful Enterprise & Marketplace Influence',
+            'description' => 'Leverage institutional growth advisory with KBloc Consult and explore proven marketplace blueprints in the Business Development book series.',
+            'url' => route('kbloc'),
+            'button_text' => 'Explore KBloc Consult Program',
+            'secondary_url' => route('books.index') . '#business-development',
+            'secondary_text' => 'View Business Books',
+            'badge' => 'KBloc Consult & Business Series',
+            'icon' => 'fa-chart-line'
+        ],
+        'Leadership & Influence' => [
+            'type' => 'Coaching Course & Book Category',
+            'title' => 'Lead with Character, Wisdom & Courage',
+            'description' => 'Equip yourself for high-impact leadership with the ThriveForge Leadership Track and the Leadership Uplift book collection.',
+            'url' => route('courses'),
+            'button_text' => 'Explore Leadership Coaching Course',
+            'secondary_url' => route('books.index') . '#leadership-uplift',
+            'secondary_text' => 'View Leadership Books',
+            'badge' => 'ThriveForge Leadership Track',
+            'icon' => 'fa-users'
+        ],
+        'Relationships, Love & Emotional Wholeness' => [
+            'type' => 'Book Category & Coaching',
+            'title' => 'Heal Wounds & Build Mature Connections',
+            'description' => 'Gain relational clarity, heal emotional wounds, and build intentional bonds with the Relationship Series books and ThriveForge Family Track.',
+            'url' => route('books.index') . '#relationship-upskill',
+            'button_text' => 'Explore More (Relationship Books)',
+            'secondary_url' => route('courses'),
+            'secondary_text' => 'Family & Relationship Track',
+            'badge' => 'The Relationship Series',
+            'icon' => 'fa-heart'
+        ],
+        'Personal Effectiveness & Life Skills' => [
+            'type' => 'Book Category & Coaching Course',
+            'title' => 'Master Life Disciplines & Productivity Systems',
+            'description' => 'Develop personal effectiveness, master time management, and build sustainable habits with the Personal Skills Series books and coaching.',
+            'url' => route('books.index') . '#spiritual-personal-skill-development',
+            'button_text' => 'Explore More (Personal Skills Books)',
+            'secondary_url' => route('courses'),
+            'secondary_text' => 'Personal Growth Track',
+            'badge' => 'Personal Skills Series',
+            'icon' => 'fa-seedling'
+        ],
+        'Insight, Discernment & Wisdom' => [
+            'type' => 'Book Category & Media',
+            'title' => 'Sharpen Intuition, Discernment & Direction',
+            'description' => 'Gain spiritual discernment, make sound choices in uncertain seasons, and dive deeper with the Insight Series books and podcasts.',
+            'url' => route('books.index') . '#the-insight-series',
+            'button_text' => 'Explore More (The Insight Series)',
+            'secondary_url' => route('podcast'),
+            'secondary_text' => 'Listen to Podcasts',
+            'badge' => 'The Insight Series',
+            'icon' => 'fa-lightbulb'
+        ],
+        'Marriage & Family Life' => [
+            'type' => 'Book Category & Counseling',
+            'title' => 'Strengthen Covenant Foundations in Marriage',
+            'description' => 'Build lasting marital intimacy, weather seasons of conflict, and cultivate a harmonious family with the Marriage Series books.',
+            'url' => route('books.index') . '#marriage-enrichment',
+            'button_text' => 'Explore More (Marriage Series Books)',
+            'secondary_url' => route('session.create'),
+            'secondary_text' => 'Book a Marriage Session',
+            'badge' => 'The Marriage Series',
+            'icon' => 'fa-ring'
+        ]
+    ];
+
+    $rec = $categoryRecommendations[$insight->category] ?? [
+        'type' => 'Books & Programs',
+        'title' => 'Take Your Purpose Journey Further',
+        'description' => 'Explore Bimbo Ilori’s complete library of published books, coaching courses, and transformational life frameworks.',
+        'url' => route('books.index'),
+        'button_text' => 'Explore More Books & Resources',
+        'secondary_url' => route('courses'),
+        'secondary_text' => 'View Coaching Courses',
+        'badge' => 'BIPPs Growth Resources',
+        'icon' => 'fa-book-open'
+    ];
 @endphp
 
 <x-guest-layout 
@@ -181,6 +329,37 @@
                         {!! nl2br(e($insight->content)) !!}
                     </div>
 
+                    <!-- Tail of Article: Explore More Relevant Course, Book Category or Program -->
+                    <div class="article-explore-more-cta p-4 p-md-5 mb-5 rounded-4 text-white position-relative overflow-hidden" 
+                         style="background: linear-gradient(135deg, #180938 0%, #3F207F 65%, #250B56 100%); box-shadow: 0 14px 35px rgba(63, 32, 127, 0.18);">
+                        <div class="position-absolute end-0 bottom-0 opacity-10 pe-4 pb-1 d-none d-md-block" style="pointer-events: none;">
+                            <i class="fa {{ $rec['icon'] }}" style="font-size: 11rem; line-height: 1;"></i>
+                        </div>
+                        <div class="row align-items-center g-4 position-relative">
+                            <div class="col-lg-8">
+                                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold text-uppercase mb-3 d-inline-flex align-items-center gap-1" style="font-size: 0.78rem;">
+                                    <i class="fa {{ $rec['icon'] }}"></i> {{ $rec['badge'] }}
+                                </span>
+                                <h3 class="fw-bold text-white mb-2">{{ $rec['title'] }}</h3>
+                                <p class="text-white-50 mb-0 fs-6 lh-base" style="max-width: 600px;">
+                                    {{ $rec['description'] }}
+                                </p>
+                            </div>
+                            <div class="col-lg-4 text-lg-end">
+                                <div class="d-flex flex-column gap-2 justify-content-lg-end">
+                                    <a href="{{ $rec['url'] }}" class="btn btn-warning rounded-pill px-4 py-3 fw-bold text-dark shadow-sm d-inline-flex align-items-center justify-content-center gap-2">
+                                        <i class="fa fa-compass"></i> Explore More
+                                    </a>
+                                    @if(!empty($rec['secondary_url']))
+                                        <a href="{{ $rec['secondary_url'] }}" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold small d-inline-flex align-items-center justify-content-center gap-2">
+                                            <i class="fa fa-arrow-right"></i> {{ $rec['secondary_text'] }}
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Social Share Section -->
                     <div class="p-4 bg-light rounded-4 border mb-5 d-md-flex align-items-center justify-content-between">
                         <div class="mb-3 mb-md-0">
@@ -209,7 +388,7 @@
                     <!-- Comments & Questions Section -->
                     <div id="comments-section" class="comments-section-card p-4 p-md-5 mb-5">
                         
-                        <!-- Header with count badge -->
+                        <!-- Header with count badge (hidden when 0 contributions) -->
                         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 mb-4 border-bottom">
                             <div>
                                 <h3 class="fw-bold mb-1" style="color: #3F207F;">
@@ -219,11 +398,13 @@
                                     Have a thought, question, or reflection on this topic? Join the conversation below.
                                 </p>
                             </div>
-                            <div>
-                                <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #3F207F; color: #FFFFFF; font-size: 0.9rem;">
-                                    <i class="fa fa-comment-dots me-1 text-warning"></i> {{ $insight->comments->count() }} {{ Str::plural('Contribution', $insight->comments->count()) }}
-                                </span>
-                            </div>
+                            @if($insight->comments->count() > 0)
+                                <div>
+                                    <span class="badge rounded-pill px-3 py-2 fw-semibold" style="background-color: #3F207F; color: #FFFFFF; font-size: 0.9rem;">
+                                        <i class="fa fa-comment-dots me-1 text-warning"></i> {{ $insight->comments->count() }} {{ Str::plural('Contribution', $insight->comments->count()) }}
+                                    </span>
+                                </div>
+                            @endif
                         </div>
 
                         <!-- Success Flash Message -->
@@ -382,17 +563,6 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                </div>
-                            @else
-                                <!-- Empty State -->
-                                <div class="text-center py-5 px-3 rounded-4 bg-light border border-dashed">
-                                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px; background-color: #EDE7F8; color: #3F207F;">
-                                        <i class="fa fa-comments fs-3"></i>
-                                    </div>
-                                    <h6 class="fw-bold text-dark mb-1">No comments or questions yet</h6>
-                                    <p class="text-muted small mb-0" style="max-width: 420px; margin: 0 auto;">
-                                        Be the first reader to share your reflection, feedback, or ask Bimbo Ilori a question about this insight!
-                                    </p>
                                 </div>
                             @endif
                         </div>
