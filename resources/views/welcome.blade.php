@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Bimbo Ilori Programs | Life Purpose Coaching, Books & Personal Growth"
+    description="Empower yourself with expert life purpose coaching, 100+ transformational books, and impact programs designed to help you thrive with clarity and fulfillment."
+    image="{{ asset('assets/img/featured-image.jpg') }}"
+>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">

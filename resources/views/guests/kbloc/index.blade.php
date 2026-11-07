@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Kingswitbloc (KBloc) Consult | Organizational Strategy & Capacity Building"
+    description="Kingswitbloc Consult equips professionals and organizations for clarity, excellence, and lasting impact through tailored leadership, mentoring, and institutional training."
+    image="{{ asset('assets/img/strategy2.jpg') }}"
+>
     <!-- Hero Section -->
 <section class="bimbo-hero d-flex flex-column justify-content-center align-items-center">
   <div class="container text-center">

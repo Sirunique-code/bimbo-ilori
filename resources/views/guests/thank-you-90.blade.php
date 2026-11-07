@@ -1,4 +1,7 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Thank You — Session Confirmed | Bimbo Ilori Programs"
+    description="Your 90-minute strategy session with Bimbo Ilori has been received. Check your email for full booking details and meeting link."
+>
     <div class="container-xxl py-5">
         <div class="container text-center">
 

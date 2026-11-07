@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="About Bimbo Ilori (BI) | Life Purpose & Personal Development Coach"
+    description="Meet Bimbo Ilori (née Agoro) — author, educator, and personal development strategist dedicated to helping individuals and institutions discover purpose and lead with clarity."
+    image="{{ asset('assets/img/strategy.jpg') }}"
+>
     <style>
         .about-image {
             width: 100%;

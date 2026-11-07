@@ -1,4 +1,7 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Thank You | Bimbo Ilori Programs"
+    description="Thank you for taking a step in your transformation with Bimbo Ilori Programs. We look forward to supporting your purposeful journey."
+>
     <div class="container-xxl py-5">
         <div class="container text-center">
 

@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="ThriveForge Coaching & Courses | Bimbo Ilori Impact Programs"
+    description="Transformative coaching and courses across Life & Clarity, Family & Relationships, Personal Growth, and Leadership tracks. Discover and develop your purpose today."
+    image="{{ asset('assets/img/thriveforge-logo.png') }}"
+>
 
     <div class="container-xxl py-5">
         <div class="container">

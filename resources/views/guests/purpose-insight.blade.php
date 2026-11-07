@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Purpose Insights & Articles | Bimbo Ilori Programs"
+    description="Explore curated reflections, wisdom keys, and practical growth articles across 12 areas of purposeful living, faith, leadership, and personal development."
+    image="{{ asset('assets/img/featured-image.jpg') }}"
+>
     @php
     $allCategories = [
         'Faith Development' => [

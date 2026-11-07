@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="About Kingswitbloc (KBloc) Consult | Purpose-Driven Capacity Building"
+    description="Discover the mission and frameworks behind Kingswitbloc Consult. We partner with healthcare, educational, corporate, and public institutions to build thriving cultures."
+    image="{{ asset('assets/img/kbloc.jpg') }}"
+>
 <!-- About — Full Page -->
 <section id="about-full" class="bimbo-about-full py-5">
   <div class="container">

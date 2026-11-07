@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Privacy Policy | Bimbo Ilori Programs (BIPs)"
+    description="Read the privacy policy for Bimbo Ilori Programs. Understand how we collect, protect, and handle your personal data across all our platforms and services."
+    image="{{ asset('assets/img/featured-image.jpg') }}"
+>
     <div style="margin-top: 50px"></div>
     <div class="container">
                 

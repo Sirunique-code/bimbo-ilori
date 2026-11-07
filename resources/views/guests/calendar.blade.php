@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Events Calendar & Program Schedule | Bimbo Ilori Programs"
+    description="Stay updated with upcoming workshops, webinars, masterclasses, and events by Bimbo Ilori Programs. View dates and plan your participation."
+    image="{{ asset('assets/img/featured-image.jpg') }}"
+>
      <!-- Upcoming Events Section -->
         <section class="py-5 bg-light">
             <div class="container">

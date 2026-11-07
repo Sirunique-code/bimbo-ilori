@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Book a One-on-One Clarity & Strategy Session | Bimbo Ilori"
+    description="Book a private 1-on-1 coaching session with Bimbo Ilori. Gain clarity, confidence, and strategic direction for your life purpose, personal growth, and major transitions."
+    image="{{ asset('assets/img/strategy.jpg') }}"
+>
 
 <section>
 <div class="container mx-auto py-8 max-w-2xl">

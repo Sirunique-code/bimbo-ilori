@@ -1,5 +1,9 @@
 <!-- Podcasts and Teachings Section -->
-<x-guest-layout>
+<x-guest-layout 
+    title="Podcasts & Teachings by Bimbo Ilori | Spiritual & Personal Development"
+    description="Listen to BI deliver transformative insights on spiritual growth, life purpose actualization, and personal mastery. Available on Spotify, YouTube, and Amazon Music."
+    image="{{ asset('assets/img/podcast.jpg') }}"
+>
     <div class="container-xxl py-5 bg-light">
         <div class="container">
             <!-- Intro Section -->

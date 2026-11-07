@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Testimonials & Quotes Gallery | Bimbo Ilori Programs"
+    description="See what clients, readers, and organizations are saying about Bimbo Ilori's coaching, transformational books, and life-changing impact programs."
+    image="{{ asset('assets/img/testimonialbg.jpg') }}"
+>
     <!-- Testimonials Section -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">

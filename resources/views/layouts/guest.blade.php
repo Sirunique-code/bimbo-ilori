@@ -17,10 +17,14 @@
     </script>
 
     @php
-        $pageTitle = !empty($title) ? $title : 'Bimbo Ilori Programs | Life Purpose Coaching, Books & Self Development Mastery.';
-        $pageDescription = !empty($description) ? $description : 'Transform your life with Bimbo Ilori’s coaching, books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.';
-        $pageKeywords = !empty($keywords) ? $keywords : 'Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori';
-        $pageImage = !empty($image) ? $image : asset('assets/img/featured-image.jpg');
+        $pageTitle = strip_tags(!empty($title) ? $title : 'Bimbo Ilori Programs | Life Purpose Coaching, Books & Personal Growth');
+        $rawDescription = !empty($description) ? $description : 'Transform your life with Bimbo Ilori’s coaching, 100+ transformational books, and online programs. Discover your purpose, grow in leadership, and attain fulfillment.';
+        $pageDescription = Str::limit(preg_replace('/\s+/', ' ', strip_tags($rawDescription)), 220);
+        $pageKeywords = !empty($keywords) ? $keywords : 'Life Purpose, Coaching, Personal Development, Leadership, Books, Programs, Bimbo Ilori, Kingswitbloc, STC';
+        
+        $rawImage = !empty($image) ? $image : asset('assets/img/featured-image.jpg');
+        $pageImage = Str::startsWith($rawImage, ['http://', 'https://', '//']) ? $rawImage : asset($rawImage);
+        
         $pageUrl = !empty($url) ? $url : url()->current();
         $pageType = !empty($type) ? $type : 'website';
     @endphp
@@ -30,15 +34,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="keywords" content="{{ $pageKeywords }}">
     <meta name="description" content="{{ $pageDescription }}">
+    <link rel="canonical" href="{{ $pageUrl }}">
 
-    <!-- Open Graph Meta Tags (For Social Media) -->
+    <!-- Open Graph Meta Tags (Specifically Formatted for WhatsApp & Social Media Previews) -->
+    <meta property="og:site_name" content="Bimbo Ilori Programs">
     <meta property="og:type" content="{{ $pageType }}">
     <meta property="og:title" content="{{ $pageTitle }}">
     <meta property="og:description" content="{{ $pageDescription }}">
+    <meta property="og:url" content="{{ $pageUrl }}">
     <meta property="og:image" content="{{ $pageImage }}">
     <meta property="og:image:secure_url" content="{{ $pageImage }}">
-    <meta property="og:url" content="{{ $pageUrl }}">
-    <meta property="og:site_name" content="Bimbo Ilori Programs">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ $pageTitle }}">
     @if(($pageType ?? 'website') === 'article')
         @if(!empty($publishedTime))
     <meta property="article:published_time" content="{{ $publishedTime }}">

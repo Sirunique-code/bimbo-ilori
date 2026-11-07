@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Student Transformation Companion (STC) | Child Development Framework"
+    description="A progressive child development framework equipping learners from childhood through adolescence with character, competence, clarity, and contribution for purposeful living."
+    image="{{ asset('storage/category110.png') }}"
+>
 
 <!-- Unique wrapper for page-specific CSS targeting -->
 <div data-page="stc-landing" class="stc-landing-page font-sans antialiased text-gray-800">

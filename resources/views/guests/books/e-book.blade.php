@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="Free E-Book: The Art of Asking Well | Books by Bimbo Ilori"
+    description="Claim your complimentary copy of 'The Art of Asking Well' by Bimbo Ilori. Learn how to make irresistible requests and position yourself for life-changing results."
+    image="{{ asset('assets/img/The-art-of-asking-well.jpg') }}"
+>
     <section class="py-5 bg-dark text-white">
         <div class="container">
             <div class="text-center mb-4">

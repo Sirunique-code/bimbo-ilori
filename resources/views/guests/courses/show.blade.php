@@ -1,4 +1,15 @@
-<x-guest-layout>
+@php
+    $pageTitle = $course->course_title . ' | ThriveForge Coaching by Bimbo Ilori';
+    $pageDescription = Str::limit(preg_replace('/\s+/', ' ', strip_tags($course->course_description)), 200);
+    $pageImage = $course->course_image ? asset('storage/' . $course->course_image) : asset('assets/img/thriveforge-logo.png');
+@endphp
+
+<x-guest-layout 
+    :title="$pageTitle"
+    :description="$pageDescription"
+    :image="$pageImage"
+    :url="route('courses.show', $course->id)"
+>
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">

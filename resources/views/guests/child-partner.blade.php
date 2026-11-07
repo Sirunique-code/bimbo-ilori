@@ -1,4 +1,8 @@
-<x-guest-layout>
+<x-guest-layout 
+    title="School Partnership & Educator Capacity Building | BIPPs"
+    description="Partner with BIPPs to build intentional systems for schools: Develop the Learner (STC), Develop the Teacher, and Develop the Institution through whole-child frameworks."
+    image="{{ asset('assets/img/strategy2.jpg') }}"
+>
 
 <!-- Unique wrapper for page-specific CSS targeting -->
 <div data-page="stc-partnership" class="p-page font-sans antialiased text-gray-800">
