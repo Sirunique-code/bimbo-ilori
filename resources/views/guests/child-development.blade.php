@@ -1,7 +1,7 @@
 <x-guest-layout 
     title="Student Transformation Companion (STC) | Child Development Framework"
     description="A progressive child development framework equipping learners from childhood through adolescence with character, competence, clarity, and contribution for purposeful living."
-    image="{{ asset('storage/category110.png') }}"
+    image="{{ asset('assets/img/stc-ft-image.jpg') }}"
 >
 
 <!-- Unique wrapper for page-specific CSS targeting -->

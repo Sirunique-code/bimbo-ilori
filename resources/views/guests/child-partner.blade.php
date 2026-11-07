@@ -1,7 +1,7 @@
 <x-guest-layout 
     title="School Partnership & Educator Capacity Building | BIPPs"
     description="Partner with BIPPs to build intentional systems for schools: Develop the Learner (STC), Develop the Teacher, and Develop the Institution through whole-child frameworks."
-    image="{{ asset('assets/img/strategy2.jpg') }}"
+    image="{{ asset('assets/img/childpartner-ft-image.jpg') }}"
 >
 
 <!-- Unique wrapper for page-specific CSS targeting -->
