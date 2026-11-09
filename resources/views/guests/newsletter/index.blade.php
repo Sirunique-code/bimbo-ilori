@@ -10,6 +10,12 @@
                 <span class="badge bg-primary px-3 py-2 rounded-pill fs-6">
                     <i class="bi bi-people-fill me-1"></i> {{ $subscribers->total() }} Total Subscribers
                 </span>
+                <form action="{{ route('superadmin.newsletter.purge-spam') }}" method="POST" onsubmit="return confirm('Are you sure you want to purge all bot/spam domains (e.g. formtests, mailinator, tempmail) from the subscriber list?');">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-3 py-2 fw-semibold">
+                        <i class="bi bi-shield-x me-1"></i> Purge Bot Spam
+                    </button>
+                </form>
             </div>
         </div>
 
@@ -37,6 +43,7 @@
                                 <th>Subscriber Email</th>
                                 <th>Status</th>
                                 <th>Subscribed On</th>
+                                <th class="text-end pe-4" style="width: 100px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,7 +58,7 @@
                                             </div>
                                             <div>
                                                 <span class="fw-bold text-dark d-block">{{ $subscriber->email }}</span>
-                                                <small class="text-muted">Verified contact</small>
+                                                <small class="text-muted">Contact record</small>
                                             </div>
                                         </div>
                                     </td>
@@ -65,10 +72,19 @@
                                             <i class="bi bi-calendar-event me-1 text-primary"></i> {{ $subscriber->created_at->format('M d, Y') }} &bull; {{ $subscriber->created_at->format('h:i A') }}
                                         </span>
                                     </td>
+                                    <td class="text-end pe-4">
+                                        <form action="{{ route('superadmin.newsletter.destroy', $subscriber->id) }}" method="POST" onsubmit="return confirm('Remove this email from the newsletter list?');" class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-outline-danger rounded-circle p-1" style="width: 30px; height: 30px;" title="Delete Subscriber">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="4" class="text-center py-5 text-muted">
+                                    <td colspan="5" class="text-center py-5 text-muted">
                                         <i class="bi bi-inbox fs-1 d-block mb-2 text-muted"></i>
                                         No subscribers found yet.
                                     </td>

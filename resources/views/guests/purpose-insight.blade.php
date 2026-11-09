@@ -312,12 +312,31 @@
                     <div class="col-lg-5">
                         <form id="purpose-newsletter-form" action="{{ route('subscribe') }}" method="POST">
                             @csrf
+                            <!-- Anti-bot honeypot fields (hidden from humans, filled by bots) -->
+                            <div style="display:none !important; visibility:hidden !important; opacity:0; position:absolute; left:-9999px;">
+                                <input type="text" name="b_hp_name" tabindex="-1" autocomplete="off" value="">
+                                <input type="text" name="website_url" tabindex="-1" autocomplete="off" value="">
+                                <input type="hidden" name="_sub_ts" value="{{ encrypt(time()) }}">
+                            </div>
+
                             <div class="input-group mb-2">
                                 <input type="email" name="email" class="form-control py-3 ps-4 border-0 rounded-start" placeholder="Enter your email address" required>
                                 <button type="submit" class="btn btn-warning fw-bold px-4">Subscribe</button>
                             </div>
                         </form>
-                        <div id="purpose-message-container"></div>
+                        <div id="purpose-message-container">
+                            @if(session('newsletter_success'))
+                                <div class="alert alert-success py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center text-dark">
+                                    <i class="fa fa-check-circle me-2 text-success"></i>
+                                    <span>{{ session('newsletter_success') }}</span>
+                                </div>
+                            @elseif(session('newsletter_error'))
+                                <div class="alert alert-danger py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center">
+                                    <i class="fa fa-exclamation-circle me-2 text-danger"></i>
+                                    <span>{{ session('newsletter_error') }}</span>
+                                </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

@@ -75,6 +75,8 @@ Route::prefix('superadmin')->middleware(['auth'])->group(function () {
 
      // ✅ Newsletter Subscribers List
      Route::get('/newsletter-subscribers', [App\Http\Controllers\NewsletterController::class, 'index'])->name('superadmin.newsletter.index');
+     Route::delete('/newsletter-subscribers/{id}', [App\Http\Controllers\NewsletterController::class, 'destroy'])->name('superadmin.newsletter.destroy');
+     Route::post('/newsletter-subscribers/purge-spam', [App\Http\Controllers\NewsletterController::class, 'purgeSpam'])->name('superadmin.newsletter.purge-spam');
 });
 
 // Handle login form submission
@@ -203,8 +205,10 @@ Route::get('/testimonials', function () {
 })->name('testimonials.index');
 
 
-// Handle newsletter subscription form submission
-Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
+// Handle newsletter subscription form submission (Rate limited: max 5 requests per minute)
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])
+    ->name('subscribe')
+    ->middleware('throttle:5,1');
 
 // View all subscribed emails
 Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');

@@ -305,6 +305,13 @@ src="https://www.facebook.com/tr?id=1927742851377054&ev=PageView&noscript=1"
                     <p>Subscribe to receive periodic Purpose Insights, BIPPs updates and resources to engage more deeply with the BIPPs Community.</p>
                     <form id="newsletter-form" action="{{ route('subscribe') }}" method="POST">
                         @csrf
+                        <!-- Anti-bot honeypot fields (hidden from humans, filled by bots) -->
+                        <div style="display:none !important; visibility:hidden !important; opacity:0; position:absolute; left:-9999px;">
+                            <input type="text" name="b_hp_name" tabindex="-1" autocomplete="off" value="">
+                            <input type="text" name="website_url" tabindex="-1" autocomplete="off" value="">
+                            <input type="hidden" name="_sub_ts" value="{{ encrypt(time()) }}">
+                        </div>
+
                         <div class="position-relative" style="max-width: 100%;">
                             <input class="form-control border-0 w-100 py-3 ps-4 pe-5 rounded" type="email"
                                 name="email" placeholder="Enter your email" required>
@@ -312,7 +319,19 @@ src="https://www.facebook.com/tr?id=1927742851377054&ev=PageView&noscript=1"
                                 class="btn btn-primary position-absolute top-0 end-0 mt-2 me-2 px-4">Sign Up</button>
                         </div>
                     </form>
-                    <div id="message-container" class="mt-2"></div>
+                    <div id="message-container" class="mt-2">
+                        @if(session('newsletter_success'))
+                            <div class="alert alert-success py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center">
+                                <i class="fa fa-check-circle me-2 text-success"></i>
+                                <span>{{ session('newsletter_success') }}</span>
+                            </div>
+                        @elseif(session('newsletter_error'))
+                            <div class="alert alert-danger py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center">
+                                <i class="fa fa-exclamation-circle me-2 text-danger"></i>
+                                <span>{{ session('newsletter_error') }}</span>
+                            </div>
+                        @endif
+                    </div>
                 </div>
 
                
@@ -527,6 +546,89 @@ src="https://www.facebook.com/tr?id=1927742851377054&ev=PageView&noscript=1"
 
 
 
+    <!-- Newsletter AJAX Submission & Anti-Spam UX Handler -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const forms = [
+            { formId: 'newsletter-form', msgId: 'message-container' },
+            { formId: 'purpose-newsletter-form', msgId: 'purpose-message-container' }
+        ];
+
+        forms.forEach(function (item) {
+            const form = document.getElementById(item.formId);
+            const msgContainer = document.getElementById(item.msgId);
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+                const formData = new FormData(form);
+
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-1" role="status"></span> Subscribing...';
+                }
+
+                if (msgContainer) {
+                    msgContainer.innerHTML = '';
+                }
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
+                    },
+                    body: formData
+                })
+                .then(response => response.json().then(data => ({ status: response.status, body: data })))
+                .then(({ status, body }) => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+
+                    if (body.success) {
+                        form.reset();
+                        if (msgContainer) {
+                            msgContainer.innerHTML = `
+                                <div class="alert alert-success py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center text-dark shadow-sm">
+                                    <i class="fa fa-check-circle me-2 text-success fs-5"></i>
+                                    <span>${body.message || 'Thank you for subscribing to our newsletter!'}</span>
+                                </div>
+                            `;
+                        }
+                    } else {
+                        if (msgContainer) {
+                            msgContainer.innerHTML = `
+                                <div class="alert alert-danger py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center text-dark shadow-sm">
+                                    <i class="fa fa-exclamation-circle me-2 text-danger fs-5"></i>
+                                    <span>${body.message || 'Please check your email and try again.'}</span>
+                                </div>
+                            `;
+                        }
+                    }
+                })
+                .catch(error => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+                    if (msgContainer) {
+                        msgContainer.innerHTML = `
+                            <div class="alert alert-danger py-2 px-3 rounded-3 small mb-0 mt-2 d-flex align-items-center text-dark shadow-sm">
+                                <i class="fa fa-exclamation-circle me-2 text-danger fs-5"></i>
+                                <span>Unable to complete request. Please try again.</span>
+                            </div>
+                        `;
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>
